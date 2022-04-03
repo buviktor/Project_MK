@@ -1,0 +1,22 @@
+Segédlet:
+--> HTML5
+--> Bootstrap5
+--> CCS (ha kell)
+--> JavaScript
+--> Verzió kezelés
+--> Reszponzív megjelenés
+
+Lehetőségek:
+-- Main --
+--> Regisztráció és Bejelentkezés (hiba kezeléssel)
+--> Slide-ok pillanat képekkel
+--> Bemutatkozás
+
+-- Logged in --
+--> Navigációs bar 
+--> Lekérdezés választása (legördülő mezős lista a nav bar-ban)
+--> Kimutatás összegzés (havi bontásban megtakarítás)
+--> Elemek hozzáadása,törlése és módosítása (bevétel és kiadás külön-külön kezelendő)
+
+-- Továbbiak --
+--> Lista megjelenítés (tételek egymás alatt)
