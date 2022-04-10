@@ -1,34 +1,27 @@
-CREATE TABLE szemelyek (
+CREATE TABLE persons (
     ID int NOT NULL AUTO_INCREMENT,
-    nev  varchar(255) NOT NULL
+    name  varchar(255) NOT NULL,
+	password text NOT NULL,
     PRIMARY KEY (ID)
 	);
 
-CREATE TABLE bevetelek (
+CREATE TABLE categories (
     ID int NOT NULL AUTO_INCREMENT,
-    szemelyekID int NOT NULL,
-    megnevezes  varchar(255) NOT NULL,
-    osszeg int NOT NULL,
-	datum DATE NOT NULL,
-    PRIMARY KEY (ID),
-	FOREIGN KEY (szemelyekID) REFERENCES szemelyek(ID)
-	);
-
-CREATE TABLE kategoriak (
-    ID int NOT NULL AUTO_INCREMENT,
-    megnevezes  varchar(255) NOT NULL
+    denomination  varchar(255) NOT NULL,
     PRIMARY KEY (ID)
 	);
 	
-CREATE TABLE kiadasok (
+CREATE TABLE registers (
     ID int NOT NULL AUTO_INCREMENT,
-    szemelyekID int NOT NULL,
-    megnevezes  varchar(255) NOT NULL,
-    osszeg int NOT NULL,
-	datum DATE NOT NULL,
-	kategoriakID int NOT NULL
-    PRIMARY KEY (ID),
-	FOREIGN KEY (szemelyekID) REFERENCES szemelyek(ID)
-	FOREIGN KEY (kategoriakID) REFERENCES kategoriak(ID)
+    personsID int NOT NULL,
+    denomination  varchar(255) NOT NULL,
+    amount int NOT NULL,
+	dates DATE NOT NULL,
+	categoriesID int,
+    PRIMARY KEY (ID)
 	);
+	
+ALTER TABLE `registers` ADD FOREIGN KEY (`personsID`) REFERENCES `persons`(`ID`);
+
+ALTER TABLE `registers` ADD FOREIGN KEY (`categoriesID`) REFERENCES `categories`(`ID`);
 
