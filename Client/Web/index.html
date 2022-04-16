@@ -13,8 +13,8 @@
   <title>Üdvözlet</title>
 </head>
 
-<body>
-  <header class="container">
+<body class="bg-info">
+  <header class="bg-primary pb-1 pt-1 text-white">
     <div class="mt-2 mb-3 text-center">
       <h1>Költségvetés</h1>
     </div>
@@ -65,25 +65,28 @@
         <section class="row justify-content-center">
           <form class="form-container">
             <div class="form-group">
-              <label for="email" class="form-label mb-3">Felhasználónév</label>
+              <label for="email" class="form-label mb-3 text-white">Felhasználónév</label>
               <input type="email" class="form-control mb-3" id="fnev" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
-              <label for="password" class="form-label mb-3">Jelszó</label>
+              <label for="password" class="form-label mb-3 text-white">Jelszó</label>
               <input type="password" class="form-control mb-3" id="jelszo">
             </div>
             <div class="row">
             <button id="gomb1" type="submit" class="btn btn-primary col-10 col-lg-7 mb-3 mx-auto">Bejelentkezés</button> 
             <button id="gomb2" type="submit" class="btn btn-primary col-10 col-lg-7 mb-3 mx-auto">Regisztráció</button>
+            <a href="forgot.html" class="text-center mb-2 text-white">Elfelejtettem a jelszavamat!</a>
           </div>
           </form>
         </section>
       </section>
     </div>
   </main>
+
 <!-- Lábléc -->
-  <footer class="bg-dark text-white pt-4 pb-4 align-items-end">
-    <div class="row align-items-and">
+<div class="">
+  <footer class=" bg-dark text-white pt-4 pb-4 position-absolute bottom-0 start-50 translate-middle-x ">
+    <div class="row">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github col-3"
         viewBox="0 0 16 16">
         <path
@@ -95,6 +98,7 @@
       <div class="col-2">Uhrin Balázs</div>
   </div>
   </footer>
+</div>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
