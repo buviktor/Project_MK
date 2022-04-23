@@ -25,51 +25,39 @@ app.post('/SignUp', (req,res)=>{
     const k ="insert into persons(name,password) values(?,?)"
     pool.query(q,[req.body.rnev],
         function(error,results){
-           
             if(results[0] || error)
             return res.status(400).send({message: "Van már ilyen nevű felhasználó!!"})
-
             else{
                 const hash=bcrypt.hashSync(req.body.rpassword,10)
-            
                 pool.query(k, [req.body.rnev,hash],
                     function(error, results){
                         if(!error){
                             return res.send({ message: "Sikeres regisztráció" })
                         }else{
                             return res.send({ message: error })
-                        }})
-                    
-            }
+                        }}
+            )}
                 
         })
     })
-    //miután hozzáadsz nem tudsz megint lekérdezni
 
 //Bejelentkezés
 app.post('/users/login', (req, res) => {
     const q ="select name from persons WHERE name=?"
     const k ="select password from persons where name=?"
-    //const hash= bcrypt.hashSync(req.body.jelszo, 10)
     pool.query(q,[req.body.fnev],
         function(error, results){         
-            //return res.status(401).send(results)
             if(results[0] && !error){
-                //return res.status(401).send(results) 
                 pool.query(k,[req.body.fnev],
                     function(error,results1){               
-                        //return res.send(results1[0].password)
                         if (!bcrypt.compareSync(req.body.jelszo,results1[0].password) && !error)
                         return res.status(401).send({ message: "Hibás jelszó!" }) 
-                        /*
-                        const token = jwt.sign(req.body.fnev, process.env.TOKEN_SECRET, { expiresIn: 3600 })
+                        const token = jwt.sign({id:req.body.fnev}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
+                        //nem lehet beállitani a payload ot ha a fnev string , objektummá kell alakitani!!!
                         res.json({ token: token, message: "Sikeres bejelentkezés." })
-                         */
-                        return res.send("bejelentkezve") //ez nem kell majd
                     })
             }else{
                 return res.status(401).send({ message: "Nincs ilyen nevű felhasználó!" })
-                //res.send(error);
-            }
-       })}   
-    )
+           }
+       })
+    })
