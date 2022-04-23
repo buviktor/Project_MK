@@ -18,10 +18,7 @@ CREATE TABLE registers (
     amount int NOT NULL,
 	dates DATE NOT NULL,
 	categoriesID int,
-    PRIMARY KEY (ID)
+    PRIMARY KEY (ID),
+	FOREIGN KEY (`personsID`) REFERENCES `persons`(`ID`),
+	FOREIGN KEY (`categoriesID`) REFERENCES `categories`(`ID`)
 	);
-	
-ALTER TABLE `registers` ADD FOREIGN KEY (`personsID`) REFERENCES `persons`(`ID`);
-
-ALTER TABLE `registers` ADD FOREIGN KEY (`categoriesID`) REFERENCES `categories`(`ID`);
-
