@@ -17,6 +17,35 @@ var pool=mysql.createPool({
     password:process.env.PASSWORD,
     database:process.env.DATABASE
 });
+
+
+//regisztráció
+app.post('/SignUp', (req,res)=>{
+    const q ="select name from persons WHERE name=?"
+    const k ="insert into persons(name,password) values(?,?)"
+    pool.query(q,[req.body.rnev],
+        function(error,results){
+           
+            if(results[0] || error)
+            return res.status(400).send({message: "Van már ilyen nevű felhasználó!!"})
+
+            else{
+                const hash=bcrypt.hashSync(req.body.rpassword,10)
+            
+                pool.query(k, [req.body.rnev,hash],
+                    function(error, results){
+                        if(!error){
+                            return res.send({ message: "Sikeres regisztráció" })
+                        }else{
+                            return res.send({ message: error })
+                        }})
+                    
+            }
+                
+        })
+    })
+    //miután hozzáadsz nem tudsz megint lekérdezni
+
 //Bejelentkezés
 app.post('/users/login', (req, res) => {
     const q ="select name from persons WHERE name=?"
