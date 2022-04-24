@@ -1,7 +1,7 @@
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
     let ok = false
-    const url = 'http://localhost:5000/index';
+    const url = 'http://localhost:5000/user/login';
     fetch(url, {
         method: 'POST',
         headers: {
@@ -9,16 +9,17 @@ document.getElementById("gomb1").onclick = function (e) {
         },
         body: JSON.stringify({
             "fnev": document.getElementById("fnev").value,
-            "jelszo": document.getElementById("jelszo").value
+            "fjelszo": document.getElementById("fjelszo").value
         })
     })
         .then((response) => {
             ok = response.ok
             return response.json()    
         })
-        .then((response) => {
+        .then((json) => {
             sessionStorage.token = json.token
-            if (ok) document.location = "login" //Ez lesz az az oldal amin majd megjelennek a kimutatások.
+            document.getElementById("uzenet").innerHTML = json.message
+            if (ok) document.location = "login"  //Ez lesz az az oldal amin majd megjelennek a kimutatások.
         })
         .catch(err =>console.log(err));
 }
