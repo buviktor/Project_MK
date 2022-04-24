@@ -19,17 +19,17 @@ var pool=mysql.createPool({
 });
 
 
-//regisztráció--->rnev && rjelszo
+//regisztráció---.fnev && fjelszo
 app.post('/SignUp', (req,res)=>{
     const q ="select name from persons WHERE name=?"
     const k ="insert into persons(name,password) values(?,?)"
-    pool.query(q,[req.body.rnev],
+    pool.query(q,[req.body.fnev],
         function(error,results){
             if(results[0] || error)
             return res.status(400).send({message: "Van már ilyen nevű felhasználó!!"})
             else{
-                const hash=bcrypt.hashSync(req.body.rjelszo,10)
-                pool.query(k, [req.body.rnev,hash],
+                const hash=bcrypt.hashSync(req.body.fjelszo,10)
+                pool.query(k, [req.body.fnev,hash],
                     function(error){
                         if(!error){
                             return res.send({ message: "Sikeres regisztráció" })
@@ -42,7 +42,7 @@ app.post('/SignUp', (req,res)=>{
     })
 
 //Bejelentkezés--->fnev && fjelszo
-app.post('/users/login', (req, res) => {
+app.post('/user/login', (req, res) => {
     const q ="select name from persons WHERE name=?"
     const k ="select password, ID from persons where name=?"
     pool.query(q,[req.body.fnev],
@@ -54,7 +54,7 @@ app.post('/users/login', (req, res) => {
                         return res.status(401).send({ message: "Hibás jelszó!" }) 
                         const token = jwt.sign({username:req.body.fnev, password:results1[0].password,id:results1[0].ID}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
                         //nem lehet beállitani a payload ot ha a fnev string , objektummá kell alakitani!!!
-                        res.json({ token: token, message: "Sikeres bejelentkezés."})
+                        return res.json({ token: token, message: "Sikeres bejelentkezés."})
                     })
             }else{
                 return res.status(401).send({ message: "Nincs ilyen nevű felhasználó!" })
