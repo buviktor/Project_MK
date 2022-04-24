@@ -1,7 +1,10 @@
-body {
-    height: 100%;
+html {
+    height: 100vh;
 }
 
+header {
+    height: 170px;
+}
 a {
     text-decoration: none;
 }

@@ -23,3 +23,4 @@ document.getElementById("gomb1").onclick = function (e) {
         })
         .catch(err =>console.log(err));
 }
+
