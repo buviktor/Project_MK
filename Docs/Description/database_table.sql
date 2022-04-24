@@ -2,11 +2,11 @@ CREATE TABLE persons (
     ID int NOT NULL AUTO_INCREMENT,
     name  varchar(50) NOT NULL,
 	password text NOT NULL,
-	email text NOT NULL,
-	postcode int(4) NOT NULL,
-	country varchar(30) NOT NULL,
-	county varchar(30) NOT NULL,
-	city varchar(30) NOT NULL,
+	email text,
+	postcode int(4),
+	country varchar(30),
+	county varchar(30),
+	city varchar(30),
 	active boolean DEFAULT true,
     PRIMARY KEY (ID)
 	);
