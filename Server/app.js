@@ -76,10 +76,21 @@ function authenticateToken(req, res, next) {
     })
 }
 
+//új poszt hozzáadása
+app.post('/Post/New', authenticateToken,(req,res)=>{
+    const q ="Insert into registers (registers.personsID, registers.amount, registers.dates, registers.categoriesID) values (?, ?, ?, ?); "
+    pool.query(q,[req.user.id, req.body.amount, req.body.dates, req.body.categoriesID],
+        function(error){
+            if(!error)
+               return res.send("Sikeres hozzáadás")
+            else
+            return res.send(error)
+        })
+})
+
 //felhasználó posztjainak listázása(védett)
 app.get('/Users/AllPost', authenticateToken, (req, res) => {
-    const q = "select registers.denomination, registers.amount, registers.personsID,registers.dates, categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? and persons.password=?"
-
+    const q = "select registers.amount, registers.personsID,registers.dates, categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? and persons.password=?"
     pool.query(q,[req.user.username,req.user.password],
         function(error, results){
             if(!error)
