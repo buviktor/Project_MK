@@ -18,6 +18,7 @@ var pool=mysql.createPool({
     database:process.env.DATABASE
 });
 
+const Adminfiok=process.env.ADMIN
 
 //regisztráció---.fnev && fjelszo
 app.post('/SignUp', (req,res)=>{
@@ -32,9 +33,9 @@ app.post('/SignUp', (req,res)=>{
                 pool.query(k, [req.body.fnev,hash],
                     function(error){
                         if(!error){
-                            return res.send({ message: "Sikeres regisztráció" })
+                            return res.status(201).send({ message: "Sikeres regisztráció" })
                         }else{
-                            return res.send({ message: error })
+                            return res.status(500).send({ message: error })
                         }}
             )}
                 
@@ -49,15 +50,17 @@ app.post('/user/login', (req, res) => {
         function(error, results){         
             if(results[0] && !error){
                 pool.query(k,[req.body.fnev],
-                    function(error,results1){               
+                    function(error,results1){  
+                        if (error)
+                            return res.status(500).send({message: error})            
                         if (!bcrypt.compareSync(req.body.fjelszo,results1[0].password) && !error)
-                        return res.status(401).send({ message: "Hibás jelszó!" }) 
+                            return res.status(400).send({ message: "Hibás jelszó!" }) 
                         const token = jwt.sign({username:req.body.fnev, password:results1[0].password,id:results1[0].ID}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
                         //nem lehet beállitani a payload ot ha a fnev string , objektummá kell alakitani!!!
-                        return res.json({ token: token, message: "Sikeres bejelentkezés."})
+                        return res.status(200).json({ token: token, message: "Sikeres bejelentkezés."})
                     })
             }else{
-                return res.status(401).send({ message: "Nincs ilyen nevű felhasználó!" })
+                return res.status(400).send({ message: "Nincs ilyen nevű felhasználó!" })
            }
        })
     })
@@ -67,7 +70,7 @@ function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
     if (!token) 
-    return res.status(401).send({message: "Azonosítás szükséges!"})
+    return res.status(204).send({message: "Azonosítás szükséges!"})
     jwt.verify(token, process.env.TOKEN_SECRET, (err, user) => {
         if (err) 
         return res.status(403).send({message: "Nincs jogosultsága!"})
@@ -82,9 +85,9 @@ app.post('/Post/New', authenticateToken,(req,res)=>{
     pool.query(q,[req.user.id, req.body.amount, req.body.dates, req.body.categoriesID],
         function(error){
             if(!error)
-               return res.send("Sikeres hozzáadás")
+               return res.status(201).send({message: "Sikeres hozzáadás"})
             else
-            return res.send(error)
+            return res.status(500).send({message: error})
         })
 })
 
@@ -94,9 +97,9 @@ app.get('/Users/AllPost', authenticateToken, (req, res) => {
     pool.query(q,[req.user.username,req.user.password],
         function(error, results){
             if(!error)
-               return res.send(results)
+               return res.status(200).send(results)
             else
-            return res.send(error)
+            return res.status(500).send({message: error})
     
 })
 })
@@ -105,11 +108,24 @@ app.get('/Users/AllPost', authenticateToken, (req, res) => {
 app.post('/User/Delete', authenticateToken,(req,res)=>{
     const q ="delete from persons where persons.ID=?"
     const kesz=false
-    pool.query(q,[req.user.id],
+    pool.query(q,[req.body.fiok],
         function(error){
             if(!error && kesz!=true)
                 return res.status(200).send({message:"Felhasználó sikeresen törölve"})
             else
-            return res.send(error)
+            return res.status(500).send({message:error})
         })
 })
+
+
+
+
+/*
+hibakodok
+200 -ok
+201 -létrehozva
+204 -feldolgozva, de üres/nincs visszaadott érték
+400 -ügyfél hiba
+403 -server megértette de megtagatta a kérést(nincs jogosultság)
+500 -szerver hiba 
+*/

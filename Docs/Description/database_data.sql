@@ -1,34 +1,29 @@
 Insert into persons (ID, name, password, email, postcode, country, county, city, active) values 
-    (1, 'teszt1', 'teszt1', 'teszt1@valami.hu', 4032, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', true),
-    (2, 'teszt2', 'teszt2', 'teszt2@valami.hu', 1182, 'Magyarország', 'Pest', 'Budapest', true);
+    (1, 'Személy1', '$2b$10$9jINSWgzHPQPndkJ/9wqiuzfz/lsIERnrxEcQANUxTtvCLjeuhDIK', 'személy1@valami.hu', 4032, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', true),
+    (2, 'Személy2', '$2b$10$Nx8udleGnXa8U.MD58mTpu8A4StdV9n6RaDZEcgrJjEbxiX7N2xxS', 'személy2@valami.hu', 1182, 'Magyarország', 'Pest', 'Budapest', true),
+    (3, 'Személy3', '$2b$10$x5.fptzczJiIPwG3Xkf53.QFrt9kYJdSGiWNuA/TwTWalLm4QjzWG', 'személy3@valami.hu', 1182, 'Magyarország', 'Vas', 'Szombathely', true);
 	
 Insert into categories(ID, denomination) values
-    (1, 'élelmiszer'),
-    (2, 'alkohol'),
-    (3, 'ruházat'),
-    (4, 'tárgy'),
-    (5, 'szolgáltatás'),
-    (6, 'édesség/nassolnivaló'),
-	(7, 'egyéb');
+    (1, 'Élelmiszer'),
+    (2, 'Alkohol'),
+    (3, 'Fizetés'),
+    (4, 'Lakásfelújítás'),
+    (5, 'Számítógép kiegészítő'),
+    (6, 'Munkahelyi bónusz'),
+	(7, 'Túrázás'),
+    (8, 'Vizi park'),
+    (9, 'Peti tartozás');
 	
 Insert into registers (ID, personsID, amount, dates, categoriesID) values 
-    (1, 1, 100000, '2018-01-01', NULL),
-    (2, 1, -250, '2018-01-03', 6),
-    (3, 1, -5000, '2018-01-04', 1),
-    (4, 1, -15432, '2018-01-07', 3),
-    (5, 1, -657, '2018-01-14', 2),
-    (6, 1, -988, '2018-01-18', 5),
-    (7, 1, 155000, '2018-01-20', NULL),
-    (8, 1, -324, '2018-02-02', 1),
-    (9, 1, -3200, '2018-02-09', 1),
-    (10, 1, -320, '2018-02-16', 2),
-    (11, 2, 200000, '2018-01-02', NULL),
-    (12, 2, -65000, '2018-01-03', 4),
-    (13, 2, -980, '2018-01-05', 1),
-    (14, 2, -7845, '2018-01-09', 3),
-    (15, 2, -450, '2018-01-15', 6),
-    (16, 2, -555, '2018-01-27', 7),
-    (17, 2, 35000, '2018-02-02', NULL),
-    (18, 2, -10345, '2018-02-08', 5),
-    (19, 2, -670, '2018-02-13', 1),
-    (20, 2, -871, '2018-02-19', 7);
+    (1, 1, -1000, '2018-01-01', 1),
+    (2, 1, -5000, '2018-01-03', 2),
+    (3, 1,  500000, '2018-01-04', 3),
+    (4, 1,  -2000, '2018-01-01', 1),
+    (5, 1,  -3000, '2018-01-02', 1),
+    (6, 2, -30000,'2018-01-07', 4),
+    (7, 2, -25000, '2018-01-07', 5),
+    (8, 2,  30000, '2018-01-07', 6),
+    (9, 3, -15000, '2018-01-07', 7),
+    (10, 3, -30000, '2018-01-07', 8),
+    (11, 3,  2000, '2018-01-07', 9);
+  
