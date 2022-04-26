@@ -100,3 +100,16 @@ app.get('/Users/AllPost', authenticateToken, (req, res) => {
     
 })
 })
+
+//felhasználó törlése
+app.post('/User/Delete', authenticateToken,(req,res)=>{
+    const q ="delete from persons where persons.ID=?"
+    const kesz=false
+    pool.query(q,[req.user.id],
+        function(error){
+            if(!error && kesz!=true)
+                return res.status(200).send({message:"Felhasználó sikeresen törölve"})
+            else
+            return res.send(error)
+        })
+})
