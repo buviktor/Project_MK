@@ -2,16 +2,29 @@ html {
     height: 100vh;
 }
 
-header {
-    height: 170px;
+.re {
+    position: relative;
 }
+
+.fej {
+    background-image: url(pictures/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    position: relative;
+}
+ .vissza {
+    right: 20px;
+    bottom: 10px;
+    position: absolute;
+ }
 a {
     text-decoration: none;
 }
-footer {
+
+.footer {
     position: fixed;
-    padding: 5px 10px 0 10px;
     bottom: 0;
     height: 40px;
-    width: 100%;
+    
 }
