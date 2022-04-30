@@ -145,11 +145,11 @@ app.get('/Categories',(req,res)=>{
 
 //felhasználó törlése
 app.post('/User/Delete', authenticateToken,(req,res)=>{
-    const q ="delete from persons where persons.ID=?"
-    const kesz=false
+    const q ="delete from persons where persons.name=?"
+    if(req.user.username==AdminNev && req.user.password==AdminJelszo)
     pool.query(q,[req.body.fiok],
         function(error){
-            if(!error && kesz!=true)
+            if(!error)
                 return res.status(200).send({message:"Felhasználó sikeresen törölve"})
             else
             return res.status(500).send({message:error})
