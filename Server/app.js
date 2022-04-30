@@ -73,6 +73,43 @@ function authenticateToken(req, res, next) {
     })
 }
 
+
+//felhasználó posztjainak listázása(védett)
+app.get('/Users/AllPost', authenticateToken, (req, res) => {
+    var q = String("select registers.amount,date_format(registers.dates,'%Y-%m-%d') as date,categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? and persons.password=? ")
+    const osszeg=String(" and registers.amount='"+req.body.osszeg+"' ")
+    const kategoria=String(" and categories.denomination='"+req.body.kategoria+"'")
+//date_format(registers.dates,'%Y-%M-%d') - hónap neveinek kiirása
+        if(req.body.year!=00){
+            if(req.body.month!=00){
+                if(req.body.day!=00)
+                    var date1=String(req.body.year+"-"+req.body.month+"-"+req.body.day)
+                else
+                    var date1=String(req.body.year+"-"+req.body.month+"-__%")
+                }
+            else
+                var date1=String(req.body.year+"-__%-__%")
+        }
+    const datum=String("and registers.dates like '"+date1+"'")
+
+    if(req.body.year!=00)
+    q+=datum
+    if(req.body.osszeg!=00)
+        q+=osszeg
+    if(req.body.kategoria!=00)
+        q+=kategoria
+    pool.query(q,[req.user.username,req.user.password],
+        function(error, results){
+            if(!error)
+            return res.status(200).send(results)
+            else
+            return res.status(500).send({message: error})
+                                        
+    })
+    })
+
+
+
 //új poszt hozzáadása
 app.post('/Post/New', authenticateToken,(req,res)=>{
     const q ="Insert into registers (registers.personsID, registers.amount, registers.dates, registers.categoriesID) values (?, ?, ?, ?); "
@@ -85,18 +122,6 @@ app.post('/Post/New', authenticateToken,(req,res)=>{
         })
 })
 
-//felhasználó posztjainak listázása(védett)
-app.get('/Users/AllPost', authenticateToken, (req, res) => {
-    const q = "select registers.amount, registers.personsID,registers.dates, categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? and persons.password=?"
-    pool.query(q,[req.user.username,req.user.password],
-        function(error, results){
-            if(!error)
-               return res.status(200).send(results)
-            else
-            return res.status(500).send({message: error})
-    
-})
-})
 
 //felhasználó törlése
 app.post('/User/Delete', authenticateToken,(req,res)=>{
@@ -110,9 +135,6 @@ app.post('/User/Delete', authenticateToken,(req,res)=>{
             return res.status(500).send({message:error})
         })
 })
-
-
-
 
 /*
 hibakodok
