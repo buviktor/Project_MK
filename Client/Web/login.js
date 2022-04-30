@@ -33,3 +33,5 @@ function Allpost(e) {
     )
         .catch(err => console.log(err));
 }
+
+Allpost();
