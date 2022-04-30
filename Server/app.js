@@ -25,14 +25,14 @@ const AdminJelszo=process.env.ADMINPASSWORD
 //regisztráció---.fnev && fjelszo
 app.post('/SignUp', (req,res)=>{
     const q ="select name from persons WHERE name=?"
-    const k ="insert into persons(name,password) values(?,?)"
+    const k ="insert into persons(name,password,email,postcode,country,county,city) values(?,?,?,?,?,?,?)"
     pool.query(q,[req.body.fnev],
         function(error,results){
             if(results[0] || error || AdminNev==req.body.fnev)
             return res.status(400).send({message: "Van már ilyen nevű felhasználó!!"})
             else{
                 const hash=bcrypt.hashSync(req.body.fjelszo,10)
-                pool.query(k, [req.body.fnev,hash],
+                pool.query(k, [req.body.fnev,hash,req.body.email,req.body.postcode,req.body.country,req.body.county, req.body.city],
                     function(error){
                         if(!error){
                             return res.status(201).send({ message: "Sikeres regisztráció"})
