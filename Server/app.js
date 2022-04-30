@@ -7,6 +7,7 @@ const cors = require("cors");
 app.use(cors())
 const bcrypt = require("bcrypt");
 const mysql= require('mysql');
+const { json } = require('express');
 
 app.listen(5000,()=>console.log("Szerver elinditva az 5000-es porton"));
 
@@ -18,7 +19,8 @@ var pool=mysql.createPool({
     database:process.env.DATABASE
 });
 
-const Adminfiok=process.env.ADMIN
+const AdminNev=process.env.ADMINNAME
+const AdminJelszo=process.env.ADMINPASSWORD
 
 //regisztráció---.fnev && fjelszo
 app.post('/SignUp', (req,res)=>{
@@ -26,14 +28,14 @@ app.post('/SignUp', (req,res)=>{
     const k ="insert into persons(name,password) values(?,?)"
     pool.query(q,[req.body.fnev],
         function(error,results){
-            if(results[0] || error)
+            if(results[0] || error || AdminNev==req.body.fnev)
             return res.status(400).send({message: "Van már ilyen nevű felhasználó!!"})
             else{
                 const hash=bcrypt.hashSync(req.body.fjelszo,10)
                 pool.query(k, [req.body.fnev,hash],
                     function(error){
                         if(!error){
-                            return res.status(201).send({ message: "Sikeres regisztráció" })
+                            return res.status(201).send({ message: "Sikeres regisztráció"})
                         }else{
                             return res.status(500).send({ message: error })
                         }}
@@ -47,19 +49,24 @@ app.post('/SignUp', (req,res)=>{
         var token=""
         pool.query(q,[req.body.fnev],
         function(error,results){
-            
             if(results[0] && !error){
-               if(bcrypt.compareSync(req.body.fjelszo,results[0].password) && !error){
-                    token = jwt.sign({username:req.body.fnev, password:results[0].password,id:results[0].ID}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
-                    return res.status(200).json({ token: token, message: "Sikeres bejelentkezés."})}
-                else
-                    return res.status(400).send({ message: "Hibás jelszó!" }) }
+               if(bcrypt.compareSync(req.body.fjelszo,results[0].password)){
+                       token = jwt.sign({username:req.body.fnev, password:results[0].password,id:results[0].ID}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
+                       return res.status(200).json({ token: token, message: "Sikeres bejelentkezés."})}       
+                else       
+                      return res.status(400).send({ message: "Hibás jelszó!" })}        
             else
+                if(req.body.fnev==AdminNev){
+                    if(bcrypt.compareSync(req.body.fjelszo,AdminJelszo)){
+                        token = jwt.sign({username:AdminNev, password:AdminJelszo}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
+                        return res.status(200).json({ token: token, message: "Sikeres bejelentkezés."})}   
+                    else
+                        return res.status(400).send({ message: "Hibás jelszó!" }) }
                 return res.status(400).send({ message: "Hibás felhasználónév!" }) 
-        })
-    })
-
-//token ellenörzése
+                })
+            })
+                
+                //token ellenörzése
 function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
