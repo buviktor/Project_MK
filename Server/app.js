@@ -43,7 +43,7 @@ app.post('/SignUp', (req,res)=>{
     })
     //Bejelentkezés--->fnev && fjelszo
     app.post('/user/login', (req, res) => {
-        const q ="select name,password from persons WHERE name=?"
+        const q ="select name,password,ID from persons WHERE name=?"
         var token=""
         pool.query(q,[req.body.fnev],
         function(error,results){
@@ -79,7 +79,7 @@ app.get('/Users/AllPost', authenticateToken, (req, res) => {
     var q = String("select registers.amount,date_format(registers.dates,'%Y-%m-%d') as date,categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? and persons.password=? ")
     const osszeg=String(" and registers.amount='"+req.body.osszeg+"' ")
     const kategoria=String(" and categories.denomination='"+req.body.kategoria+"'")
-//date_format(registers.dates,'%Y-%M-%d') - hónap neveinek kiirása
+//date_format(registers.dates,'%Y-%M-%d') - hónapok neveinek kiirása
         if(req.body.year!=00){
             if(req.body.month!=00){
                 if(req.body.day!=00)
@@ -110,7 +110,7 @@ app.get('/Users/AllPost', authenticateToken, (req, res) => {
 
 
 
-//új poszt hozzáadása
+//új poszt hozzáadása meglévó kategoriához 
 app.post('/Post/New', authenticateToken,(req,res)=>{
     const q ="Insert into registers (registers.personsID, registers.amount, registers.dates, registers.categoriesID) values (?, ?, ?, ?); "
     pool.query(q,[req.user.id, req.body.amount, req.body.dates, req.body.categoriesID],
@@ -118,9 +118,10 @@ app.post('/Post/New', authenticateToken,(req,res)=>{
             if(!error)
                return res.status(201).send({message: "Sikeres hozzáadás"})
             else
-            return res.status(500).send({message: error})
+            return res.status(500).send({message: "Hozzáadás sikertelen"})
         })
 })
+
 
 
 //felhasználó törlése
