@@ -41,28 +41,22 @@ app.post('/SignUp', (req,res)=>{
                 
         })
     })
-
-//Bejelentkezés--->fnev && fjelszo
-app.post('/user/login', (req, res) => {
-    const q ="select name from persons WHERE name=?"
-    const k ="select password, ID from persons where name=?"
-    pool.query(q,[req.body.fnev],
-        function(error, results){         
+    //Bejelentkezés--->fnev && fjelszo
+    app.post('/user/login', (req, res) => {
+        const q ="select name,password from persons WHERE name=?"
+        var token=""
+        pool.query(q,[req.body.fnev],
+        function(error,results){
+            
             if(results[0] && !error){
-                pool.query(k,[req.body.fnev],
-                    function(error,results1){  
-                        if (error)
-                            return res.status(500).send({message: error})            
-                        if (!bcrypt.compareSync(req.body.fjelszo,results1[0].password) && !error)
-                            return res.status(400).send({ message: "Hibás jelszó!" }) 
-                        const token = jwt.sign({username:req.body.fnev, password:results1[0].password,id:results1[0].ID}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
-                        //nem lehet beállitani a payload ot ha a fnev string , objektummá kell alakitani!!!
-                        return res.status(200).json({ token: token, message: "Sikeres bejelentkezés."})
-                    })
-            }else{
-                return res.status(400).send({ message: "Nincs ilyen nevű felhasználó!" })
-           }
-       })
+               if(bcrypt.compareSync(req.body.fjelszo,results[0].password) && !error){
+                    token = jwt.sign({username:req.body.fnev, password:results[0].password,id:results[0].ID}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
+                    return res.status(200).json({ token: token, message: "Sikeres bejelentkezés."})}
+                else
+                    return res.status(400).send({ message: "Hibás jelszó!" }) }
+            else
+                return res.status(400).send({ message: "Hibás felhasználónév!" }) 
+        })
     })
 
 //token ellenörzése
