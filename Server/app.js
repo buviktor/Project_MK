@@ -122,6 +122,18 @@ app.post('/Post/New', authenticateToken,(req,res)=>{
         })
 })
 
+//Minden kategoria kiirása
+app.get('/Categories',(req,res)=>{
+    const q="select * from categories;"
+    pool.query(q,function(error,results){
+        if(!error && results[0])
+            return res.status(200).send(results)
+        else
+            return res.status(400).send({error})
+    })
+})
+
+
 
 
 //felhasználó törlése
