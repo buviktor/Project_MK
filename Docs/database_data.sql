@@ -11,7 +11,7 @@ Insert into categories(ID, denomination) values
     (5, 'Számlák'),
     (6, 'Egyéb');
 	
-Insert into registers (ID, personsID, amount, dates, categoriesID) values 
+Insert into registers (ID, personsID, amount, regAt, categoriesID) values 
     (1, 1, -1000, '2018-01-01', 1),
     (2, 1, -5000, '2018-01-03', 2),
     (3, 1,  500000, '2018-01-04', 3),

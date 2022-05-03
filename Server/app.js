@@ -81,9 +81,9 @@ function authenticateToken(req, res, next) {
 }
 
 
-//felhasználó posztjainak listázása(védett)
-app.get('/Users/AllPost', authenticateToken, (req, res) => {
-    var q = String("select registers.amount,date_format(registers.dates,'%Y-%m-%d') as date,categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? and persons.password=? ")
+//felhasználó posztjainak egyéni kilistázása (védett)
+app.post('/Users/AllPost', authenticateToken, (req, res) => {
+    var q = String("select registers.amount,date_format(registers.regAt,'%Y-%m-%d') as date,categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? ")
     const osszeg=String(" and registers.amount='"+req.body.osszeg+"' ")
     const kategoria=String(" and categories.denomination='"+req.body.kategoria+"'")
 //date_format(registers.dates,'%Y-%M-%d') - hónapok neveinek kiirása
@@ -97,7 +97,7 @@ app.get('/Users/AllPost', authenticateToken, (req, res) => {
             else
                 var date1=String(req.body.year+"-__%-__%")
         }
-    const datum=String("and registers.dates like '"+date1+"'")
+    const datum=String("and registers.regAt like '"+date1+"'")
 
     if(req.body.year!=00)
     q+=datum
@@ -105,7 +105,7 @@ app.get('/Users/AllPost', authenticateToken, (req, res) => {
         q+=osszeg
     if(req.body.kategoria!=00)
         q+=kategoria
-    pool.query(q,[req.user.username,req.user.password],
+    pool.query(q,[req.user.username],
         function(error, results){
             if(!error)
             return res.status(200).send(results)
@@ -116,10 +116,23 @@ app.get('/Users/AllPost', authenticateToken, (req, res) => {
     })
 
 
+//felhasználó összes posztjának listázása(védett)
+app.get('/Users/AllPost', authenticateToken, (req, res) => {
+    var q ="Select registers.amount,categories.denomination,date_format(registers.regAt,'%Y-%m-%d') as date from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=?"
+    pool.query(q,[req.user.username],
+        function(error, results){
+            if(!error)
+            return res.status(200).send(results)
+            else
+            return res.status(500).send({message: error})
+                                        
+    })
+})
+
 
 //új poszt hozzáadása meglévó kategoriához 
 app.post('/Post/New', authenticateToken,(req,res)=>{
-    const q ="Insert into registers (registers.personsID, registers.amount, registers.dates, registers.categoriesID) values (?, ?, ?, ?); "
+    const q ="Insert into registers (registers.personsID, registers.amount, registers.regAt, registers.categoriesID) values (?, ?, ?, ?); "
     pool.query(q,[req.user.id, req.body.amount, req.body.dates, req.body.categoriesID],
         function(error){
             if(!error)
@@ -141,10 +154,8 @@ app.get('/Categories',(req,res)=>{
 })
 
 
-
-
 //felhasználó törlése
-app.post('/User/Delete', authenticateToken,(req,res)=>{
+app.post('/Admin/Delete', authenticateToken,(req,res)=>{
     const q ="delete from persons where persons.name=?"
     if(req.user.username==AdminNev && req.user.password==AdminJelszo)
     pool.query(q,[req.body.fiok],
