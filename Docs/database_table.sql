@@ -7,7 +7,7 @@ CREATE TABLE persons (
 	country varchar(30),
 	county varchar(30),
 	city varchar(30),
-	active boolean DEFAULT true,
+	active DATE NOT NULL,
     PRIMARY KEY (ID)
 	);
 
@@ -21,7 +21,7 @@ CREATE TABLE registers (
     ID int NOT NULL AUTO_INCREMENT,
     personsID int NOT NULL,
     amount int NOT NULL,
-	dates DATE NOT NULL,
+	regAt DATE NOT NULL,
 	categoriesID int,
     PRIMARY KEY (ID),
 	FOREIGN KEY (`personsID`) REFERENCES `persons`(`ID`) ON DELETE CASCADE,

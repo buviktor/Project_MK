@@ -1,18 +1,15 @@
 Insert into persons (ID, name, password, email, postcode, country, county, city, active) values 
-    (1, 'Személy1', '$2b$10$9jINSWgzHPQPndkJ/9wqiuzfz/lsIERnrxEcQANUxTtvCLjeuhDIK', 'személy1@valami.hu', 4032, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', true),
-    (2, 'Személy2', '$2b$10$Nx8udleGnXa8U.MD58mTpu8A4StdV9n6RaDZEcgrJjEbxiX7N2xxS', 'személy2@valami.hu', 1182, 'Magyarország', 'Pest', 'Budapest', true),
-    (3, 'Személy3', '$2b$10$x5.fptzczJiIPwG3Xkf53.QFrt9kYJdSGiWNuA/TwTWalLm4QjzWG', 'személy3@valami.hu', 1182, 'Magyarország', 'Vas', 'Szombathely', true);
+    (1, 'Személy1', '$2b$10$9jINSWgzHPQPndkJ/9wqiuzfz/lsIERnrxEcQANUxTtvCLjeuhDIK', 'személy1@valami.hu', 4032, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', "2022-05-01"),
+    (2, 'Személy2', '$2b$10$Nx8udleGnXa8U.MD58mTpu8A4StdV9n6RaDZEcgrJjEbxiX7N2xxS', 'személy2@valami.hu', 1182, 'Magyarország', 'Pest', 'Budapest',"2020-09-12"),
+    (3, 'Személy3', '$2b$10$x5.fptzczJiIPwG3Xkf53.QFrt9kYJdSGiWNuA/TwTWalLm4QjzWG', 'személy3@valami.hu', 1182, 'Magyarország', 'Vas', 'Szombathely', "2014-03-05");
 	
 Insert into categories(ID, denomination) values
     (1, 'Élelmiszer'),
-    (2, 'Alkohol'),
+    (2, 'Ruházat'),
     (3, 'Fizetés'),
-    (4, 'Lakásfelújítás'),
-    (5, 'Számítógép kiegészítő'),
-    (6, 'Munkahelyi bónusz'),
-	(7, 'Túrázás'),
-    (8, 'Vizi park'),
-    (9, 'Peti tartozás');
+    (4, 'Szabadidő'),
+    (5, 'Számlák'),
+    (6, 'Egyéb');
 	
 Insert into registers (ID, personsID, amount, dates, categoriesID) values 
     (1, 1, -1000, '2018-01-01', 1),
@@ -23,7 +20,7 @@ Insert into registers (ID, personsID, amount, dates, categoriesID) values
     (6, 2, -30000,'2018-01-07', 4),
     (7, 2, -25000, '2018-01-07', 5),
     (8, 2,  30000, '2018-01-07', 6),
-    (9, 3, -15000, '2018-01-07', 7),
-    (10, 3, -30000, '2018-01-07', 8),
-    (11, 3,  2000, '2018-01-07', 9);
+    (9, 3, -15000, '2018-01-07', 1),
+    (10, 3, -30000, '2018-01-07', 2),
+    (11, 3,  2000, '2018-01-07', 3);
   
