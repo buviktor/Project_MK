@@ -245,6 +245,16 @@ app.get('/Setting', authenticateToken , (req,res)=>{
         })
 })
 
+app.put('/Setting/Update', authenticateToken, (req,res)=>{
+    const q ="update persons set persons.email=?, persons.postcode=?, persons.country=?, persons.county=?, persons.city=? where persons.ID=?;"
+    pool.query(q,[req.body.email, req.body.postcode, req.body.country, req.body.county, req.body.city, req.user.id],
+        function(error){
+            if(!error)
+                return res.status(200).send({message: "Modositás sikeres"})
+            else
+                return res.status(500).send({message:error}) 
+        })
+})
 
 /*
 hibakodok
