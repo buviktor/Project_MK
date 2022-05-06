@@ -89,7 +89,7 @@ function authenticateToken(req, res, next) {
 
 //felhasználó posztjainak egyéni kilistázása (védett)
 app.post('/Users/AllPost', authenticateToken, (req, res) => {
-    var q = String("select registers.amount,date_format(registers.regAt,'%Y-%m-%d') as date,categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? ")
+    var q = String("select registers.ID, registers.amount,date_format(registers.regAt,'%Y-%m-%d') as date,categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? ")
     const osszeg=String(" and registers.amount='"+req.body.osszeg+"' ")
     const kategoria=String(" and categories.denomination='"+req.body.kategoria+"'")
 //date_format(registers.dates,'%Y-%M-%d') - hónapok neveinek kiirása
@@ -124,7 +124,7 @@ app.post('/Users/AllPost', authenticateToken, (req, res) => {
 
 //felhasználó összes posztjának listázása(védett)
 app.get('/Users/AllPost', authenticateToken, (req, res) => {
-    var q ="Select registers.amount,categories.denomination,date_format(registers.regAt,'%Y-%m-%d') as date from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=?"
+    var q ="Select registers.ID, registers.amount,categories.denomination,date_format(registers.regAt,'%Y-%m-%d') as date from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=?"
     pool.query(q,[req.user.username],
         function(error, results){
             if(!error)
@@ -161,7 +161,7 @@ app.get('/Categories',(req,res)=>{
 
 
 //felhasználó törlése
-app.post('/Admin/Delete', authenticateToken,(req,res)=>{
+app.post('/Delete', authenticateToken,(req,res)=>{
     const q ="delete from persons where persons.name=?"
     pool.query(q,[req.body.fiok],
         function(error){
@@ -187,7 +187,30 @@ app.get('/Admin/Users', authenticateToken,(req,res)=>{
 })
 //datediff(CURDATE(), active) as passiv
 
+//egy poszt megjelenitése modositáshoz
+app.post('/SetData',authenticateToken, (req,res)=>{
+    const q="select registers.amount, date_format(registers.regAt,'%Y-%m-%d') as date, registers.categoriesID from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where name=? and registers.ID = ?"
+     
+    pool.query(q,[req.user.username, req.body.id ], function(error,results){
+        if(!error)
+                return res.status(200).send(results)
+        else
+            return res.status(500).send({message:error})
+    })
+})
 
+//adatok modositása(poszt)
+app.put('/SetData/Update', authenticateToken, (req,res)=>{
+    const q = "update registers set registers.regAt=?, registers.amount=? where registers.ID=?;"
+    pool.query(q, [req.body.regAt , req.body.amount, req.body.id],
+        function(error, results){
+            if(!error)
+                return res.status(200).send({message: "Modositás sikeres"})
+            else
+                return res.status(500).send({message:error})
+        
+        })
+})
 
 /*
 hibakodok
