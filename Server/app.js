@@ -233,6 +233,18 @@ app.post('/Delete/Post', authenticateToken, (req,res)=>{
                 return res.status(500).send({message:error}) 
         })
 })
+//Felhasználó személyes datakok kiirása(modositáshoz)
+app.get('/Setting', authenticateToken , (req,res)=>{
+    const q = "select persons.email, persons.postcode, persons.country, persons.county, persons.city from persons where persons.ID=?;"
+    pool.query(q, [req.user.id],
+        function(error,results){
+            if(!error)
+                return res.status(200).send(results)
+            else
+                return res.status(500).send({message:error}) 
+        })
+})
+
 
 /*
 hibakodok
