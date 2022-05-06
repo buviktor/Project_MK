@@ -52,8 +52,13 @@ app.post('/SignUp', (req,res)=>{
             if(results[0] && !error){
                if(bcrypt.compareSync(req.body.fjelszo,results[0].password)){
                        token = jwt.sign({username:req.body.fnev, password:results[0].password,id:results[0].ID}, process.env.TOKEN_SECRET, { expiresIn: 3600 })
-                       return res.status(200).json({ token: token, message: "Sikeres bejelentkezés."})}       
-                else       
+                            const k ="update persons set persons.active=CURDATE() where name=?"      
+                            pool.query(k,[req.body.fnev],
+                            function(error){
+                            if(error)
+                                return res.status(400).send(error)})                          
+                            return res.status(200).json({ token: token, message: "Sikeres bejelentkezés."})}  
+                else     
                       return res.status(400).send({ message: "Hibás jelszó!" })}        
             else
                 if(req.body.fnev==AdminNev){
@@ -66,7 +71,8 @@ app.post('/SignUp', (req,res)=>{
                 })
             })
                 
-                //token ellenörzése
+
+ //token ellenörzése
 function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
@@ -157,15 +163,31 @@ app.get('/Categories',(req,res)=>{
 //felhasználó törlése
 app.post('/Admin/Delete', authenticateToken,(req,res)=>{
     const q ="delete from persons where persons.name=?"
-    if(req.user.username==AdminNev && req.user.password==AdminJelszo)
     pool.query(q,[req.body.fiok],
         function(error){
             if(!error)
                 return res.status(200).send({message:"Felhasználó sikeresen törölve"})
             else
-            return res.status(500).send({message:error})
+            return res.status(400).send({message:"Felhasználó törlése sikertelen!"})
+        })
+    
+})
+
+//Felhasználók kilistázása
+app.get('/Admin/Users', authenticateToken,(req,res)=>{
+    const q= "select name,email,postcode,country,county,city, date_format(persons.active,'%Y-%m-%d') as date from persons"
+    if(req.user.username==AdminNev && req.user.password==AdminJelszo)
+    pool.query(q,
+        function(error,results){
+            if(!error)
+                return res.status(200).send(results)
+            else
+                return res.status(500).send({message:error})
         })
 })
+//datediff(CURDATE(), active) as passiv
+
+
 
 /*
 hibakodok
