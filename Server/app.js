@@ -222,7 +222,17 @@ app.put('/SetData/Categories', authenticateToken, (req,res)=>{
                 return res.status(500).send({message:error}) 
         })
 })
-
+//poszt törlése
+app.post('/Delete/Post', authenticateToken, (req,res)=>{
+    const q= "delete from registers where registers.ID=?"
+    pool.query(q,[req.body.id],
+        function(error){
+            if(!error)
+                return res.status(200).send({message: "Eltávolitás sikeres!"})
+            else
+                return res.status(500).send({message:error}) 
+        })
+})
 
 /*
 hibakodok
