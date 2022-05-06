@@ -203,7 +203,7 @@ app.post('/SetData',authenticateToken, (req,res)=>{
 app.put('/SetData/Update', authenticateToken, (req,res)=>{
     const q = "update registers set registers.regAt=?, registers.amount=? where registers.ID=?;"
     pool.query(q, [req.body.regAt , req.body.amount, req.body.id],
-        function(error, results){
+        function(error){
             if(!error)
                 return res.status(200).send({message: "Modositás sikeres"})
             else
@@ -211,6 +211,18 @@ app.put('/SetData/Update', authenticateToken, (req,res)=>{
         
         })
 })
+//poszt kategoriájának modositása
+app.put('/SetData/Categories', authenticateToken, (req,res)=>{
+    const q= "update registers set registers.categoriesID=? where registers.ID=?;"
+    pool.query(q, [req.body.catID, req.body.id],
+        function(error){
+            if(!error)
+                return res.status(200).send({message: "Modositás sikeres"})
+            else
+                return res.status(500).send({message:error}) 
+        })
+})
+
 
 /*
 hibakodok
