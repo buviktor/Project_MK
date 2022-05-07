@@ -299,7 +299,7 @@ app.put('/Admin/Set', authenticateToken , (req,res)=>{
         })
 })
 
-//
+//Jelszó módositása
 app.put('/Update/Password', authenticateToken, (req,res)=>{
     const q="update persons set password=? where name=?"
     if(req.user.password != req.body.fjelszo){
@@ -315,7 +315,16 @@ app.put('/Update/Password', authenticateToken, (req,res)=>{
     else
     return res.status(400).send({message: "Módosítás sikertelen!"})
 })
-
+//Összes passziv felhasználó törlsése
+app.get('/Admin/Delete/Passiv' , authenticateToken , (req,res)=>{
+    const q ="delete from persons where datediff(CURDATE(), persons.active)>90;"
+    pool.query(q, function(error,results){
+        if(!error)
+                return res.status(200).send({message: "Törlés sikeres!"})
+                else
+                return res.status(500).send({message:error}) 
+    })
+})
 
 /*
 hibakodok
