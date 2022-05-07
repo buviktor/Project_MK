@@ -244,7 +244,7 @@ app.get('/Setting', authenticateToken , (req,res)=>{
                 return res.status(500).send({message:error}) 
         })
 })
-
+//személyes adatok modositása
 app.put('/Setting/Update', authenticateToken, (req,res)=>{
     const q ="update persons set persons.email=?, persons.postcode=?, persons.country=?, persons.county=?, persons.city=? where persons.ID=?;"
     pool.query(q,[req.body.email, req.body.postcode, req.body.country, req.body.county, req.body.city, req.user.id],
@@ -255,6 +255,67 @@ app.put('/Setting/Update', authenticateToken, (req,res)=>{
                 return res.status(500).send({message:error}) 
         })
 })
+//Admin statisztika
+app.get('/Admin/Login', authenticateToken , (req,res)=>{
+    const q = "select persons.country , persons.county, persons.city , persons.postcode, count(persons.postcode) as db  from persons group by city order by country, county,city, postcode;"
+    pool.query(q, function(error,results){
+        if(!error)
+        return res.status(200).send(results)
+    else
+        return res.status(500).send({message:error}) 
+    })
+})
+
+//Aktiv/passziv felhasználók kiirása
+app.get('/Admin/Active' , authenticateToken , (req,res)=>{
+    const q = "select count(name) as active from persons GROUP by datediff(CURDATE(), persons.active)>90;"
+    pool.query(q,function(error,results){
+        if(!error)
+        return res.status(200).send(results)
+    else
+        return res.status(500).send({message:error}) 
+    })
+})
+//Kategoria hozzáadása
+app.post('/Admin/Add', authenticateToken, (req,res)=>{
+    const q ="insert into categories (denomination) value (?);"
+    pool.query(q,[req.body.categori],
+    function(error,results){
+        if(!error)
+        return res.status(200).send({message: "Hozzáadás sikeres!"})
+        else
+        return res.status(500).send({message:error}) 
+    })
+})
+//Kategoria modositása
+app.put('/Admin/Set', authenticateToken , (req,res)=>{
+    const q="update categories set denomination=? where denomination=?"
+    pool.query(q,[req.body.uj, req.body.regi],
+        function(error,results){
+        if(!error)
+        return res.status(200).send({message: "Módosítás sikeres!"})
+        else
+        return res.status(500).send({message:error}) 
+        })
+})
+
+//
+app.put('/Update/Password', authenticateToken, (req,res)=>{
+    const q="update persons set password=? where name=?"
+    if(req.user.password != req.body.fjelszo){
+        const hash=bcrypt.hashSync(req.body.fjelszo,10)
+        pool.query(q,[hash, req.user.username],
+            function(error, results){
+                if(!error)
+                return res.status(200).send({message: "Módosítás sikeres!"})
+                else
+                return res.status(500).send({message:error}) 
+
+        })}
+    else
+    return res.status(400).send({message: "Módosítás sikertelen!"})
+})
+
 
 /*
 hibakodok
