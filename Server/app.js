@@ -299,21 +299,23 @@ app.put('/Admin/Set', authenticateToken , (req,res)=>{
         })
 })
 
-//Jelszó módositása
+//Jelszó módositása bcrypt.compareSync(req.body.regijelszo,req.user.password)
 app.put('/Update/Password', authenticateToken, (req,res)=>{
     const q="update persons set password=? where name=?"
-    if(req.user.password != req.body.fjelszo){
-        const hash=bcrypt.hashSync(req.body.fjelszo,10)
-        pool.query(q,[hash, req.user.username],
-            function(error, results){
-                if(!error)
-                return res.status(200).send({message: "Módosítás sikeres!"})
-                else
-                return res.status(500).send({message:error}) 
-
-        })}
+    const hash=bcrypt.hashSync(req.body.fjelszo,10)
+    if(bcrypt.compareSync(req.body.regijelszo,req.user.password)){
+        if(!bcrypt.compareSync(req.body.fjelszo,req.user.password)){ 
+            pool.query(q,[hash, req.user.username],
+                function(error, results){
+                    if(!error)
+                    return res.status(200).send({message: "Módosítás sikeres!"})
+                    else
+                    return res.status(400).send({message:error}) })
+                }else
+        return res.status(400).send({message: "Jelszó nem lehet ugyanaz!"})
+            }
     else
-    return res.status(400).send({message: "Módosítás sikertelen!"})
+        return res.status(400).send({message: "Hibás jelszó!"})     
 })
 //Összes passziv felhasználó törlsése
 app.get('/Admin/Delete/Passiv' , authenticateToken , (req,res)=>{
