@@ -1,7 +1,7 @@
 Insert into persons (ID, name, password, email, postcode, country, county, city, active) values 
     (1, 'Személy1', '$2b$10$9jINSWgzHPQPndkJ/9wqiuzfz/lsIERnrxEcQANUxTtvCLjeuhDIK', 'személy1@valami.hu', 4032, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', "2022-05-01"),
     (2, 'Személy2', '$2b$10$Nx8udleGnXa8U.MD58mTpu8A4StdV9n6RaDZEcgrJjEbxiX7N2xxS', 'személy2@valami.hu', 1182, 'Magyarország', 'Pest', 'Budapest',"2020-09-12"),
-    (3, 'Személy3', '$2b$10$x5.fptzczJiIPwG3Xkf53.QFrt9kYJdSGiWNuA/TwTWalLm4QjzWG', 'személy3@valami.hu', 1182, 'Magyarország', 'Vas', 'Szombathely', "2014-03-05");
+    (3, 'Személy3', '$2b$10$x5.fptzczJiIPwG3Xkf53.QFrt9kYJdSGiWNuA/TwTWalLm4QjzWG', 'személy3@valami.hu', 9700, 'Magyarország', 'Vas', 'Szombathely', "2014-03-05");
 	
 Insert into categories(ID, denomination) values
     (1, 'Élelmiszer'),
