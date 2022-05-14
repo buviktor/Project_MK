@@ -52,7 +52,7 @@ function calculation(data){
             outlay+=Math. abs(data[i].amount)
         sum+=data[i].amount
     }
-    return [{sum:sum, income:income , outlay:outlay}]
+    return {sum:sum, income:income , outlay:outlay}
 }
 
 ////////////////////////////////////////////////////////USERS/ADMIN////////////////////////////////////////////////////////////////////////////////////////////
@@ -444,12 +444,12 @@ app.route("/admin/users/:active/:order/:desc")
         const q= "select name,email,postcode,country,county,city, date_format(persons.active,'%Y-%m-%d') as date from persons " + where1 +" order by persons." + order1 + desc1
             pool.query(q,
                 function(error,results){
-                    if(!error && req.user.username==AdminNev && results.users){
+                    if(!error && req.user.username==AdminNev && results[0]){
                         var sum=results.length
                         return res.status(200).send({users:results, number:sum})
-                    }else if(!error && req.user.username==AdminNev && !results.users)
+                    }else if(!error && req.user.username==AdminNev && !results[0]){
                         return res.status(200).send({message:"Nincs ilyen felhasználó"})
-                    else if(error)
+                    }else if(error)
                         return res.status(500).send({message:error})
                     else
                         return res.status(400).send({message: "Hibás felhasználó!"})
