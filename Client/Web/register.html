@@ -80,12 +80,21 @@
 
             <form id="loign" class="form-group">
               <label for="uname" class="form-label mb-3 text-white">Felhasználónév</label>
-              <input type="text" class="form-control mb-3" id="fnev">
-            <div class="form-group">
+              <input type="text" class="form-control mb-3" id="uname">
               <label for="upassword" class="form-label mb-3 text-white">Jelszó</label>
-              <input type="password" class="form-control mb-3" id="fjelszo">
+              <input type="password" class="form-control mb-3" id="upassword">
+              <label for="email" class="form-label mb-3 text-white">Email</label>
+              <input type="email" class="form-control mb-3" id="email">
+              <label for="postcode" class="form-label mb-3 text-white">Irányítószám</label>
+              <input type="number" class="form-control mb-3" id="postcode">
+              <label for="country" class="form-label mb-3 text-white">Ország</label>
+              <input type="text" class="form-control mb-3" id="country">
+              <label for="county" class="form-label mb-3 text-white">Megye</label>
+              <input type="text" class="form-control mb-3" id="county">
+              <label for="city" class="form-label mb-3 text-white">Város</label>
+              <input type="text" class="form-control mb-3" id="city">
             </form>
-            <button id="gomb1" type="submit" class="btn btn-primary">Bejelentkezés</button>
+            <button id="gomb" type="submit" class="btn btn-primary col-lg-4">Regisztráció</button>
             <div>
               <p id="uzenet"></p>
             </div>
@@ -119,7 +128,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <script src="index.js"></script>
+  <script src="reg.js"></script>
 
 </body>
 </html>

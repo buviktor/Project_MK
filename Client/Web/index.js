@@ -2,15 +2,15 @@
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
     let ok = false
-    const url = 'http://localhost:5000/user/login';
+    const url = 'http://localhost:5000/login';
     fetch(url, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify({
-            "fnev": document.getElementById("fnev").value,
-            "fjelszo": document.getElementById("fjelszo").value
+            "uname": document.getElementById("uname").value,
+            "upassword": document.getElementById("upassword").value
         })
     })
         .then((response) => {

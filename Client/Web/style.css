@@ -28,5 +28,7 @@ a {
     position: fixed;
     bottom: 0;
     height: 40px;
-    width: max-content;
+    width: 100%;
+
 }
+
