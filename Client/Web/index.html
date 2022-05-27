@@ -15,94 +15,115 @@
 <body class="bg-info re">
 
 <div>
-  <header class="bg-primary text-white">
+  <header class="text-white">
     <div class="mt-1 mb-1 text-center">
      <img src="pictures/logo.png" alt="logo">
     </div>
   </header>
 </div>
 
-  <!-- Bemutatkozás -->
-<div>
-  <main>
-    <div class="container sticky-lg-top">
-      <section class="row">
-        <div id="diasor" class="carousel slide my-3 col-12 mx-auto col-lg-6" data-bs-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-bs-target="#diasor" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#diasor" data-bs-slide-to="1"></li>
-            <li data-bs-target="#diasor" data-bs-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="w-100 rounded" src="pictures/bemut1.png" alt="bemut1" width="400" height="350">
-              <div class="carousel-caption d-none d-md-block szovegdoboz">
-                <p>Nem tudja, hogy mire költött ennyi pénzt? Mi segítünk!</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="w-100 rounded" src="pictures/bemut2.jpg" alt="emut2" width="400" height="350">
-              <div class="carousel-caption d-none d-md-block szovegdoboz">
-                <p></p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="w-100 rounded" src="pictures/bemut3.jpg" alt="bemut3" width="400" height="350">
-              <div class="carousel-caption d-none d-md-block szovegdoboz">
-                <p></p>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev " href="#diasor" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </a>
-          <a class="carousel-control-next" href="#diasor" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </a>
-        </div>
-      </section>
-    </div>
+<main class="container mx-auto mb-5">
+  <div class="d-flex justify-content-center my-3">
+    <ul class="nav nav-tabs px-auto" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Bejelentkezés</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Regisztráció</button>
+      </li>
+    </ul>
+  </div>
 
-    <!-- Bejelentkezés -->
-    <div class="row align-items-center xs-3 mb-5">
-      <section class="col-10 col-sm-6 col-lg-3 mx-auto">
-        <section class="row justify-content-center">
-          <form class="form-container">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Válassz!
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="index.html">Bejelentkezés</a></li>
-                <li><a class="dropdown-item" href="register.html">Regisztráció</a></li>
-              </ul>
-            </div>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
-            <form class="form-group">
-              <label for="uname" class="form-label mb-3 text-white">Felhasználónév</label>
-              <input type="text" class="form-control mb-3" id="fnev">
-            <div class="form-group">
-              <label for="upassword" class="form-label mb-3 text-white">Jelszó</label>
-              <input type="password" class="form-control mb-3" id="fjelszo">
+
+      <!-- Bejelentkezés -->
+      <div class="row mb-1 ls mx-auto">
+        <section class="col-10 col-sm-6 col-lg-3">
+            <form class="form-container" style="width: 300px; padding-left: 100px;">
+              <form class="form-group">
+                <label for="uname" class="form-label mb-3 text-white">Felhasználónév</label>
+                <input type="text" class="form-control mb-3" id="fnev">
+              <div class="form-group">
+                <label for="upassword" class="form-label mb-3 text-white">Jelszó</label>
+                <input type="password" class="form-control mb-3" id="fjelszo">
+              </form>
+              <div class="d-flex justify-content-center">
+              <button id="gomb1" type="submit" class="btn btn-primary ">Bejelentkezés</button>
+            </div>
+              <div>
+                <p id="uzenet"></p>
+              </div>
+              <a href="forgot.html" class="text-center pb-4 text-white">Elfelejtettem a jelszavamat!</a>
             </form>
-            <button id="gomb1" type="submit" class="btn btn-primary">Bejelentkezés</button>
-            <div>
-              <p id="uzenet"></p>
-            </div>
-            <a href="forgot.html" class="text-center mb-2 text-white">Elfelejtettem a jelszavamat!</a>
-          </form>
         </section>
-      </section>
+      </div>
     </div>
-  </main>
-</div>
+
+    <div class="tab-pane fade d-flex justify-content-center" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+      <!-- Regisztráció -->
+      <div class="reg mx-auto row">
+      <form id="loign" class="form-group ls">
+        <div class="row">
+            <div class="col-lg col-sm-6 px-3">
+                <label for="uname" class="form-label mb-3 text-white">Felhasználónév</label>
+                <input type="text" class="form-control mb-3" id="uname">
+            </div>
+    
+            <div class="col-lg col-sm-6 px-3">
+                <label for="upassword" class="form-label mb-3 text-white">Jelszó</label>
+                <input type="password" class="form-control mb-3" id="upassword">
+            </div>
+        </div>
+        <div class="row gx-5">
+            <div class="col-lg clo-sm-12 px-5">    
+                <label for="email" class="form-label mb-3 text-white">Email</label>
+                <input type="email" class="form-control mb-3" id="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg px-3">
+                <label for="postcode" class="form-label mb-3 text-white">Irányítószám</label>
+                <input type="number" class="form-control mb-3" id="postcode">
+            </div>
+            <div class="col-lg px-3">
+                <label for="country" class="form-label mb-3 text-white">Ország</label>
+                <input type="text" class="form-control mb-3" id="country">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg px-3">
+                <label for="county" class="form-label mb-3 text-white">Megye</label>
+                <input type="text" class="form-control mb-3" id="county">
+        </div>
+            <div class="col-lg px-3">
+                <label for="city" class="form-label mb-3 text-white">Város</label>
+                <input type="text" class="form-control mb-3" id="city">
+            </div>
+        </div>
+      <div class="d-flex justify-content-center pb-2">
+        <button id="gomb" type="submit" class="btn btn-primary">Regisztráció</button>
+      </div>
+          </form>
+          
+      </div>
+      
+        <div>
+          <p id="uzenet"></p>
+        </div>
+    </div>
+    <div>
+</main>
 
 
 <!-- Lábléc -->
 <div>
-  <footer class=" bg-dark text-white footer">
-    <div class="row justify-content-center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github col-2 col-lg-2"
+  <footer class=" bg-dark text-white footer px-2">
+    <div class="row justify-content-center px-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github col-2 col-lg-2 mx-2"
         viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />

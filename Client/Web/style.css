@@ -1,18 +1,34 @@
 html {
     height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
     
 }
-
+ body {
+     background-image: url(pictures/mathieu-stern-1zO4O3Z0UJA-unsplash.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
 .re {
     position: relative;
 }
 
 .fej {
-    background-image: url(pictures/logo.png);
     background-repeat: no-repeat;
-    background-position: center;
-    height: 150px;
     position: relative;
+    padding: 10px;
+    margin: auto;
+    background-color: #c0bdbda4;
+    width: 170px;
+    border-radius: 15px;
+}
+
+.ls{
+    background-color: #c0bdbda4;
+    border-radius: 15px;
+    width: 400px;
+
+
 }
  .vissza {
     right: 20px;
@@ -32,4 +48,21 @@ a {
 
 }
 
+.reg {
+    width: max-content;
+}
 
+
+
+::-webkit-scrollbar {
+width: 0px;
+}
+::-webkit-scrollbar-thumb {
+background: #FF0000;
+}
+
+@media (max-width: 540px) {
+    body {
+        background-image: none;
+    }
+}
