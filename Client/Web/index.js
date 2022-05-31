@@ -19,8 +19,9 @@ document.getElementById("gomb1").onclick = function (e) {
         })
         .then((json) => {
             sessionStorage.token = json.token
+            sessionStorage.id = json.id
             document.getElementById("uzenet").innerHTML = json.message
-            if (ok) document.location = "login.html"  //Ez lesz az az oldal amin majd megjelennek a kimutatások.
+            if (ok) document.location = "user.html"  //Ez lesz az az oldal amin majd megjelennek a kimutatások.
         })    
         .catch(err =>console.log(err))
 }
