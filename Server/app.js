@@ -145,8 +145,10 @@ app.route("/user/all/:id")
                         //pool.query(q1,function(error,categori){
                             if(!error && req.user.id!=req.params.id)
                                 return res.status(400).send({message: "Hibás felhasználó!"})
-                            else if(!error /*&& categori[0]*/ && posts[0])
-                                return res.status(200).send(/*{categories:categori,posts:*/{calculation:calculation(posts) ,results:posts}/*}*/)
+                           else if(!error /*&& categori[0]*/ && posts[0]){
+                                posts.splice(0, 0, calculation(posts))//push(calculation(posts))
+                                return res.status(200).send(posts)
+                                }
                             else if(!error /*&& categori[0] */ && !posts[0])
                                 return res.status(200).send({/*categories:categori,*/ message:"Még nincs bevitt adat!"})
                             else
