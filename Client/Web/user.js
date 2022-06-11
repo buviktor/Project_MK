@@ -21,4 +21,3 @@ window.addEventListener("load", function Allpost() {
         .catch (err => console.log(err));
 })
 
-

@@ -138,22 +138,19 @@ app.route("/user/all/:id")
     //USER POSTS(+CATEGORIES)-FELHASZNÁLÓ POSZTJAI (+KATEGORIÁK)
     .get(authenticateToken, (req, res) => {
         const q ="Select registers.ID, registers.amount,categories.denomination,date_format(registers.regAt,'%Y-%m-%d') as date from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? AND year(regAt)=year(now()) and month(regAt)=month(now());"
-        //const q1='select * from categories'
             pool.query(q,[req.user.username],
                 function(error, posts){
                     if(!error){
-                        //pool.query(q1,function(error,categori){
                             if(!error && req.user.id!=req.params.id)
                                 return res.status(400).send({message: "Hibás felhasználó!"})
-                           else if(!error /*&& categori[0]*/ && posts[0]){
-                                posts.splice(0, 0, calculation(posts))//push(calculation(posts))
+                            else if(!error && posts[0]){
+                                posts.splice(0, 0, calculation(posts))
                                 return res.status(200).send(posts)
                                 }
-                            else if(!error /*&& categori[0] */ && !posts[0])
-                                return res.status(200).send({/*categories:categori,*/ message:"Még nincs bevitt adat!"})
+                            else if(!error && !posts[0])
+                                return res.status(200).send({message:"Még nincs bevitt adat!"})
                             else
                                 return res.status(400).send({error})
-                            //})
                         }
                     else   
                         return res.status(400).send({error})    
@@ -217,8 +214,12 @@ app.route("/user/posts/:id/:year/:month/:day/:categories/:cost/:order/:desc")
 
             pool.query(q,[req.user.username],
             function(error, results){
-                if(!error && req.user.id==req.params.id && results[0])
-                    return res.status(200).send({calculation:calculation(results) ,results:results})
+                
+                if(!error && results[0]){
+                    results.splice(0, 0, calculation(results))
+                    return res.status(200).send(results)
+                    }
+
                 else if(!error && req.user.id==req.params.id && !results[0])
                     return res.status(200).send({message: "Nincs ilyen adat!"})
                 else if(!error && req.user.id!=req.params.id)
