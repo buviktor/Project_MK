@@ -7,7 +7,6 @@ window.addEventListener("load", function Allpost() {
         method: 'GET'
     })
         .then((response) => response.json())
-        console.log(json())
 
         lista.innerHTML = ""; 
         json.forEach(f => { lista.innerHTML += "<tr>" +"<td>" + f.amount + "</td>" + "<td>" + f.denomination + "</td>" + "<td>" + f.date + "</td>" + "</tr>"  
