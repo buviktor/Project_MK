@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="container re">
+<body class="re">
 <div>
 <header>
   <nav class="navbar navbar-dark bg-dark justify-content-center navbar-expand-lg">
@@ -37,46 +37,47 @@
   </nav>
 </header>
 </div>
+<div class="container">
   
  
-<div class="container my-3">
-  <table class="table table-striped" id="lista">
-       
+<div class="my-3 d-flex justify-content-center">
+  <table class="table" id="lista"> 
   </table>
-
 </div>
 
-<div>
-<form class="container">
+<div class="mx-auto">
+<form>
   <div class="my-3">
      <h2>Új </h2> 
   </div>
 
   <div class="row mb-3" style="position: relative;">
-          <div class="col-md-3">
+          <div class="col-md-4">
               <label for="osszeg" class="form-label">Összeg</label>
               <input class="form-control" id="osszeg" type="number">
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-4">
               <label for="datum" class="form-label">Dátum</label>
               <input class="form-control" id="datum" type="date">
           </div>
       
-          <div class="col-md-3">
+          <div class="col-md-4">
               <label for="kategoria" class="form-label">Kategória</label>
               <input class="form-control" id="kategoria" type="">
-          </div> 
-          <div class="col-md-3 pb-0" style="bottom: 0; right: 0; position: absolute;">
-            <button class="btn btn-primary" type="submit" name="button">Hozzáad</button>
+          </div>
         </div>
+        <div class="mb-3">
+          <div class="pb-0 justify-content-end" style="bottom: 0; right: 0;">
+            <button class="btn btn-primary" type="submit" name="button">Hozzáad</button>
+          </div>
   </div>
 </form>
 </div>
+</div>
 
-
-<div class="d-flex justify-content-center">
-<footer class=" bg-dark text-white footer px-2">
+<div class="">
+<footer class=" bg-dark text-white px-2">
   <div class="row justify-content-center px-2">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github col-2 col-lg-2 mx-2 pt-2"
       viewBox="0 0 16 16">
@@ -91,5 +92,6 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
     <script src="user.js"></script>
+
 </body>
 </html>

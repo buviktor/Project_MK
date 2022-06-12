@@ -5,7 +5,7 @@ html {
     
 }
  body {
-     background-image: url(pictures/mathieu-stern-1zO4O3Z0UJA-unsplash.jpg);
+     /* background-image: url(pictures/mathieu-stern-1zO4O3Z0UJA-unsplash.jpg); */
      background-repeat: no-repeat;
      background-size: cover;
  }
@@ -52,6 +52,9 @@ a {
     width: max-content;
 }
 
+.table {
+    width: 50%;
+}
 
 
 ::-webkit-scrollbar {
@@ -65,4 +68,9 @@ background: #FF0000;
     body {
         background-image: none;
     }
+
+    .table {
+        width: 100%;
+    }
 }
+
