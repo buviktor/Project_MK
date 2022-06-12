@@ -6,9 +6,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import io.github.cdimascio.dotenv.Dotenv;
-import org.springframework.security.crypto.bcrypt.BCrypt;
+import java.time.LocalDate;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 /**
  * Admin felülethet a controller osztály
@@ -24,52 +28,29 @@ public class FXMLDocumentController implements Initializable {
     String dPassword = dotenv.get("ADMINPASSWORD");
     
     @FXML
-    private TextField txtUsername;
-    
-    @FXML
-    private Label lblUsername;
-
-    @FXML
-    private TextField txtPassword;
-    
-    @FXML
-    private Label lblPassword;
-
-    @FXML
     private Label lblLogged;
-    
+
     @FXML
     private Button btnLogin;
-    
-    @FXML
-    private Button btnLogout;
 
     @FXML
-    void Login() {
-        if (BCrypt.checkpw(txtPassword.getText(), dPassword.substring(1, dPassword.length()-1))) {
-            lblLogged.setText("Bejelentkezve: " + txtUsername.getText());
-            
-            txtUsername.setVisible(false);
-            lblUsername.setVisible(false);
-            txtPassword.setVisible(false);
-            lblPassword.setVisible(false);
-            btnLogin.setVisible(false);
-            btnLogout.setVisible(true);
-            
-            txtUsername.setText("");
-            txtPassword.setText("");
-        }
+    void Login() throws Exception{
+        window();
     }
 
-    @FXML
-    void Logout() {
-        lblLogged.setText("Kijelentkezve!");
-        txtUsername.setVisible(true);
-        lblUsername.setVisible(true);
-        txtPassword.setVisible(true);
-        lblPassword.setVisible(true);
-        btnLogin.setVisible(true);
-        btnLogout.setVisible(false);
+    private void window() throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+        Parent root = loader.load();
+        
+        LoginController lc = loader.getController();
+                
+        Scene scene = new Scene(root);
+        Stage loginWindows = new Stage();
+        loginWindows.setTitle("Bejelentkezés");
+        loginWindows.initModality(Modality.APPLICATION_MODAL);
+        loginWindows.setResizable(false);
+        loginWindows.setScene(scene);
+        loginWindows.showAndWait();
     }
     
     @Override

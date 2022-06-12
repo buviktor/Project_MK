@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Admin.jar" size="4547" download="eager" />
+    <jar href="Admin.jar" size="6297" download="eager" />
     <jar href="lib\io.github.cdimascio.dotenv.jar" size="24797" download="eager" />
     <jar href="lib\junit-4.12.jar" size="316791" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
