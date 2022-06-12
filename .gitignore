@@ -1,2 +1,8 @@
 /Client/Java/Admin/.env
 /Server/.env
+/Client/Java/Admin/lib/io.github.cdimascio.dotenv/nbproject/private/
+/Client/Java/Admin/lib/org.springframework.security.crypto.bcrypt/nbproject/private/
+/Client/Java/Admin/lib/io.github.cdimascio.dotenv/build/
+/Client/Java/Admin/lib/io.github.cdimascio.dotenv/dist/
+/Client/Java/Admin/lib/org.springframework.security.crypto.bcrypt/build/
+/Client/Java/Admin/lib/org.springframework.security.crypto.bcrypt/dist/
