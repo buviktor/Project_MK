@@ -56,6 +56,10 @@ a {
     width: 50%;
 }
 
+.gomb {
+    display: flex;
+    justify-content: right;
+}
 
 ::-webkit-scrollbar {
 width: 0px;
@@ -72,5 +76,9 @@ background: #FF0000;
     .table {
         width: 100%;
     }
+
+    .button {
+        width: 100%;
+    } 
 }
 
