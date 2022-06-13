@@ -24,3 +24,24 @@ window.addEventListener("load", function Allpost() {
         .catch (err => console.log(err));
 })
 
+//Új poszt hozzáadása
+document.getElementById("gomb1").onclick = function (e) {
+    e.preventDefault();
+    const url = 'http://localhost:5000/all/' + sessionStorage.id;
+    const token = 'Bearer: ' + sessionStorage.token
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Authorization': token
+        },
+        body: JSON.stringify({
+            "amount": document.getElementById("amount").value,
+            "dates": document.getElementById("dates").value,
+            "categoriesID": document.getElementById("categoriesID").value,
+           
+        })
+    })
+        .then((response) => response.json())
+        .then(json => document.getElementById("uzenet").innerHTML = json.message)
+        .catch(err => console.log(err));
+}
