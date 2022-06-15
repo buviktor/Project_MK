@@ -19,15 +19,13 @@ window.addEventListener("load", function Allpost() {
             });
           })
 
-
-
         .catch (err => console.log(err));
 })
 
 //Új poszt hozzáadása
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
-    const url = 'http://localhost:5000/all/' + sessionStorage.id;
+    const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
         method: 'POST',
