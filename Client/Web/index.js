@@ -1,6 +1,12 @@
 // Bejelentkezés
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
+
+    document.getElementById("gomb1").onclick = function (a) {
+        if(document.getElementById(text.id).value =="")
+            return alert
+    }
+
     let ok = false
     const url = 'http://localhost:5000/login';
     fetch(url, {
