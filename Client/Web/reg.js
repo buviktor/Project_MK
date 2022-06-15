@@ -8,8 +8,8 @@ document.getElementById("gomb").onclick = function (e) {
             'Content-type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify({
-            "uname": document.getElementById("uname").value,
-            "upassword": document.getElementById("upassword").value,
+            "uname": document.getElementById("runame").value,
+            "upassword": document.getElementById("rupassword").value,
             "email": document.getElementById("email").value,
             "postcode": document.getElementById("postcode").value,
             "country": document.getElementById("country").value,
@@ -18,6 +18,6 @@ document.getElementById("gomb").onclick = function (e) {
         })
     })
         .then((response) => response.json())
-        .then(json => document.getElementById("uzenet").innerHTML = json.message)
+        .then(json => document.getElementById("ruzenet").innerHTML = json.message)
         .catch(err => console.log(err));
 }
