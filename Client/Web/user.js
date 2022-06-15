@@ -32,7 +32,8 @@ document.getElementById("gomb1").onclick = function (e) {
     fetch(url, {
         method: 'POST',
         headers: {
-            'Authorization': token
+            'Authorization': token,
+            'Content-type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify({
             "amount": document.getElementById("amount").value,
@@ -45,3 +46,27 @@ document.getElementById("gomb1").onclick = function (e) {
         .then(json => document.getElementById("uzenet").innerHTML = json.message)
         .catch(err => console.log(err));
 }
+
+//Kategoriák
+window.addEventListener("load", function AllCat() {
+    const url = 'http://localhost:5000/categories';
+    const menu = document.getElementById("categoriesID");
+    const token = 'Bearer: ' + sessionStorage.token
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Authorization': token,
+        }
+    })
+
+
+    .then((response) => response.json())
+    .then(json => {
+        json.forEach(cs => {
+            menu.innerHTML += "<option value=" + cs.ID + ">" + cs.denomination + "</option> "
+            });
+          })
+
+        .catch (err => console.log(err));
+}
+)
