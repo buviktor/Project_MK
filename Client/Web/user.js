@@ -1,6 +1,8 @@
+let token = "";
+
 window.addEventListener("load", function Allpost() {
     const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
-    const token = 'Bearer: ' + sessionStorage.token
+    token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista");
     fetch(url, {
         method: 'GET',
@@ -28,7 +30,6 @@ window.addEventListener("load", function Allpost() {
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
     const url = 'http://localhost:5000/all/' + sessionStorage.id;
-    const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
         method: 'POST',
         headers: {
