@@ -1,8 +1,6 @@
-let token = "";
-
 window.addEventListener("load", function Allpost() {
     const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
-    token = 'Bearer: ' + sessionStorage.token
+    const token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista");
     fetch(url, {
         method: 'GET',
@@ -30,11 +28,12 @@ window.addEventListener("load", function Allpost() {
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
     const url = 'http://localhost:5000/all/' + sessionStorage.id;
+    const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
         method: 'POST',
         headers: {
             'Authorization': token,
-            'Content-type': 'application/json;charset=utf-8'
+            "Content-type": "application/json;charset=utf-8"
         },
         body: JSON.stringify({
             "amount": document.getElementById("amount").value,
