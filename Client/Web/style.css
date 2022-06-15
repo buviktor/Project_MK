@@ -4,7 +4,7 @@ html {
     overflow-x: hidden;
     
 }
- body {
+.hatter {
      background-image: url(pictures/mathieu-stern-1zO4O3Z0UJA-unsplash.jpg); 
      background-repeat: no-repeat;
      background-size: cover;

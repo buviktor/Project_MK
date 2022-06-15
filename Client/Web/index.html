@@ -12,7 +12,7 @@
   <title>Üdvözlet</title>
 </head>
 
-<body class="bg-info re">
+<body class="bg-info re hatter">
 
 <div>
   <header class="text-white">
@@ -35,6 +35,8 @@
   </div>
 
   <div class="tab-content" id="myTabContent">
+
+
     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
 
@@ -45,7 +47,8 @@
               <form class="form-group">
                 <label for="uname" class="form-label mb-3 text-white">Felhasználónév</label>
                 <input type="text" class="form-control mb-3" id="uname">
-              <div class="form-group">
+              </form>
+              <form class="form-group">
                 <label for="upassword" class="form-label mb-3 text-white">Jelszó</label>
                 <input type="password" class="form-control mb-3" id="upassword">
               </form>
@@ -55,7 +58,7 @@
               <div class="text-white mt-2>
                 <p id="uzenet"></p>
               </div>
-              <a href="forgot.html" class="text-center pb-4 text-white">Elfelejtettem a jelszavamat!</a>
+              <!-- <a href="forgot.html" class="text-center pb-4 text-white">Elfelejtettem a jelszavamat!</a> -->
             </form>
         </section>
       </div>
@@ -107,15 +110,15 @@
       <div class="d-flex justify-content-center pb-2">
         <button id="gomb" type="submit" class="btn btn-primary">Regisztráció</button>
       </div>
-          </form>
-          
+      </form>
+          <div class="text-white px-auto">
+            <p id="uzenet"></p>
+          </div>
       </div>
       
-        <div class="text-white px-auto">
-          <p id="uzenet"></p>
-        </div>
+        
     </div>
-    <div>
+  </div>
 </main>
 
 
