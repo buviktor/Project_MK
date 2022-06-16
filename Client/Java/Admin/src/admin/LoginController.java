@@ -5,17 +5,17 @@
  */
 package admin;
 
-import com.sun.net.httpserver.HttpsConfigurator;
 import io.github.cdimascio.dotenv.Dotenv;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Window;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 
 /**
  * FXML Controller class
@@ -62,31 +62,64 @@ public class LoginController implements Initializable {
         try {
             URL loginUrl = new URL("localhost:5000/login");
             
+            
+            
             HttpURLConnection conn = (HttpURLConnection)loginUrl.openConnection();
             
-            conn.setRequestMethod("POST");
+            conn.setRequestMethod("GET");
             conn.connect();
             
             int responsecode = conn.getResponseCode();
+            String inline = "";
+            
+            Scanner sc = new Scanner(loginUrl.openStream());
+            while (sc.hasNext()) {
+                inline += sc.nextLine();
+            }
+            System.out.println(inline);
+            sc.close();
+            
+            
+            
             
         } catch (Exception e) {
             System.out.println(e);
         }
         */
         
+        /*
         try {
-            OkHttpClient client = new OkHttpClient().newBuilder()
-                .build();
-            MediaType mediaType = MediaType.parse("text/plain");
-            RequestBody body = RequestBody.create(mediaType, "");
-            Request request = new Request.Builder()
-              .url("localhost:5000/login")
-              .method("POST", body)
-              .build();
-            Response response = client.newCall(request).execute();
+            HttpResponse<String> response = Unirest.post("localhost:5000/login")
+                .header("Content-Type", "application/json")
+                .body("{\r\n\"uname\" : \"Admin\",\r\n\"upassword\" : \"admin\"\r\n}")
+                .asString();
+            
+            UnirestParsingException ex = response.getParsingError().get();
+            lblMessage.setText(ex.getMessage());
+            
         } catch (Exception e) {
         }
+        */
+        String name = txtUserName.getText();
+        String password = txtPassword.getText();
         
+        try {
+            String rawData = "{\r\n\"uname\" : \"" + name +
+                    "\",\r\n\"" + password + "\" : \"admin\"\r\n}";
+            String type = "application/json";
+            String encodedData = URLEncoder.encode( rawData, "UTF-8" ); 
+            URL u = new URL("localhost:5000/login");
+            HttpURLConnection conn = (HttpURLConnection) u.openConnection();
+            conn.setDoOutput(true);
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty( "Content-Type", type );
+            conn.setRequestProperty( "Content-Length", String.valueOf(encodedData.length()));
+            OutputStream os = conn.getOutputStream();
+            os.write(encodedData.getBytes());
+            
+            lblMessage.setText(conn.getResponseMessage());
+        } catch (Exception e) {
+        }
     }
     
     @Override
