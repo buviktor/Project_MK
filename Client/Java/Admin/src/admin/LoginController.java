@@ -10,12 +10,14 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Window;
+
 
 /**
  * FXML Controller class
@@ -104,18 +106,25 @@ public class LoginController implements Initializable {
         String password = txtPassword.getText();
         
         try {
-            String rawData = "{\r\n\"uname\" : \"" + name +
+            String loginData = "{\r\n\"uname\" : \"" + name +
                     "\",\r\n\"" + password + "\" : \"admin\"\r\n}";
-            String type = "application/json";
-            String encodedData = URLEncoder.encode( rawData, "UTF-8" ); 
+            String type = "application/json; charset=UTF-8"; 
+            
+           
             URL u = new URL("localhost:5000/login");
-            HttpURLConnection conn = (HttpURLConnection) u.openConnection();
-            conn.setDoOutput(true);
+            HttpURLConnection conn = (HttpURLConnection)u.openConnection();
             conn.setRequestMethod("POST");
+            conn.setDoOutput(true);
+            
+            byte[] out = loginData.getBytes(StandardCharsets.UTF_8);
+            int length = out.length;
+            
+            conn.setFixedLengthStreamingMode(length);
             conn.setRequestProperty( "Content-Type", type );
-            conn.setRequestProperty( "Content-Length", String.valueOf(encodedData.length()));
-            OutputStream os = conn.getOutputStream();
-            os.write(encodedData.getBytes());
+            conn.connect();
+            try(OutputStream os = conn.getOutputStream()){
+               os.write(out); 
+            }
             
             lblMessage.setText(conn.getResponseMessage());
         } catch (Exception e) {

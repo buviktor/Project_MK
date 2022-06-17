@@ -1,2 +1,7 @@
 /Client/Java/Admin/.env
 /Server/.env
+/Client/Java/Admin/lib/com.google.api.client/nbproject/private/
+/Client/Java/Admin/lib/com.google.api.client/build/
+/Client/Java/Admin/lib/org.json.simple/build/
+/Client/Java/Admin/lib/org.springframework.security.crypto.bcrypt/build/
+/Client/Java/Admin/lib/org.json.simple/dist/
