@@ -80,5 +80,11 @@ background: #FF0000;
     .button {
         width: 100%;
     } 
+
 }
 
+@media (min-width: 540px) {
+    th {
+        width: 150px;
+    }
+}

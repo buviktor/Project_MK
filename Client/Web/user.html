@@ -39,6 +39,32 @@
 </div>
 
 <div class="container">
+  <div class="my-3 d-flex justify-content-center">
+    <table class="table ">
+      <tr>
+        <th>
+            <select class="form-select" id="cost">
+            <option selected></option>
+            <option value="00">Minden</option>
+            <option value="1">Kiadás</option>
+            <option value="2">Bevétel</option>
+          </select>
+        </th>
+        <th>
+          <select class="form-select" id="categoriesID">
+            <option selected></option>
+          </select>
+        </th>
+        <th>
+          <input class="form-control" id="dates" type="date">
+        </th>
+        <th>
+          <button class="btn btn-primary button" type="submit" id="gomb2" name="button">Keres</button>
+        </th>
+      </tr>
+    </table>
+  </div>
+  
 <div class="my-3 d-flex justify-content-center">
   <table class="table" id="lista"> 
   </table>

@@ -68,3 +68,22 @@ window.addEventListener("load", function AllCat() {
         .catch (err => console.log(err));
 }
 )
+
+/////USERPOSTS-PAGE/////
+
+document.getElementById("gomb2").onclick = function (e) {
+    e.preventDefault();
+    const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
+    const token = 'Bearer: ' + sessionStorage.token
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Authorization': token,
+            "Content-type": "application/json;charset=utf-8"
+        },
+  
+    })
+        .then((response) => response.json())
+        .then(json => document.getElementById("uzenet").innerHTML = json.message)
+        .catch(err => console.log(err));
+}
