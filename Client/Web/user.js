@@ -73,17 +73,24 @@ window.addEventListener("load", function AllCat() {
 
 document.getElementById("gomb2").onclick = function (e) {
     e.preventDefault();
-    const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
+    const url = 'http://localhost:5000/user/posts' + "/" + sessionStorage.id + "/" + document.getElementById("datesy").value + "/" + document.getElementById("datesm").value + "/" + document.getElementById("dated").value + "/" + document.getElementById("categoriesID").value + "/" + document.getElementById("cost").value + "/" + document.getElementById("order").value + "/" + document.getElementById("desc").value;
     const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
-        method: 'POST',
+        method: 'GET',
         headers: {
-            'Authorization': token,
-            "Content-type": "application/json;charset=utf-8"
-        },
-  
+            'Authorization': token
+        }
     })
-        .then((response) => response.json())
-        .then(json => document.getElementById("uzenet").innerHTML = json.message)
-        .catch(err => console.log(err));
+
+    .then((response) => response.json())
+    .then(json => {
+      lista.innerHTML = "<tr><th>Összeg</th><th>Kategoria</th><th>Dátum</th></tr>";
+      json.forEach(cs => {
+          if(cs!=json[0]) 
+          lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
+              + "</td><td>" + cs.date + "</td>"+"</tr>"
+            });
+          })
+
+        .catch (err => console.log(err));
 }
