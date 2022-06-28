@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="re">
+<body>
 <div>
 <header>
   <nav class="navbar navbar-dark bg-dark justify-content-center navbar-expand-lg">
@@ -40,26 +40,33 @@
 
 <div class="container">
   <div class="my-3 d-flex justify-content-center">
-    <table class="table">
-      <tr>
-        <th>
+    <div class="row">
+
+          <div class="col-12 col-lg-3">
             <select class="form-select" id="cost">
-            <option value="00">Minden</option>
-            <option value="1">Kiadás</option>
-            <option value="2">Bevétel</option>
-          </select>
-          <input type="number" id="cost">
-        </th>
-        <th>
-          <select class="form-select" id="categoriesID">
-          </select>
-        </th>
-        <th>
+              <option value="00">Minden</option>
+              <option value="1">Kiadás</option>
+              <option value="2">Bevétel</option>
+            </select>
+          </div>
+
+          <!-- <div class="col form-input">
+            <input type="number" id="cost">
+          </div> -->
+
+          <div class="col-12 col-lg-3">
+            <select class="form-select" id="categoriesID"></select>
+          </div>
+
+          <div class="col-12 col-lg-3">
           <select class="form-select" id="datesy">
             <option value="00">Összes év</option>
             <option value="2021">2021</option>
             <option value="2022">2022</option>
           </select>
+        </div>
+
+        <div class="col-12 col-lg-3">
           <select class="form-select" id="datesm">
             <option value="00">Összes hónap</option>
             <option value="01">Január</option>
@@ -75,26 +82,33 @@
             <option value="11">November</option>
             <option value="12">December</option>
           </select>
-          <input type="number" min="1" max="31" id="dated" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
+        </div>
 
-        </th>
-        <th>
+        <div class="col-12 col-lg-3 mt-2">
+          <input class="form-select "type="number" min="1" max="31" id="dated" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
+        </div>
+
+        <div class="col-12 col-lg-3 mt-2">
           <select class="form-select" id="order">
             <option value="00"></option>
             <option value="date">Dátum</option>
             <option value="amount">Összeg</option>
             <option value="categori">Kategoria</option>
           </select>
+        </div>
+
+        <div class="col-12 col-lg-3 mt-2">
           <select class="form-select" id="desc">
             <option value="0">Csökkenő</option>
             <option value="1">Növekvő</option>
           </select>
-        </th>
-        <th>
+        </div>
+
+        <div class="col-12 col-lg-3 mt-2">
           <button class="btn btn-primary button" type="submit" id="gomb2" name="button">Keres</button>
-        </th>
-      </tr>
-    </table>
+        </div>
+
+    </div>
   </div>
   
 <div class="my-3 d-flex justify-content-center">
@@ -121,7 +135,7 @@
       
           <div class="col-md-4">
               <label for="kategoria" class="form-label">Kategória</label>
-              <select class="form-select" id="categoriesID">
+              <select class="form-select" id="categoriesID2">
                 <option selected>Válasszon!</option>
                 <!-- <option value="1">Élelmiszer</option>
                 <option value="2">Ruházat</option>

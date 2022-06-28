@@ -64,8 +64,7 @@ window.addEventListener("load", function AllCat() {
             menu.innerHTML += "<option value=" + cs.ID + ">" + cs.denomination + "</option> "
             });
           })
-
-        .catch (err => console.log(err));
+    .catch (err => console.log(err));
 }
 )
 
