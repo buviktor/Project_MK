@@ -1,6 +1,5 @@
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
-
     let ok = false
     const url = 'http://localhost:5000/login';
     fetch(url, {

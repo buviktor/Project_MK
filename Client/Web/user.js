@@ -57,7 +57,6 @@ window.addEventListener("load", function AllCat() {
         }
     })
 
-
     .then((response) => response.json())
     .then(json => {
         json.forEach(cs => {

@@ -15,7 +15,7 @@ window.addEventListener("load", function Allpost() {
       json.forEach(cs => {
           if(cs!=json[0]) 
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td>"+"</tr>"
+              + "</td><td>" + cs.date + "</td></tr>" 
             });
           })
 
@@ -43,7 +43,7 @@ document.getElementById("gomb2").onclick = function (e) {
       json.forEach(cs => {
           if(cs!=json[0]) 
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td>"+"</tr>"
+              + "</td><td>" + cs.date + "</td></tr>"
             });
           })
 
@@ -71,3 +71,23 @@ window.addEventListener("load", function AllCat() {
           })
     .catch (err => console.log(err))
 })
+
+//Módosítandó poszt megjelenítése
+document.getElementsById("gomb3").onclick = function (f) {
+    e.preventDefault();
+    const url = 'http://localhost:5000/user/post/' + sessionStorage.id;
+    const token = 'Bearer: ' + sessionStorage.token
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Authorization': token,
+        }
+    })
+        .then((response) => response.json())
+        .then((json) => {
+            document.getElementById("uzenet").innerHTML = json.message
+            document.location = "post.html"
+        })
+        .catch(err => console.log(err));
+
+}
