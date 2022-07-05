@@ -1,3 +1,5 @@
+let ID = ""
+
 window.addEventListener("load", function Allpost() {
     const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
@@ -11,16 +13,20 @@ window.addEventListener("load", function Allpost() {
 
     .then((response) => response.json())
     .then(json => {
-      lista.innerHTML = "<tr><th>Összeg</th><th>Kategoria</th><th>Dátum</th></tr>";
-      json.forEach(cs => {
-          if(cs!=json[0]) 
-          lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td></tr>" 
-            });
-          })
+        lista.innerHTML = "<tr><th>Összeg</th><th>Kategoria</th><th>Dátum</th><th></th></tr>";
+        json.forEach(cs => {
+            if(cs!=json[0]) 
+            lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
+                + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id)' >...</button></td></tr>"
+              });
+            })
 
         .catch (err => console.log(err));
 })
+function reply_click(clicked_id)
+  {
+      ID = clicked_id;
+  }
 
 
 /////USERPOSTS-PAGE/////
@@ -39,11 +45,11 @@ document.getElementById("gomb2").onclick = function (e) {
 
     .then((response) => response.json())
     .then(json => {
-      lista.innerHTML = "<tr><th>Összeg</th><th>Kategoria</th><th>Dátum</th></tr>";
+      lista.innerHTML = "<tr><th>Összeg</th><th>Kategoria</th><th>Dátum</th><th></th></tr>";
       json.forEach(cs => {
           if(cs!=json[0]) 
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td></tr>"
+              + "</td><td>" + cs.date + "</td><td><button id='"+ cs.ID + "'></button></td></tr>"
             });
           })
 
@@ -73,7 +79,8 @@ window.addEventListener("load", function AllCat() {
 })
 
 //Módosítandó poszt megjelenítése
-document.getElementsById("gomb3").onclick = function (f) {
+
+ID.onclick = function (f) {
     e.preventDefault();
     const url = 'http://localhost:5000/user/post/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token

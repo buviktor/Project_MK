@@ -22,12 +22,13 @@ window.addEventListener("load", function Adatok() {
 
 document.getElementById("gomb4").onclick = function (e) {
     e.preventDefault();
-    const url = 'http://localhost:5000/user/person'+ sessionStorage.id;
+    const url = 'http://localhost:5000/user/person' + "/" + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
         method: 'PUT',
         headers: {
-            'Authorization': token
+            'Authorization': token,
+            "Content-type": "application/json;charset=utf-8"
         },
         body: JSON.stringify({
             "newpassword": document.getElementById("newpassword").value,
