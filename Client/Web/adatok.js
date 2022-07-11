@@ -44,3 +44,25 @@ document.getElementById("gomb4").onclick = function (e) {
     .then(json => document.getElementById("uzenet").innerHTML = json.message)
     .catch(err => console.log(err));
 }
+
+
+// ---- Adatok módosítása ----
+
+let mutat = false;
+
+window.addEventListener("load", function() {
+    document.getElementById("madatok").style.display ="none"
+});
+
+document.getElementById("gomb5").onclick = function Mutat(){
+    if(mutat == false) {
+        document.getElementById("madatok").style.display = "block";
+        mutat = true;
+    }
+    else{
+        document.getElementById("madatok").style.display = "none";
+        mutat = false;
+    }
+}
+
+
