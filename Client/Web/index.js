@@ -1,14 +1,15 @@
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
     let ok = false
-    const url = 'http://localhost:5000/login';
+    const url = 'http://localhost:5000/login'; 
+    let uname = document.getElementById("uname").value;
     fetch(url, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify({
-            "uname": document.getElementById("uname").value,
+            "uname" : uname,
             "upassword": document.getElementById("upassword").value
         })
     })
@@ -20,7 +21,13 @@ document.getElementById("gomb1").onclick = function (e) {
             sessionStorage.token = json.token
             sessionStorage.id = json.id
             document.getElementById("uzenet").innerHTML = json.message
-            if (ok) document.location = "adminhome.html"  //Ez lesz az az oldal amin majd megjelennek a kimutatások.
+            if (ok){
+                if (uname == "Admin"){
+                 document.location = "adminhome.html" 
+                } else {
+                    document.location = "user.html" 
+                }
+            } 
              
         })    
         .catch(err =>console.log(err))

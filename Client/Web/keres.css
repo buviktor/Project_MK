@@ -2,10 +2,39 @@
     width: 40%;
 }
 
+.nap{
+    display: flex;
+    flex-flow: row;
+}
 
-@media (max-width: 576px)  {
+#napok{
+    margin: 10px 15px 0px 10px;
+}
+
+label{
+    margin-left: 13px;
+}
+
+.class1{
+    margin-top: 5px;
+    flex: 50%;
+    white-space: nowrap;
+}
+
+.class2{
+    flex: 50%;
+}
+
+@media (max-width: 991px)  {
     .table {
         width: 100%;
     }
 
+    .class1{
+        flex: 25%;
+    }
+    .class2{
+        flex: 75;
+    }
 }
+

@@ -47,7 +47,7 @@
             <p id="uzenet"></p>
           </div>
 
-        <div class="my-3 d-flex justify-content-center">
+        <div class="my-3 px-5 d-flex justify-content-center">
             <div class="row">
         
                   <div class="col-12 col-lg-3 mt-2">
@@ -55,9 +55,12 @@
                       <option value="00">Minden</option>
                       <option value="1">Kiadás</option>
                       <option value="2">Bevétel</option>
+                      <option value="3">Egyéb összeg</option>
                     </select>
                   </div>
-        
+                  <div id="egyeb" class="col-12 col-lg-3 mt-2">
+                    <input id="szam" type="number" class="form-select" disabled>
+                  </div>
                   <!-- <div class="col form-input">
                     <input type="number" id="cost">
                   </div> -->
@@ -92,8 +95,14 @@
                   </select>
                 </div>
         
-                <div class="col-12 col-lg-3 mt-2">
-                  <input class="form-select "type="number" min="1" max="31" id="dated" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" placeholder="Válasszon napot!">
+                <div class="col-12 col-lg-3 mt-2 nap">
+                  <div class="class1">
+                    <label for="napok">Összes nap</label>
+                    <input type="checkbox" id="napok">
+                  </div>
+                  <div class="class2" id="days">
+                    <input class="form-select "type="number" value="01" min="1" max="31" id="dated" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" placeholder="Válasszon napot!">
+                  </div>
                 </div>
         
                 <div class="col-12 col-lg-3 mt-2">
@@ -110,9 +119,8 @@
                     <option value="1">Növekvő</option>
                   </select>
                 </div>
-        
                 <div class="col-12 col-lg-3 mt-2">
-                  <button class="btn btn-primary button" type="submit" id="gomb2" name="button">Keres</button>
+                  <button class="btn btn-primary button" style="width: calc(100% -80px);" type="submit" id="gomb2" name="button">Keres</button>
                 </div>
         
             </div>
@@ -121,6 +129,8 @@
     <div class="my-3 d-flex justify-content-center">
     <table class="table" id="lista"> 
     </table>
+    <div id="uzenet">
+    </div>
     </div>
 
 
