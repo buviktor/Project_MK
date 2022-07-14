@@ -22,31 +22,48 @@
   </header>
 </div>
 
-<!-- <div>
-    <select id="rend">
-        <option value="0">Csökkenő</option>
-        <option value="1">Növekvő</option>
-    </select>
-</div> -->
-
-<main class="container mx-auto mb-5">
-    <div class="my-3 d-flex justify-content-center">
+<main class="mx-auto mb-5">
+    <div class=" my-3 d-flex justify-content-center">
         <table class="table" id="lista"> 
         </table>
       </div>
 
+    <div class="d-flex justify-content-center">
+      <div class="row">
+        <div class="col">
+          <select class="form-select" id="what">
+            <option value="postcode">Irányítószám</option>
+            <option value="city">Város</option>
+            <option value="county">Megye</option>
+            <option value="country">Ország</option>
+          </select>
+        </div>
+        <div class="col">
+          <select class="form-select" id="order">
+            <option value="0">Csökkenő</option>
+            <option value="1">Növekvő</option>
+          </select>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary button" type="submit" id="gomb2" name="button">Keres</button>
+        </div>
+      </div>  
+    </div>
+
+        <div class="my-3 d-flex justify-content-center">
+          <table class="table" id="lista2"> 
+          </table>
+        </div>
+      </div>
     
       </form>
           <div class="text-white px-auto">
             <p id="ruzenet"></p>
           </div>
       </div>
-      
-        
     </div>
   </div>
 </main>
-
 
 <!-- Lábléc -->
 <div>
