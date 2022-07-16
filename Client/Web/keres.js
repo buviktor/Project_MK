@@ -15,7 +15,7 @@ window.addEventListener("load", function Allpost() {
         json.forEach(cs => {
             if(cs!=json[0]) 
             lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-                + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id)' >...</button></td></tr>"
+                + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Post()' >...</button></td></tr>"
               }),
               )
     .catch (err => console.log(err))
@@ -76,7 +76,7 @@ document.getElementById("gomb2").onclick = function (e) {
       json.forEach(cs => {
           if(cs!=json[0]) 
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td><td><button id='"+ cs.ID + "'></button></td></tr>"
+              + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id)' >...</button></td></tr>"
             });
         } else {
             document.getElementById("uzenet").innerHTML = "Nincs ilyen adat!"
@@ -109,22 +109,11 @@ window.addEventListener("load", function AllCat() {
 
 //Módosítandó poszt megjelenítése
 
-ID.onclick = function (f) {
-    e.preventDefault();
-    const url = 'http://localhost:5000/user/post/' + sessionStorage.id;
-    const token = 'Bearer: ' + sessionStorage.token
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Authorization': token,
-        }
-    })
-        .then((response) => response.json())
-        .then((json) => {
-            document.getElementById("uzenet").innerHTML = json.message
-            document.location = "post.html"
-        })
-        .catch(err => console.log(err));
-
+function Post() {
+    document.location = "post.html"
+    sessionStorage.regid = ID;
 }
+
+
+
 

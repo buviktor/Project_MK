@@ -1,9 +1,5 @@
-html {
-    height: 100vh;
-    overflow: scroll;
-    overflow-x: hidden;
-    
-}
+   
+
 .hatter {
      background-image: url(pictures/mathieu-stern-1zO4O3Z0UJA-unsplash.jpg); 
      background-repeat: no-repeat;
