@@ -14,6 +14,30 @@
 
 <body>
 
+  <nav class="navbar navbar-dark bg-dark justify-content-center navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="adminhome.html">Főoldal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kategoriak.html">Kategóriák</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="felhasznalok.html">Felhasználók</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Kijelentkezés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 <div>
   <header class="text-white">
     <div class="mt-1 mb-1 text-center">
@@ -22,24 +46,10 @@
   </header>
 </div>
 
-<main class="mx-auto mb-5">
-
 <!-- -----Felhasználók kiírása----- -->
 
-    <!-- <div class=" my-3 d-flex justify-content-center">
-        <table class="table" id="lista1"> 
-        </table>
-      </div>
-      <div class=" my-3 d-flex justify-content-center">
-        <table class="table" id="lista2"> 
-        </table>
-      </div>
-      <div class=" my-3 d-flex justify-content-center">
-        <table class="table" id="lista3"> 
-        </table> -->
-      </div>
-      <div class=" my-3 d-flex justify-content-center">
-        <table class="table" id="lista4"> 
+      <div class="d-flex justify-content-center">
+        <table class="table" id="lista" style="width: 400px;"> 
         </table>
       </div>
 
@@ -65,26 +75,6 @@
       </div>  
     </div>
 
-<!-- -----Új kategória----- -->
-
-<div class="d-flex justify-content-center" style="margin-top: 100px;">
-    <div class="col-md-4">
-      <label for="összeg" class="form-label">Új kategória</label>
-      <input class="form-control" id="categori" type="text">
-    </div>
-    <div class="d-flex mb-3 px-5">
-      <button class="btn btn-primary button" type="submit" id="gomb1" name="button">Hozzáad</button>
-  </div>
-</div>
-
-<!-- -----Kategóriák----- -->
-
-<div class="mt-5 mx-auto" style="width: 400px;">
-  <table class="table" id="lista5"> 
-  </table>
-</div>
-
-
     <div class="text-white px-auto">
       <p id="uzenet"></p>
     </div>
@@ -92,7 +82,6 @@
       </div>
     </div>
   </div>
-</main>
 
 <!-- Lábléc -->
 <div>
