@@ -1,15 +1,16 @@
 package webtest;
 
+import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.support.ui.Select;
@@ -24,8 +25,10 @@ import org.openqa.selenium.support.ui.Select;
 public class WebTest {
     
     private static WebDriver driver;
-    private static List<LogEntry> entries;
-    private static String message;
+
+    private static String message, randomLocation, randomName;
+    
+    static ArrayList<Data> locations = new ArrayList<>();
     
     /**
      * pagePath metódus vissza adja a .html fájlok helyét Stringben.
@@ -88,14 +91,22 @@ public class WebTest {
      * Szám típusú paraméter/ek: postcode
     **/
     
-    private static void register (String name, String password, String email, int postcode, String country, String county, String city) {
+    private static void register (String randName, String randLocation) {
+        String name, password, email, postcode, country, county, city;
+        
+        String[] n = randName.split(",");
+        name = n[0]; password = n[1]; email = n[2];
+        
+        String[] l = randLocation.split(",");
+        postcode = l[0]; country = l[1]; county = l[2]; city = l[3];
+        
         try {
             driver.findElement(By.id("profile-tab")).click();
             Thread.sleep(1000);
             driver.findElement(By.id("runame")).sendKeys(name);
             driver.findElement(By.id("rupassword")).sendKeys(password);
             driver.findElement(By.id("email")).sendKeys(email);
-            driver.findElement(By.id("postcode")).sendKeys(Integer.toString(postcode));
+            driver.findElement(By.id("postcode")).sendKeys(postcode);
             driver.findElement(By.id("country")).sendKeys(country);
             driver.findElement(By.id("county")).sendKeys(county);
             driver.findElement(By.id("city")).sendKeys(city);
@@ -129,10 +140,10 @@ public class WebTest {
     **/
     
     private static void newData(int value, String date, int category) {
-        String splitter[] = date.split("-");
-        String year = splitter[0];
-        String month = splitter[1];
-        String day = splitter[2];
+        String dateList[] = date.split("-");
+        String year = dateList[0];
+        String month = dateList[1];
+        String day = dateList[2];
         
         try {
             Thread.sleep(1000);
@@ -172,10 +183,20 @@ public class WebTest {
         if (status) System.out.println("Login OK!");
         else System.out.println("Login NOK!");
     }
-    **/
+     * @param args
+        */
     
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
+        try (Scanner scan = new Scanner(new File("./lib/locations.csv"))){
+            System.out.println(scan.nextLine().length());
+            while (scan.hasNextLine()) {
+                locations.add(new Data(scan.nextLine()));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        
         System.setProperty("webdriver.chrome.driver", 
                 "./lib/chromedriver_win32/chromedriver.exe");   // Driver kiválasztása és elérési útja.
         
@@ -189,6 +210,8 @@ public class WebTest {
         driver.get(pagePath("index.html"));     // A főoldal betöltése.
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);        // Időzítés beállítása
         
+        
+        System.out.println(locations.get(0).getLocation());
         /**
          * Bejelentkezés Teszt Elek fiókkal.
         **/
@@ -199,21 +222,20 @@ public class WebTest {
          * Új fiók regisztrálása.
         **/
         
-        //register("Édes Anna", "Anna", "anna@gmail.com", 4275, "Magyarország", "Hajdú-Bihar", "Monostorpályi");
+        //register("Édes Anna", "Anna", "anna@gmail.com", locations.get(0).getLocation());
         
         /**
          * Új fiók bejelentkezése.
         **/
         
-        login("Édes Anna", "Anna");
+        //login("Édes Anna", "Anna");
         
         /**
          * Új fiók adat feltöltése.
         **/
         
-        newData(3000, "2022-07-17", 3);
+        //newData(3000, "2022-07-17", 3);
         
-        Thread.sleep(4000);
         driver.quit();      // Kilép a böngészőből.
     }
     
