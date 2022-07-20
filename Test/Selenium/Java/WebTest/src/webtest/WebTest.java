@@ -1,6 +1,7 @@
 package webtest;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -26,9 +27,11 @@ public class WebTest {
     
     private static WebDriver driver;
 
-    private static String message, randomLocation, randomName;
+    private static String message, randomLocation, randomName, randomEmail, password;
+    private static Boolean start;
     
     static ArrayList<Data> locations = new ArrayList<>();
+    static ArrayList<Data> names = new ArrayList<>();
     
     /**
      * pagePath metódus vissza adja a .html fájlok helyét Stringben.
@@ -53,6 +56,7 @@ public class WebTest {
     **/
     
     private static void login (String name, String password) {
+        
         try {
             driver.findElement(By.id("home-tab")).click();
             Thread.sleep(1000);
@@ -65,13 +69,16 @@ public class WebTest {
             message = driver.findElement(By.id("uzenet")).getText();
             if (message.equals("Hibás jelszó!") || message.equals("Hibás felhasználónév!")){
                 System.out.println("Login NOK!");
+                start = false;
             } else {
                 System.out.println("Login OK!");
             }
-
-        } catch (InterruptedException e) {
+            
+        } catch (Exception e) {
             System.out.println(e);
+            start = false;
         }
+        
     }
     
     /**
@@ -91,21 +98,20 @@ public class WebTest {
      * Szám típusú paraméter/ek: postcode
     **/
     
-    private static void register (String randName, String randLocation) {
-        String name, password, email, postcode, country, county, city;
-        
-        String[] n = randName.split(",");
-        name = n[0]; password = n[1]; email = n[2];
-        
+    private static void register (String randName, String randLocation, String randEmail) {
+        String postcode, country, county, city;
+              
         String[] l = randLocation.split(",");
         postcode = l[0]; country = l[1]; county = l[2]; city = l[3];
+        
+        randomEmail = randEmail;
         
         try {
             driver.findElement(By.id("profile-tab")).click();
             Thread.sleep(1000);
-            driver.findElement(By.id("runame")).sendKeys(name);
+            driver.findElement(By.id("runame")).sendKeys(randName);
             driver.findElement(By.id("rupassword")).sendKeys(password);
-            driver.findElement(By.id("email")).sendKeys(email);
+            driver.findElement(By.id("email")).sendKeys(randomEmail);
             driver.findElement(By.id("postcode")).sendKeys(postcode);
             driver.findElement(By.id("country")).sendKeys(country);
             driver.findElement(By.id("county")).sendKeys(county);
@@ -117,12 +123,14 @@ public class WebTest {
             message = driver.findElement(By.id("ruzenet")).getText();
             if (!message.equals("Sikeres regisztráció")){
                 System.out.println("Register NOK!");
+                start = false;
             } else {
                 System.out.println("Register OK!");
             }
             
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             System.out.println(e);
+            start = false;
         }
     }
     
@@ -161,11 +169,13 @@ public class WebTest {
             Thread.sleep(2000);
             driver.findElement(By.id("gomb1")).click();
             
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             System.out.println(e);
+            start = false;
         }
         
     }
+     
     /**
      * log függvény kiolvassa a státusz választ.
     
@@ -184,59 +194,73 @@ public class WebTest {
         else System.out.println("Login NOK!");
     }
      * @param args
+     * @throws java.lang.InterruptedException
         */
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         try (Scanner scan = new Scanner(new File("./lib/locations.csv"))){
             System.out.println(scan.nextLine().length());
             while (scan.hasNextLine()) {
-                locations.add(new Data(scan.nextLine()));
+                locations.add(new Data(0, scan.nextLine()));
             }
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (IOException l) {
+            System.out.println(l);
         }
-        
+
+        try (Scanner scan = new Scanner(new File("./lib/names.csv"))){
+            System.out.println(scan.nextLine().length());
+            while (scan.hasNextLine()) {
+                names.add(new Data(1, scan.nextLine()));
+            }
+        } catch (IOException n) {
+            System.out.println(n);
+        }
+
         System.setProperty("webdriver.chrome.driver", 
                 "./lib/chromedriver_win32/chromedriver.exe");   // Driver kiválasztása és elérési útja.
-        
+
         ChromeOptions options = new ChromeOptions();
         LoggingPreferences logPrefs = new LoggingPreferences();
         logPrefs.enable( LogType.PERFORMANCE, Level.ALL );
         options.setCapability( "goog:loggingPrefs", logPrefs );
-    
+
         driver = new ChromeDriver(options);  // Új példány a ChromeDriver-ből.
 
         driver.get(pagePath("index.html"));     // A főoldal betöltése.
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);        // Időzítés beállítása
+
+
+        System.out.println(locations.get(0).getLocation() + "\n" + names.get(0).getName() + "\n" + Data.getEmail());
+        password = "Anna";
         
+        start = true;
         
-        System.out.println(locations.get(0).getLocation());
-        /**
-         * Bejelentkezés Teszt Elek fiókkal.
-        **/
+        for (int i=0; i<5; i++) {
+            /**
+             * Új fiók regisztrálása.
+            **/
+            
+            //if (start) register(names.get(0).getName(), locations.get(0).getLocation(), Data.getEmail());
+
+            /**
+             * Új fiók bejelentkezése.
+            **/
+
+            if (start) login(names.get(0).getName(), password);
+            
+            /**
+             * Új fiók adat feltöltése.
+            **/
+
+            //if (start) newData(3000, "2022-07-17", 3);
+        }
         
-        // login("Teszt Elek", "Elek");
-        
-        /**
-         * Új fiók regisztrálása.
-        **/
-        
-        //register("Édes Anna", "Anna", "anna@gmail.com", locations.get(0).getLocation());
-        
-        /**
-         * Új fiók bejelentkezése.
-        **/
-        
-        //login("Édes Anna", "Anna");
-        
-        /**
-         * Új fiók adat feltöltése.
-        **/
-        
-        //newData(3000, "2022-07-17", 3);
-        
+        Thread.sleep(2000);
         driver.quit();      // Kilép a böngészőből.
+        
+
+        
     }
     
 }
@@ -263,32 +287,3 @@ public class WebTest {
        
         **/
 
-/*
-{"message":{
-    "method":"Network.responseReceived",
-    "params":{
-        "frameId":"6B226A5E34F4364EC2E9EFA069C90723",
-        "hasExtraInfo":false,
-        "loaderId":"A95FBB4D380BD93F6F6B10EA16EF6669",
-        "requestId":"A95FBB4D380BD93F6F6B10EA16EF6669",
-        "response":{"connectionId":0,
-        "connectionReused":false,
-        "encodedDataLength":-1,
-        "fromDiskCache":false,
-        "fromPrefetchCache":false,
-        "fromServiceWorker":false,
-        "headers":{
-            "Content-Type":"text/html",
-            "Last-Modified":"Wed, 15 Jun 2022 15:30:03 GMT"},
-        "mimeType":"text/html",
-        "protocol":"file",
-        "remoteIPAddress":"",
-        "remotePort":0,
-        "securityState":"secure",
-        "status":200,
-        "statusText":"OK",
-        "url":"file:///D:/Documents/Szoftverfejleszto_2021-22/Projects/Project_MK/Client/Web/index.html"},
-        "timestamp":2577491.559795,
-        "type":"Document"}},
-    "webview":"6B226A5E34F4364EC2E9EFA069C90723"}
-*/
