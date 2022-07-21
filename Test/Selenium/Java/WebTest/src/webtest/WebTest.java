@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -26,9 +27,11 @@ import org.openqa.selenium.support.ui.Select;
 public class WebTest {
     
     private static WebDriver driver;
-
+    
     private static String message, randomLocation, randomName, randomEmail, password;
     private static Boolean start;
+    
+    static Random rand = new Random();
     
     static ArrayList<Data> locations = new ArrayList<>();
     static ArrayList<Data> names = new ArrayList<>();
@@ -98,14 +101,15 @@ public class WebTest {
      * Szám típusú paraméter/ek: postcode
     **/
     
-    private static void register (String randName, String randLocation, String randEmail) {
+    private static void register (String randName, String randLocation, String randEmail, String randPassword) {
         String postcode, country, county, city;
-              
-        String[] l = randLocation.split(",");
-        postcode = l[0]; country = l[1]; county = l[2]; city = l[3];
         
         randomEmail = randEmail;
+        password = randPassword;
         
+        String[] l = randLocation.split(",");
+        postcode = l[0]; country = l[1]; county = l[2]; city = l[3];
+                        
         try {
             driver.findElement(By.id("profile-tab")).click();
             Thread.sleep(1000);
@@ -168,12 +172,21 @@ public class WebTest {
             selectObject.selectByIndex(category);
             Thread.sleep(2000);
             driver.findElement(By.id("gomb1")).click();
+            Thread.sleep(1000);
             
         } catch (Exception e) {
             System.out.println(e);
             start = false;
-        }
-        
+        } 
+    }
+    
+    /**
+     * randomLocationAndName függvény kiválaszt véletlen szerűen egy nnevet és egy helységet
+    **/
+    
+    private static void randomLocationAndName() {
+        randomName = names.get(rand.nextInt(names.size())).getName();
+        randomLocation = locations.get(rand.nextInt(locations.size())).getLocation();
     }
      
     /**
@@ -199,17 +212,15 @@ public class WebTest {
     
     public static void main(String[] args) throws Exception{
 
-        try (Scanner scan = new Scanner(new File("./lib/locations.csv"))){
-            System.out.println(scan.nextLine().length());
+        try (Scanner scan = new Scanner(new File("./lib/locations.csv"))){      // locations.csv állomány betöltése és mentése listában.
             while (scan.hasNextLine()) {
                 locations.add(new Data(0, scan.nextLine()));
             }
         } catch (IOException l) {
             System.out.println(l);
         }
-
-        try (Scanner scan = new Scanner(new File("./lib/names.csv"))){
-            System.out.println(scan.nextLine().length());
+        
+        try (Scanner scan = new Scanner(new File("./lib/names.csv"))){      // names.csv állomány betöltése és mentése listában.
             while (scan.hasNextLine()) {
                 names.add(new Data(1, scan.nextLine()));
             }
@@ -220,49 +231,35 @@ public class WebTest {
         System.setProperty("webdriver.chrome.driver", 
                 "./lib/chromedriver_win32/chromedriver.exe");   // Driver kiválasztása és elérési útja.
 
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();        // Böngésző főbb beállításai.
         LoggingPreferences logPrefs = new LoggingPreferences();
         logPrefs.enable( LogType.PERFORMANCE, Level.ALL );
         options.setCapability( "goog:loggingPrefs", logPrefs );
 
-        driver = new ChromeDriver(options);  // Új példány a ChromeDriver-ből.
+        driver = new ChromeDriver(options);  // Új példány a ChromeDriver-ből az előző beállításokkal.
 
         driver.get(pagePath("index.html"));     // A főoldal betöltése.
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);        // Időzítés beállítása
-
-
-        System.out.println(locations.get(0).getLocation() + "\n" + names.get(0).getName() + "\n" + Data.getEmail());
-        password = "Anna";
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);        // Időzítés beállítása.
         
-        start = true;
+        start = true;       // Indítási érték.
         
+        /**
+        * Első teszt: Automata teszt 5x.
+        **/
+        
+        randomLocationAndName();        // Első fiók paraméterei.
         for (int i=0; i<5; i++) {
-            /**
-             * Új fiók regisztrálása.
-            **/
-            
-            //if (start) register(names.get(0).getName(), locations.get(0).getLocation(), Data.getEmail());
-
-            /**
-             * Új fiók bejelentkezése.
-            **/
-
-            if (start) login(names.get(0).getName(), password);
-            
-            /**
-             * Új fiók adat feltöltése.
-            **/
-
-            //if (start) newData(3000, "2022-07-17", 3);
+            if (start) register(randomName, randomLocation, Data.getEmail(), Data.getPassword());       // Új fiók regisztrálása.
+            if (start) login(randomName, password);     // Új fiók bejelentkezése.
+            if (start) newData(3000, "2022-07-17", 3);      // Új fiók adatainak feltöltése.
+            if (start) driver.findElement(By.linkText("Kijelentkezés")).click();
+            if (start) randomLocationAndName();         // Következő fiók paraméterei.
         }
         
         Thread.sleep(2000);
         driver.quit();      // Kilép a böngészőből.
-        
-
-        
-    }
-    
+        System.out.println("Test end");
+    } 
 }
 
 /*
