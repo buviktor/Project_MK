@@ -36,6 +36,8 @@ public class WebTest {
     static ArrayList<Data> locations = new ArrayList<>();
     static ArrayList<Data> names = new ArrayList<>();
     
+    
+    
     /**
      * pagePath metódus vissza adja a .html fájlok helyét Stringben.
      * 
@@ -151,15 +153,19 @@ public class WebTest {
      * Szám típusú paraméter/ek: value, category
     **/
     
-    private static void newData(int value, String date, int category) {
-        String dateList[] = date.split("-");
-        String year = dateList[0];
-        String month = dateList[1];
-        String day = dateList[2];
-        
+    private static void newData(int value, String date, int category) {  
         try {
-            Thread.sleep(1000);
-            driver.findElement(By.id("amount")).sendKeys(Integer.toString(value));
+            String dateList[] = date.split("-");
+            String year = dateList[0], month = dateList[1], day = dateList[2], amount;
+            
+            System.out.println(value);
+            if (category == 3 || category == 7) amount = Integer.toString(value);
+            else if (value >= 100000) amount = "-" + (value / 50);
+            else amount = "-" + (value / 5);
+            
+            
+            Thread.sleep(500);
+            driver.findElement(By.id("amount")).sendKeys(amount);
             WebElement datePicker = driver.findElement(By.id("dates"));
             new Actions(driver)
                 .sendKeys(datePicker, year)
@@ -170,9 +176,9 @@ public class WebTest {
             WebElement selectElement = driver.findElement(By.id("categoriesID"));
             Select selectObject = new Select(selectElement);
             selectObject.selectByIndex(category);
-            Thread.sleep(2000);
+            Thread.sleep(500);
             driver.findElement(By.id("gomb1")).click();
-            Thread.sleep(1000);
+            Thread.sleep(500);
             
         } catch (Exception e) {
             System.out.println(e);
@@ -248,10 +254,15 @@ public class WebTest {
         **/
         
         randomLocationAndName();        // Első fiók paraméterei.
-        for (int i=0; i<5; i++) {
+        for (int i=0; i<3; i++) {
             if (start) register(randomName, randomLocation, Data.getEmail(), Data.getPassword());       // Új fiók regisztrálása.
             if (start) login(randomName, password);     // Új fiók bejelentkezése.
-            if (start) newData(3000, "2022-07-17", 3);      // Új fiók adatainak feltöltése.
+            for (int j=0; j < 50; j++) {
+                if (start) {
+                    newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
+                    driver.navigate().refresh();
+                } 
+            }
             if (start) driver.findElement(By.linkText("Kijelentkezés")).click();
             if (start) randomLocationAndName();         // Következő fiók paraméterei.
         }
