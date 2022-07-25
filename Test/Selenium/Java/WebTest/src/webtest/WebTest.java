@@ -5,9 +5,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -31,7 +34,8 @@ public class WebTest {
     
     private static WebDriver driver;
     
-    private static String message, randomLocation, randomName, randomEmail, password;
+    private static String message, randomLocation, randomName, password;
+    private static LocalTime startTime;
     private static Boolean start;
     
     static Random rand = new Random();
@@ -39,6 +43,7 @@ public class WebTest {
     static ArrayList<Data> locations = new ArrayList<>();
     static ArrayList<Data> names = new ArrayList<>();
     static ArrayList<String> uploadData = new ArrayList<>();
+    static ArrayList<String> minimalLogs = new ArrayList<>();
     
     
     
@@ -76,15 +81,14 @@ public class WebTest {
             Thread.sleep(1000);
             
             message = driver.findElement(By.id("uzenet")).getText();
+            minimalLogsAddToList(message);
+            
             if (message.equals("Hibás jelszó!") || message.equals("Hibás felhasználónév!")){
-                System.out.println("Login NOK!");
                 start = false;
-            } else {
-                System.out.println("Login OK!");
             }
             
         } catch (Exception e) {
-            System.out.println(e);
+            minimalLogsAddToList("Sikertelen belépési adat kitöltés!");
             start = false;
         }
         
@@ -107,21 +111,24 @@ public class WebTest {
      * Szám típusú paraméter/ek: postcode
     **/
     
-    private static void register (String randName, String randLocation, String randEmail, String randPassword) {
+    private static void register (String randLocation, String randEmail, String randPassword) {
         String postcode, country, county, city;
         
-        randomEmail = randEmail;
         password = randPassword;
         
         String[] l = randLocation.split(",");
         postcode = l[0]; country = l[1]; county = l[2]; city = l[3];
+        
+        minimalLogsAddToList("Felhasználónév: " + randomName + "; Jelszó: " + password + "; Email: " 
+                + randEmail + "; Irányítószám: " + postcode + "; Ország: " + country + "; Megye: " 
+                + county + "; Város: " + city);
                         
         try {
             driver.findElement(By.id("profile-tab")).click();
             Thread.sleep(1000);
-            driver.findElement(By.id("runame")).sendKeys(randName);
+            driver.findElement(By.id("runame")).sendKeys(randomName);
             driver.findElement(By.id("rupassword")).sendKeys(password);
-            driver.findElement(By.id("email")).sendKeys(randomEmail);
+            driver.findElement(By.id("email")).sendKeys(randEmail);
             driver.findElement(By.id("postcode")).sendKeys(postcode);
             driver.findElement(By.id("country")).sendKeys(country);
             driver.findElement(By.id("county")).sendKeys(county);
@@ -131,15 +138,14 @@ public class WebTest {
             Thread.sleep(1000);
             
             message = driver.findElement(By.id("ruzenet")).getText();
+            minimalLogsAddToList(message + "!");
+            
             if (!message.equals("Sikeres regisztráció")){
-                System.out.println("Register NOK!");
                 start = false;
-            } else {
-                System.out.println("Register OK!");
             }
             
         } catch (Exception e) {
-            System.out.println(e);
+            minimalLogsAddToList("Sikertelen fiók adat kitöltés!");
             start = false;
         }
     }
@@ -166,8 +172,8 @@ public class WebTest {
             else if (value >= 100000) amount = "-" + (value / 50);
             else amount = "-" + (value / 5);
             
-            uploadData.add(amount + "," + date + "," + Integer.toString(category));     // uploadData lista feltöltése a generált adatokkal, log fájlhoz szükséges.
-            
+            uploadData.add(amount + ", " + date + ", " + Integer.toString(category));     // uploadData lista feltöltése a generált adatokkal, log fájlhoz szükséges.
+                        
             Thread.sleep(500);
             driver.findElement(By.id("amount")).sendKeys(amount);
             WebElement datePicker = driver.findElement(By.id("dates"));
@@ -180,11 +186,23 @@ public class WebTest {
             WebElement selectElement = driver.findElement(By.id("categoriesID"));
             Select selectObject = new Select(selectElement);
             selectObject.selectByIndex(category);
+            
+            minimalLogsAddToList("Összeg (Ft): " + amount + ", Dátum: " + date + ", Kategória: " 
+                    + Integer.toString(category));
+            
             Thread.sleep(500);
             driver.findElement(By.id("gomb1")).click();
             Thread.sleep(500);
             
+            message = driver.findElement(By.id("uzenet")).getText();
+            
+            if (!message.equals("Sikeres hozzáadás")){
+                minimalLogsAddToList(message + "!");
+                start = false;
+            }
+            
         } catch (Exception e) {
+            minimalLogsAddToList("Sikertelen adat feltöltés!");
             System.out.println(e);
             start = false;
         } 
@@ -209,14 +227,18 @@ public class WebTest {
         }
     }
 
-    private static void writeFile(ArrayList list) {
-        try (PrintWriter writer = new PrintWriter(new File("./logs/" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd-HHmmss")) + "_log.txt"))){
+    private static void writeFile(ArrayList list, String log) {
+        try (PrintWriter writer = new PrintWriter(new File("./logs/" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd-HHmmss")) + log))){
             for (int i=0; i<list.size(); i++) {
                 writer.println(list.get(i));
             }
         } catch (IOException e) {
             System.out.println(e);
         }
+    }
+    
+    private static void minimalLogsAddToList(String prompt) {
+        minimalLogs.add(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + "\t" + prompt);
     }
      
     /**
@@ -241,9 +263,13 @@ public class WebTest {
         */
     
     public static void main(String[] args) throws Exception{
+        startTime = LocalTime.now();
+        minimalLogsAddToList("Teszt indítása");
 
+        minimalLogsAddToList("Szükséges forrás fájlok betöltése....");
         readFile("./lib/locations.csv", locations, 0);      // locations.csv állomány betöltése és mentése listában.
         readFile("./lib/names.csv", names, 1);      // names.csv állomány betöltése és mentése listában.
+        minimalLogsAddToList("Forrás fájlok betöltése kész!");
                 
         System.setProperty("webdriver.chrome.driver", 
                 "./lib/chromedriver_win32/chromedriver.exe");   // Driver kiválasztása és elérési útja.
@@ -264,30 +290,38 @@ public class WebTest {
         * Első teszt: Automata teszt 5x.
         **/
         
-        randomLocationAndName();        // Első fiók paraméterei.
         for (int i=0; i<3; i++) {
+            minimalLogs.add(" ");       // Üres sor beszúrása.
             
-            System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd-HHmmss")));
-            
-            if (start) register(randomName, randomLocation, Data.getEmail(), Data.getPassword());       // Új fiók regisztrálása.
+            if (start) {
+                minimalLogsAddToList((i+1) + " fiók adatainak létrehozása");
+                randomLocationAndName();         // A fiók paraméterei.
+            }   
+            if (start) register(randomLocation, Data.getEmail(), Data.getPassword());       // Új fiók regisztrálása.
             if (start) login(randomName, password);     // Új fiók bejelentkezése.
+            
+            if (start) minimalLogsAddToList("Adatok feltöltése....");
             for (int j=0; j < 50; j++) {
                 if (start) {
                     newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
                     driver.navigate().refresh();
                 } 
             }
+            
             if (start) {
-                writeFile(uploadData);       // Ki írja fájlba a feltöltött adatok.
+                minimalLogsAddToList("Adatok sikeresen feltöltve!");
+                driver.findElement(By.linkText("Kijelentkezés")).click();
                 uploadData.clear();
             }
-            if (start) driver.findElement(By.linkText("Kijelentkezés")).click();
-            if (start) randomLocationAndName();         // Következő fiók paraméterei.
         }
-        
+               
         Thread.sleep(2000);
         driver.quit();      // Kilép a böngészőből.
-        System.out.println("Test end");
+        
+        Duration duration = Duration.between(startTime, LocalTime.now());       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        minimalLogsAddToList("A teszt befejeződött! Teljes ideje: " + duration.getSeconds()/60 + " perc " + duration.getSeconds()% 60 + " másodperc.");
+        
+        writeFile(minimalLogs, "_testlog.txt");       // Ki írja fájlba a minimalis logokat.
     } 
 }
 

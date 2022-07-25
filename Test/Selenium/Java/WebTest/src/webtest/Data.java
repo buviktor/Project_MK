@@ -1,6 +1,7 @@
 package webtest;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 /**
@@ -103,8 +104,8 @@ public class Data {
     }
     
     public static String getDate() {
-        String[] localDate = LocalDate.now().toString().split("-");
-        String year, month, day = "", yearNow = localDate[0];
+        String[] localDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")).split("-");
+        String year = "", month = "", day = "", yearNow = localDate[0];
         int randomNumberForMonth, monthNow = Integer.parseInt(localDate[1]);
         int randomNumberForDay, dayNow = Integer.parseInt(localDate[2]);
         
@@ -112,14 +113,17 @@ public class Data {
         else year = "2021";
         
         randomNumberForMonth = rand.nextInt(12)+1;
-        if (year.equals(yearNow)) month = "0" + (rand.nextInt(monthNow)+1);
-        else if (randomNumberForMonth >= 10) month = String.valueOf(randomNumberForMonth);
-        else month = "0" + randomNumberForMonth;
+        if (year.equals(yearNow)) {
+            month = String.valueOf(rand.nextInt(monthNow)+1);
+            if (Integer.parseInt(month) < 10) month = "0" + month;
+        } else month = String.valueOf(randomNumberForMonth);
         
         randomNumberForDay = rand.nextInt(31)+1;
         if (year.equals(yearNow) && month.equals(monthNow)) {
-            if (randomNumberForDay <= dayNow && randomNumberForDay >= 10) day = String.valueOf(randomNumberForDay);
-            else if (randomNumberForDay <= dayNow) day = "0" + randomNumberForDay;
+            day = String.valueOf(rand.nextInt(dayNow)+1);
+            if (Integer.parseInt(day) < 10) {
+                day = "0" + day;
+            }  
         } else {
             switch (randomNumberForMonth-1) {
                 case 0: case 2: case 4: case 6: case 7: case 9: case 11:
