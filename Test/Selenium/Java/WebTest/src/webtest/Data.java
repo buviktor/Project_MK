@@ -118,7 +118,7 @@ public class Data {
         
         randomNumberForDay = rand.nextInt(31)+1;
         if (year.equals(yearNow) && month.equals(monthNow)) {
-            if (randomNumberForDay >= 10 && randomNumberForDay <= dayNow) day = String.valueOf(randomNumberForDay);
+            if (randomNumberForDay <= dayNow && randomNumberForDay >= 10) day = String.valueOf(randomNumberForDay);
             else if (randomNumberForDay <= dayNow) day = "0" + randomNumberForDay;
         } else {
             switch (randomNumberForMonth-1) {

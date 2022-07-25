@@ -2,8 +2,11 @@ package webtest;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -35,6 +38,7 @@ public class WebTest {
     
     static ArrayList<Data> locations = new ArrayList<>();
     static ArrayList<Data> names = new ArrayList<>();
+    static ArrayList<String> uploadData = new ArrayList<>();
     
     
     
@@ -154,15 +158,15 @@ public class WebTest {
     **/
     
     private static void newData(int value, String date, int category) {  
-        try {
+        try {       
             String dateList[] = date.split("-");
             String year = dateList[0], month = dateList[1], day = dateList[2], amount;
             
-            System.out.println(value);
             if (category == 3 || category == 7) amount = Integer.toString(value);
             else if (value >= 100000) amount = "-" + (value / 50);
             else amount = "-" + (value / 5);
             
+            uploadData.add(amount + "," + date + "," + Integer.toString(category));     // uploadData lista feltöltése a generált adatokkal, log fájlhoz szükséges.
             
             Thread.sleep(500);
             driver.findElement(By.id("amount")).sendKeys(amount);
@@ -194,6 +198,26 @@ public class WebTest {
         randomName = names.get(rand.nextInt(names.size())).getName();
         randomLocation = locations.get(rand.nextInt(locations.size())).getLocation();
     }
+    
+    private static void readFile(String path, ArrayList list, int which) {
+        try (Scanner scan = new Scanner(new File(path))){
+            while (scan.hasNextLine()) {
+                list.add(new Data(which, scan.nextLine()));
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+    }
+
+    private static void writeFile(ArrayList list) {
+        try (PrintWriter writer = new PrintWriter(new File("./logs/" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd-HHmmss")) + "_log.txt"))){
+            for (int i=0; i<list.size(); i++) {
+                writer.println(list.get(i));
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+    }
      
     /**
      * log függvény kiolvassa a státusz választ.
@@ -218,22 +242,9 @@ public class WebTest {
     
     public static void main(String[] args) throws Exception{
 
-        try (Scanner scan = new Scanner(new File("./lib/locations.csv"))){      // locations.csv állomány betöltése és mentése listában.
-            while (scan.hasNextLine()) {
-                locations.add(new Data(0, scan.nextLine()));
-            }
-        } catch (IOException l) {
-            System.out.println(l);
-        }
-        
-        try (Scanner scan = new Scanner(new File("./lib/names.csv"))){      // names.csv állomány betöltése és mentése listában.
-            while (scan.hasNextLine()) {
-                names.add(new Data(1, scan.nextLine()));
-            }
-        } catch (IOException n) {
-            System.out.println(n);
-        }
-
+        readFile("./lib/locations.csv", locations, 0);      // locations.csv állomány betöltése és mentése listában.
+        readFile("./lib/names.csv", names, 1);      // names.csv állomány betöltése és mentése listában.
+                
         System.setProperty("webdriver.chrome.driver", 
                 "./lib/chromedriver_win32/chromedriver.exe");   // Driver kiválasztása és elérési útja.
 
@@ -255,6 +266,9 @@ public class WebTest {
         
         randomLocationAndName();        // Első fiók paraméterei.
         for (int i=0; i<3; i++) {
+            
+            System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd-HHmmss")));
+            
             if (start) register(randomName, randomLocation, Data.getEmail(), Data.getPassword());       // Új fiók regisztrálása.
             if (start) login(randomName, password);     // Új fiók bejelentkezése.
             for (int j=0; j < 50; j++) {
@@ -262,6 +276,10 @@ public class WebTest {
                     newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
                     driver.navigate().refresh();
                 } 
+            }
+            if (start) {
+                writeFile(uploadData);       // Ki írja fájlba a feltöltött adatok.
+                uploadData.clear();
             }
             if (start) driver.findElement(By.linkText("Kijelentkezés")).click();
             if (start) randomLocationAndName();         // Következő fiók paraméterei.
