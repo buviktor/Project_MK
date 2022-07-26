@@ -133,9 +133,9 @@ public class WebTest {
             driver.findElement(By.id("country")).sendKeys(country);
             driver.findElement(By.id("county")).sendKeys(county);
             driver.findElement(By.id("city")).sendKeys(city);
-            Thread.sleep(2000);
-            driver.findElement(By.id("gomb")).click();
             Thread.sleep(1000);
+            driver.findElement(By.id("gomb")).click();
+            Thread.sleep(500);
             
             message = driver.findElement(By.id("ruzenet")).getText();
             minimalLogsAddToList(message + "!");
@@ -240,6 +240,10 @@ public class WebTest {
     private static void minimalLogsAddToList(String prompt) {
         minimalLogs.add(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + "\t" + prompt);
     }
+    
+    private static void queryToDatabase() {
+        
+    }
      
     /**
      * log függvény kiolvassa a státusz választ.
@@ -287,7 +291,7 @@ public class WebTest {
         start = true;       // Indítási érték.
         
         /**
-        * Első teszt: Automata teszt 5x.
+        * Első teszt: Automata teszt 3x.
         **/
         
         for (int i=0; i<3; i++) {
@@ -297,15 +301,20 @@ public class WebTest {
                 minimalLogsAddToList((i+1) + " fiók adatainak létrehozása");
                 randomLocationAndName();         // A fiók paraméterei.
             }   
+            
             if (start) register(randomLocation, Data.getEmail(), Data.getPassword());       // Új fiók regisztrálása.
             if (start) login(randomName, password);     // Új fiók bejelentkezése.
-            
             if (start) minimalLogsAddToList("Adatok feltöltése....");
+            
             for (int j=0; j < 50; j++) {
                 if (start) {
                     newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
                     driver.navigate().refresh();
                 } 
+            }
+            
+            if (start) {
+                
             }
             
             if (start) {

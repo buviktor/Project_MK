@@ -119,11 +119,9 @@ public class Data {
         } else month = String.valueOf(randomNumberForMonth);
         
         randomNumberForDay = rand.nextInt(31)+1;
-        if (year.equals(yearNow) && month.equals(monthNow)) {
+        if (year.equals(yearNow) && month.equals(String.valueOf(monthNow))) {
             day = String.valueOf(rand.nextInt(dayNow)+1);
-            if (Integer.parseInt(day) < 10) {
-                day = "0" + day;
-            }  
+            if (Integer.parseInt(day) < 10) day = "0" + day;
         } else {
             switch (randomNumberForMonth-1) {
                 case 0: case 2: case 4: case 6: case 7: case 9: case 11:

@@ -1,0 +1,175 @@
+2022-07-26 16:29:38	Teszt indítása
+2022-07-26 16:29:38	Szükséges forrás fájlok betöltése....
+2022-07-26 16:29:38	Forrás fájlok betöltése kész!
+ 
+2022-07-26 16:29:41	1 fiók adatainak létrehozása
+2022-07-26 16:29:41	Felhasználónév: Szekeres Verka; Jelszó: bMwc6GTFS0; Email: szekeres.verka8245@outlook.hu; Irányítószám: 4633; Ország: Magyarország; Megye: Szabolcs-Szatmár-Bereg; Város: Lövőpetri
+2022-07-26 16:29:46	Sikeres regisztráció!
+2022-07-26 16:29:50	
+2022-07-26 16:29:50	Adatok feltöltése....
+2022-07-26 16:29:51	Összeg (Ft): 480200, Dátum: 2022-06-13, Kategória: 7
+2022-07-26 16:29:53	Összeg (Ft): -9458, Dátum: 2021-11-07, Kategória: 1
+2022-07-26 16:29:55	Összeg (Ft): -9958, Dátum: 2022-07-22, Kategória: 5
+2022-07-26 16:29:57	Összeg (Ft): 311400, Dátum: 2021-10-25, Kategória: 3
+2022-07-26 16:29:59	Összeg (Ft): -8176, Dátum: 2022-04-16, Kategória: 1
+2022-07-26 16:30:01	Összeg (Ft): -2140, Dátum: 2021-2-12, Kategória: 5
+2022-07-26 16:30:03	Összeg (Ft): -4426, Dátum: 2021-6-04, Kategória: 2
+2022-07-26 16:30:05	Összeg (Ft): -9878, Dátum: 2021-10-22, Kategória: 5
+2022-07-26 16:30:08	Összeg (Ft): 234400, Dátum: 2021-6-02, Kategória: 7
+2022-07-26 16:30:10	Összeg (Ft): -14800, Dátum: 2022-07-10, Kategória: 6
+2022-07-26 16:30:12	Összeg (Ft): -7590, Dátum: 2022-05-04, Kategória: 6
+2022-07-26 16:30:14	Összeg (Ft): -7988, Dátum: 2021-2-27, Kategória: 4
+2022-07-26 16:30:16	Összeg (Ft): 102200, Dátum: 2022-02-02, Kategória: 7
+2022-07-26 16:30:18	Összeg (Ft): -8880, Dátum: 2021-2-8, Kategória: 1
+2022-07-26 16:30:20	Összeg (Ft): -19280, Dátum: 2022-04-23, Kategória: 2
+2022-07-26 16:30:22	Összeg (Ft): -8752, Dátum: 2021-6-19, Kategória: 5
+2022-07-26 16:30:24	Összeg (Ft): -3462, Dátum: 2021-7-09, Kategória: 4
+2022-07-26 16:30:26	Összeg (Ft): 199600, Dátum: 2022-04-15, Kategória: 3
+2022-07-26 16:30:28	Összeg (Ft): -6196, Dátum: 2022-02-23, Kategória: 2
+2022-07-26 16:30:30	Összeg (Ft): 372700, Dátum: 2022-06-03, Kategória: 7
+2022-07-26 16:30:32	Összeg (Ft): -15900, Dátum: 2022-07-15, Kategória: 1
+2022-07-26 16:30:34	Összeg (Ft): -2160, Dátum: 2022-03-03, Kategória: 2
+2022-07-26 16:30:37	Összeg (Ft): -6930, Dátum: 2022-07-11, Kategória: 2
+2022-07-26 16:30:39	Összeg (Ft): 413000, Dátum: 2021-3-22, Kategória: 3
+2022-07-26 16:30:41	Összeg (Ft): -13960, Dátum: 2021-11-06, Kategória: 4
+2022-07-26 16:30:43	Összeg (Ft): -3106, Dátum: 2021-1-21, Kategória: 5
+2022-07-26 16:30:45	Összeg (Ft): -6286, Dátum: 2021-2-24, Kategória: 2
+2022-07-26 16:30:47	Összeg (Ft): 460600, Dátum: 2022-03-02, Kategória: 3
+2022-07-26 16:30:49	Összeg (Ft): 92200, Dátum: 2021-4-27, Kategória: 3
+2022-07-26 16:30:51	Összeg (Ft): -2760, Dátum: 2021-4-20, Kategória: 1
+2022-07-26 16:30:53	Összeg (Ft): -4106, Dátum: 2022-04-13, Kategória: 2
+2022-07-26 16:30:55	Összeg (Ft): -4192, Dátum: 2021-12-07, Kategória: 1
+2022-07-26 16:30:57	Összeg (Ft): 267200, Dátum: 2022-05-04, Kategória: 3
+2022-07-26 16:30:59	Összeg (Ft): 112900, Dátum: 2022-04-20, Kategória: 7
+2022-07-26 16:31:01	Összeg (Ft): -8210, Dátum: 2021-8-10, Kategória: 2
+2022-07-26 16:31:03	Összeg (Ft): -4270, Dátum: 2021-3-04, Kategória: 5
+2022-07-26 16:31:06	Összeg (Ft): -7016, Dátum: 2022-05-21, Kategória: 1
+2022-07-26 16:31:08	Összeg (Ft): -2246, Dátum: 2021-11-08, Kategória: 5
+2022-07-26 16:31:10	Összeg (Ft): -3514, Dátum: 2021-11-26, Kategória: 5
+2022-07-26 16:31:12	Összeg (Ft): -4592, Dátum: 2021-8-01, Kategória: 4
+2022-07-26 16:31:14	Összeg (Ft): -9488, Dátum: 2022-07-09, Kategória: 1
+2022-07-26 16:31:16	Összeg (Ft): -3308, Dátum: 2021-8-17, Kategória: 2
+2022-07-26 16:31:18	Összeg (Ft): -4426, Dátum: 2022-01-04, Kategória: 2
+2022-07-26 16:31:20	Összeg (Ft): 261000, Dátum: 2022-03-23, Kategória: 3
+2022-07-26 16:31:22	Összeg (Ft): -5262, Dátum: 2021-6-29, Kategória: 1
+2022-07-26 16:31:24	Összeg (Ft): 339500, Dátum: 2021-8-11, Kategória: 3
+2022-07-26 16:31:26	Összeg (Ft): -7768, Dátum: 2021-8-20, Kategória: 2
+2022-07-26 16:31:28	Összeg (Ft): 193400, Dátum: 2021-10-14, Kategória: 3
+2022-07-26 16:31:30	Összeg (Ft): -3622, Dátum: 2022-07-21, Kategória: 4
+2022-07-26 16:31:32	Összeg (Ft): -7294, Dátum: 2021-8-09, Kategória: 5
+2022-07-26 16:31:33	Adatok sikeresen feltöltve!
+ 
+2022-07-26 16:31:34	2 fiók adatainak létrehozása
+2022-07-26 16:31:34	Felhasználónév: Aknai Perla; Jelszó: CH7GhgX6AI; Email: aknai.perla2588@freemail.hu; Irányítószám: 7025; Ország: Magyarország; Megye: Tolna; Város: Bölcske
+2022-07-26 16:31:38	Sikeres regisztráció!
+2022-07-26 16:31:43	
+2022-07-26 16:31:43	Adatok feltöltése....
+2022-07-26 16:31:43	Összeg (Ft): -2936, Dátum: 2021-11-07, Kategória: 6
+2022-07-26 16:31:46	Összeg (Ft): 362600, Dátum: 2021-5-06, Kategória: 7
+2022-07-26 16:31:48	Összeg (Ft): 273300, Dátum: 2021-4-30, Kategória: 7
+2022-07-26 16:31:50	Összeg (Ft): 162500, Dátum: 2021-3-31, Kategória: 3
+2022-07-26 16:31:52	Összeg (Ft): 424600, Dátum: 2022-02-04, Kategória: 3
+2022-07-26 16:31:54	Összeg (Ft): 172100, Dátum: 2021-6-06, Kategória: 3
+2022-07-26 16:31:56	Összeg (Ft): -5128, Dátum: 2021-12-14, Kategória: 4
+2022-07-26 16:31:58	Összeg (Ft): -3024, Dátum: 2021-9-29, Kategória: 6
+2022-07-26 16:32:00	Összeg (Ft): -7258, Dátum: 2022-02-05, Kategória: 6
+2022-07-26 16:32:02	Összeg (Ft): -2774, Dátum: 2021-1-03, Kategória: 4
+2022-07-26 16:32:04	Összeg (Ft): -6506, Dátum: 2022-06-25, Kategória: 2
+2022-07-26 16:32:06	Összeg (Ft): -3520, Dátum: 2022-07-19, Kategória: 6
+2022-07-26 16:32:09	Összeg (Ft): -6550, Dátum: 2022-01-19, Kategória: 4
+2022-07-26 16:32:11	Összeg (Ft): -4644, Dátum: 2021-11-16, Kategória: 2
+2022-07-26 16:32:13	Összeg (Ft): -6762, Dátum: 2021-5-13, Kategória: 1
+2022-07-26 16:32:15	Összeg (Ft): -9468, Dátum: 2022-04-25, Kategória: 2
+2022-07-26 16:32:17	Összeg (Ft): 262000, Dátum: 2021-7-15, Kategória: 3
+2022-07-26 16:32:19	Összeg (Ft): 416900, Dátum: 2021-5-26, Kategória: 7
+2022-07-26 16:32:21	Összeg (Ft): 285900, Dátum: 2021-10-17, Kategória: 7
+2022-07-26 16:32:23	Összeg (Ft): 234900, Dátum: 2021-9-14, Kategória: 3
+2022-07-26 16:32:25	Összeg (Ft): 409600, Dátum: 2021-11-07, Kategória: 3
+2022-07-26 16:32:27	Összeg (Ft): -8918, Dátum: 2022-06-16, Kategória: 1
+2022-07-26 16:32:29	Összeg (Ft): -3458, Dátum: 2022-04-15, Kategória: 5
+2022-07-26 16:32:31	Összeg (Ft): 482600, Dátum: 2022-01-11, Kategória: 7
+2022-07-26 16:32:33	Összeg (Ft): -4580, Dátum: 2021-9-28, Kategória: 6
+2022-07-26 16:32:35	Összeg (Ft): 64500, Dátum: 2022-06-20, Kategória: 7
+2022-07-26 16:32:38	Összeg (Ft): -4756, Dátum: 2022-05-11, Kategória: 5
+2022-07-26 16:32:40	Összeg (Ft): 98000, Dátum: 2022-01-25, Kategória: 7
+2022-07-26 16:32:42	Összeg (Ft): 434600, Dátum: 2022-07-03, Kategória: 3
+2022-07-26 16:32:44	Összeg (Ft): 379000, Dátum: 2021-12-08, Kategória: 3
+2022-07-26 16:32:46	Összeg (Ft): 131500, Dátum: 2022-02-03, Kategória: 7
+2022-07-26 16:32:48	Összeg (Ft): -19720, Dátum: 2022-02-19, Kategória: 5
+2022-07-26 16:32:50	Összeg (Ft): -7162, Dátum: 2022-02-09, Kategória: 6
+2022-07-26 16:32:52	Összeg (Ft): -8932, Dátum: 2021-12-25, Kategória: 4
+2022-07-26 16:32:54	Összeg (Ft): -6220, Dátum: 2021-11-07, Kategória: 6
+2022-07-26 16:32:56	Összeg (Ft): 336900, Dátum: 2021-8-17, Kategória: 3
+2022-07-26 16:32:58	Összeg (Ft): -14240, Dátum: 2022-05-08, Kategória: 2
+2022-07-26 16:33:01	Összeg (Ft): 214300, Dátum: 2022-07-05, Kategória: 3
+2022-07-26 16:33:03	Összeg (Ft): -6698, Dátum: 2021-6-17, Kategória: 4
+2022-07-26 16:33:05	Összeg (Ft): -4334, Dátum: 2021-2-28, Kategória: 6
+2022-07-26 16:33:07	Összeg (Ft): -8806, Dátum: 2021-10-06, Kategória: 1
+2022-07-26 16:33:09	Összeg (Ft): 218400, Dátum: 2021-8-25, Kategória: 3
+2022-07-26 16:33:11	Összeg (Ft): -4424, Dátum: 2022-02-20, Kategória: 6
+2022-07-26 16:33:13	Összeg (Ft): -2878, Dátum: 2022-05-11, Kategória: 6
+2022-07-26 16:33:15	Összeg (Ft): -5434, Dátum: 2022-07-19, Kategória: 4
+2022-07-26 16:33:17	Összeg (Ft): -7896, Dátum: 2022-02-12, Kategória: 6
+2022-07-26 16:33:19	Összeg (Ft): -6298, Dátum: 2021-3-25, Kategória: 4
+2022-07-26 16:33:21	Összeg (Ft): -9672, Dátum: 2022-03-07, Kategória: 5
+2022-07-26 16:33:23	Összeg (Ft): 39400, Dátum: 2021-9-11, Kategória: 7
+2022-07-26 16:33:25	Összeg (Ft): 90800, Dátum: 2021-12-02, Kategória: 7
+2022-07-26 16:33:27	Adatok sikeresen feltöltve!
+ 
+2022-07-26 16:33:27	3 fiók adatainak létrehozása
+2022-07-26 16:33:27	Felhasználónév: Szőcs Szelim; Jelszó: 1KD1dAXcwy; Email: szocs.szelim8372@citromail.hu; Irányítószám: 8660; Ország: Magyarország; Megye: Somogy; Város: Torvaj
+2022-07-26 16:33:31	Sikeres regisztráció!
+2022-07-26 16:33:36	
+2022-07-26 16:33:36	Adatok feltöltése....
+2022-07-26 16:33:36	Összeg (Ft): -7184, Dátum: 2022-05-07, Kategória: 2
+2022-07-26 16:33:38	Összeg (Ft): -6514, Dátum: 2021-9-04, Kategória: 5
+2022-07-26 16:33:40	Összeg (Ft): -6692, Dátum: 2021-8-22, Kategória: 6
+2022-07-26 16:33:43	Összeg (Ft): 283500, Dátum: 2022-05-10, Kategória: 3
+2022-07-26 16:33:45	Összeg (Ft): 168400, Dátum: 2021-11-11, Kategória: 3
+2022-07-26 16:33:47	Összeg (Ft): -2000, Dátum: 2022-04-20, Kategória: 5
+2022-07-26 16:33:49	Összeg (Ft): -5538, Dátum: 2021-4-11, Kategória: 4
+2022-07-26 16:33:51	Összeg (Ft): -4398, Dátum: 2022-07-11, Kategória: 2
+2022-07-26 16:33:53	Összeg (Ft): -2334, Dátum: 2021-7-24, Kategória: 4
+2022-07-26 16:33:55	Összeg (Ft): -3242, Dátum: 2021-8-23, Kategória: 2
+2022-07-26 16:33:57	Összeg (Ft): -13520, Dátum: 2021-6-24, Kategória: 4
+2022-07-26 16:33:59	Összeg (Ft): -2738, Dátum: 2022-02-25, Kategória: 6
+2022-07-26 16:34:01	Összeg (Ft): -4920, Dátum: 2021-12-23, Kategória: 5
+2022-07-26 16:34:03	Összeg (Ft): 240600, Dátum: 2021-2-24, Kategória: 3
+2022-07-26 16:34:06	Összeg (Ft): 155800, Dátum: 2022-04-03, Kategória: 3
+2022-07-26 16:34:08	Összeg (Ft): -8820, Dátum: 2021-1-17, Kategória: 5
+2022-07-26 16:34:10	Összeg (Ft): -2442, Dátum: 2022-06-21, Kategória: 4
+2022-07-26 16:34:12	Összeg (Ft): 131400, Dátum: 2021-8-22, Kategória: 3
+2022-07-26 16:34:14	Összeg (Ft): -6032, Dátum: 2022-07-26, Kategória: 6
+2022-07-26 16:34:16	Összeg (Ft): -11700, Dátum: 2021-5-06, Kategória: 6
+2022-07-26 16:34:18	Összeg (Ft): -8328, Dátum: 2021-8-29, Kategória: 1
+2022-07-26 16:34:20	Összeg (Ft): -3280, Dátum: 2022-02-21, Kategória: 2
+2022-07-26 16:34:22	Összeg (Ft): 264900, Dátum: 2022-06-12, Kategória: 3
+2022-07-26 16:34:24	Összeg (Ft): 105800, Dátum: 2021-7-15, Kategória: 7
+2022-07-26 16:34:26	Összeg (Ft): -6888, Dátum: 2022-07-09, Kategória: 5
+2022-07-26 16:34:28	Összeg (Ft): -4224, Dátum: 2022-02-16, Kategória: 6
+2022-07-26 16:34:30	Összeg (Ft): -9536, Dátum: 2022-02-21, Kategória: 5
+2022-07-26 16:34:32	Összeg (Ft): 91000, Dátum: 2021-2-06, Kategória: 3
+2022-07-26 16:34:34	Összeg (Ft): -9056, Dátum: 2021-12-22, Kategória: 4
+2022-07-26 16:34:36	Összeg (Ft): -2290, Dátum: 2022-03-13, Kategória: 4
+2022-07-26 16:34:38	Összeg (Ft): 18400, Dátum: 2021-4-16, Kategória: 7
+2022-07-26 16:34:40	Összeg (Ft): -5486, Dátum: 2021-10-01, Kategória: 5
+2022-07-26 16:34:42	Összeg (Ft): 215800, Dátum: 2021-6-22, Kategória: 3
+2022-07-26 16:34:44	Összeg (Ft): -4928, Dátum: 2022-04-25, Kategória: 2
+2022-07-26 16:34:47	Összeg (Ft): 465900, Dátum: 2021-2-16, Kategória: 3
+2022-07-26 16:34:49	Összeg (Ft): 226100, Dátum: 2022-05-23, Kategória: 7
+2022-07-26 16:34:51	Összeg (Ft): -3960, Dátum: 2022-02-12, Kategória: 2
+2022-07-26 16:34:53	Összeg (Ft): -7534, Dátum: 2022-05-24, Kategória: 6
+2022-07-26 16:34:55	Összeg (Ft): -7212, Dátum: 2022-05-24, Kategória: 5
+2022-07-26 16:34:57	Összeg (Ft): 490900, Dátum: 2022-04-03, Kategória: 3
+2022-07-26 16:34:59	Összeg (Ft): 407700, Dátum: 2022-05-15, Kategória: 3
+2022-07-26 16:35:01	Összeg (Ft): 48700, Dátum: 2021-5-26, Kategória: 7
+2022-07-26 16:35:03	Összeg (Ft): 159000, Dátum: 2022-04-07, Kategória: 7
+2022-07-26 16:35:05	Összeg (Ft): -6698, Dátum: 2021-8-20, Kategória: 6
+2022-07-26 16:35:07	Összeg (Ft): -6236, Dátum: 2022-07-03, Kategória: 1
+2022-07-26 16:35:09	Összeg (Ft): -7398, Dátum: 2022-01-08, Kategória: 4
+2022-07-26 16:35:11	Összeg (Ft): -11220, Dátum: 2022-05-03, Kategória: 4
+2022-07-26 16:35:13	Összeg (Ft): -5850, Dátum: 2022-03-17, Kategória: 2
+2022-07-26 16:35:16	Összeg (Ft): -8980, Dátum: 2021-5-13, Kategória: 1
+2022-07-26 16:35:18	Összeg (Ft): 123600, Dátum: 2021-4-10, Kategória: 7
+2022-07-26 16:35:19	Adatok sikeresen feltöltve!
+2022-07-26 16:35:22	A teszt befejeződött! Teljes ideje: 5 perc 43 másodperc.
