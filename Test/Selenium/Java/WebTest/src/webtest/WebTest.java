@@ -241,8 +241,38 @@ public class WebTest {
         minimalLogs.add(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + "\t" + prompt);
     }
     
-    private static void queryToDatabase() {
-        
+    private static void queryFromDatabase() {
+        try {
+            driver.findElement(By.linkText("Lekérdezés")).click();
+            
+            List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
+            List<WebElement> selectCategory = driver.findElements(By.id("categoriesID"));
+            // if (!table.isEmpty()) start = false;     // Tábla ürességének ellenőrzése.
+            
+            driver.findElement(By.id("gomb2")).click();
+            
+            Thread.sleep(500);
+            table = driver.findElements(By.id("lista"));
+            
+            
+            for (int i = 0; i < table.size(); i++) {
+               // System.out.println(table.get(i).getText());
+               // System.out.println(uploadData.get(0));    
+                
+            }
+            
+            for (int i = 0; i < selectCategory.size(); i++) {
+                System.out.println(selectCategory.get(i).getText());
+            }
+            Thread.sleep(2000);
+            
+            start = false;
+            
+            
+        } catch (Exception e) {
+            System.out.println(e);
+            start = false;
+        }
     }
      
     /**
@@ -296,7 +326,7 @@ public class WebTest {
         
         for (int i=0; i<3; i++) {
             minimalLogs.add(" ");       // Üres sor beszúrása.
-            
+            /*
             if (start) {
                 minimalLogsAddToList((i+1) + " fiók adatainak létrehozása");
                 randomLocationAndName();         // A fiók paraméterei.
@@ -312,9 +342,16 @@ public class WebTest {
                     driver.navigate().refresh();
                 } 
             }
-            
+            */
             if (start) {
-                
+                login("Ferencsik Délia", "77Gqh84175");
+                for (int j=0; j < 50; j++) {
+                    if (start) {
+                        newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
+                        driver.navigate().refresh();
+                    } 
+                }
+                queryFromDatabase();
             }
             
             if (start) {

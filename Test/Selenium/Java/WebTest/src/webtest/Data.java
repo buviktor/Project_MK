@@ -116,10 +116,15 @@ public class Data {
         if (year.equals(yearNow)) {
             month = String.valueOf(rand.nextInt(monthNow)+1);
             if (Integer.parseInt(month) < 10) month = "0" + month;
-        } else month = String.valueOf(randomNumberForMonth);
+        } else {
+            if (randomNumberForMonth < 10) {
+                month = "0" + String.valueOf(randomNumberForMonth);
+            } else month = String.valueOf(randomNumberForMonth);
+        }
         
         randomNumberForDay = rand.nextInt(31)+1;
-        if (year.equals(yearNow) && month.equals(String.valueOf(monthNow))) {
+        
+        if (year.equals(yearNow) && Integer.parseInt(month) == monthNow) {
             day = String.valueOf(rand.nextInt(dayNow)+1);
             if (Integer.parseInt(day) < 10) day = "0" + day;
         } else {
