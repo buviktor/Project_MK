@@ -1,5 +1,5 @@
 window.addEventListener("load", function Post() {
-    const url = 'http://localhost:5000/user/post/' + "/" + sessionStorage.id + "/" +  sessionStorage.regid;
+    const url = 'http://localhost:5000/user/post' + "/" + sessionStorage.id + "/" +  sessionStorage.regid;
     const token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista");
     fetch(url, {

@@ -41,52 +41,53 @@
 </header>
 </div>
 
+<div>
+  <form>
+    <div class="my-3 px-5">
+  
+       <h2>Új </h2> 
+    </div>
+  
+    <div class="row mb-3 px-5" style="position: relative;">
+            <div class="col-md-4">
+                <label for="összeg" class="form-label">Összeg</label>
+                <input class="form-control" id="amount" type="number">
+            </div>
+  
+            <div class="col-md-4">
+                <label for="datum" class="form-label">Dátum</label>
+                <input class="form-control" id="dates" type="date">
+            </div>
+        
+            <div class="col-md-4">
+                <label for="kategoria" class="form-label">Kategória</label>
+                <select class="form-select" id="categoriesID">
+                  <option selected>Válasszon!</option>
+                  <!-- <option value="1">Élelmiszer</option>
+                  <option value="2">Ruházat</option>
+                  <option value="3">Fizetés</option>
+                  <option value="4">Szabadidő</option>
+                  <option value="5">Számlák</option>
+                  <option value="6">Egyéb kiadások</option>
+                  <option value="7">Egyéb juttatások</option> -->
+                </select>
+            </div>
+          </div>
+        </form>
+        <div class="d-flex mb-3 px-5 d-flex justify-content-end">
+            <button class="btn btn-primary button" type="submit" id="gomb1" name="button">Hozzáad</button>
+        </div>
+        <div class="text-white px-auto">
+          <p id="uzenet"></p>
+        </div>
+  </div>
 
 <div class="my-3 d-flex justify-content-center">
   <table class="table" id="lista"> 
   </table>
 </div>
 
-<div>
-<form>
-  <div class="my-3 px-5">
 
-     <h2>Új </h2> 
-  </div>
-
-  <div class="row mb-3 px-5" style="position: relative;">
-          <div class="col-md-4">
-              <label for="összeg" class="form-label">Összeg</label>
-              <input class="form-control" id="amount" type="number">
-          </div>
-
-          <div class="col-md-4">
-              <label for="datum" class="form-label">Dátum</label>
-              <input class="form-control" id="dates" type="date">
-          </div>
-      
-          <div class="col-md-4">
-              <label for="kategoria" class="form-label">Kategória</label>
-              <select class="form-select" id="categoriesID">
-                <option selected>Válasszon!</option>
-                <!-- <option value="1">Élelmiszer</option>
-                <option value="2">Ruházat</option>
-                <option value="3">Fizetés</option>
-                <option value="4">Szabadidő</option>
-                <option value="5">Számlák</option>
-                <option value="6">Egyéb kiadások</option>
-                <option value="7">Egyéb juttatások</option> -->
-              </select>
-          </div>
-        </div>
-      </form>
-      <div class="d-flex mb-3 px-5 d-flex justify-content-end">
-          <button class="btn btn-primary button" type="submit" id="gomb1" name="button">Hozzáad</button>
-      </div>
-      <div class="text-white px-auto">
-        <p id="uzenet"></p>
-      </div>
-</div>
 </div>
 
 <div class="">

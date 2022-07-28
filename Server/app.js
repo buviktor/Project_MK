@@ -178,17 +178,34 @@ app.route("/user/posts/:id/:year/:month/:day/:categories/:cost/:order/:desc")
     //SELECT POST-POSZT KIVÁLASZTÁSA
     .get(authenticateToken, (req, res) => {
         var q = String("select registers.ID, registers.amount,date_format(registers.regAt,'%Y-%m-%d') as date,categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where persons.name=? ")
+        var date1 = ""
 
         //date_format(registers.dates,'%Y-%M-%d') - hónapok neveinek kiirása
         if(req.params.year!=00){
             if(req.params.month!=00){
                 if(req.params.day!=00)
-                    var date1=String(req.params.year+"-"+req.params.month+"-"+req.params.day)
+                    date1=String(req.params.year+"-"+req.params.month+"-"+req.params.day)
                 else
-                    var date1=String(req.params.year+"-"+req.params.month+"-__%")              
+                    date1=String(req.params.year+"-"+req.params.month+"-__%")             
             }else
-                    var date1=String(req.params.year+"-__%-__%")
+                    date1=String(req.params.year+"-__%-__%") 
+            
         q+=String("and registers.regAt like '"+date1+"'")
+
+        }
+
+        ///módosítottuk, de még nem működik mert nincs kivételképzés az évre 
+
+        else{
+            if(req.params.month!=00){
+                if(req.params.day!=00)
+                    date1=String("-__%"+"-"+req.params.month+"-"+req.params.day)
+                else
+                    date1=String("-__%"+"-"+req.params.month+"-__%")             
+            }else {
+                    date1=String("-__%-__%-__%") 
+            }
+            q+=String("and registers.regAt like '"+date1+"'")
         }
         
         if(req.params.categories!=00)

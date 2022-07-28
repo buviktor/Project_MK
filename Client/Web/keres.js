@@ -41,15 +41,20 @@ document.getElementById("cost").onchange = function (a){
 }
 document.getElementById("napok").onchange = function (a){
     a.preventDefault();
-    if  (document.getElementById("napok").value){
+    if  (this.checked){
         document.getElementById("days").innerHTML = "";
         document.getElementById("days").innerHTML = '<input class="form-select "type="number" disabled>'
     } 
-    else if (!document.getElementById("napok").value) {
+    else {
         document.getElementById("days").innerHTML = "";
-        document.getElementById("days").innerHTML = '<input class="form-select "type="number" value="01" min="1" max="31" id="dated" onchange="if(parseInt(this.value,10)<10)this.value="0"+this.value;" placeholder="Válasszon napot!">'
+        document.getElementById("days").innerHTML = '<input class="form-select "type="number" value="01" min="1" max="31" id="dated" placeholder="Válasszon napot!">'
     }
+
 }
+    document.getElementById("days").onchange= function (e){
+        e.preventDefault();
+        if(parseInt(this.value,10)<10)this.value="0"+this.value 
+    }
 
 document.getElementById("gomb2").onclick = function (e) {
     e.preventDefault();
@@ -76,7 +81,7 @@ document.getElementById("gomb2").onclick = function (e) {
       json.forEach(cs => {
           if(cs!=json[0]) 
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id)' >...</button></td></tr>"
+              + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Post()' >...</button></td></tr>"
             });
         } else {
             document.getElementById("uzenet").innerHTML = "Nincs ilyen adat!"
@@ -84,6 +89,11 @@ document.getElementById("gomb2").onclick = function (e) {
     })
         .catch (err => console.log(err));
 }
+
+function reply_click(clicked_id)
+  {
+      ID = clicked_id;
+  }
 
 //Kategoriák
 window.addEventListener("load", function AllCat() {
