@@ -190,20 +190,18 @@ app.route("/user/posts/:id/:year/:month/:day/:categories/:cost/:order/:desc")
             }else
                     date1=String(req.params.year+"-__%-__%") 
             
-        q+=String("and registers.regAt like '"+date1+"'")
-
-        }
-
-        ///módosítottuk, de még nem működik mert nincs kivételképzés az évre 
-
-        else{
+            q+=String("and registers.regAt like '"+date1+"'")
+        }else{
             if(req.params.month!=00){
                 if(req.params.day!=00)
-                    date1=String("-__%"+"-"+req.params.month+"-"+req.params.day)
+                    date1=String("__%"+"-"+req.params.month+"-"+req.params.day)
                 else
-                    date1=String("-__%"+"-"+req.params.month+"-__%")             
+                    date1=String("__%"+"-"+req.params.month+"-__%")             
             }else {
-                    date1=String("-__%-__%-__%") 
+                if(req.params.day!=00)
+                    date1=String("__%-__%"+"-"+req.params.day)
+                else
+                    date1=String("__%-__%-__%") 
             }
             q+=String("and registers.regAt like '"+date1+"'")
         }
