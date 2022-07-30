@@ -56,6 +56,9 @@ document.getElementById("napok").onchange = function (a){
         if(parseInt(this.value,10)<10)this.value="0"+this.value 
     }
 
+
+
+    
 document.getElementById("gomb2").onclick = function (e) {
     e.preventDefault();
     if  (document.getElementById("cost").value == 3){
