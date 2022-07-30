@@ -1,5 +1,6 @@
 let ID = "";
 let cost = document.getElementById("cost").value;
+let dated;
 
 window.addEventListener("load", function Allpost() {
     const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
@@ -43,7 +44,7 @@ document.getElementById("napok").onchange = function (a){
     a.preventDefault();
     if  (this.checked){
         document.getElementById("days").innerHTML = "";
-        document.getElementById("days").innerHTML = '<input class="form-select "type="number" disabled>'
+        document.getElementById("days").innerHTML = '<input class="form-select "type="number" disabled>';
     } 
     else {
         document.getElementById("days").innerHTML = "";
@@ -51,20 +52,22 @@ document.getElementById("napok").onchange = function (a){
     }
 
 }
-    document.getElementById("days").onchange= function (e){
-        e.preventDefault();
-        if(parseInt(this.value,10)<10)this.value="0"+this.value 
-    }
-
-
-
     
 document.getElementById("gomb2").onclick = function (e) {
     e.preventDefault();
     if  (document.getElementById("cost").value == 3){
         cost = document.getElementById("szam").value;
     }
-    const url = 'http://localhost:5000/user/posts' + "/" + sessionStorage.id + "/" + document.getElementById("datesy").value + "/" + document.getElementById("datesm").value + "/" + document.getElementById("dated").value + "/" + document.getElementById("categoriesID").value + "/" + cost + "/" + document.getElementById("order").value + "/" + document.getElementById("desc").value;
+
+    // összes napok figyelése és helyes formátumú érték küldése
+    if (!document.getElementById("napok").checked) {
+        dated = document.getElementById("dated").value;
+        if(parseInt(dated)<10) dated = "0" + dated;
+    }else{
+        dated = document.getElementById("napok").value;
+    }
+
+    const url = 'http://localhost:5000/user/posts' + "/" + sessionStorage.id + "/" + document.getElementById("datesy").value + "/" + document.getElementById("datesm").value + "/" + dated + "/" + document.getElementById("categoriesID").value + "/" + cost + "/" + document.getElementById("order").value + "/" + document.getElementById("desc").value;
     const token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista")
     fetch(url, {
@@ -86,6 +89,7 @@ document.getElementById("gomb2").onclick = function (e) {
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
               + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Post()' >...</button></td></tr>"
             });
+            document.getElementById("uzenet").innerHTML = ""
         } else {
             document.getElementById("uzenet").innerHTML = "Nincs ilyen adat!"
         }
