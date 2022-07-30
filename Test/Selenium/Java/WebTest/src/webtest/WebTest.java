@@ -246,24 +246,36 @@ public class WebTest {
             driver.findElement(By.linkText("Lekérdezés")).click();
             
             List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
-            List<WebElement> selectCategory = driver.findElements(By.id("categoriesID"));
             // if (!table.isEmpty()) start = false;     // Tábla ürességének ellenőrzése.
+            List<WebElement> selectCategory = driver.findElements(By.id("categoriesID"));       // Lekérdezés menü: Kategóriák listázása.
+
+            int hit = 0;
             
+            driver.findElement(By.id("napok")).click();
             driver.findElement(By.id("gomb2")).click();
-            
             Thread.sleep(500);
             table = driver.findElements(By.id("lista"));
             
-            
+            System.out.println(table);       // 1 hosszú lista, meg kell nézni hogy benne mi van
             for (int i = 0; i < table.size(); i++) {
-               // System.out.println(table.get(i).getText());
-               // System.out.println(uploadData.get(0));    
+                System.out.println(table.get(i).getText());
+                String[] cat = table.get(i).getText().split(" ");
+                String catAmount = cat[0], catCategory = cat[1], catDate = cat[2];
                 
+                System.out.println(catAmount + "|" + catCategory + "|");
+                for (int j = 0; j < selectCategory.size(); j++) {
+                    if (selectCategory.get(j).getText().equals(catCategory)) {
+                        for (int k = 0; k < uploadData.size(); k++) {
+                            String[] up = uploadData.get(k).split(",");
+                            String upAmount = up[0], upCategory = up[1], upDate = up[2];
+                            
+                            if(catAmount.equals(upAmount)) System.out.println("OK");;
+                        }
+                    }
+                } 
             }
             
-            for (int i = 0; i < selectCategory.size(); i++) {
-                System.out.println(selectCategory.get(i).getText());
-            }
+
             Thread.sleep(2000);
             
             start = false;
@@ -324,7 +336,7 @@ public class WebTest {
         * Első teszt: Automata teszt 3x.
         **/
         
-        for (int i=0; i<3; i++) {
+        for (int i=0; i<1; i++) {
             minimalLogs.add(" ");       // Üres sor beszúrása.
             /*
             if (start) {
@@ -345,12 +357,14 @@ public class WebTest {
             */
             if (start) {
                 login("Ferencsik Délia", "77Gqh84175");
+
                 for (int j=0; j < 50; j++) {
                     if (start) {
                         newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
                         driver.navigate().refresh();
                     } 
                 }
+
                 queryFromDatabase();
             }
             
