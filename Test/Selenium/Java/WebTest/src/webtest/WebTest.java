@@ -73,12 +73,11 @@ public class WebTest {
         
         try {
             driver.findElement(By.id("home-tab")).click();
-            Thread.sleep(1000);
+            Thread.sleep(500);
             driver.findElement(By.id("uname")).sendKeys(name);
             driver.findElement(By.id("upassword")).sendKeys(password);
-            Thread.sleep(2000);
-            driver.findElement(By.id("gomb1")).click();
             Thread.sleep(1000);
+            driver.findElement(By.id("gomb1")).click();
             
             message = driver.findElement(By.id("uzenet")).getText();
             minimalLogsAddToList(message);
@@ -125,7 +124,7 @@ public class WebTest {
                         
         try {
             driver.findElement(By.id("profile-tab")).click();
-            Thread.sleep(1000);
+            Thread.sleep(500);
             driver.findElement(By.id("runame")).sendKeys(randomName);
             driver.findElement(By.id("rupassword")).sendKeys(password);
             driver.findElement(By.id("email")).sendKeys(randEmail);
@@ -190,7 +189,6 @@ public class WebTest {
             minimalLogsAddToList("Összeg (Ft): " + amount + ", Dátum: " + date + ", Kategória: " 
                     + Integer.toString(category));
             
-            Thread.sleep(500);
             driver.findElement(By.id("gomb1")).click();
             Thread.sleep(500);
             
@@ -246,7 +244,7 @@ public class WebTest {
             driver.findElement(By.linkText("Lekérdezés")).click();
             
             List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
-            // if (!table.isEmpty()) start = false;     // Tábla ürességének ellenőrzése.
+            if (!table.isEmpty()) start = false;     // Tábla ürességének ellenőrzése.
             List<WebElement> selectCategory = driver.findElements(By.id("categoriesID"));       // Lekérdezés menü: Kategóriák listázása.
 
             int hit = 0;
@@ -255,26 +253,20 @@ public class WebTest {
             driver.findElement(By.id("gomb2")).click();
             Thread.sleep(500);
             table = driver.findElements(By.id("lista"));
-            
-            System.out.println(table);       // 1 hosszú lista, meg kell nézni hogy benne mi van
-            for (int i = 0; i < table.size(); i++) {
-                System.out.println(table.get(i).getText());
-                String[] cat = table.get(i).getText().split(" ");
-                String catAmount = cat[0], catCategory = cat[1], catDate = cat[2];
-                
-                System.out.println(catAmount + "|" + catCategory + "|");
-                for (int j = 0; j < selectCategory.size(); j++) {
-                    if (selectCategory.get(j).getText().equals(catCategory)) {
-                        for (int k = 0; k < uploadData.size(); k++) {
-                            String[] up = uploadData.get(k).split(",");
-                            String upAmount = up[0], upCategory = up[1], upDate = up[2];
-                            
-                            if(catAmount.equals(upAmount)) System.out.println("OK");;
-                        }
-                    }
-                } 
+            List<String> strings = new ArrayList<>();
+            for(WebElement e : table){
+                strings.add(e.getText());
+            }
+            ArrayList<String> stringList = new ArrayList<>();
+            Scanner readList = new Scanner(strings.get(0));
+            readList.nextLine();
+            while (readList.hasNextLine()) {
+                stringList.add(readList.nextLine());
             }
             
+            
+            System.out.println(stringList);       // 1 hosszú lista, meg kell nézni hogy benne mi van
+                      
 
             Thread.sleep(2000);
             
@@ -361,7 +353,6 @@ public class WebTest {
                 for (int j=0; j < 50; j++) {
                     if (start) {
                         newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
-                        driver.navigate().refresh();
                     } 
                 }
 
