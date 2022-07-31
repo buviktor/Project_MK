@@ -22,7 +22,7 @@ window.addEventListener("load", function AllCat() {
 
 // ----Módosítandó post kiírása
 
-window.addEventListener("load", function Post() {
+function Post() {
     const url = 'http://localhost:5000/user/post' + "/" + sessionStorage.id + "/" +  sessionStorage.regid;
     const token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista");
@@ -30,6 +30,7 @@ window.addEventListener("load", function Post() {
         method: 'GET',
         headers: {
             'Authorization': token
+
         }
     })
 
@@ -37,19 +38,23 @@ window.addEventListener("load", function Post() {
         .then(json => {
             lista.innerHTML = "<tr><th>Összeg</th><th>Dátum</th><th>Kategória</th></tr>";
             json.forEach(cs => {
-                lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.date + "</td><td>" + cs.categoriesID + "</td>"
+                lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.date + "</td><td>" + cs.denomination + "</td>"
+                document.getElementById("amount").setAttribute ('value', cs.amount);
+                document.getElementById("regAt").setAttribute ('value', cs.date);
+                document.getElementById("menu").selectedIndex = (cs.categoriesID);
+
                     });   
 })
 
         .catch(err => console.log(err))
-})
-
+}
+Post()
 // ----Post módosítása
 
 document.getElementById("gomb").onclick = function (e) {
     e.preventDefault();
 
-    if(document.getElementById("amount").value == null && document.getElementById("regAt").value == null && document.getElementById("menu").value == null) {
+    if(document.getElementById("amount").value =="" && document.getElementById("regAt").value == "" && document.getElementById("menu").value == "") {
         alert("Kérjük minden mezőt töltsön ki!")
     } else {
     const url = 'http://localhost:5000/user/post' + "/" + sessionStorage.id + "/" +  sessionStorage.regid;
@@ -58,16 +63,19 @@ document.getElementById("gomb").onclick = function (e) {
         method: 'PUT',
         headers: {
             'Authorization': token,
+            "Content-type": "application/json;charset=utf-8"
         },
-        body: {
+        body: JSON.stringify({
             "amount" : document.getElementById("amount").value,
             "regAt" : document.getElementById("regAt").value,
             "categori" : document.getElementById("menu").value 
-        }
+        })
     })
 
         .then((response) => response.json())
-        .then(json => document.getElementById("uzenet").innerHTML = json.message)
+        .then(json => {
+            Post()
+            document.getElementById("uzenet").innerHTML = json.message})
         .catch(err => console.log(err))
 }}
 

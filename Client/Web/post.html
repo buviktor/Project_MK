@@ -53,15 +53,19 @@
             </div>
             <div class="col-sm-12 col-lg">
               <label for="menu" class="form-label">Új kategória</label>
-              <select class="form-select" id="menu"></select>
+              <select class="form-select" id="menu">
+                <option value="0">Kérem válasszon!</option>
+              </select>
             </div>
           </div>
-            <div class="d-flex justify-content-center mt-5">
+            <div class="row">
+            <div class="col d-flex justify-content-end mt-5">
               <button id="gomb" type="submit" class="btn btn-primary ">Módosítás</button>
             </div>
-            <div class="d-flex justify-content-center mt-5 popup">
-              <button id="gomb1" type="submit" class="btn btn-primary ">Törlés</button>
+            <div class="col d-flex justify-content-start mt-5 popup">
+              <button id="gomb1" type="submit" class="btn btn-danger ">Törlés</button>
             </div>
+          </div>
       </form>
     </div>
 

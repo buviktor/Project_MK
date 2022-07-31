@@ -1,4 +1,4 @@
-window.addEventListener("load", function Allpost() {
+function Allpost() {
     const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista");
@@ -17,10 +17,12 @@ window.addEventListener("load", function Allpost() {
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
               + "</td><td>" + cs.date + "</td>"+"</tr>"
             });
+            document.getElementById("form").reset()
           })
-
+          
         .catch (err => console.log(err));
-})
+}
+Allpost()
 
 //Új poszt hozzáadása
 document.getElementById("gomb1").onclick = function (e) {
@@ -41,7 +43,10 @@ document.getElementById("gomb1").onclick = function (e) {
         })
     })
         .then((response) => response.json())
-        .then(json => document.getElementById("uzenet").innerHTML = json.message)
+        .then(json => {
+            document.getElementById("uzenet").innerHTML = json.message
+            Allpost()
+        })
         .catch(err => console.log(err));
 }
 

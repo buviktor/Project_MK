@@ -58,8 +58,9 @@ a {
 
 
 @media (max-width: 540px) {
-    body {
+    .hatter {
         background-image: none;
+        background-color: rgb(74, 80, 85);
     }
 
     .table {
@@ -69,6 +70,15 @@ a {
     .button {
         width: 100%;
     } 
+
+    .nav-link{
+        color: white;    
+    } 
+
+    .nav-link:hover {
+        color: white;
+    }
+
 
 }
 

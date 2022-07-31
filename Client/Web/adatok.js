@@ -16,6 +16,11 @@ window.addEventListener("load", function Adatok() {
             json.forEach(cs => {
                 adatok.innerHTML += "<tr><td>" + cs.email + "</td><td>" + cs.postcode + "</td>"
                     + "</td><td>" + cs.country + "</td><td>" + cs.county + "</td><td>" + cs.city + "</td></tr>";
+                document.getElementById("email").setAttribute ('value',cs.email);
+                document.getElementById("postcode").setAttribute ('value',cs.postcode);
+                document.getElementById("county").setAttribute ('value',cs.county);
+                document.getElementById("country").setAttribute ('value',cs.country);
+                document.getElementById("city").setAttribute ('value',cs.city);
                 }); 
         })
         .catch(err => console.log(err))
@@ -85,12 +90,9 @@ document.getElementById("gomb6").onclick = function (e) {
     fetch(url, {
         method: 'DELETE',
         headers: {
-            'Authorization': token,
-            'Content-type': 'application/json;charset=utf-8'
+            'Authorization': token
         },
-        body: JSON.stringify({
-
-        })
+        
     })
         .then((response) => response.json())
         .then((json) => {

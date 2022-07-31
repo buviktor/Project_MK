@@ -12,13 +12,6 @@ window.addEventListener("load", function Allpost() {
         }
     })
     .then((response) => response.json())
-    .then(json => 
-        json.forEach(cs => {
-            if(cs!=json[0]) 
-            lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-                + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Post()' >...</button></td></tr>"
-              }),
-              )
     .catch (err => console.log(err))
 })
 
@@ -44,11 +37,11 @@ document.getElementById("napok").onchange = function (a){
     a.preventDefault();
     if  (this.checked){
         document.getElementById("days").innerHTML = "";
-        document.getElementById("days").innerHTML = '<input class="form-select "type="number" disabled>';
+        document.getElementById("days").innerHTML = '<input class="form-select "type="number" id="dated" disabled>';
     } 
     else {
         document.getElementById("days").innerHTML = "";
-        document.getElementById("days").innerHTML = '<input class="form-select "type="number" value="01" min="1" max="31" id="dated" placeholder="Válasszon napot!">'
+        document.getElementById("days").innerHTML = '<input class="form-select "type="number" value="1" min="1" max="31" id="dated" placeholder="Válasszon napot!">'
     }
 
 }
@@ -97,10 +90,6 @@ document.getElementById("gomb2").onclick = function (e) {
         .catch (err => console.log(err));
 }
 
-function reply_click(clicked_id)
-  {
-      ID = clicked_id;
-  }
 
 //Kategoriák
 window.addEventListener("load", function AllCat() {

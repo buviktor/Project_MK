@@ -249,7 +249,7 @@ app.route("/user/post/:id/:regid")
 
     //ONE POST-EGY POSZT
     .get(authenticateToken, (req,res)=>{
-        const q="select registers.amount, date_format(registers.regAt,'%Y-%m-%d') as date, registers.categoriesID from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where name=? and registers.ID = ?"    
+        const q="select registers.amount, date_format(registers.regAt,'%Y-%m-%d') as date, registers.categoriesID, categories.denomination from registers join persons on persons.ID=registers.personsID join categories on categories.ID=registers.categoriesID where name=? and registers.ID = ?"    
         pool.query(q,[req.user.username, req.params.regid], function(error,results){
             if(!error && req.user.id!=req.params.id)
                     return res.status(400).send({message: "Hibás felhasználó!"})
@@ -269,7 +269,7 @@ app.route("/user/post/:id/:regid")
             pool.query(q, [req.body.regAt , req.body.amount,req.body.categori, req.params.regid],
                 function(error){
                     if(!error)
-                        return res.status(200).send({message: "Modositás sikeres"})
+                        return res.status(200).send({message: "Módosítás sikeres"})
                     else
                         return res.status(500).send({message:error})
                 })
@@ -342,7 +342,7 @@ app.route("/user/person/:id")
                 pool.query(q,[password, req.body.email, req.body.postcode, req.body.country, req.body.county, req.body.city, req.params.id],
                     function(error){
                         if(!error)
-                            return res.status(200).send({message: "Modositás sikeres"})
+                            return res.status(200).send({message: "Módosítás sikeres"})
                         else
                             return res.status(500).send({message:error}) 
                     })
