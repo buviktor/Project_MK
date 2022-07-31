@@ -48,13 +48,16 @@ window.addEventListener("load", function Post() {
 
 document.getElementById("gomb").onclick = function (e) {
     e.preventDefault();
+
+    if(document.getElementById("amount").value == null && document.getElementById("regAt").value == null && document.getElementById("menu").value == null) {
+        alert("Kérjük minden mezőt töltsön ki!")
+    } else {
     const url = 'http://localhost:5000/user/post' + "/" + sessionStorage.id + "/" +  sessionStorage.regid;
     const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
         method: 'PUT',
         headers: {
             'Authorization': token,
-            // "Content-type": "application/json;charset=utf-8"
         },
         body: {
             "amount" : document.getElementById("amount").value,
@@ -66,12 +69,14 @@ document.getElementById("gomb").onclick = function (e) {
         .then((response) => response.json())
         .then(json => document.getElementById("uzenet").innerHTML = json.message)
         .catch(err => console.log(err))
-}
+}}
 
 // ----Post törlés
 
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
+
+    if (confirm("Biztosan törölni szeretné?") == true) {
 
     const url = 'http://localhost:5000/user/post' + "/" + sessionStorage.id + "/" +  sessionStorage.regid;
     const token = 'Bearer: ' + sessionStorage.token
@@ -90,5 +95,7 @@ document.getElementById("gomb1").onclick = function (e) {
         }, 1500)
         })
         .catch(err => console.log(err))
-}
+} else {
+  }
+} 
 
