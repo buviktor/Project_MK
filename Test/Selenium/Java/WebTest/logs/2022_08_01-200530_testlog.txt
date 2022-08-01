@@ -1,0 +1,57 @@
+2022-08-01 20:03:42	Teszt indítása
+2022-08-01 20:03:42	Szükséges forrás fájlok betöltése....
+2022-08-01 20:03:42	Forrás fájlok betöltése kész!
+ 
+2022-08-01 20:03:46	
+2022-08-01 20:03:48	Összeg (Ft): -4056, Dátum: 2022-02-02, Kategória:  Számlák 4
+2022-08-01 20:03:50	Összeg (Ft): -3664, Dátum: 2021-05-07, Kategória:  Számlák 4
+2022-08-01 20:03:52	Összeg (Ft): -7538, Dátum: 2022-04-15, Kategória:  Ruházat 1
+2022-08-01 20:03:54	Összeg (Ft): 357400, Dátum: 2022-02-22, Kategória:   7
+2022-08-01 20:03:56	Összeg (Ft): -9750, Dátum: 2022-04-15, Kategória:  Ruházat 1
+2022-08-01 20:03:58	Összeg (Ft): -7296, Dátum: 2021-03-06, Kategória:  Egyéb kiadások 5
+2022-08-01 20:04:00	Összeg (Ft): 438900, Dátum: 2022-07-07, Kategória:   7
+2022-08-01 20:04:02	Összeg (Ft): 333500, Dátum: 2021-03-01, Kategória:  Szabadidő 3
+2022-08-01 20:04:04	Összeg (Ft): 278100, Dátum: 2021-11-28, Kategória:  Szabadidő 3
+2022-08-01 20:04:06	Összeg (Ft): -11640, Dátum: 2021-05-31, Kategória:  Egyéb kiadások 5
+2022-08-01 20:04:08	Összeg (Ft): 493900, Dátum: 2021-09-14, Kategória:   7
+2022-08-01 20:04:10	Összeg (Ft): -4518, Dátum: 2022-04-03, Kategória:  Egyéb kiadások 5
+2022-08-01 20:04:12	Összeg (Ft): -7840, Dátum: 2021-06-18, Kategória:  Egyéb jutatások 6
+2022-08-01 20:04:14	Összeg (Ft): -8860, Dátum: 2021-08-24, Kategória:  Fizetés 2
+2022-08-01 20:04:15	Összeg (Ft): -8634, Dátum: 2021-03-30, Kategória:  Számlák 4
+2022-08-01 20:04:17	Összeg (Ft): 449000, Dátum: 2021-03-10, Kategória:   7
+2022-08-01 20:04:19	Összeg (Ft): -9046, Dátum: 2022-07-21, Kategória:  Egyéb jutatások 6
+2022-08-01 20:04:21	Összeg (Ft): -6232, Dátum: 2022-05-11, Kategória:  Számlák 4
+2022-08-01 20:04:23	Összeg (Ft): -6370, Dátum: 2022-02-07, Kategória:  Egyéb kiadások 5
+2022-08-01 20:04:25	Összeg (Ft): 57800, Dátum: 2022-05-05, Kategória:  Szabadidő 3
+2022-08-01 20:04:27	Összeg (Ft): -5426, Dátum: 2022-02-27, Kategória:  Egyéb jutatások 6
+2022-08-01 20:04:29	Összeg (Ft): -5790, Dátum: 2022-03-22, Kategória:  Ruházat 1
+2022-08-01 20:04:31	Összeg (Ft): -8948, Dátum: 2022-08-01, Kategória:  Egyéb jutatások 6
+2022-08-01 20:04:33	Összeg (Ft): 16900, Dátum: 2021-06-02, Kategória:  Szabadidő 3
+2022-08-01 20:04:35	Összeg (Ft): -9380, Dátum: 2022-06-10, Kategória:  Számlák 4
+2022-08-01 20:04:37	Összeg (Ft): -2038, Dátum: 2022-01-20, Kategória:  Egyéb kiadások 5
+2022-08-01 20:04:39	Összeg (Ft): -4258, Dátum: 2021-10-23, Kategória:  Számlák 4
+2022-08-01 20:04:41	Összeg (Ft): -4944, Dátum: 2022-04-17, Kategória:  Fizetés 2
+2022-08-01 20:04:43	Összeg (Ft): -3316, Dátum: 2022-06-25, Kategória:  Fizetés 2
+2022-08-01 20:04:45	Összeg (Ft): 439600, Dátum: 2022-07-04, Kategória:  Szabadidő 3
+2022-08-01 20:04:47	Összeg (Ft): 70800, Dátum: 2021-02-09, Kategória:  Szabadidő 3
+2022-08-01 20:04:48	Összeg (Ft): 289300, Dátum: 2022-08-01, Kategória:  Szabadidő 3
+2022-08-01 20:04:50	Összeg (Ft): 9600, Dátum: 2021-04-24, Kategória:   7
+2022-08-01 20:04:52	Összeg (Ft): -7334, Dátum: 2022-06-28, Kategória:  Számlák 4
+2022-08-01 20:04:54	Összeg (Ft): 128300, Dátum: 2022-01-10, Kategória:  Szabadidő 3
+2022-08-01 20:04:56	Összeg (Ft): 499300, Dátum: 2021-11-04, Kategória:  Szabadidő 3
+2022-08-01 20:04:58	Összeg (Ft): -3072, Dátum: 2021-10-15, Kategória:  Egyéb jutatások 6
+2022-08-01 20:05:00	Összeg (Ft): -6388, Dátum: 2021-01-26, Kategória:  Ruházat 1
+2022-08-01 20:05:02	Összeg (Ft): 56000, Dátum: 2021-10-24, Kategória:   7
+2022-08-01 20:05:04	Összeg (Ft): 46200, Dátum: 2021-01-25, Kategória:  Szabadidő 3
+2022-08-01 20:05:06	Összeg (Ft): -3500, Dátum: 2022-02-9, Kategória:  Egyéb jutatások 6
+2022-08-01 20:05:08	Összeg (Ft): -7124, Dátum: 2021-04-25, Kategória:  Egyéb kiadások 5
+2022-08-01 20:05:10	Összeg (Ft): -9360, Dátum: 2022-01-27, Kategória:  Egyéb kiadások 5
+2022-08-01 20:05:12	Összeg (Ft): 61400, Dátum: 2021-07-21, Kategória:   7
+2022-08-01 20:05:14	Összeg (Ft): -10300, Dátum: 2021-03-15, Kategória:  Számlák 4
+2022-08-01 20:05:16	Összeg (Ft): 121700, Dátum: 2022-02-03, Kategória:   7
+2022-08-01 20:05:18	Összeg (Ft): 433600, Dátum: 2022-04-02, Kategória:   7
+2022-08-01 20:05:20	Összeg (Ft): -3792, Dátum: 2021-10-18, Kategória:  Egyéb jutatások 6
+2022-08-01 20:05:22	Összeg (Ft): -13680, Dátum: 2022-08-01, Kategória:  Fizetés 2
+2022-08-01 20:05:24	Összeg (Ft): -6836, Dátum: 2022-08-01, Kategória:  Ruházat 1
+2022-08-01 20:05:27	Adatok sikeresen feltöltve!
+2022-08-01 20:05:30	A teszt befejeződött! Teljes ideje: 1 perc 48 másodperc.

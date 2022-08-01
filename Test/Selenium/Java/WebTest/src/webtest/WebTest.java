@@ -252,7 +252,9 @@ public class WebTest {
     }
     
     private static void queryFromDatabase() {
-        int hit;
+        int hit = 0;
+        boolean next = true;
+        
         try {
             driver.findElement(By.linkText("Lekérdezés")).click();
             Thread.sleep(500);
@@ -264,29 +266,47 @@ public class WebTest {
                 ArrayList<String> categoryArrayList = new ArrayList<>();        // ArrayList a kategóriák vizsgálatához.
                 ArrayList<String> allQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
 
-                driver.findElement(By.id("napok")).click();
-                Thread.sleep(500);
+                /**
+                 * Összes adat lekérdezése.
+                **/
+                
                 driver.findElement(By.id("gomb2")).click();
                 Thread.sleep(500);
                 
                 table = driver.findElements(By.id("lista"));
                 findElementsToArrayList(table, allQuery);
-                findElementsToArrayList(selectCategory, categoryArrayList);
-                hit = 0;
+                if (allQuery.size() != uploadData.size()) {
+                    next = false;
+                    minimalLogsAddToList("Az összes feltöltött adat és az összes lekérdezett adat nem egyezik meg!");
+                }
+                else minimalLogsAddToList("Az összes feltöltött adat és az összes lekérdezett adat megegyezik!");
                 
-                System.out.println(categoryArrayList);
-                System.out.println(allQuery.size());
-                System.out.println(uploadData.size());
+                /**
+                 * Az összes élelmiszer adat lekérdezése.
+                **/
                 
+                if (next) {
+                    findElementsToArrayList(selectCategory, categoryArrayList);
+                    hit = 0;
+                    Select selectObject = new Select(selectCategory.get(0));
+                    selectObject.selectByIndex(1);
+                    Thread.sleep(2000);
+                }
+
+
+                
+                
+                /*
                 for (int i = 0; i < allQuery.size(); i++) {
                     for (int j = 0; j < uploadData.size(); j++) {
                         String[] s = uploadData.get(j).split(", ");
-                        int category = Integer.parseInt(s[2]);
-                        if (allQuery.get(i).contains(categoryArrayList.get(category-1))) {
+                        String amount = s[0];
+                        if (allQuery.get(i).contains(amount)) {
                             hit++;
                         }
                     }
                 }
+                */
                 
                 System.out.println(hit);
                 
