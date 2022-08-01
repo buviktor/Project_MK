@@ -17,10 +17,9 @@ function Allpost() {
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
               + "</td><td>" + cs.date + "</td>"+"</tr>"
             });
-            document.getElementById("form").reset()
-          })
-          
-        .catch (err => console.log(err));
+          }) 
+    .catch (err => console.log(err))
+    .finally(document.getElementById("form").reset())
 }
 Allpost()
 

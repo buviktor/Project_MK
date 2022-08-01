@@ -1,0 +1,12 @@
+2022-08-01 18:43:30	Teszt indítása
+2022-08-01 18:43:30	Szükséges forrás fájlok betöltése....
+2022-08-01 18:43:30	Forrás fájlok betöltése kész!
+ 
+2022-08-01 18:43:34	
+2022-08-01 18:43:36	Összeg (Ft): -3098, Dátum: 2022-03-29, Kategória:  Fizetés 2
+2022-08-01 18:43:37	Összeg (Ft): -4500, Dátum: 2022-02-02, Kategória:  Egyéb kiadások 5
+2022-08-01 18:43:39	Összeg (Ft): -8480, Dátum: 2021-11-01, Kategória:  Egyéb jutatások 6
+2022-08-01 18:43:41	Összeg (Ft): 301000, Dátum: 2022-06-28, Kategória:  Szabadidő 3
+2022-08-01 18:43:43	Összeg (Ft): 283800, Dátum: 2022-02-08, Kategória:   7
+2022-08-01 18:43:56	Sikertelen adat feltöltés!
+2022-08-01 18:44:11	A teszt befejeződött! Teljes ideje: 0 perc 41 másodperc.

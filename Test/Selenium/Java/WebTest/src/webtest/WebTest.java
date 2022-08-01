@@ -35,7 +35,6 @@ public class WebTest {
     private static WebDriver driver;
     
     private static String message, randomLocation, randomName, password;
-    private static LocalTime startTime;
     private static Boolean start;
     
     static Random rand = new Random();
@@ -44,8 +43,6 @@ public class WebTest {
     static ArrayList<Data> names = new ArrayList<>();
     static ArrayList<String> uploadData = new ArrayList<>();
     static ArrayList<String> minimalLogs = new ArrayList<>();
-    
-    
     
     /**
      * pagePath metódus vissza adja a .html fájlok helyét Stringben.
@@ -173,7 +170,7 @@ public class WebTest {
             
             uploadData.add(amount + ", " + date + ", " + Integer.toString(category));     // uploadData lista feltöltése a generált adatokkal, log fájlhoz szükséges.
                         
-            Thread.sleep(500);
+            Thread.sleep(1000);
             driver.findElement(By.id("amount")).sendKeys(amount);
             WebElement datePicker = driver.findElement(By.id("dates"));
             new Actions(driver)
@@ -186,8 +183,11 @@ public class WebTest {
             Select selectObject = new Select(selectElement);
             selectObject.selectByIndex(category);
             
+            List<WebElement> listOfCategory = driver.findElements(By.id("categoriesID"));        // List a kategóriák ArrayList-jéhez.
+            ArrayList<String> categories = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
+            findElementsToArrayList(listOfCategory, categories);
             minimalLogsAddToList("Összeg (Ft): " + amount + ", Dátum: " + date + ", Kategória: " 
-                    + Integer.toString(category));
+                    + categories.get(category) + " " + Integer.toString(category));
             
             driver.findElement(By.id("gomb1")).click();
             Thread.sleep(500);
@@ -239,38 +239,65 @@ public class WebTest {
         minimalLogs.add(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + "\t" + prompt);
     }
     
+    private static void findElementsToArrayList(List<WebElement> table, ArrayList<String> stringList) {
+        List<String> strings = new ArrayList<>();
+        for(WebElement e : table){
+            strings.add(e.getText());
+        }
+        Scanner readList = new Scanner(strings.get(0));
+        readList.nextLine();
+        while (readList.hasNextLine()) {
+            stringList.add(readList.nextLine());
+        }
+    }
+    
     private static void queryFromDatabase() {
+        int hit;
         try {
             driver.findElement(By.linkText("Lekérdezés")).click();
+            Thread.sleep(500);
             
             List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
-            if (!table.isEmpty()) start = false;     // Tábla ürességének ellenőrzése.
-            List<WebElement> selectCategory = driver.findElements(By.id("categoriesID"));       // Lekérdezés menü: Kategóriák listázása.
+            if (!table.get(0).getText().equals("")) start = false;     // Tábla ürességének ellenőrzése.
+            else {
+                List<WebElement> selectCategory = driver.findElements(By.id("categoriesID"));       // Lekérdezés menü: Kategóriák listázása.
+                ArrayList<String> categoryArrayList = new ArrayList<>();        // ArrayList a kategóriák vizsgálatához.
+                ArrayList<String> allQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
 
-            int hit = 0;
-            
-            driver.findElement(By.id("napok")).click();
-            driver.findElement(By.id("gomb2")).click();
-            Thread.sleep(500);
-            table = driver.findElements(By.id("lista"));
-            List<String> strings = new ArrayList<>();
-            for(WebElement e : table){
-                strings.add(e.getText());
+                driver.findElement(By.id("napok")).click();
+                Thread.sleep(500);
+                driver.findElement(By.id("gomb2")).click();
+                Thread.sleep(500);
+                
+                table = driver.findElements(By.id("lista"));
+                findElementsToArrayList(table, allQuery);
+                findElementsToArrayList(selectCategory, categoryArrayList);
+                hit = 0;
+                
+                System.out.println(categoryArrayList);
+                System.out.println(allQuery.size());
+                System.out.println(uploadData.size());
+                
+                for (int i = 0; i < allQuery.size(); i++) {
+                    for (int j = 0; j < uploadData.size(); j++) {
+                        String[] s = uploadData.get(j).split(", ");
+                        int category = Integer.parseInt(s[2]);
+                        if (allQuery.get(i).contains(categoryArrayList.get(category-1))) {
+                            hit++;
+                        }
+                    }
+                }
+                
+                System.out.println(hit);
+                
+                
             }
-            ArrayList<String> stringList = new ArrayList<>();
-            Scanner readList = new Scanner(strings.get(0));
-            readList.nextLine();
-            while (readList.hasNextLine()) {
-                stringList.add(readList.nextLine());
-            }
             
             
-            System.out.println(stringList);       // 1 hosszú lista, meg kell nézni hogy benne mi van
                       
 
             Thread.sleep(2000);
             
-            start = false;
             
             
         } catch (Exception e) {
@@ -301,7 +328,7 @@ public class WebTest {
         */
     
     public static void main(String[] args) throws Exception{
-        startTime = LocalTime.now();
+        LocalTime startTime = LocalTime.now();
         minimalLogsAddToList("Teszt indítása");
 
         minimalLogsAddToList("Szükséges forrás fájlok betöltése....");
@@ -369,7 +396,8 @@ public class WebTest {
         Thread.sleep(2000);
         driver.quit();      // Kilép a böngészőből.
         
-        Duration duration = Duration.between(startTime, LocalTime.now());       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        LocalTime endTime = LocalTime.now();
+        Duration duration = Duration.between(startTime, endTime);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
         minimalLogsAddToList("A teszt befejeződött! Teljes ideje: " + duration.getSeconds()/60 + " perc " + duration.getSeconds()% 60 + " másodperc.");
         
         writeFile(minimalLogs, "_testlog.txt");       // Ki írja fájlba a minimalis logokat.

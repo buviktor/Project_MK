@@ -1,0 +1,56 @@
+2022-08-01 17:08:23	Teszt indítása
+2022-08-01 17:08:23	Szükséges forrás fájlok betöltése....
+2022-08-01 17:08:23	Forrás fájlok betöltése kész!
+ 
+2022-08-01 17:08:28	
+2022-08-01 17:08:29	Összeg (Ft): -7742, Dátum: 2021-06-09, Kategória: 1
+2022-08-01 17:08:31	Összeg (Ft): -4378, Dátum: 2022-03-30, Kategória: 4
+2022-08-01 17:08:33	Összeg (Ft): -8740, Dátum: 2022-04-13, Kategória: 4
+2022-08-01 17:08:35	Összeg (Ft): -18580, Dátum: 2021-02-21, Kategória: 6
+2022-08-01 17:08:37	Összeg (Ft): -7578, Dátum: 2021-01-02, Kategória: 4
+2022-08-01 17:08:39	Összeg (Ft): -9020, Dátum: 2022-08-01, Kategória: 2
+2022-08-01 17:08:41	Összeg (Ft): 415000, Dátum: 2022-06-06, Kategória: 3
+2022-08-01 17:08:43	Összeg (Ft): -9334, Dátum: 2022-01-21, Kategória: 6
+2022-08-01 17:08:45	Összeg (Ft): 376100, Dátum: 2022-06-29, Kategória: 7
+2022-08-01 17:08:47	Összeg (Ft): -2676, Dátum: 2021-02-25, Kategória: 6
+2022-08-01 17:08:49	Összeg (Ft): -4712, Dátum: 2022-08-01, Kategória: 1
+2022-08-01 17:08:51	Összeg (Ft): -9500, Dátum: 2022-07-24, Kategória: 1
+2022-08-01 17:08:53	Összeg (Ft): 116200, Dátum: 2021-08-11, Kategória: 7
+2022-08-01 17:08:55	Összeg (Ft): -5710, Dátum: 2022-05-03, Kategória: 2
+2022-08-01 17:08:57	Összeg (Ft): -17320, Dátum: 2022-03-10, Kategória: 2
+2022-08-01 17:08:59	Összeg (Ft): -9854, Dátum: 2022-06-30, Kategória: 4
+2022-08-01 17:09:01	Összeg (Ft): 356900, Dátum: 2021-02-07, Kategória: 7
+2022-08-01 17:09:03	Összeg (Ft): 491900, Dátum: 2021-08-31, Kategória: 3
+2022-08-01 17:09:05	Összeg (Ft): -6980, Dátum: 2021-02-12, Kategória: 4
+2022-08-01 17:09:07	Összeg (Ft): -2200, Dátum: 2021-11-05, Kategória: 2
+2022-08-01 17:09:09	Összeg (Ft): -5786, Dátum: 2021-01-02, Kategória: 5
+2022-08-01 17:09:11	Összeg (Ft): -9960, Dátum: 2021-02-14, Kategória: 5
+2022-08-01 17:09:13	Összeg (Ft): -9786, Dátum: 2022-06-21, Kategória: 4
+2022-08-01 17:09:15	Összeg (Ft): 275500, Dátum: 2022-05-28, Kategória: 7
+2022-08-01 17:09:17	Összeg (Ft): -6786, Dátum: 2022-06-27, Kategória: 5
+2022-08-01 17:09:19	Összeg (Ft): -2510, Dátum: 2021-12-17, Kategória: 6
+2022-08-01 17:09:21	Összeg (Ft): -3300, Dátum: 2021-08-10, Kategória: 6
+2022-08-01 17:09:22	Összeg (Ft): -4524, Dátum: 2022-07-04, Kategória: 6
+2022-08-01 17:09:24	Összeg (Ft): -8680, Dátum: 2022-08-01, Kategória: 4
+2022-08-01 17:09:26	Összeg (Ft): 141400, Dátum: 2022-08-01, Kategória: 7
+2022-08-01 17:09:28	Összeg (Ft): 480600, Dátum: 2021-01-07, Kategória: 3
+2022-08-01 17:09:30	Összeg (Ft): -8820, Dátum: 2021-10-03, Kategória: 6
+2022-08-01 17:09:32	Összeg (Ft): 194600, Dátum: 2022-02-22, Kategória: 7
+2022-08-01 17:09:34	Összeg (Ft): -4800, Dátum: 2021-02-26, Kategória: 1
+2022-08-01 17:09:36	Összeg (Ft): -2718, Dátum: 2021-07-14, Kategória: 4
+2022-08-01 17:09:38	Összeg (Ft): -5358, Dátum: 2022-05-10, Kategória: 2
+2022-08-01 17:09:40	Összeg (Ft): -8202, Dátum: 2022-05-11, Kategória: 1
+2022-08-01 17:09:42	Összeg (Ft): -6364, Dátum: 2022-07-30, Kategória: 1
+2022-08-01 17:09:44	Összeg (Ft): -7374, Dátum: 2021-08-06, Kategória: 5
+2022-08-01 17:09:46	Összeg (Ft): -8290, Dátum: 2021-10-26, Kategória: 5
+2022-08-01 17:09:48	Összeg (Ft): 268700, Dátum: 2021-02-03, Kategória: 3
+2022-08-01 17:09:50	Összeg (Ft): 235300, Dátum: 2021-02-15, Kategória: 3
+2022-08-01 17:09:52	Összeg (Ft): -4704, Dátum: 2021-09-28, Kategória: 5
+2022-08-01 17:09:54	Összeg (Ft): -8572, Dátum: 2022-05-05, Kategória: 2
+2022-08-01 17:09:56	Összeg (Ft): -3804, Dátum: 2022-07-06, Kategória: 1
+2022-08-01 17:09:58	Összeg (Ft): -3292, Dátum: 2022-02-04, Kategória: 1
+2022-08-01 17:10:00	Összeg (Ft): -2478, Dátum: 2022-06-26, Kategória: 2
+2022-08-01 17:10:01	Összeg (Ft): -4546, Dátum: 2021-02-04, Kategória: 2
+2022-08-01 17:10:04	Összeg (Ft): -8654, Dátum: 2021-10-08, Kategória: 6
+2022-08-01 17:10:05	Összeg (Ft): -4900, Dátum: 2021-10-22, Kategória: 6
+2022-08-01 17:10:10	A teszt befejeződött! Teljes ideje: 1 perc 46 másodperc.
