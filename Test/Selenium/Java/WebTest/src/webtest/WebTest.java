@@ -75,11 +75,13 @@ public class WebTest {
             driver.findElement(By.id("upassword")).sendKeys(password);
             Thread.sleep(1000);
             driver.findElement(By.id("gomb1")).click();
+            Thread.sleep(1000);
             
             message = driver.findElement(By.id("uzenet")).getText();
             minimalLogsAddToList(message);
             
-            if (message.equals("Hibás jelszó!") || message.equals("Hibás felhasználónév!")){
+            if (!message.equals("Sikeres bejelentkezés.")){
+                minimalLogsAddToList(message + "!");
                 start = false;
             }
             
@@ -170,7 +172,7 @@ public class WebTest {
             
             uploadData.add(amount + ", " + date + ", " + Integer.toString(category));     // uploadData lista feltöltése a generált adatokkal, log fájlhoz szükséges.
                         
-            Thread.sleep(1000);
+            Thread.sleep(500);
             driver.findElement(By.id("amount")).sendKeys(amount);
             WebElement datePicker = driver.findElement(By.id("dates"));
             new Actions(driver)
@@ -187,7 +189,7 @@ public class WebTest {
             ArrayList<String> categories = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
             findElementsToArrayList(listOfCategory, categories);
             minimalLogsAddToList("Összeg (Ft): " + amount + ", Dátum: " + date + ", Kategória: " 
-                    + categories.get(category) + " " + Integer.toString(category));
+                    + categories.get(category-1) + " " + Integer.toString(category));
             
             driver.findElement(By.id("gomb1")).click();
             Thread.sleep(500);
@@ -244,13 +246,41 @@ public class WebTest {
         for(WebElement e : table){
             strings.add(e.getText());
         }
+        
         Scanner readList = new Scanner(strings.get(0));
         readList.nextLine();
         while (readList.hasNextLine()) {
-            stringList.add(readList.nextLine());
+            String nextLine = readList.nextLine().replace(" ", "");
+            if (!nextLine.equals("")) stringList.add(nextLine);
         }
     }
     
+    private static void tableToArrayList(List<WebElement> table, ArrayList<String> stringList) {
+        stringList.clear();
+        List<String> strings = new ArrayList<>();
+        for(WebElement e : table){
+            strings.add(e.getText());
+        }
+        
+        Scanner readList = new Scanner(strings.get(0));
+        readList.nextLine();
+        while (readList.hasNextLine()) {
+            String nextLine = readList.nextLine().replace("...", "");
+            if (!nextLine.equals("")) stringList.add(nextLine);
+        }
+    }
+    
+    private static void controlForQuery(ArrayList<String> allQuery, int hit, boolean next, String message) {
+        if (!message.equals("Nincs ilyen adat!")) {
+            minimalLogsAddToList("Talált adat: " + allQuery.size() + ", mért adat: " + hit + ".");
+            if (hit != allQuery.size()) {
+                next = false;
+                start = false;
+                minimalLogsAddToList("Nem egyezik a talált és a mért adat!");
+            }
+        }else minimalLogsAddToList(message);  
+    }
+        
     private static void queryFromDatabase() {
         int hit = 0;
         boolean next = true;
@@ -262,9 +292,25 @@ public class WebTest {
             List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
             if (!table.get(0).getText().equals("")) start = false;     // Tábla ürességének ellenőrzése.
             else {
+                Select selectObject;
+                List<WebElement> selectCost = driver.findElements(By.id("cost"));       // Lekérdezés menü: Összegek listázása.
                 List<WebElement> selectCategory = driver.findElements(By.id("categoriesID"));       // Lekérdezés menü: Kategóriák listázása.
+                List<WebElement> selectYear = driver.findElements(By.id("datesy"));       // Lekérdezés menü: Évek listázása.
+                List<WebElement> selectMonth = driver.findElements(By.id("datesm"));       // Lekérdezés menü: Hónapok listázása.
+                
+                
+                ArrayList<String> costArrayList = new ArrayList<>();        // ArrayList a összegek vizsgálatához.
                 ArrayList<String> categoryArrayList = new ArrayList<>();        // ArrayList a kategóriák vizsgálatához.
+                ArrayList<String> yearArrayList = new ArrayList<>();        // ArrayList a évek vizsgálatához.
+                ArrayList<String> monthArrayList = new ArrayList<>();        // ArrayList a hónapok vizsgálatához.
+                ArrayList<String> dayArrayList = new ArrayList<>();        // ArrayList a napok vizsgálatához.
+                
                 ArrayList<String> allQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
+                
+                findElementsToArrayList(selectCost, costArrayList);     // Összeg List-t átalakítjuk ArrayList-é.
+                findElementsToArrayList(selectCategory, categoryArrayList);     // Kategória List-t átalakítjuk ArrayList-é.
+                findElementsToArrayList(selectYear, yearArrayList);     // Év List-t átalakítjuk ArrayList-é.
+                findElementsToArrayList(selectMonth, monthArrayList);     // Hónap List-t átalakítjuk ArrayList-é.
 
                 /**
                  * Összes adat lekérdezése.
@@ -274,52 +320,490 @@ public class WebTest {
                 Thread.sleep(500);
                 
                 table = driver.findElements(By.id("lista"));
-                findElementsToArrayList(table, allQuery);
+                tableToArrayList(table, allQuery);
+                               
                 if (allQuery.size() != uploadData.size()) {
                     next = false;
+                    start = false;
                     minimalLogsAddToList("Az összes feltöltött adat és az összes lekérdezett adat nem egyezik meg!");
                 }
                 else minimalLogsAddToList("Az összes feltöltött adat és az összes lekérdezett adat megegyezik!");
                 
                 /**
-                 * Az összes élelmiszer adat lekérdezése.
+                 * Adatok lekérdezése és ellenőrzése.
+                 * 
+                 * for(categoryNumber), selectOption(a) : 
+                 *      - 0 : Élelmiszer.
+                 * 
+                 * costNumber :
+                 *      - 0 : Kiadás.
+                 *      - 1 : Bevétel.
+                 *      - 2 : Egyéb összeg.
                 **/
                 
                 if (next) {
-                    findElementsToArrayList(selectCategory, categoryArrayList);
-                    hit = 0;
-                    Select selectObject = new Select(selectCategory.get(0));
-                    selectObject.selectByIndex(1);
-                    Thread.sleep(2000);
-                }
+                    for (int categoryNumber = 0; categoryNumber < categoryArrayList.size(); categoryNumber++) {
+                        if (next) {     // categoryID id mező.
+                            hit = 0;
+                            
+                            selectObject = new Select(selectCategory.get(0));
+                            selectObject.selectByIndex(categoryNumber+1);
+                            selectObject = new Select(selectCost.get(0));
+                            selectObject.selectByIndex(0);
+                            selectObject = new Select(selectYear.get(0));
+                            selectObject.selectByIndex(0);
+                            selectObject = new Select(selectMonth.get(0));
+                            selectObject.selectByIndex(0);
+                            if (!driver.findElement(By.id("napok")).isSelected()) {
+                                driver.findElement(By.id("napok")).click();
+                            }
+                            
+                            driver.findElement(By.id("gomb2")).click();
+                            table = driver.findElements(By.id("lista"));
+                            tableToArrayList(table, allQuery);
+                            message = driver.findElement(By.id("uzenet")).getText();
+                            
+                            if (!message.equals("Nincs ilyen adat!")) {
+                                for (int j = 0; j < allQuery.size(); j++) {
+                                    for (int k = 0; k < uploadData.size(); k++) {
+                                        String[] s = uploadData.get(k).split(", ");
+                                        if (s[2].equals(String.valueOf(categoryNumber+1)) && allQuery.get(j).contains(s[0])) {
+                                            hit++;
+                                            minimalLogsAddToList(allQuery.get(j));
+                                        }
+                                    }
+                                }
+                            }
 
+                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
 
-                
-                
-                /*
-                for (int i = 0; i < allQuery.size(); i++) {
-                    for (int j = 0; j < uploadData.size(); j++) {
-                        String[] s = uploadData.get(j).split(", ");
-                        String amount = s[0];
-                        if (allQuery.get(i).contains(amount)) {
-                            hit++;
+                            if (next) {     // cost id mező.
+                                hit = 0;
+                                for (int costNumber = 0; costNumber < costArrayList.size(); costNumber++) {
+                                    selectObject = new Select(selectCost.get(0));
+                                    selectObject.selectByIndex(costNumber+1);
+                                    selectObject = new Select(selectYear.get(0));
+                                    selectObject.selectByIndex(0);
+                                    selectObject = new Select(selectMonth.get(0));
+                                    selectObject.selectByIndex(0);
+                                    if (!driver.findElement(By.id("napok")).isSelected()) {
+                                        driver.findElement(By.id("napok")).click();
+                                        Thread.sleep(500);
+                                    }
+
+                                    if (costNumber <= 1) {
+                                        driver.findElement(By.id("gomb2")).click();
+                                        table = driver.findElements(By.id("lista"));
+                                        tableToArrayList(table, allQuery);
+                                        message = driver.findElement(By.id("uzenet")).getText();
+                                        
+                                        if (!message.equals("Nincs ilyen adat!")) {
+                                            for (int j = 0; j < allQuery.size(); j++) {
+                                                for (int k = 0; k < uploadData.size(); k++) {
+                                                    String[] s = uploadData.get(k).split(", ");
+                                                    if (allQuery.get(j).contains(s[0])) {
+                                                        hit++;
+                                                        minimalLogsAddToList(allQuery.get(j));
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                        
+                                        if (next) {     // datesy id mező.
+                                            hit = 0;
+                                            for (int yearNumber = 0; yearNumber < yearArrayList.size(); yearNumber++) {
+                                                selectObject = new Select(selectYear.get(0));
+                                                selectObject.selectByIndex(yearNumber+1);
+                                                selectObject = new Select(selectMonth.get(0));
+                                                selectObject.selectByIndex(0);
+                                                if (!driver.findElement(By.id("napok")).isSelected()) {
+                                                    driver.findElement(By.id("napok")).click();
+                                                    Thread.sleep(500);
+                                                }
+                                                
+                                                driver.findElement(By.id("gomb2")).click();
+                                                table = driver.findElements(By.id("lista"));
+                                                tableToArrayList(table, allQuery);
+                                                message = driver.findElement(By.id("uzenet")).getText();
+
+                                                if (!message.equals("Nincs ilyen adat!")) {
+                                                    for (int j = 0; j < allQuery.size(); j++) {
+                                                        for (int k = 0; k < uploadData.size(); k++) {
+                                                            String[] s = uploadData.get(k).split(", ");
+                                                            if (allQuery.get(j).contains(yearArrayList.get(yearNumber)) && allQuery.get(j).contains(s[1])) {
+                                                                hit++;
+                                                                minimalLogsAddToList(allQuery.get(j));
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                
+                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                
+                                                if (next) {     // datesm id mező.
+                                                    hit = 0;
+                                                    for (int monthNumber = 0; monthNumber < monthArrayList.size(); monthNumber++) {
+                                                        selectObject = new Select(selectMonth.get(0));
+                                                        selectObject.selectByIndex(monthNumber+1);
+                                                        if (!driver.findElement(By.id("napok")).isSelected()) {
+                                                            driver.findElement(By.id("napok")).click();
+                                                            Thread.sleep(500);
+                                                        }
+
+                                                        driver.findElement(By.id("gomb2")).click();
+                                                        table = driver.findElements(By.id("lista"));
+                                                        tableToArrayList(table, allQuery);
+                                                        message = driver.findElement(By.id("uzenet")).getText();
+
+                                                        if (!message.equals("Nincs ilyen adat!")) {
+                                                            for (int j = 0; j < allQuery.size(); j++) {
+                                                                for (int k = 0; k < uploadData.size(); k++) {
+                                                                    String[] s = uploadData.get(k).split(", ");
+                                                                    String monthNum = "-" + (monthNumber+1) + "-";
+                                                                    if ((monthNumber+1) < 10) monthNum = "-0" + (monthNumber+1) + "-";
+                                                                    if (allQuery.get(j).contains(String.valueOf(monthNum)) && allQuery.get(j).contains(s[1])) {
+                                                                        hit++;
+                                                                        minimalLogsAddToList(allQuery.get(j));
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+
+                                                        controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                        
+                                                        if (next) {     // dated id mező.
+                                                            hit = 0;
+                                                            driver.findElement(By.id("napok")).click();
+                                                            Thread.sleep(500);
+                                                            driver.findElement(By.id("gomb2")).click();
+                                                            table = driver.findElements(By.id("lista"));
+                                                            tableToArrayList(table, allQuery);
+                                                            message = driver.findElement(By.id("uzenet")).getText();
+                                                            
+                                                            if (!message.equals("Nincs ilyen adat!")) {
+                                                                for (int j = 0; j < allQuery.size(); j++) {
+                                                                    for (int k = 0; k < uploadData.size(); k++) {
+                                                                        String[] s = uploadData.get(k).split(", ");
+                                                                        if (allQuery.get(j).contains(String.valueOf("-01")) && allQuery.get(j).contains(s[1])) {
+                                                                            hit++;
+                                                                            minimalLogsAddToList(allQuery.get(j));
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                            
+                                                            switch ((monthNumber+1)) {
+                                                                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                                                                    if (next) {
+                                                                        hit = 0;
+                                                                        for (int dayNumber = 0; dayNumber < 31; dayNumber++) {
+                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber+1));
+                                                                            driver.findElement(By.id("gomb2")).click();
+                                                                            table = driver.findElements(By.id("lista"));
+                                                                            tableToArrayList(table, allQuery);
+                                                                            message = driver.findElement(By.id("uzenet")).getText();
+
+                                                                            if (!message.equals("Nincs ilyen adat!")) {
+                                                                                for (int j = 0; j < allQuery.size(); j++) {
+                                                                                    for (int k = 0; k < uploadData.size(); k++) {
+                                                                                        String[] s = uploadData.get(k).split(", ");
+                                                                                        String dayNum = "-" + (dayNumber+1);
+                                                                                        if ((monthNumber+1) < 10) dayNum = "-0" + (dayNumber+1);
+                                                                                        if (allQuery.get(j).contains(String.valueOf(dayNum)) && allQuery.get(j).contains(s[1])) {
+                                                                                            hit++;
+                                                                                            minimalLogsAddToList(allQuery.get(j));
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+
+                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                        }
+                                                                    }
+                                                                    break;
+                                                                case 2: 
+                                                                    if (next) {
+                                                                        hit = 0;
+                                                                        for (int dayNumber = 0; dayNumber < 28; dayNumber++) {
+                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber+1));
+                                                                            driver.findElement(By.id("gomb2")).click();
+                                                                            table = driver.findElements(By.id("lista"));
+                                                                            tableToArrayList(table, allQuery);
+                                                                            message = driver.findElement(By.id("uzenet")).getText();
+
+                                                                            if (!message.equals("Nincs ilyen adat!")) {
+                                                                                for (int j = 0; j < allQuery.size(); j++) {
+                                                                                    for (int k = 0; k < uploadData.size(); k++) {
+                                                                                        String[] s = uploadData.get(k).split(", ");
+                                                                                        String dayNum = "-" + (dayNumber+1);
+                                                                                        if ((monthNumber+1) < 10) dayNum = "-0" + (dayNumber+1);
+                                                                                        if (allQuery.get(j).contains(String.valueOf(dayNum)) && allQuery.get(j).contains(s[1])) {
+                                                                                            hit++;
+                                                                                            minimalLogsAddToList(allQuery.get(j));
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+
+                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                        }
+                                                                    }
+                                                                    break;
+                                                                case 4: case 6: case 9: case 11:
+                                                                    if (next) {
+                                                                        hit = 0;
+                                                                        for (int dayNumber = 0; dayNumber < 30; dayNumber++) {
+                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber+1));
+                                                                            driver.findElement(By.id("gomb2")).click();
+                                                                            table = driver.findElements(By.id("lista"));
+                                                                            tableToArrayList(table, allQuery);
+                                                                            message = driver.findElement(By.id("uzenet")).getText();
+
+                                                                            if (!message.equals("Nincs ilyen adat!")) {
+                                                                                for (int j = 0; j < allQuery.size(); j++) {
+                                                                                    for (int k = 0; k < uploadData.size(); k++) {
+                                                                                        String[] s = uploadData.get(k).split(", ");
+                                                                                        String dayNum = "-" + (dayNumber+1);
+                                                                                        if ((monthNumber+1) < 10) dayNum = "-0" + (dayNumber+1);
+                                                                                        if (allQuery.get(j).contains(String.valueOf(dayNum)) && allQuery.get(j).contains(s[1])) {
+                                                                                            hit++;
+                                                                                            minimalLogsAddToList(allQuery.get(j));
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+
+                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                        }
+                                                                    }
+                                                                    break; 
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    } else {
+                                        for (int i = 0; i < 3; i++) {
+                                            String randomData = uploadData.get(rand.nextInt(uploadData.size()));
+                                            String[] randomAmount = randomData.split(", ");
+                                            driver.findElement(By.id("szam")).sendKeys(randomAmount);
+                                            driver.findElement(By.id("gomb2")).click();
+                                            table = driver.findElements(By.id("lista"));
+                                            tableToArrayList(table, allQuery);
+                                            message = driver.findElement(By.id("uzenet")).getText();
+                                            
+                                            if (!message.equals("Nincs ilyen adat!")) {
+                                                for (int j = 0; j < allQuery.size(); j++) {
+                                                    for (int k = 0; k < uploadData.size(); k++) {
+                                                        String[] s = uploadData.get(k).split(", ");
+                                                        if (allQuery.get(j).contains(s[0])) {
+                                                            hit++;
+                                                            minimalLogsAddToList(allQuery.get(j));
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                            
+                                            if (next) {     // datesy id mező.
+                                                hit = 0;
+                                                for (int yearNumber = 0; yearNumber < yearArrayList.size(); yearNumber++) {
+                                                    selectObject = new Select(selectYear.get(0));
+                                                    selectObject.selectByIndex(yearNumber+1);
+                                                    selectObject = new Select(selectMonth.get(0));
+                                                    selectObject.selectByIndex(0);
+                                                    if (!driver.findElement(By.id("napok")).isSelected()) {
+                                                        driver.findElement(By.id("napok")).click();
+                                                        Thread.sleep(500);
+                                                    }
+
+                                                    driver.findElement(By.id("gomb2")).click();
+                                                    table = driver.findElements(By.id("lista"));
+                                                    tableToArrayList(table, allQuery);
+                                                    message = driver.findElement(By.id("uzenet")).getText();
+
+                                                    if (!message.equals("Nincs ilyen adat!")) {
+                                                        for (int j = 0; j < allQuery.size(); j++) {
+                                                            for (int k = 0; k < uploadData.size(); k++) {
+                                                                String[] s = uploadData.get(k).split(", ");
+                                                                if (allQuery.get(j).contains(yearArrayList.get(yearNumber)) && allQuery.get(j).contains(s[1])) {
+                                                                    hit++;
+                                                                    minimalLogsAddToList(allQuery.get(j));
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+
+                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+
+                                                    if (next) {     // datesm id mező.
+                                                        hit = 0;
+                                                        for (int monthNumber = 0; monthNumber < monthArrayList.size(); monthNumber++) {
+                                                            selectObject = new Select(selectMonth.get(0));
+                                                            selectObject.selectByIndex(monthNumber+1);
+                                                            if (!driver.findElement(By.id("napok")).isSelected()) {
+                                                                driver.findElement(By.id("napok")).click();
+                                                                Thread.sleep(500);
+                                                            }
+
+                                                            driver.findElement(By.id("gomb2")).click();
+                                                            table = driver.findElements(By.id("lista"));
+                                                            tableToArrayList(table, allQuery);
+                                                            message = driver.findElement(By.id("uzenet")).getText();
+
+                                                            if (!message.equals("Nincs ilyen adat!")) {
+                                                                for (int j = 0; j < allQuery.size(); j++) {
+                                                                    for (int k = 0; k < uploadData.size(); k++) {
+                                                                        String[] s = uploadData.get(k).split(", ");
+                                                                        String monthNum = "-" + (monthNumber+1) + "-";
+                                                                        if ((monthNumber+1) < 10) monthNum = "-0" + (monthNumber+1) + "-";
+                                                                        if (allQuery.get(j).contains(String.valueOf(monthNum)) && allQuery.get(j).contains(s[1])) {
+                                                                            hit++;
+                                                                            minimalLogsAddToList(allQuery.get(j));
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+
+                                                            if (next) {     // dated id mező.
+                                                                hit = 0;
+                                                                driver.findElement(By.id("napok")).click();
+                                                                Thread.sleep(500);
+                                                                driver.findElement(By.id("gomb2")).click();
+                                                                table = driver.findElements(By.id("lista"));
+                                                                tableToArrayList(table, allQuery);
+                                                                message = driver.findElement(By.id("uzenet")).getText();
+                                                                
+                                                                if (!message.equals("Nincs ilyen adat!")) {
+                                                                    for (int j = 0; j < allQuery.size(); j++) {
+                                                                        for (int k = 0; k < uploadData.size(); k++) {
+                                                                            String[] s = uploadData.get(k).split(", ");
+                                                                            if (allQuery.get(j).contains(String.valueOf("-01")) && allQuery.get(j).contains(s[1])) {
+                                                                                hit++;
+                                                                                minimalLogsAddToList(allQuery.get(j));
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+
+                                                                switch ((monthNumber+1)) {
+                                                                    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                                                                        if (next) {
+                                                                            hit = 0;
+                                                                            for (int dayNumber = 0; dayNumber < 31; dayNumber++) {
+                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber+1));
+                                                                                driver.findElement(By.id("gomb2")).click();
+                                                                                table = driver.findElements(By.id("lista"));
+                                                                                tableToArrayList(table, allQuery);
+                                                                                message = driver.findElement(By.id("uzenet")).getText();
+
+                                                                                if (!message.equals("Nincs ilyen adat!")) {
+                                                                                    for (int j = 0; j < allQuery.size(); j++) {
+                                                                                        for (int k = 0; k < uploadData.size(); k++) {
+                                                                                            String[] s = uploadData.get(k).split(", ");
+                                                                                            String dayNum = "-" + (dayNumber+1);
+                                                                                            if ((monthNumber+1) < 10) dayNum = "-0" + (dayNumber+1);
+                                                                                            if (allQuery.get(j).contains(String.valueOf(dayNum)) && allQuery.get(j).contains(s[1])) {
+                                                                                                hit++;
+                                                                                                minimalLogsAddToList(allQuery.get(j));
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+
+                                                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                            }
+                                                                        }
+                                                                        break;
+                                                                    case 2: 
+                                                                        if (next) {
+                                                                            hit = 0;
+                                                                            for (int dayNumber = 0; dayNumber < 28; dayNumber++) {
+                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber+1));
+                                                                                driver.findElement(By.id("gomb2")).click();
+                                                                                table = driver.findElements(By.id("lista"));
+                                                                                tableToArrayList(table, allQuery);
+                                                                                message = driver.findElement(By.id("uzenet")).getText();
+
+                                                                                if (!message.equals("Nincs ilyen adat!")) {
+                                                                                    for (int j = 0; j < allQuery.size(); j++) {
+                                                                                        for (int k = 0; k < uploadData.size(); k++) {
+                                                                                            String[] s = uploadData.get(k).split(", ");
+                                                                                            String dayNum = "-" + (dayNumber+1);
+                                                                                            if ((monthNumber+1) < 10) dayNum = "-0" + (dayNumber+1);
+                                                                                            if (allQuery.get(j).contains(String.valueOf(dayNum)) && allQuery.get(j).contains(s[1])) {
+                                                                                                hit++;
+                                                                                                minimalLogsAddToList(allQuery.get(j));
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+
+                                                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                            }
+                                                                        }
+                                                                        break;
+                                                                    case 4: case 6: case 9: case 11:
+                                                                        if (next) {
+                                                                            hit = 0;
+                                                                            for (int dayNumber = 0; dayNumber < 30; dayNumber++) {
+                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber+1));
+                                                                                driver.findElement(By.id("gomb2")).click();
+                                                                                table = driver.findElements(By.id("lista"));
+                                                                                tableToArrayList(table, allQuery);
+                                                                                message = driver.findElement(By.id("uzenet")).getText();
+
+                                                                                if (!message.equals("Nincs ilyen adat!")) {
+                                                                                    for (int j = 0; j < allQuery.size(); j++) {
+                                                                                        for (int k = 0; k < uploadData.size(); k++) {
+                                                                                            String[] s = uploadData.get(k).split(", ");
+                                                                                            String dayNum = "-" + (dayNumber+1);
+                                                                                            if ((monthNumber+1) < 10) dayNum = "-0" + (dayNumber+1);
+                                                                                            if (allQuery.get(j).contains(String.valueOf(dayNum)) && allQuery.get(j).contains(s[1])) {
+                                                                                                hit++;
+                                                                                                minimalLogsAddToList(allQuery.get(j));
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+
+                                                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                            }
+                                                                        }
+                                                                        break; 
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                */
-                
-                System.out.println(hit);
-                
-                
             }
-            
-            
-                      
-
-            Thread.sleep(2000);
-            
-            
-            
+ 
         } catch (Exception e) {
             System.out.println(e);
             start = false;
