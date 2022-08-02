@@ -62,7 +62,7 @@ document.getElementById("gomb2").onclick = function (e) {
 
     const url = 'http://localhost:5000/user/posts' + "/" + sessionStorage.id + "/" + document.getElementById("datesy").value + "/" + document.getElementById("datesm").value + "/" + dated + "/" + document.getElementById("categoriesID").value + "/" + cost + "/" + document.getElementById("order").value + "/" + document.getElementById("desc").value;
     const token = 'Bearer: ' + sessionStorage.token
-    const lista = document.getElementById("lista")
+    const lista = document.getElementById("lista");
     fetch(url, {
         method: 'GET',
         headers: {
@@ -119,7 +119,3 @@ function Post() {
     document.location = "post.html"
     sessionStorage.regid = ID;
 }
-
-
-
-
