@@ -1,0 +1,9 @@
+2022-08-03 18:21:36	Teszt indítása
+2022-08-03 18:21:36	Szükséges forrás fájlok betöltése....
+2022-08-03 18:21:36	Forrás fájlok betöltése kész!
+ 
+2022-08-03 18:21:42	Sikeres bejelentkezés.
+2022-08-03 18:21:42	Összeg (Ft): -7008, Dátum: 2022-05-18, Kategória: Számlák 5
+2022-08-03 18:21:43	!
+2022-08-03 18:21:44	Az összes feltöltött adat és az összes lekérdezett adat nem egyezik meg!
+2022-08-03 18:21:47	A teszt befejeződött! Teljes ideje: 0 perc 10 másodperc.
