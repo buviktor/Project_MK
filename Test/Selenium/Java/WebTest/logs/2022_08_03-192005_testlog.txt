@@ -1,0 +1,80 @@
+2022-08-03 19:19:09	Teszt indítása
+2022-08-03 19:19:09	Szükséges forrás fájlok betöltése....
+2022-08-03 19:19:09	Forrás fájlok betöltése kész!
+ 
+2022-08-03 19:19:14	Sikeres bejelentkezés.
+2022-08-03 19:19:15	Összeg (Ft): 121800, Dátum: 2022-05-24, Kategória: Fizetés 3
+2022-08-03 19:19:16	Összeg (Ft): -8400, Dátum: 2021-04-08, Kategória: Ruházat 2
+2022-08-03 19:19:17	Összeg (Ft): -9374, Dátum: 2021-01-02, Kategória: Élelmiszer 1
+2022-08-03 19:19:17	Összeg (Ft): 36200, Dátum: 2022-04-23, Kategória: Fizetés 3
+2022-08-03 19:19:18	Összeg (Ft): -8548, Dátum: 2021-06-27, Kategória: Ruházat 2
+2022-08-03 19:19:19	Összeg (Ft): -4946, Dátum: 2022-07-10, Kategória: Szabadidő 4
+2022-08-03 19:19:20	Összeg (Ft): -15920, Dátum: 2022-08-03, Kategória: Élelmiszer 1
+2022-08-03 19:19:21	Összeg (Ft): -7222, Dátum: 2021-12-07, Kategória: Számlák 5
+2022-08-03 19:19:22	Összeg (Ft): 221100, Dátum: 2022-03-06, Kategória: Egyébjutatások 7
+2022-08-03 19:19:23	Összeg (Ft): -5574, Dátum: 2021-12-29, Kategória: Egyébkiadások 6
+2022-08-03 19:19:24	Összeg (Ft): 153400, Dátum: 2021-02-25, Kategória: Fizetés 3
+2022-08-03 19:19:25	Összeg (Ft): -7226, Dátum: 2022-01-12, Kategória: Számlák 5
+2022-08-03 19:19:26	Összeg (Ft): -6858, Dátum: 2022-05-18, Kategória: Számlák 5
+2022-08-03 19:19:27	Összeg (Ft): 191700, Dátum: 2021-01-27, Kategória: Fizetés 3
+2022-08-03 19:19:28	Összeg (Ft): -8738, Dátum: 2021-02-01, Kategória: Egyébkiadások 6
+2022-08-03 19:19:29	Összeg (Ft): -4358, Dátum: 2022-02-04, Kategória: Szabadidő 4
+2022-08-03 19:19:30	Összeg (Ft): -3976, Dátum: 2021-10-25, Kategória: Szabadidő 4
+2022-08-03 19:19:30	Összeg (Ft): -5966, Dátum: 2022-05-04, Kategória: Egyébkiadások 6
+2022-08-03 19:19:31	Összeg (Ft): 496100, Dátum: 2022-02-30, Kategória: Egyébjutatások 7
+2022-08-03 19:19:32	Összeg (Ft): -9206, Dátum: 2021-04-17, Kategória: Ruházat 2
+2022-08-03 19:19:33	Összeg (Ft): -8436, Dátum: 2022-02-16, Kategória: Egyébkiadások 6
+2022-08-03 19:19:34	Összeg (Ft): -8364, Dátum: 2022-04-19, Kategória: Egyébkiadások 6
+2022-08-03 19:19:35	Összeg (Ft): -3738, Dátum: 2021-02-24, Kategória: Számlák 5
+2022-08-03 19:19:36	Összeg (Ft): -8380, Dátum: 2022-06-14, Kategória: Számlák 5
+2022-08-03 19:19:37	Összeg (Ft): -9530, Dátum: 2022-05-12, Kategória: Élelmiszer 1
+2022-08-03 19:19:38	Összeg (Ft): -1400, Dátum: 2022-05-27, Kategória: Élelmiszer 1
+2022-08-03 19:19:39	Összeg (Ft): -6790, Dátum: 2022-01-16, Kategória: Egyébkiadások 6
+2022-08-03 19:19:40	Összeg (Ft): -2240, Dátum: 2022-02-16, Kategória: Élelmiszer 1
+2022-08-03 19:19:40	Összeg (Ft): -4618, Dátum: 2022-07-11, Kategória: Számlák 5
+2022-08-03 19:19:41	Összeg (Ft): -2108, Dátum: 2022-08-03, Kategória: Számlák 5
+2022-08-03 19:19:42	Összeg (Ft): -8388, Dátum: 2022-01-04, Kategória: Ruházat 2
+2022-08-03 19:19:43	Összeg (Ft): -7296, Dátum: 2021-04-18, Kategória: Szabadidő 4
+2022-08-03 19:19:44	Összeg (Ft): -4296, Dátum: 2021-05-12, Kategória: Szabadidő 4
+2022-08-03 19:19:45	Összeg (Ft): -3260, Dátum: 2021-04-08, Kategória: Számlák 5
+2022-08-03 19:19:46	Összeg (Ft): 478400, Dátum: 2022-06-04, Kategória: Egyébjutatások 7
+2022-08-03 19:19:47	Összeg (Ft): -2826, Dátum: 2022-07-19, Kategória: Élelmiszer 1
+2022-08-03 19:19:48	Összeg (Ft): -18420, Dátum: 2021-09-14, Kategória: Szabadidő 4
+2022-08-03 19:19:49	Összeg (Ft): -9484, Dátum: 2022-04-03, Kategória: Ruházat 2
+2022-08-03 19:19:50	Összeg (Ft): -3774, Dátum: 2022-03-17, Kategória: Ruházat 2
+2022-08-03 19:19:50	Összeg (Ft): 497900, Dátum: 2022-05-14, Kategória: Egyébjutatások 7
+2022-08-03 19:19:51	Összeg (Ft): 455500, Dátum: 2022-03-17, Kategória: Fizetés 3
+2022-08-03 19:19:52	Összeg (Ft): 133400, Dátum: 2022-08-03, Kategória: Fizetés 3
+2022-08-03 19:19:53	Összeg (Ft): -17780, Dátum: 2022-05-01, Kategória: Számlák 5
+2022-08-03 19:19:54	Összeg (Ft): -9010, Dátum: 2021-07-28, Kategória: Szabadidő 4
+2022-08-03 19:19:55	Összeg (Ft): -3176, Dátum: 2022-03-02, Kategória: Ruházat 2
+2022-08-03 19:19:56	Összeg (Ft): -9308, Dátum: 2022-06-26, Kategória: Élelmiszer 1
+2022-08-03 19:19:57	Összeg (Ft): -14280, Dátum: 2021-11-05, Kategória: Szabadidő 4
+2022-08-03 19:19:58	Összeg (Ft): -7750, Dátum: 2021-01-14, Kategória: Szabadidő 4
+2022-08-03 19:19:59	Összeg (Ft): -5512, Dátum: 2022-07-06, Kategória: Élelmiszer 1
+2022-08-03 19:20:00	Összeg (Ft): -3394, Dátum: 2021-03-25, Kategória: Számlák 5
+2022-08-03 19:20:01	Az összes feltöltött adat és az összes lekérdezett adat megegyezik!
+2022-08-03 19:20:02	-9374 Élelmiszer 2021-01-02 
+2022-08-03 19:20:02	-2240 Élelmiszer 2022-02-16 
+2022-08-03 19:20:02	-9530 Élelmiszer 2022-05-12 
+2022-08-03 19:20:02	-1400 Élelmiszer 2022-05-27 
+2022-08-03 19:20:02	-9308 Élelmiszer 2022-06-26 
+2022-08-03 19:20:02	-5512 Élelmiszer 2022-07-06 
+2022-08-03 19:20:02	-2826 Élelmiszer 2022-07-19 
+2022-08-03 19:20:02	-15920 Élelmiszer 2022-08-03 
+2022-08-03 19:20:02	Talált adat: 50, mért adat: 8.
+2022-08-03 19:20:02	Nem egyezik a talált és a mért adat!
+2022-08-03 19:20:02	-9374 Élelmiszer 2021-01-02 
+2022-08-03 19:20:02	-2240 Élelmiszer 2022-02-16 
+2022-08-03 19:20:02	-9530 Élelmiszer 2022-05-12 
+2022-08-03 19:20:02	-1400 Élelmiszer 2022-05-27 
+2022-08-03 19:20:02	-9308 Élelmiszer 2022-06-26 
+2022-08-03 19:20:02	-5512 Élelmiszer 2022-07-06 
+2022-08-03 19:20:02	-2826 Élelmiszer 2022-07-19 
+2022-08-03 19:20:02	-15920 Élelmiszer 2022-08-03 
+2022-08-03 19:20:02	Talált adat: 8, mért adat: 8.
+2022-08-03 19:20:02	-9374 Élelmiszer 2021-01-02 
+2022-08-03 19:20:02	Talált adat: 1, mért adat: 1.
+2022-08-03 19:20:02	-9374 Élelmiszer 2021-01-02 
+2022-08-03 19:20:02	Talált adat: 1, mért adat: 1.
+2022-08-03 19:20:05	A teszt befejeződött! Teljes ideje: 0 perc 56 másodperc.

@@ -195,8 +195,6 @@ public class WebTest {
             
             message = driver.findElement(By.id("uzenet")).getText();
             
-            System.out.println(uploadData);
-            
             if (!message.equals("Sikeres hozzáadás")){
                 minimalLogsAddToList(message + "!");
                 start = false;
@@ -399,7 +397,7 @@ public class WebTest {
                                     selected = costArrayList.get(costNumber) + ", " + categoryArrayList.get(categoryNumber) + ", " 
                                         + yearArrayList.get(0) + ", " + monthArrayList.get(0) + ", " + allDay;
 
-                                    if (costNumber <= 1) {
+                                    if (costNumber <= 2) {
                                         driver.findElement(By.id("gomb2")).click();
                                         table = driver.findElements(By.id("lista"));
                                         tableToArrayList(table, allQuery);
@@ -431,8 +429,8 @@ public class WebTest {
                                                     Thread.sleep(500);
                                                     allDay = "Összes nap";
                                                 }
-                                                minimalLogsAddToList(costArrayList.get(costNumber) + ", " + categoryArrayList.get(categoryNumber) + ", " 
-                                                    + yearArrayList.get(yearNumber) + ", " + monthArrayList.get(0) + ", " + allDay);
+                                                selected = costArrayList.get(costNumber) + ", " + categoryArrayList.get(categoryNumber) + ", " 
+                                                    + yearArrayList.get(yearNumber) + ", " + monthArrayList.get(0) + ", " + allDay;
                                                 
                                                 driver.findElement(By.id("gomb2")).click();
                                                 table = driver.findElements(By.id("lista"));
@@ -463,17 +461,15 @@ public class WebTest {
                                                             Thread.sleep(500);
                                                             allDay = "Összes nap";
                                                         }
-                                                        minimalLogsAddToList(costArrayList.get(costNumber) + ", " + categoryArrayList.get(categoryNumber) + ", " 
+                                                        selected = costArrayList.get(costNumber) + ", " + categoryArrayList.get(categoryNumber) + ", " 
                                                             + yearArrayList.get(yearNumber) + ", " + monthArrayList.get(monthNumber) + ", " 
-                                                            + allDay);
+                                                            + allDay;
 
                                                         driver.findElement(By.id("gomb2")).click();
                                                         table = driver.findElements(By.id("lista"));
                                                         tableToArrayList(table, allQuery);
                                                         message = driver.findElement(By.id("uzenet")).getText();
                                                         
-                                                        System.out.println("\n" + allQuery);
-
                                                         if (!message.equals("Nincs ilyen adat!")) {
                                                             for (int j = 0; j < allQuery.size(); j++) {
                                                                 for (int k = 0; k < uploadData.size(); k++) {
@@ -494,8 +490,8 @@ public class WebTest {
                                                             hit = 0;
                                                             driver.findElement(By.id("napok")).click();
                                                             Thread.sleep(500);
-                                                            String day = driver.findElement(By.xpath("//*[@id=\"dated\"]")).getText();
-                                                            if (Integer.parseInt(driver.findElement(By.xpath("//*[@id=\"dated\"]")).getText()) < 10) {
+                                                            String day = "1";
+                                                            if (Integer.parseInt(day) < 10) {
                                                                 day = "0" + day;
                                                             }
                                                             selected = costArrayList.get(costNumber) + ", " + categoryArrayList.get(categoryNumber) + ", " 
@@ -524,10 +520,9 @@ public class WebTest {
                                                             switch ((monthNumber)) {
                                                                 case 1: case 3: case 5: case 7: case 8: case 10: case 12:       // 31 napos hónapok
                                                                     if (next) {
-                                                                        hit = 0;
-                                                                        for (int dayNumber = 2; dayNumber < 31; dayNumber++) {
-                                                                            driver.findElement(By.id("dated")).clear();
-                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber));
+                                                                        for (int dayNumber = 2; dayNumber < 32; dayNumber++) {
+                                                                            hit = 0;
+                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(Keys.UP));
                                                                             if (dayNumber < 10) {
                                                                                 day = "0" + dayNumber;
                                                                             }
@@ -560,10 +555,9 @@ public class WebTest {
                                                                     break;
                                                                 case 2:        // 28 napos hónapok
                                                                     if (next) {
-                                                                        hit = 0;
-                                                                        for (int dayNumber = 2; dayNumber < 28; dayNumber++) {
-                                                                            driver.findElement(By.id("dated")).clear();
-                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber));
+                                                                        for (int dayNumber = 2; dayNumber < 29; dayNumber++) {
+                                                                            hit = 0;
+                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(Keys.UP));
                                                                             if (dayNumber < 10) {
                                                                                 day = "0" + dayNumber;
                                                                             }
@@ -596,10 +590,9 @@ public class WebTest {
                                                                     break;
                                                                 case 4: case 6: case 9: case 11:       // 30 napos hónapok
                                                                     if (next) {
-                                                                        hit = 0;
-                                                                        for (int dayNumber = 2; dayNumber < 30; dayNumber++) {
-                                                                            driver.findElement(By.id("dated")).clear();
-                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber));
+                                                                        for (int dayNumber = 2; dayNumber < 31; dayNumber++) {
+                                                                            hit = 0;
+                                                                            driver.findElement(By.id("dated")).sendKeys(String.valueOf(Keys.UP));
                                                                             if (dayNumber < 10) {
                                                                                 day = "0" + dayNumber;
                                                                             }
@@ -746,8 +739,8 @@ public class WebTest {
                                                                 hit = 0;
                                                                 driver.findElement(By.id("napok")).click();
                                                                 Thread.sleep(500);
-                                                                String day = driver.findElement(By.xpath("//*[@id=\"dated\"]")).getText();
-                                                                if (Integer.parseInt(driver.findElement(By.xpath("//*[@id=\"dated\"]")).getText()) < 10) {
+                                                                String day = "1";
+                                                                if (Integer.parseInt(day) < 10) {
                                                                     day = "0" + day;
                                                                 }
                                                                 selected = costArrayList.get(costNumber) + ": " +randomAmount[0] + ", " + categoryArrayList.get(categoryNumber) + ", " 
@@ -776,10 +769,9 @@ public class WebTest {
                                                                 switch ((monthNumber)) {
                                                                     case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                                                                         if (next) {
-                                                                            hit = 0;
-                                                                            for (int dayNumber = 2; dayNumber < 31; dayNumber++) {
-                                                                                driver.findElement(By.id("dated")).clear();
-                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber));
+                                                                            for (int dayNumber = 2; dayNumber < 32; dayNumber++) {
+                                                                                hit = 0;
+                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(Keys.UP));
                                                                                 if (dayNumber < 10) {
                                                                                 day = "0" + dayNumber;
                                                                                 }
@@ -812,10 +804,9 @@ public class WebTest {
                                                                         break;
                                                                     case 2: 
                                                                         if (next) {
-                                                                            hit = 0;
-                                                                            for (int dayNumber = 2; dayNumber < 28; dayNumber++) {
-                                                                                driver.findElement(By.id("dated")).clear();
-                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber));
+                                                                            for (int dayNumber = 2; dayNumber < 29; dayNumber++) {
+                                                                                hit = 0;
+                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(Keys.UP));
                                                                                 if (dayNumber < 10) {
                                                                                 day = "0" + dayNumber;
                                                                                 }
@@ -848,10 +839,9 @@ public class WebTest {
                                                                         break;
                                                                     case 4: case 6: case 9: case 11:
                                                                         if (next) {
-                                                                            hit = 0;
-                                                                            for (int dayNumber = 2; dayNumber < 30; dayNumber++) {
-                                                                                driver.findElement(By.id("dated")).clear();
-                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(dayNumber));
+                                                                            for (int dayNumber = 2; dayNumber < 31; dayNumber++) {
+                                                                                hit = 0;
+                                                                                driver.findElement(By.id("dated")).sendKeys(String.valueOf(Keys.UP));
                                                                                 if (dayNumber < 10) {
                                                                                 day = "0" + dayNumber;
                                                                                 }
