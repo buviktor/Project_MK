@@ -63,6 +63,7 @@ document.getElementById("gomb2").onclick = function (e) {
     const url = 'http://localhost:5000/user/posts' + "/" + sessionStorage.id + "/" + document.getElementById("datesy").value + "/" + document.getElementById("datesm").value + "/" + dated + "/" + document.getElementById("categoriesID").value + "/" + cost + "/" + document.getElementById("order").value + "/" + document.getElementById("desc").value;
     const token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista");
+    const lista2 = document.getElementById("lista2");
     fetch(url, {
         method: 'GET',
         headers: {
@@ -75,7 +76,13 @@ document.getElementById("gomb2").onclick = function (e) {
         return response.json()    
     })
     .then(json => {
-      lista.innerHTML = "<tr><th>Összeg</th><th>Kategoria</th><th>Dátum</th><th></th></tr>";
+        lista2.innerHTML = "<tr><th>Összegzés</th><th>Bevétel</th><th>Kiadás</th></tr>";
+        json.forEach(a => {
+          if(a!=json[1] && a.sum) 
+          lista2.innerHTML += "<tr><td>" + a.sum + "</td><td>" + a.income + "</td>"
+              + "</td><td>" + a.outlay + "</td></tr>"
+            });
+      lista.innerHTML = "<tr><th>Összeg</th><th>Kategória</th><th>Dátum</th><th></th></tr>";
       if (ok && json[0] != null) {
       json.forEach(cs => {
           if(cs!=json[0]) 

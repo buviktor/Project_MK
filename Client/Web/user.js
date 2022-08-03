@@ -14,15 +14,15 @@ function Allpost() {
     .then(json => {
         lista2.innerHTML = "<tr><th>Összegzés</th><th>Bevétel</th><th>Kiadás</th></tr>";
         json.forEach(a => {
-          if(a!=json[1]) 
+          if(a!=json[1] && a.sum) 
           lista2.innerHTML += "<tr><td>" + a.sum + "</td><td>" + a.income + "</td>"
-              + "</td><td>" + a.outlay + "</td>"+"</tr>"
+              + "</td><td>" + a.outlay + "</td></tr>"
             });
         lista.innerHTML = "<tr><th>Összeg</th><th>Kategoria</th><th>Dátum</th></tr>";
         json.forEach(cs => {
           if(cs!=json[0]) 
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td>"+"</tr>"
+              + "</td><td>" + cs.date + "</td></tr>"
             });
           }) 
     .catch (err => console.log(err))

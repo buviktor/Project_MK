@@ -463,8 +463,11 @@ app.route("/admin/users/:active/:order/:desc")
             pool.query(q,
                 function(error,results){
                     if(!error && req.user.username==AdminNev && results[0]){
-                        var sum=results.length
-                        return res.status(200).send({users:results, number:sum})
+                        if(!error && req.user.username==AdminNev && results[0]){
+                            var szam={number:results.length}
+                            results.splice(0, 0,szam)
+                            return res.status(200).send(results)
+                        }
                     }else if(!error && req.user.username==AdminNev && !results[0]){
                         return res.status(200).send({message:"Nincs ilyen felhasználó"})
                     }else if(error)
