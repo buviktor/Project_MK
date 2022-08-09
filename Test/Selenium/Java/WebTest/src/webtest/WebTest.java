@@ -311,8 +311,40 @@ public class WebTest {
         }
         
         if (sort) {
-            if (value == 1) Collections.sort(uploadDataSortingInt);
-            else Collections.sort(uploadDataSorting);
+            switch (value) {
+                case 1:
+                    Collections.sort(uploadDataSortingInt);
+                    break;
+                case 2:
+                    String ABC = "aábcdeéfghiíjklmnoóöőpqrstuúüűvwxyz";
+                    char c = uploadDataSorting.get(0).charAt(0), abc;
+                    int end = 0, abcIndex = 0;
+                    
+                    while (end < 50) {
+                        end = 0;
+                        c = uploadDataSorting.get(0).charAt(0);
+                        for (int i = 1; i < uploadDataSorting.size(); i++) {
+                            if (c != uploadDataSorting.get(i).charAt(0)) {
+                                for (int j = 0; j < ABC.length(); j++) {
+                                    abc = ABC.charAt(j);
+                                    if (abc == c) {
+                                        abcIndex = j;
+                                    }
+                                    if (abc == uploadDataSorting.get(i).charAt(0)) {
+                                        if (abcIndex > j) {
+                                            uploadDataSorting.add((i-1), uploadDataSorting.get(i));
+                                        }
+                                    }
+                                }
+                            } else end++;
+                            c = uploadDataSorting.get(i).charAt(0);
+                        }
+                    }
+                    break;
+                default:
+                    Collections.sort(uploadDataSorting);
+                    break;
+            }
         }
         else {
             if (value == 1) Collections.sort(uploadDataSortingInt, Collections.reverseOrder());
