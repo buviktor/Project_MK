@@ -1,3 +1,4 @@
+// ----- Bejelentkezés -----
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
     let ok = false
@@ -37,9 +38,10 @@ document.getElementById("gomb1").onclick = function (e) {
              
         })    
         .catch(err =>console.log(err))
-}
+    }
 }
 
+// ----- Navs and tabs -----
 const tabEl = document.getElementById('myTab')
 tabEl.addEventListener('shown.bs.tab', event => {
   event.target // newly activated tab

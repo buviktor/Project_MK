@@ -1,5 +1,4 @@
 //---- Adatok módosítása ----
-
 window.addEventListener("load", function Adatok() {
     const url = 'http://localhost:5000/user/person/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
@@ -21,13 +20,12 @@ window.addEventListener("load", function Adatok() {
                 document.getElementById("county").setAttribute ('value',cs.county);
                 document.getElementById("country").setAttribute ('value',cs.country);
                 document.getElementById("city").setAttribute ('value',cs.city);
-                }); 
+            }); 
         })
         .catch(err => console.log(err))
 })
 
 // ---- Adatok módosítása ----
-
 document.getElementById("gomb4").onclick = function (e) {
     e.preventDefault();
 
@@ -57,10 +55,10 @@ document.getElementById("gomb4").onclick = function (e) {
     .then((response) => response.json())
     .then(json => document.getElementById("uzenet").innerHTML = json.message)
     .catch(err => console.log(err));
-}
+    }
 }
 
-
+// ----- Módosítás mutatása/rejtése -----
 let mutat = false;
 
 window.addEventListener("load", function() {
@@ -79,7 +77,6 @@ document.getElementById("gomb5").onclick = function Mutat(){
 }
 
 // ---- Felhasználó törlése ----
-
 document.getElementById("gomb6").onclick = function (e) {
     e.preventDefault();
 
@@ -92,17 +89,17 @@ document.getElementById("gomb6").onclick = function (e) {
         headers: {
             'Authorization': token
         },
-        
     })
+    
         .then((response) => response.json())
         .then((json) => {
             document.getElementById("uzenet").innerHTML = json.message
             setTimeout(function a() {
                 document.location = "index.html"
-        }, 1500)
+            }, 1500)
     })
     .catch(err => console.log(err));
-}else {
+    }else {
 }
 }
 

@@ -1,3 +1,4 @@
+// ----- Összegzés és az utolsó havi adatok listázása -----
 function Allpost() {
     const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
@@ -30,7 +31,7 @@ function Allpost() {
 }
 Allpost()
 
-//Új poszt hozzáadása
+// ----- Új poszt hozzáadása -----
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
     const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
@@ -56,7 +57,7 @@ document.getElementById("gomb1").onclick = function (e) {
         .catch(err => console.log(err));
 }
 
-//Kategoriák
+// ----- Kategoriák -----
 window.addEventListener("load", function AllCat() {
     const url = 'http://localhost:5000/categories';
     const menu = document.getElementById("categoriesID");
@@ -72,10 +73,9 @@ window.addEventListener("load", function AllCat() {
     .then(json => {
         json.forEach(cs => {
             menu.innerHTML += "<option value=" + cs.ID + ">" + cs.denomination + "</option> "
-            });
-          })
+        });
+    })
     .catch (err => console.log(err));
-}
-)
+})
 
 

@@ -15,13 +15,7 @@ window.addEventListener("load", function Allpost() {
     .catch (err => console.log(err))
 })
 
-function reply_click(clicked_id)
-  {
-      ID = clicked_id;
-  }
-
-
-/////USERPOSTS-PAGE/////
+// ----- USERPOSTS-PAGE(összes/ egy adott nap) ----- 
 document.getElementById("cost").onchange = function (a){
     a.preventDefault();
     if(document.getElementById("cost").value == 3){
@@ -45,7 +39,8 @@ document.getElementById("napok").onchange = function (a){
     }
 
 }
-    
+
+// ----- Lekérdezés -----
 document.getElementById("gomb2").onclick = function (e) {
     e.preventDefault();
     if  (document.getElementById("cost").value == 3){
@@ -101,8 +96,12 @@ document.getElementById("gomb2").onclick = function (e) {
         .catch (err => console.log(err));
 }
 
+// ----- Poszt ID -----
+function reply_click(clicked_id){
+    ID = clicked_id;
+}
 
-//Kategoriák
+// ----- Kategoriák -----
 window.addEventListener("load", function AllCat() {
     const url = 'http://localhost:5000/categories';
     const menu = document.getElementById("categoriesID");
@@ -124,8 +123,7 @@ window.addEventListener("load", function AllCat() {
     .catch (err => console.log(err))
 })
 
-//Módosítandó poszt megjelenítése
-
+// ----- Módosítandó poszt megjelenítése -----
 function Post() {
     document.location = "post.html"
     sessionStorage.regid = ID;
