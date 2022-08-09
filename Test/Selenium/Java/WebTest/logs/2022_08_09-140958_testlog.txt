@@ -1,0 +1,347 @@
+2022-08-09 14:09:02	Teszt indítása
+2022-08-09 14:09:02	Szükséges forrás fájlok betöltése....
+2022-08-09 14:09:03	Forrás fájlok betöltése kész!
+ 
+2022-08-09 14:09:08	Sikeres bejelentkezés.
+2022-08-09 14:09:08	Összeg (Ft): 267700, Dátum: 2021-01-28, Kategória: Egyébjutatások 7
+2022-08-09 14:09:09	Összeg (Ft): -6076, Dátum: 2021-09-20, Kategória: Ruházat 2
+2022-08-09 14:09:10	Összeg (Ft): 394700, Dátum: 2021-03-06, Kategória: Egyébjutatások 7
+2022-08-09 14:09:11	Összeg (Ft): -9528, Dátum: 2021-08-24, Kategória: Ruházat 2
+2022-08-09 14:09:12	Összeg (Ft): -4992, Dátum: 2022-03-27, Kategória: Egyébkiadások 6
+2022-08-09 14:09:13	Összeg (Ft): 438400, Dátum: 2021-12-06, Kategória: Egyébjutatások 7
+2022-08-09 14:09:14	Összeg (Ft): -2450, Dátum: 2022-04-29, Kategória: Élelmiszer 1
+2022-08-09 14:09:15	Összeg (Ft): 359200, Dátum: 2021-07-28, Kategória: Fizetés 3
+2022-08-09 14:09:16	Összeg (Ft): 201600, Dátum: 2021-04-29, Kategória: Egyébjutatások 7
+2022-08-09 14:09:17	Összeg (Ft): -3914, Dátum: 2022-07-10, Kategória: Élelmiszer 1
+2022-08-09 14:09:17	Összeg (Ft): -5276, Dátum: 2022-08-04, Kategória: Számlák 5
+2022-08-09 14:09:18	Összeg (Ft): 144700, Dátum: 2022-08-06, Kategória: Egyébjutatások 7
+2022-08-09 14:09:19	Összeg (Ft): -6078, Dátum: 2021-07-21, Kategória: Élelmiszer 1
+2022-08-09 14:09:20	Összeg (Ft): -2172, Dátum: 2021-03-31, Kategória: Élelmiszer 1
+2022-08-09 14:09:21	Összeg (Ft): -2014, Dátum: 2022-04-03, Kategória: Szabadidő 4
+2022-08-09 14:09:22	Összeg (Ft): -7558, Dátum: 2021-09-06, Kategória: Ruházat 2
+2022-08-09 14:09:23	Összeg (Ft): 64100, Dátum: 2021-09-20, Kategória: Fizetés 3
+2022-08-09 14:09:24	Összeg (Ft): -3020, Dátum: 2021-06-18, Kategória: Ruházat 2
+2022-08-09 14:09:25	Összeg (Ft): -13020, Dátum: 2021-05-05, Kategória: Ruházat 2
+2022-08-09 14:09:26	Összeg (Ft): -5076, Dátum: 2022-04-30, Kategória: Egyébkiadások 6
+2022-08-09 14:09:27	Összeg (Ft): -6446, Dátum: 2021-04-19, Kategória: Szabadidő 4
+2022-08-09 14:09:27	Összeg (Ft): 401600, Dátum: 2022-05-05, Kategória: Fizetés 3
+2022-08-09 14:09:28	Összeg (Ft): -7850, Dátum: 2022-03-28, Kategória: Egyébkiadások 6
+2022-08-09 14:09:29	Összeg (Ft): -3466, Dátum: 2022-02-11, Kategória: Számlák 5
+2022-08-09 14:09:30	Összeg (Ft): -3000, Dátum: 2022-02-11, Kategória: Ruházat 2
+2022-08-09 14:09:31	Összeg (Ft): -7302, Dátum: 2021-05-30, Kategória: Egyébkiadások 6
+2022-08-09 14:09:32	Összeg (Ft): -3892, Dátum: 2022-08-05, Kategória: Élelmiszer 1
+2022-08-09 14:09:33	Összeg (Ft): -7738, Dátum: 2021-02-20, Kategória: Ruházat 2
+2022-08-09 14:09:34	Összeg (Ft): -3244, Dátum: 2021-02-25, Kategória: Számlák 5
+2022-08-09 14:09:35	Összeg (Ft): -600, Dátum: 2022-07-18, Kategória: Szabadidő 4
+2022-08-09 14:09:36	Összeg (Ft): -8318, Dátum: 2022-05-9, Kategória: Ruházat 2
+2022-08-09 14:09:37	Összeg (Ft): -9822, Dátum: 2022-03-04, Kategória: Élelmiszer 1
+2022-08-09 14:09:38	Összeg (Ft): 236500, Dátum: 2021-05-21, Kategória: Egyébjutatások 7
+2022-08-09 14:09:39	Összeg (Ft): -16820, Dátum: 2021-03-09, Kategória: Egyébkiadások 6
+2022-08-09 14:09:40	Összeg (Ft): -6206, Dátum: 2022-08-08, Kategória: Ruházat 2
+2022-08-09 14:09:40	Összeg (Ft): -4374, Dátum: 2021-04-29, Kategória: Egyébkiadások 6
+2022-08-09 14:09:41	Összeg (Ft): -8616, Dátum: 2021-05-16, Kategória: Élelmiszer 1
+2022-08-09 14:09:42	Összeg (Ft): -4568, Dátum: 2022-05-18, Kategória: Ruházat 2
+2022-08-09 14:09:43	Összeg (Ft): 31600, Dátum: 2022-05-10, Kategória: Egyébjutatások 7
+2022-08-09 14:09:44	Összeg (Ft): -6220, Dátum: 2022-04-14, Kategória: Egyébkiadások 6
+2022-08-09 14:09:45	Összeg (Ft): -4992, Dátum: 2022-02-20, Kategória: Ruházat 2
+2022-08-09 14:09:46	Összeg (Ft): -17740, Dátum: 2022-04-28, Kategória: Egyébkiadások 6
+2022-08-09 14:09:47	Összeg (Ft): -9870, Dátum: 2022-05-21, Kategória: Szabadidő 4
+2022-08-09 14:09:47	Összeg (Ft): -14200, Dátum: 2022-02-29, Kategória: Élelmiszer 1
+2022-08-09 14:09:48	Összeg (Ft): -8654, Dátum: 2021-10-03, Kategória: Számlák 5
+2022-08-09 14:09:49	Összeg (Ft): -10140, Dátum: 2022-03-28, Kategória: Ruházat 2
+2022-08-09 14:09:50	Összeg (Ft): 301200, Dátum: 2021-07-21, Kategória: Egyébjutatások 7
+2022-08-09 14:09:51	Összeg (Ft): 351500, Dátum: 2021-03-16, Kategória: Fizetés 3
+2022-08-09 14:09:52	Összeg (Ft): -4132, Dátum: 2022-05-11, Kategória: Élelmiszer 1
+2022-08-09 14:09:53	Összeg (Ft): -5122, Dátum: 2021-11-25, Kategória: Egyébkiadások 6
+2022-08-09 14:09:55	Az összes feltöltött adat és az összes lekérdezett adat megegyezik!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Dátum szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:55	Összeg szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:56	Kategoria szerinti Növekvő sorrend nem egyezik meg!
+2022-08-09 14:09:58	A teszt befejeződött! Teljes ideje: 0 perc 55 másodperc.

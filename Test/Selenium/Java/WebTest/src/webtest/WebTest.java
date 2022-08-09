@@ -5,12 +5,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.Collator;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -43,6 +47,8 @@ public class WebTest {
     static ArrayList<Data> names = new ArrayList<>();
     static ArrayList<String> uploadData = new ArrayList<>();
     static ArrayList<String> minimalLogs = new ArrayList<>();
+    static ArrayList<String> uploadDataSorting = new ArrayList<>();       // ArrayList a sorrend megállapításához.
+    static ArrayList<Integer> uploadDataSortingInt = new ArrayList<>();       // ArrayList a sorrend megállapításához.
     
     /**
      * pagePath metódus vissza adja a .html fájlok helyét Stringben.
@@ -279,6 +285,46 @@ public class WebTest {
             }
         }else minimalLogsAddToList(message);  
     }
+    
+    private static void sorting(int value, boolean sort, ArrayList category) {
+        uploadDataSorting.clear();
+        uploadDataSortingInt.clear();
+        for (int i = 0; i < uploadData.size(); i++) {
+            String[] s = uploadData.get(i).split(", ");
+            if (value == 0) {
+                uploadDataSorting.add(s[1]);
+            }
+            if (value == 1) {
+                uploadDataSortingInt.add(Integer.parseInt(s[0]));
+            }
+            if (value == 2) {
+                String categoryName = String.valueOf(category.get(Integer.parseInt(s[2])));
+                String replaced = String.valueOf(category.get(Integer.parseInt(s[2])));
+                if (categoryName.equals("Egyébjutatások")) {
+                    categoryName = replaced.replace("Egyébjutatások", "Egyéb jutatások");
+                }
+                if (categoryName.equals("Egyébkiadások")) {
+                    categoryName = replaced.replace("Egyébkiadások", "Egyéb kiadások");
+                }
+                uploadDataSorting.add(categoryName);
+            }
+        }
+        
+        if (sort) {
+            if (value == 1) Collections.sort(uploadDataSortingInt);
+            else Collections.sort(uploadDataSorting);
+        }
+        else {
+            if (value == 1) Collections.sort(uploadDataSortingInt, Collections.reverseOrder());
+            else Collections.sort(uploadDataSorting, Collections.reverseOrder());
+        }
+        
+        
+        System.out.println(uploadDataSortingInt);
+        System.out.println("--------");
+        System.out.println(uploadDataSorting);
+        
+    }
         
     private static void queryFromDatabase() {
         int hit = 0, dayHit = 0, monthHit = 0, yearHit = 0, allHit = 0;;
@@ -297,12 +343,15 @@ public class WebTest {
                 List<WebElement> selectCategory = driver.findElements(By.id("categoriesID"));       // Lekérdezés menü: Kategóriák listázása.
                 List<WebElement> selectYear = driver.findElements(By.id("datesy"));       // Lekérdezés menü: Évek listázása.
                 List<WebElement> selectMonth = driver.findElements(By.id("datesm"));       // Lekérdezés menü: Hónapok listázása.
-                
+                List<WebElement> selectSort = driver.findElements(By.id("order"));       // Lekérdezés menü: Listázás szerint listázása.
+                List<WebElement> selectSorting = driver.findElements(By.id("desc"));       // Lekérdezés menü: Sorrend listázása.
                 
                 ArrayList<String> costArrayList = new ArrayList<>();        // ArrayList a összegek vizsgálatához.
                 ArrayList<String> categoryArrayList = new ArrayList<>();        // ArrayList a kategóriák vizsgálatához.
                 ArrayList<String> yearArrayList = new ArrayList<>();        // ArrayList a évek vizsgálatához.
                 ArrayList<String> monthArrayList = new ArrayList<>();        // ArrayList a hónapok vizsgálatához.
+                ArrayList<String> sortArrayList = new ArrayList<>();        // ArrayList a listázás szerint vizsgálatához.
+                ArrayList<String> sortingArrayList = new ArrayList<>();        // ArrayList a sorrend vizsgálatához.
                 
                 ArrayList<String> allQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
                 
@@ -310,6 +359,8 @@ public class WebTest {
                 findElementsToArrayList(selectCategory, categoryArrayList);     // Kategória List-t átalakítjuk ArrayList-é.
                 findElementsToArrayList(selectYear, yearArrayList);     // Év List-t átalakítjuk ArrayList-é.
                 findElementsToArrayList(selectMonth, monthArrayList);     // Hónap List-t átalakítjuk ArrayList-é.
+                findElementsToArrayList(selectSort, sortArrayList);     // Listázás szerint List-t átalakítjuk ArrayList-é.
+                findElementsToArrayList(selectSorting, sortingArrayList);     // Sorrend List-t átalakítjuk ArrayList-é.
 
                 /**
                  * Összes adat lekérdezése.
@@ -328,6 +379,118 @@ public class WebTest {
                 }
                 else minimalLogsAddToList("Az összes feltöltött adat és az összes lekérdezett adat megegyezik!");
                 
+                /**
+                 * Sorrend teszt.
+                **/
+                
+                selectObject = new Select(selectSort.get(0));       // Dátum szerint csökkenő.
+                selectObject.selectByIndex(0);
+                driver.findElement(By.id("gomb2")).click();
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, allQuery);
+                sorting(0, false, categoryArrayList);
+                for (int i = 0; i < allQuery.size(); i++) {
+                    if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
+                        start = false;
+                        next = false;
+                        minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                    }
+                }
+                if (next) {
+                    minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                }
+                
+                selectObject = new Select(selectSorting.get(0));       // Dátum szerint növekvő.
+                selectObject.selectByIndex(1);
+                driver.findElement(By.id("gomb2")).click();
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, allQuery);
+                sorting(0, true, categoryArrayList);
+                for (int i = 0; i < allQuery.size(); i++) {
+                    if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
+                        start = false;
+                        next = false;
+                        minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                    }
+                }
+                if (next) {
+                    minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                }
+                
+                selectObject = new Select(selectSort.get(0));       // Összeg szerint növekvő.
+                selectObject.selectByIndex(1);
+                driver.findElement(By.id("gomb2")).click();
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, allQuery);
+                sorting(1, true, categoryArrayList);
+                for (int i = 0; i < allQuery.size(); i++) {
+                    if (!allQuery.get(i).contains(String.valueOf(uploadDataSortingInt.get(i)))) {
+                        start = false;
+                        next = false;
+                        minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                    }
+                }
+                if (next) {
+                    minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                }
+                
+                selectObject = new Select(selectSorting.get(0));       // Összeg szerint csökkenő.
+                selectObject.selectByIndex(0);
+                driver.findElement(By.id("gomb2")).click();
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, allQuery);
+                sorting(1, false, categoryArrayList);
+                for (int i = 0; i < allQuery.size(); i++) {
+                    if (!allQuery.get(i).contains(String.valueOf(uploadDataSortingInt.get(i)))) {
+                        start = false;
+                        next = false;
+                        minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                    }
+                }
+                if (next) {
+                    minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                }
+                
+                selectObject = new Select(selectSort.get(0));       // kategória szerint csökkenő.
+                selectObject.selectByIndex(2);
+                driver.findElement(By.id("gomb2")).click();
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, allQuery);
+                sorting(2, false, categoryArrayList);
+                for (int i = 0; i < allQuery.size(); i++) {
+                    if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
+                        start = false;
+                        next = false;
+                        minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                    }
+                }
+                if (next) {
+                    minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                }
+                
+                selectObject = new Select(selectSorting.get(0));       // kategória szerint növekvő.
+                selectObject.selectByIndex(1);
+                driver.findElement(By.id("gomb2")).click();
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, allQuery);
+                sorting(2, true, categoryArrayList);
+                for (int i = 0; i < allQuery.size(); i++) {
+                    if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
+                        start = false;
+                        next = false;
+                        minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                    }
+                }
+                if (next) {
+                    minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                }
+                
+                selectObject = new Select(selectSort.get(0));       // Listázás szerint Dátumra állítva.
+                selectObject.selectByIndex(0);
+                selectObject = new Select(selectSorting.get(0));       // Sorrend szerint csökkenőre állítva.
+                selectObject.selectByIndex(0);
+                
+                next = false;
                 /**
                  * Adatok lekérdezése és ellenőrzése.
                  * 
@@ -1416,7 +1579,7 @@ public class WebTest {
                     }
                 }
             }
- 
+
         } catch (Exception e) {
             System.out.println(e);
             start = false;

@@ -223,7 +223,7 @@ app.route("/user/posts/:id/:year/:month/:day/:categories/:cost/:order/:desc")
         else if(req.params.order=="date")
             q+=String(" order by registers.regAt ")
         
-        if(req.params.desc==1)
+        if(req.params.desc==0)
             q+=String(" desc")
       
 
