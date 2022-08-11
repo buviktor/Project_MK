@@ -36,4 +36,8 @@ label{
     .class2{
         flex: 75;
     }
+    #adatok{
+        display: block;
+    }
 }
+

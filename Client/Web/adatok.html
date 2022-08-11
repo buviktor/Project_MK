@@ -44,17 +44,17 @@
   </div>
 
   <!-- ----- Adatok kiírása ----- -->
-  <div class="my-3 d-flex justify-content-center">
+  <div class="my-3 d-flex justify-content-center" style="overflow-x:auto;">
     <table class="table" id="adatok">
     </table>
   </div>
 
   <!-- ----- Módosítás/Törlés ----- -->
   <div class="row">
-    <div class="col-sm-12 col-lg-6 d-flex justify-content-end">
-      <button id="gomb5" type="submit" class="btn btn-primary">Adatok módosítása</button>
+    <div class="col d-flex justify-content-end mt-5">
+      <button id="gomb5" type="submit" class="btn btn-primary ">Adatok módosítása</button>
     </div>
-    <div class="col-sm-12 col-lg-6 d-flex justify-content-start">
+    <div class="col d-flex justify-content-start mt-5 popup">
       <button id="gomb6" type="submit" class="btn btn-danger ">Fiók törlése</button>
     </div>
   </div>
@@ -66,11 +66,11 @@
       <div class="container row mx-auto">
         <div class="col-sm-12 col-lg">
           <label for="newpassword" class="form-label">Új jelszó</label>
-          <input type="text" id="newpassword" class="form-control">
+          <input type="password" id="newpassword" class="form-control">
         </div>
         <div class="col-sm-12 col-lg">
           <label for="email" class="form-label">Email</label>
-          <input type="text" id="email" class="form-control">
+          <input type="e-mail" id="email" class="form-control">
         </div>
         <div class="col-sm-12 col-lg">
           <label for="postcode" class="form-label">Irányítószám</label>
@@ -90,7 +90,7 @@
         </div>
         <div class="col-sm-12 col-lg">
           <label for="password" class="form-label">Jelenlegi jelszó</label>
-          <input type="text" id="password" class="form-control">
+          <input type="password" id="password" class="form-control">
         </div>
       </div>
       <div class="d-flex justify-content-center mt-5">
