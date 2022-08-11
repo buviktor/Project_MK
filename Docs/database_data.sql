@@ -1,26 +1,26 @@
 ALTER TABLE persons AUTO_INCREMENT = 1;
 INSERT INTO `persons` (`ID`, `name`, `password`, `email`, `postcode`, `country`, `county`, `city`, `active`) VALUES
-(1, 'Teszt Elek', '$2b$10$Yk5e4TDlj5lnHp2QvacCiOC6VmtGC/W2RMAW/K0EMO2lYpkw6g/U6', 'elek@gmail.com', 1135, 'Magyarország', 'Pest', 'Budapest', CURDATE()-1),
-(2, 'Tamás', '$2b$10$SFaMz1e/19s9N6IO4rp7N./DMa14PFm2lExUAfJgaB2p6D5S/ZYPW', 'tamas@gmail.com', 1138, 'Magyarország', 'Pest', 'Budapest', CURDATE()-2),
-(3, 'Viktor', '$2b$10$Q4tvEaMnI7eSJuB383G/duT8VtPacLSbrxwYkCHUqkTvWoFXYeWLi', 'viktor@gmail.com', 2600, 'Magyarország', 'Pest', 'Vác', CURDATE()-3),
+(1, 'Teszt Elek', '$2b$10$Yk5e4TDlj5lnHp2QvacCiOC6VmtGC/W2RMAW/K0EMO2lYpkw6g/U6', 'elek@gmail.com', 1135, 'Magyarország', 'Pest', 'Budapest', CURDATE()),
+(2, 'Tamás', '$2b$10$SFaMz1e/19s9N6IO4rp7N./DMa14PFm2lExUAfJgaB2p6D5S/ZYPW', 'tamas@gmail.com', 1138, 'Magyarország', 'Pest', 'Budapest', CURDATE()),
+(3, 'Viktor', '$2b$10$Q4tvEaMnI7eSJuB383G/duT8VtPacLSbrxwYkCHUqkTvWoFXYeWLi', 'viktor@gmail.com', 2600, 'Magyarország', 'Pest', 'Vác', CURDATE()),
 (4, 'Balázs', '$2b$10$ZJdC6sXinOoZsiEnYaYToeSyQUynGUx.7pQV8/T0DCsubhyFzXMs6', 'balazs@gmail.com', 2602, 'Magyarország', 'Pest', 'Vác', '2021-11-02'),
-(5, 'Niki', '$2b$10$6I.w9qcTmJ7sFu.e.QuPmOUKzLk2V.3KnGmyQm6KlcUw5ihywP4l.', 'niki@gmail.com', 4000, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', CURDATE()-4),
-(6, 'Ági', '$2b$10$c/XDWIotY.scKttgzIz.oulB7jTs1gkIQUfC795jLSy/ORDPiJG3K', 'agi@gmail.com', 4002, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', CURDATE()-5),
-(7, 'Ádám', '$2b$10$SSPCllf9doHCdtyzhi2vdu3T9KucpMGooe/.fkdso9yJTuid8TV8O', 'adam@gmail.com', 4025, 'Magyarország', 'Hajdú-Bihar', 'Nyíradony', '2022-01-02'-6),
-(8, 'Kitti', '$2b$10$LG9FlJxyxh2NTOgC/ckRMOzl6JhEFTVFq1PZ/HdJiISh7uUHxXwwO', 'kitti@gmail.com', 4027, 'Magyarország', 'Hajdú-Bihar', 'Nyíradony', CURDATE()-7),
-(9, 'Kurt', '$2b$10$QjDjRnYVxDWrMUejh.S6XePL.Qtu0VccHVhmyAa76ILZ4R0YxNlc2', 'kurt@gmail.com', 80331, 'Németország', 'Bajorország', 'München', CURDATE()-8),
-(10, 'Müller', '$2b$10$7j8fu9AVVtlqem0bKS8mXeey27JGxMpkKynJAtCMKUJe1hBfuzQz.', 'muller@gmail.com', 80337, 'Németország', 'Bajorország', 'München', CURDATE()-9),
+(5, 'Niki', '$2b$10$6I.w9qcTmJ7sFu.e.QuPmOUKzLk2V.3KnGmyQm6KlcUw5ihywP4l.', 'niki@gmail.com', 4000, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', CURDATE()),
+(6, 'Ági', '$2b$10$c/XDWIotY.scKttgzIz.oulB7jTs1gkIQUfC795jLSy/ORDPiJG3K', 'agi@gmail.com', 4002, 'Magyarország', 'Hajdú-Bihar', 'Debrecen', CURDATE()),
+(7, 'Ádám', '$2b$10$SSPCllf9doHCdtyzhi2vdu3T9KucpMGooe/.fkdso9yJTuid8TV8O', 'adam@gmail.com', 4025, 'Magyarország', 'Hajdú-Bihar', 'Nyíradony', '2022-01-02'),
+(8, 'Kitti', '$2b$10$LG9FlJxyxh2NTOgC/ckRMOzl6JhEFTVFq1PZ/HdJiISh7uUHxXwwO', 'kitti@gmail.com', 4027, 'Magyarország', 'Hajdú-Bihar', 'Nyíradony', CURDATE()),
+(9, 'Kurt', '$2b$10$QjDjRnYVxDWrMUejh.S6XePL.Qtu0VccHVhmyAa76ILZ4R0YxNlc2', 'kurt@gmail.com', 80331, 'Németország', 'Bajorország', 'München', CURDATE()),
+(10, 'Müller', '$2b$10$7j8fu9AVVtlqem0bKS8mXeey27JGxMpkKynJAtCMKUJe1hBfuzQz.', 'muller@gmail.com', 80337, 'Németország', 'Bajorország', 'München', CURDATE()),
 (11, 'Meyer', '$2b$10$rtFNUjibknBZyFXfehHLPuLqp.dkHduxJZeqmJRSNY5MpibBdL.9m', 'meyer@gmail.com', 86163, 'Németország', 'Bajorország', 'Augsburg', '2022-02-20'),
-(12, 'Wolf', '$2b$10$pn5bTk1BSO.n.vH6VLq7eemtj5hSFbaGThth8NZgA.sRH4iEczXs6', 'wolf@gmail.com', 86157, 'Németország', 'Bajorország', 'Augsburg', CURDATE()-10),
+(12, 'Wolf', '$2b$10$pn5bTk1BSO.n.vH6VLq7eemtj5hSFbaGThth8NZgA.sRH4iEczXs6', 'wolf@gmail.com', 86157, 'Németország', 'Bajorország', 'Augsburg', CURDATE()),
 (13, 'Vera', '$2b$10$P7VxqmE2nKQ8SA/lvJnY9um7SZoXsZsSOumcXSBHTjnR6qqj09yvi', 'vera@gmail.com', 81105, 'Szlovákia', 'Pozsony', 'Pozsony', '2021-03-01'),
-(14, 'Mira', '$2b$10$upuHdusZfFL0z1y7ao.gMePkJjGh/a5EI7S.dMsXXhA4ts1u4TVOe', 'mira@gmail.com', 81108, 'Szlovákia', 'Pozsony', 'Pozsony', CURDATE()-11),
-(15, 'Nikola', '$2b$10$vtAXa7C9jbcvJFCMkFRUfeA7BeJspRf8n/EngfZ47u03J1hLWCb0C', 'nikola@gmail.com', 561214, 'Szerbia', 'Raška', 'Kraljevo', CURDATE()-12),
-(16, 'David', '$2b$10$fuoVlhCf6UqrjOAd7n3GCeHmjFw01bw8NjgNW7iqz1LALlO8Ihdz2', 'david@gmail.com', 7030, 'United States', 'Hudson', 'Jersey', CURDATE()-13),
+(14, 'Mira', '$2b$10$upuHdusZfFL0z1y7ao.gMePkJjGh/a5EI7S.dMsXXhA4ts1u4TVOe', 'mira@gmail.com', 81108, 'Szlovákia', 'Pozsony', 'Pozsony', CURDATE()),
+(15, 'Nikola', '$2b$10$vtAXa7C9jbcvJFCMkFRUfeA7BeJspRf8n/EngfZ47u03J1hLWCb0C', 'nikola@gmail.com', 561214, 'Szerbia', 'Raška', 'Kraljevo', CURDATE()),
+(16, 'David', '$2b$10$fuoVlhCf6UqrjOAd7n3GCeHmjFw01bw8NjgNW7iqz1LALlO8Ihdz2', 'david@gmail.com', 7030, 'United States', 'Hudson', 'Jersey', CURDATE()),
 (17, 'Lisa', '$2b$10$fBRmo2Lk5dmi2qDyG2YV6uhOiwID6vH9tX5OJF4NEEDn7N/kYZP9y', 'lisa@gmail.com', 7094, 'United States', 'Hudson', 'Jersey', '2022-02-03'),
-(18, 'Paul', '$2b$10$S77Tk5MH3IlZYdykX3JtoeKgS3fFpQW4Eug1EItNmjIGrDaRHyu.2', 'paul@gmail.com', 10001, 'United States', 'New York', 'New York', CURDATE()-14),
-(19, 'Anna', '$2b$10$P0a6u/oOkRZ7Ir8PRtJyRejl5JM1/jtdM02nI72DpILgro4fSHq3.', 'anna@gmail.com', 10002, 'United States', 'New York', 'New York', CURDATE()-15),
-(20, 'Alexandra', '$2b$10$ZL35H60WVZlwSeskNX8jButH8JX.DTT2mMEj9x79NpnjJJV/KUoHS', 'Alexandra@gmail.com', 505500, 'Románia', 'Brassó', 'Kőhalom', CURDATE()-16),
-(21, 'Sofia', '$2b$10$dH53UX3eVqe13IMfGjzD/eor.JOMsy9.tB8CKF8yQbJkfZujGhJjG', 'sofia@gmail.com', 440068, 'Románia', 'Szatmár', 'Szatmárnémeti', CURDATE()-17);
+(18, 'Paul', '$2b$10$S77Tk5MH3IlZYdykX3JtoeKgS3fFpQW4Eug1EItNmjIGrDaRHyu.2', 'paul@gmail.com', 10001, 'United States', 'New York', 'New York', CURDATE()),
+(19, 'Anna', '$2b$10$P0a6u/oOkRZ7Ir8PRtJyRejl5JM1/jtdM02nI72DpILgro4fSHq3.', 'anna@gmail.com', 10002, 'United States', 'New York', 'New York', CURDATE()),
+(20, 'Alexandra', '$2b$10$ZL35H60WVZlwSeskNX8jButH8JX.DTT2mMEj9x79NpnjJJV/KUoHS', 'Alexandra@gmail.com', 505500, 'Románia', 'Brassó', 'Kőhalom', CURDATE()),
+(21, 'Sofia', '$2b$10$dH53UX3eVqe13IMfGjzD/eor.JOMsy9.tB8CKF8yQbJkfZujGhJjG', 'sofia@gmail.com', 440068, 'Románia', 'Szatmár', 'Szatmárnémeti', CURDATE());
 
 update persons set persons.active= CURDATE() where persons.active='0000-00-00';
     

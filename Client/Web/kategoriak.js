@@ -1,4 +1,7 @@
 let mutat = false;
+let ID;
+let List = [];
+let previd = 0;
 
 //Kategoriák
 window.addEventListener("load", function AllCat() {
@@ -17,7 +20,8 @@ window.addEventListener("load", function AllCat() {
         ID = this.sessionStorage.id
         menu.innerHTML = "<tr><th>Kategóriák</th></tr>";
         json.forEach(cs => {
-            menu.innerHTML += "<tr><td>"+ cs.denomination + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Mutat()' >...</button></td></tr>"
+            menu.innerHTML += "<tr><td>"+ cs.denomination + "</td><td class='d-flex justify-content-end'><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Mutat()' >...</button></td></tr>"
+            List.push(cs.denomination)
             });
           }
           )
@@ -35,13 +39,19 @@ window.addEventListener("load", function() {
 });
 
 function Mutat() {
+    if(previd == ID){
+        mutat = true
+        previd = 0
+    }else {
+        mutat = false
+    }
     if(mutat == false) {
+        document.getElementById("mcat").innerHTML = List[ID-1] + " módosítása:"
         document.getElementById("kat").style.display = "block";
-        mutat = true;
+        previd = ID
     }
     else{
         document.getElementById("kat").style.display = "none";
-        mutat = false;
     }
 }
 
@@ -71,7 +81,7 @@ document.getElementById("gomb2").onclick = function (e) {
     const url = 'http://localhost:5000/admin/stat/county/0';
     const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
-        method: 'POST',
+        method: 'PUT',
         headers: {
             'Authorization': token,
             "Content-type": "application/json;charset=utf-8"

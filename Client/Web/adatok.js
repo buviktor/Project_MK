@@ -1,4 +1,4 @@
-//---- Adatok módosítása ----
+//---- Adatok kiírása ----
 window.addEventListener("load", function Adatok() {
     const url = 'http://localhost:5000/user/person/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
