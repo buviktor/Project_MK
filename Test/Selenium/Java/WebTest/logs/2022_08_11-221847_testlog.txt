@@ -1,0 +1,15 @@
+2022-08-11 22:18:35	Teszt indítása
+2022-08-11 22:18:35	Szükséges forrás fájlok betöltése....
+2022-08-11 22:18:35	Forrás fájlok betöltése kész!
+ 
+2022-08-11 22:18:41	Sikeres bejelentkezés.
+2022-08-11 22:18:41	Összeg (Ft): 375000, Dátum: 2022-02-18, Kategória: Egyébjutatások 7
+2022-08-11 22:18:42	!
+2022-08-11 22:18:43	Az összes feltöltött adat és az összes lekérdezett adat megegyezik!
+2022-08-11 22:18:43	Dátum szerinti Csökkenő sorrend megegyezett!
+2022-08-11 22:18:43	Dátum szerinti Növekvő sorrend megegyezett!
+2022-08-11 22:18:43	Összeg szerinti Növekvő sorrend megegyezett!
+2022-08-11 22:18:44	Összeg szerinti Csökkenő sorrend megegyezett!
+2022-08-11 22:18:44	Kategoria szerinti Csökkenő sorrend megegyezett!
+2022-08-11 22:18:44	Kategoria szerinti Növekvő sorrend megegyezett!
+2022-08-11 22:18:47	A teszt befejeződött! Teljes ideje: 0 perc 11 másodperc.

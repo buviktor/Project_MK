@@ -289,6 +289,10 @@ public class WebTest {
     private static void sorting(int value, boolean sort, ArrayList category) {
         uploadDataSorting.clear();
         uploadDataSortingInt.clear();
+        ArrayList<String> supportCategoryList = new ArrayList<>();
+        supportCategoryList.clear();
+        String replaced;
+        
         for (int i = 0; i < uploadData.size(); i++) {
             String[] s = uploadData.get(i).split(", ");
             if (value == 0) {
@@ -298,15 +302,20 @@ public class WebTest {
                 uploadDataSortingInt.add(Integer.parseInt(s[0]));
             }
             if (value == 2) {
+                
                 String categoryName = String.valueOf(category.get(Integer.parseInt(s[2])));
-                String replaced = String.valueOf(category.get(Integer.parseInt(s[2])));
+                replaced = String.valueOf(category.get(Integer.parseInt(s[2])));
                 if (categoryName.equals("Egyébjutatások")) {
                     categoryName = replaced.replace("Egyébjutatások", "Egyéb jutatások");
                 }
                 if (categoryName.equals("Egyébkiadások")) {
                     categoryName = replaced.replace("Egyébkiadások", "Egyéb kiadások");
                 }
-                uploadDataSorting.add(categoryName);
+                if (categoryName.equals("Élelmiszer")) {
+                    categoryName = replaced.replace("Élelmiszer", "Elelmiszer");
+                }
+                supportCategoryList.add(categoryName);
+                
             }
         }
         
@@ -316,29 +325,13 @@ public class WebTest {
                     Collections.sort(uploadDataSortingInt);
                     break;
                 case 2:
-                    String ABC = "aábcdeéfghiíjklmnoóöőpqrstuúüűvwxyz";
-                    char c = uploadDataSorting.get(0).charAt(0), abc;
-                    int end = 0, abcIndex = 0;
-                    
-                    while (end < 50) {
-                        end = 0;
-                        c = uploadDataSorting.get(0).charAt(0);
-                        for (int i = 1; i < uploadDataSorting.size(); i++) {
-                            if (c != uploadDataSorting.get(i).charAt(0)) {
-                                for (int j = 0; j < ABC.length(); j++) {
-                                    abc = ABC.charAt(j);
-                                    if (abc == c) {
-                                        abcIndex = j;
-                                    }
-                                    if (abc == uploadDataSorting.get(i).charAt(0)) {
-                                        if (abcIndex > j) {
-                                            uploadDataSorting.add((i-1), uploadDataSorting.get(i));
-                                        }
-                                    }
-                                }
-                            } else end++;
-                            c = uploadDataSorting.get(i).charAt(0);
+                    Collections.sort(supportCategoryList);
+                    for (String l : supportCategoryList) {
+                        replaced = l;
+                        if (l.equals("Elelmiszer")) {
+                            l = replaced.replace("Elelmiszer", "Élelmiszer");
                         }
+                        uploadDataSorting.add(l);
                     }
                     break;
                 default:
@@ -347,14 +340,32 @@ public class WebTest {
             }
         }
         else {
-            if (value == 1) Collections.sort(uploadDataSortingInt, Collections.reverseOrder());
-            else Collections.sort(uploadDataSorting, Collections.reverseOrder());
+            switch (value) {
+                case 1:
+                    Collections.sort(uploadDataSortingInt, Collections.reverseOrder());
+                    break;
+                case 2:
+                    Collections.sort(supportCategoryList, Collections.reverseOrder());
+                    for (String l : supportCategoryList) {
+                        replaced = l;
+                        if (l.equals("Elelmiszer")) {
+                            l = replaced.replace("Elelmiszer", "Élelmiszer");
+                        }
+                        uploadDataSorting.add(l);
+                    }
+                    break;
+                default:
+                    Collections.sort(uploadDataSorting, Collections.reverseOrder());
+                    break;
+            }
         }
+            
         
         
         System.out.println(uploadDataSortingInt);
         System.out.println("--------");
         System.out.println(uploadDataSorting);
+        System.out.println("++++++++");
         
     }
         
@@ -425,7 +436,7 @@ public class WebTest {
                     if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
                         start = false;
                         next = false;
-                        minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                        minimalLogsAddToList(i + " :" + sortArrayList.get(0) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
                     }
                 }
                 if (next) {
@@ -442,7 +453,7 @@ public class WebTest {
                     if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
                         start = false;
                         next = false;
-                        minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                        minimalLogsAddToList(i + " :" + sortArrayList.get(0) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
                     }
                 }
                 if (next) {
@@ -459,7 +470,7 @@ public class WebTest {
                     if (!allQuery.get(i).contains(String.valueOf(uploadDataSortingInt.get(i)))) {
                         start = false;
                         next = false;
-                        minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                        minimalLogsAddToList(i + " :" + sortArrayList.get(1) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
                     }
                 }
                 if (next) {
@@ -476,7 +487,7 @@ public class WebTest {
                     if (!allQuery.get(i).contains(String.valueOf(uploadDataSortingInt.get(i)))) {
                         start = false;
                         next = false;
-                        minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                        minimalLogsAddToList(i + " :" + sortArrayList.get(1) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
                     }
                 }
                 if (next) {
@@ -489,11 +500,14 @@ public class WebTest {
                 table = driver.findElements(By.id("lista"));
                 tableToArrayList(table, allQuery);
                 sorting(2, false, categoryArrayList);
+                        System.out.println("////////");
+                        System.out.println(allQuery);
+                        System.out.println("////////");
                 for (int i = 0; i < allQuery.size(); i++) {
                     if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
                         start = false;
                         next = false;
-                        minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                        minimalLogsAddToList(i + " :" + sortArrayList.get(2) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
                     }
                 }
                 if (next) {
@@ -505,12 +519,15 @@ public class WebTest {
                 driver.findElement(By.id("gomb2")).click();
                 table = driver.findElements(By.id("lista"));
                 tableToArrayList(table, allQuery);
+                        System.out.println("////////");
+                        System.out.println(allQuery);
+                        System.out.println("////////");
                 sorting(2, true, categoryArrayList);
                 for (int i = 0; i < allQuery.size(); i++) {
                     if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
                         start = false;
                         next = false;
-                        minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                        minimalLogsAddToList(i + " :" + sortArrayList.get(2) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
                     }
                 }
                 if (next) {

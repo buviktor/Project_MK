@@ -108,8 +108,9 @@ public class Data {
         String year = "", month = "", day = "", yearNow = localDate[0];
         int randomNumberForMonth, monthNow = Integer.parseInt(localDate[1]);
         int randomNumberForDay, dayNow = Integer.parseInt(localDate[2]);
+        int randYear = (int)(Math.random() * 2 + 1);
         
-        if (0 < rand.nextInt(2)) year = yearNow;
+        if (1 == randYear) year = yearNow;
         else year = "2021";
         
         randomNumberForMonth = rand.nextInt(12)+1;
