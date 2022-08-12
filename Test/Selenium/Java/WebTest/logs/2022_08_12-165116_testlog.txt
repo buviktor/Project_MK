@@ -1,0 +1,38 @@
+2022-08-12 16:50:27	Teszt indítása
+2022-08-12 16:50:27	Szükséges forrás fájlok betöltése....
+2022-08-12 16:50:27	Forrás fájlok betöltése kész!
+ 
+2022-08-12 16:50:29	1 fiók adatainak létrehozása
+2022-08-12 16:50:29	Felhasználónév: Tóth Prijá; Jelszó: PjM4tje2Tz; Email: toth.prija4450@citromail.hu; Irányítószám: 7841; Ország: Magyarország; Megye: Baranya; Város: Sámod
+2022-08-12 16:50:32	Sikeres regisztráció!
+2022-08-12 16:50:35	Sikeres bejelentkezés.
+2022-08-12 16:50:37	Módosítás sikeres
+2022-08-12 16:50:40	Sikeres bejelentkezés.
+2022-08-12 16:50:44	Hibás felhasználónév!
+2022-08-12 16:50:44	Felhasználó törlése sikeres!
+ 
+2022-08-12 16:50:44	2 fiók adatainak létrehozása
+2022-08-12 16:50:44	Felhasználónév: Lőwy Abélia; Jelszó: W2ljBy1rLO; Email: lowy.abelia3444@outlook.hu; Irányítószám: 2145; Ország: Magyarország; Megye: Pest; Város: Kerepes-Szilasliget
+2022-08-12 16:50:47	Sikeres regisztráció!
+2022-08-12 16:50:49	Sikeres bejelentkezés.
+2022-08-12 16:50:51	Módosítás sikeres
+2022-08-12 16:50:55	Sikeres bejelentkezés.
+2022-08-12 16:50:59	Hibás felhasználónév!
+2022-08-12 16:50:59	Felhasználó törlése sikeres!
+ 
+2022-08-12 16:50:59	3 fiók adatainak létrehozása
+2022-08-12 16:50:59	Felhasználónév: Teleki Frézia; Jelszó: 6zRlK00jbL; Email: teleki.frezia7866@freemail.hu; Irányítószám: 3663; Ország: Magyarország; Megye: Borsod-Abaúj-Zemplén; Város: Arló
+2022-08-12 16:51:01	Sikeres regisztráció!
+2022-08-12 16:51:04	Sikeres bejelentkezés.
+2022-08-12 16:51:06	Módosítás sikeres
+2022-08-12 16:51:09	Sikeres bejelentkezés.
+2022-08-12 16:51:13	Hibás felhasználónév!
+2022-08-12 16:51:13	Felhasználó törlése sikeres!
+2022-08-12 16:51:16	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+2022-08-12 16:51:16	Felhasználó regisztrálásának az ideje: 0 perc 2 másodperc.
+2022-08-12 16:51:16	Felhasználó belépésének az ideje: 0 perc 2 másodperc.
+2022-08-12 16:51:16	Adatok feltöltésének az ideje: 0 perc 0 másodperc.
+2022-08-12 16:51:16	Adatok lekérdezésének az ideje: 0 perc 0 másodperc.
+2022-08-12 16:51:16	Egy adat módosításának és törlésének az ideje: 0 perc 0 másodperc.
+2022-08-12 16:51:16	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 9 másodperc.
+2022-08-12 16:51:16	A teszt befejeződött! Teljes ideje: 0 perc 49 másodperc.

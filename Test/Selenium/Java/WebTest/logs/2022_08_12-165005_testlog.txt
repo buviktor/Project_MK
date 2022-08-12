@@ -1,0 +1,25 @@
+2022-08-12 16:49:46	Teszt indítása
+2022-08-12 16:49:46	Szükséges forrás fájlok betöltése....
+2022-08-12 16:49:46	Forrás fájlok betöltése kész!
+ 
+2022-08-12 16:49:48	1 fiók adatainak létrehozása
+2022-08-12 16:49:51	Sikeres bejelentkezés.
+2022-08-12 16:49:52	Email cím nem egyezik meg!
+2022-08-12 16:49:52	Irányítószám nem egyezik meg!
+2022-08-12 16:49:52	Ország nem egyezik meg!
+2022-08-12 16:49:52	Megye nem egyezik meg!
+2022-08-12 16:49:52	Város nem egyezik meg!
+2022-08-12 16:49:53	Módosítás sikeres
+2022-08-12 16:49:56	Hibás felhasználónév!
+ 
+2022-08-12 16:49:59	Hibás felhasználónév!
+ 
+2022-08-12 16:50:02	Hibás felhasználónév!
+2022-08-12 16:50:05	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+2022-08-12 16:50:05	Felhasználó regisztrálásának az ideje: 0 perc 0 másodperc.
+2022-08-12 16:50:05	Felhasználó belépésének az ideje: 0 perc 0 másodperc.
+2022-08-12 16:50:05	Adatok feltöltésének az ideje: 0 perc 0 másodperc.
+2022-08-12 16:50:05	Adatok lekérdezésének az ideje: 0 perc 0 másodperc.
+2022-08-12 16:50:05	Egy adat módosításának és törlésének az ideje: 0 perc 0 másodperc.
+2022-08-12 16:50:05	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 5 másodperc.
+2022-08-12 16:50:05	A teszt befejeződött! Teljes ideje: 0 perc 18 másodperc.

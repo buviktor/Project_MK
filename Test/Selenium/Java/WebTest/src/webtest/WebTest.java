@@ -39,7 +39,7 @@ public class WebTest {
     private static WebDriver driver;
     
     private static String message, randomLocation, randomName, password, email;
-    private static Boolean start;
+    private static Boolean start, next = true;
     
     static Random rand = new Random();
     
@@ -193,6 +193,7 @@ public class WebTest {
             Select selectObject = new Select(selectElement);
             selectObject.selectByIndex(category);
             
+            Thread.sleep(250);
             List<WebElement> listOfCategory = driver.findElements(By.id("categoriesID"));        // List a kategóriák ArrayList-jéhez.
             ArrayList<String> categories = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
             findElementsToArrayList(listOfCategory, categories);
@@ -278,12 +279,12 @@ public class WebTest {
         }
     }
     
-    private static void controlForQuery(ArrayList<String> allQuery, int hit, boolean next, String message) {
+    private static void controlForQuery(ArrayList<String> allQuery, int hit, String message) {
         if (!message.equals("Nincs ilyen adat!")) {
             minimalLogsAddToList("Talált adat: " + allQuery.size() + ", mért adat: " + hit + ".");
             if (hit != allQuery.size()) {
-                next = false;
-                start = false;
+                //next = false;
+                //start = false;
                 minimalLogsAddToList("Nem egyezik a talált és a mért adat!");
             }
         }else minimalLogsAddToList(message);  
@@ -366,7 +367,7 @@ public class WebTest {
         
     private static void queryFromDatabase() {
         int hit = 0, dayHit = 0, monthHit = 0, yearHit = 0, allHit = 0;;
-        boolean next = true;
+        next = true;
         String selected = " ", allDay = "Összes nap";
                 
         try {
@@ -593,7 +594,7 @@ public class WebTest {
                                 }
                             }
                             
-                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                             
                             if (next) {     // cost id mező.
                                 hit = 0;
@@ -635,7 +636,7 @@ public class WebTest {
                                                     }
                                                 }
 
-                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                 if (next) {     // datesy id mező.
                                                     hit = 0;
@@ -670,7 +671,7 @@ public class WebTest {
                                                             }
                                                         }
 
-                                                        controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                        controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                         if (next) {     // datesm id mező.
                                                             hit = 0;
@@ -706,7 +707,7 @@ public class WebTest {
                                                                     }
                                                                 }
 
-                                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                 if (next) {     // dated id mező.
                                                                     hit = 0;
@@ -738,7 +739,7 @@ public class WebTest {
                                                                         }
                                                                     }
 
-                                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                    controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                     switch ((monthNumber)) {
                                                                         case 1: case 3: case 5: case 7: case 8: case 10: case 12:       // 31 napos hónapok
@@ -773,7 +774,7 @@ public class WebTest {
                                                                                         }
                                                                                     }
 
-                                                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                    controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                 }
                                                                             }
                                                                             break;
@@ -809,7 +810,7 @@ public class WebTest {
                                                                                         }
                                                                                     }
 
-                                                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                    controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                 }
                                                                             }
                                                                             break;
@@ -845,7 +846,7 @@ public class WebTest {
                                                                                         }
                                                                                     }
 
-                                                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                    controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                 }
                                                                             }
                                                                             break; 
@@ -895,7 +896,7 @@ public class WebTest {
                                                             }
                                                         }
 
-                                                        controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                        controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                         if (next) {     // datesy id mező.
                                                             hit = 0;
@@ -931,7 +932,7 @@ public class WebTest {
                                                                     }
                                                                 }
 
-                                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                 if (next) {     // datesm id mező.
                                                                     hit = 0;
@@ -967,7 +968,7 @@ public class WebTest {
                                                                             }
                                                                         }
 
-                                                                        controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                        controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                         if (next) {     // dated id mező.
                                                                             hit = 0;
@@ -999,7 +1000,7 @@ public class WebTest {
                                                                                 }
                                                                             }
 
-                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                             switch ((monthNumber)) {
                                                                                 case 1: case 3: case 5: case 7: case 8: case 10: case 12:
@@ -1034,7 +1035,7 @@ public class WebTest {
                                                                                                 }
                                                                                             }
 
-                                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                         }
                                                                                     }
                                                                                     break;
@@ -1070,7 +1071,7 @@ public class WebTest {
                                                                                                 }
                                                                                             }
 
-                                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                         }
                                                                                     }
                                                                                     break;
@@ -1105,7 +1106,7 @@ public class WebTest {
                                                                                                 }
                                                                                             }
 
-                                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                         }
                                                                                     }
                                                                                     break; 
@@ -1141,7 +1142,7 @@ public class WebTest {
                                                     }
                                                 }
 
-                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                 if (next) {     // datesy id mező.
                                                     hit = 0;
@@ -1176,7 +1177,7 @@ public class WebTest {
                                                             }
                                                         }
 
-                                                        controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                        controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                         if (next) {     // datesm id mező.
                                                             hit = 0;
@@ -1212,7 +1213,7 @@ public class WebTest {
                                                                     }
                                                                 }
 
-                                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                 if (next) {     // dated id mező.
                                                                     hit = 0;
@@ -1244,7 +1245,7 @@ public class WebTest {
                                                                         }
                                                                     }
 
-                                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                    controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                     switch ((monthNumber)) {
                                                                         case 1: case 3: case 5: case 7: case 8: case 10: case 12:       // 31 napos hónapok
@@ -1279,7 +1280,7 @@ public class WebTest {
                                                                                         }
                                                                                     }
 
-                                                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                    controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                 }
                                                                             }
                                                                             break;
@@ -1315,7 +1316,7 @@ public class WebTest {
                                                                                         }
                                                                                     }
 
-                                                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                    controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                 }
                                                                             }
                                                                             break;
@@ -1351,7 +1352,7 @@ public class WebTest {
                                                                                         }
                                                                                     }
 
-                                                                                    controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                    controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                 }
                                                                             }
                                                                             break; 
@@ -1401,7 +1402,7 @@ public class WebTest {
                                                             }
                                                         }
 
-                                                        controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                        controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                         if (next) {     // datesy id mező.
                                                             hit = 0;
@@ -1437,7 +1438,7 @@ public class WebTest {
                                                                     }
                                                                 }
 
-                                                                controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                 if (next) {     // datesm id mező.
                                                                     hit = 0;
@@ -1473,7 +1474,7 @@ public class WebTest {
                                                                             }
                                                                         }
 
-                                                                        controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                        controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                         if (next) {     // dated id mező.
                                                                             hit = 0;
@@ -1505,7 +1506,7 @@ public class WebTest {
                                                                                 }
                                                                             }
 
-                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
                                                                             switch ((monthNumber)) {
                                                                                 case 1: case 3: case 5: case 7: case 8: case 10: case 12:
@@ -1540,7 +1541,7 @@ public class WebTest {
                                                                                                 }
                                                                                             }
 
-                                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                         }
                                                                                     }
                                                                                     break;
@@ -1576,7 +1577,7 @@ public class WebTest {
                                                                                                 }
                                                                                             }
 
-                                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                         }
                                                                                     }
                                                                                     break;
@@ -1611,7 +1612,7 @@ public class WebTest {
                                                                                                 }
                                                                                             }
 
-                                                                                            controlForQuery(allQuery, hit, next, message);       // Mért adat ellenőrzése.
+                                                                                            controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
                                                                                         }
                                                                                     }
                                                                                     break; 
@@ -1638,14 +1639,15 @@ public class WebTest {
         }
     }
     
-    private static void personalDataEdit() {
+    private static void personalDataEditAndDelete() {
         try {
-            boolean next = true;
             String newPassword = "", newEmail = "", newPostcode = "", newCountry = "", newCounty = "", newCity = "";
             String[] p;
             List<WebElement> table = driver.findElements(By.id("adatok"));       // Adatok táblázatának inicializálása.
             ArrayList<String> personalDataList = new ArrayList<>();         // ArrayList a kilistázott adathoz.
             tableToArrayList(table, personalDataList);
+            
+            
             if (personalDataList.get(0).isEmpty()) {        // Tábla ürességének ellenőrzése.
                 minimalLogsAddToList("Felhasználói adat ellenőrzése sikertelen. Nincs adat!");
                 start = false;
@@ -1756,17 +1758,151 @@ public class WebTest {
         }
     }
     
-    private static void dataEdit() {
+    private static void dataEditAndDelete() {
         try {
+            int hit = 0;
+            String amount = "1111", dateY = "2022", dateM = "05", dateD = "05", category = "Fizetés";
+            String editedData = amount + " " + dateY + "-" + dateM + "-" + dateD + " " + category;
             driver.findElement(By.id("gomb2")).click();
-            Thread.sleep(500);  
+            Thread.sleep(250);  
             
             List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
-            ArrayList<String> allQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
-            tableToArrayList(table, allQuery);
+            ArrayList<String> originalQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
+            ArrayList<String> editedQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
+            tableToArrayList(table, originalQuery);
             
-            driver.findElement(By.name("...")).click();
+            driver.findElement(By.name("0")).click();
+            driver.findElement(By.id("amount")).clear();
+            driver.findElement(By.id("regAt")).clear();
             
+            table = driver.findElements(By.id("lista"));
+            tableToArrayList(table, editedQuery);
+            
+            driver.findElement(By.id("amount")).sendKeys(amount);
+            WebElement datePicker = driver.findElement(By.id("regAt"));
+            new Actions(driver)
+                .sendKeys(datePicker, dateY)
+                .sendKeys(Keys.TAB)
+                .sendKeys(dateM)
+                .sendKeys(dateD)
+                .perform();
+            WebElement selectElement = driver.findElement(By.id("menu"));
+            Select selectObject = new Select(selectElement);
+            selectObject.selectByVisibleText(category);
+            driver.findElement(By.id("gomb")).click();
+            Thread.sleep(250);
+            
+            message = driver.findElement(By.id("uzenet")).getText();
+            minimalLogsAddToList(message);
+            
+            if (!message.equals("Módosítás sikeres")) {
+                minimalLogsAddToList("Adat módosítása sikertelen. " + message);
+                next = false;
+                start = false;
+            }
+            
+            if (next) {
+                if (!editedQuery.get(0).equals(editedData)){
+                    minimalLogsAddToList("Adat módosítása sikeres!");
+                    
+                    driver.findElement(By.id("gomb1")).click();
+                    Thread.sleep(250);
+                    Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+                    Thread.sleep(250);
+                    String text = alert.getText();
+                    if (text.equals("Biztosan törölni szeretné?")) alert.accept();
+                    else {
+                        minimalLogsAddToList("Hibás alert!");
+                        alert = driver.switchTo().alert();
+                        alert.dismiss();
+                        start = false;
+                        next = false;
+                    }
+                    
+                    Thread.sleep(500);
+                    message = driver.findElement(By.id("uzenet")).getText();
+                    minimalLogsAddToList(message);
+                }
+            }
+            
+            if (next) {
+                driver.findElement(By.id("gomb2")).click();
+                Thread.sleep(250); 
+                
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, editedQuery);
+                
+                if (originalQuery.size()==editedQuery.size()) {
+                    minimalLogsAddToList("Adat eltávolítása sikertelen!");
+                    start = false;
+                    next = false;
+                }
+                
+                minimalLogsAddToList("Adat eltávolítása sikeres!");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+    private static void functionTest() {
+        //Kérem minden mezőt töltsön ki!
+        try {
+            driver.findElement(By.id("profile-tab")).click();
+            Thread.sleep(250);
+            driver.findElement(By.id("gomb")).click();
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            Thread.sleep(250);
+            String text = alert.getText();
+            if (text.equals("Kérem minden mezőt töltsön ki!")) alert.accept();
+            else {
+                minimalLogsAddToList("Hibás alert!");
+                alert = driver.switchTo().alert();
+                alert.dismiss();
+                start = false;
+                next = false;
+            }
+                
+            if (next) {
+                driver.findElement(By.id("runame")).sendKeys("Test");
+                driver.findElement(By.id("gomb")).click();
+                alert = wait.until(ExpectedConditions.alertIsPresent());
+                Thread.sleep(250);
+                text = alert.getText();
+                if (text.equals("Kérem minden mezőt töltsön ki!")) alert.accept();
+                else {
+                    minimalLogsAddToList("Hibás alert!");
+                    alert = driver.switchTo().alert();
+                    alert.dismiss();
+                    start = false;
+                    next = false;
+                }
+            }
+            
+            if (next) {
+                driver.findElement(By.id("rupassword")).sendKeys("Test");
+                driver.findElement(By.id("gomb")).click();
+                alert = wait.until(ExpectedConditions.alertIsPresent());
+                Thread.sleep(250);
+                text = alert.getText();
+                if (text.equals("Kérem minden mezőt töltsön ki!")) alert.accept();
+                else {
+                    minimalLogsAddToList("Hibás alert!");
+                    alert = driver.switchTo().alert();
+                    alert.dismiss();
+                    start = false;
+                    next = false;
+                }
+            }
+            
+            
+/*
+            driver.findElement(By.id("email")).sendKeys(email);
+            driver.findElement(By.id("postcode")).sendKeys(postcode);
+            driver.findElement(By.id("country")).sendKeys(country);
+            driver.findElement(By.id("county")).sendKeys(county);
+            driver.findElement(By.id("city")).sendKeys(city);
+            */
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -1794,6 +1930,12 @@ public class WebTest {
         */
     
     public static void main(String[] args) throws Exception{
+        LocalTime startUserDataInit = LocalTime.now(), endUserDataInit = LocalTime.now(), startUserRegister = LocalTime.now();
+        LocalTime endUserRegister = LocalTime.now(), startUserLogin = LocalTime.now(), endUserLogin = LocalTime.now();
+        LocalTime startUserDataAdd = LocalTime.now(), endUserDataAdd = LocalTime.now(), startUserDataQuery = LocalTime.now();
+        LocalTime endUserDataQuery = LocalTime.now(), startUserDataEditAndDelete = LocalTime.now(), endUserDataEditAndDelete = LocalTime.now();
+        LocalTime startUserEditAndDelete = LocalTime.now(), endUserEditAndDelete = LocalTime.now();
+        LocalTime startFunctionTest = LocalTime.now(), endFunctionTest = LocalTime.now();
         LocalTime startTime = LocalTime.now();
         minimalLogsAddToList("Teszt indítása");
 
@@ -1823,88 +1965,119 @@ public class WebTest {
         start = true;       // Indítási érték.
         
         /**
-        * Első teszt: Automata teszt 3x.
+        * Első teszt: Funcionalitás teszt.
         **/
-        
-        for (int i=0; i<3; i++) {
+        /*
+        if (start) {
+            startFunctionTest = LocalTime.now();
+            functionTest();
+            endFunctionTest = LocalTime.now();
+        }
+        */
+        /**
+        * Második teszt: Automata teszt 3x.
+        **/
+        login("valaki", "valaki");
+        for (int i=0; i<1; i++) {
             minimalLogs.add(" ");       // Üres sor beszúrása.
             /*
             if (start) {
+                startUserDataInit = LocalTime.now();
                 minimalLogsAddToList((i+1) + " fiók adatainak létrehozása");
                 randomLocationAndName();         // A fiók paraméterei.
+                endUserDataInit = LocalTime.now();
             }   
             
-            if (start) register(randomLocation, Data.getEmail(), Data.getPassword());       // Új fiók regisztrálása.
-            if (start) login(randomName, password);     // Új fiók bejelentkezése.
-            if (start) minimalLogsAddToList("Adatok feltöltése....");
-            
-            for (int j=0; j < 50; j++) {
-                if (start) {
-                    newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
-                    
-                } 
+            if (start) {       // Új fiók regisztrálása.
+                startUserRegister = LocalTime.now();
+                register(randomLocation, Data.getEmail(), Data.getPassword());
+                endUserRegister = LocalTime.now();
             }
             
-            if (start) {
-                minimalLogsAddToList("Adatok sikeresen feltöltve!");
+            if (start) {     // Új fiók bejelentkezése.
+                startUserLogin = LocalTime.now();
+                login(randomName, password);
+                endUserLogin = LocalTime.now();
+            }
+            */
+            if (start) {        // Új fiók adatainak feltöltése.
+                minimalLogsAddToList("Adatok feltöltése....");
+                startUserDataAdd = LocalTime.now();
+            
+                for (int j=0; j < 50; j++) {
+                    if (start) {
+                        newData(Data.getMoney(), Data.getDate(), Data.getCategory());
+
+                    } 
+                }
+                
+                endUserDataAdd = LocalTime.now();
             }
             
             if (start) {        // Feltöltött adatok lekérdezése.
+                startUserDataQuery = LocalTime.now();
+                minimalLogsAddToList("Adatok sikeresen feltöltve!");
                 driver.findElement(By.linkText("Lekérdezés")).click();
                 Thread.sleep(250);
                 queryFromDatabase();
-            
-                //uploadData.clear();
+                uploadData.clear();
+                driver.navigate().refresh();
+                endUserDataQuery = LocalTime.now();
             }
-            */
-            if (start) {
-                login("valaki","valaki");
+            
+            for (int j = 0; j < 40; j++) {
+                
+            
+            if (start) {        // Feltöltött adat módosítása és törlése.
+                startUserDataEditAndDelete = LocalTime.now();
                 driver.findElement(By.linkText("Lekérdezés")).click();
                 Thread.sleep(250);
-                
-                dataEdit();
+                dataEditAndDelete();
+                endUserDataEditAndDelete = LocalTime.now();
+            }
+            
             }
             /*
-            if (start) {
+            if (start) {        // Felhasználó adatainak módosítása és a felhasználó törlése.
+                startUserEditAndDelete = LocalTime.now();
                 driver.findElement(By.linkText("Adataim")).click();
                 Thread.sleep(250);
-                
-                personalDataEdit();
+                personalDataEditAndDelete();
+                endUserEditAndDelete = LocalTime.now();
             }
             */
-            
         }
                
         Thread.sleep(2000);
         driver.quit();      // Kilép a böngészőből.
         
         LocalTime endTime = LocalTime.now();
-        Duration duration = Duration.between(startTime, endTime);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
-        minimalLogsAddToList("A teszt befejeződött! Teljes ideje: " + duration.getSeconds()/60 + " perc " + duration.getSeconds()% 60 + " másodperc.");
+        Duration durationAll = Duration.between(startTime, endTime);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        Duration durationUserDataInit = Duration.between(startUserDataInit, endUserDataInit);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        Duration durationUserRegister = Duration.between(startUserRegister, endUserRegister);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        Duration durationUserLogin = Duration.between(startUserLogin, endUserLogin);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        Duration durationUserDataAdd = Duration.between(startUserDataAdd, endUserDataAdd);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        Duration durationUserDataQuery = Duration.between(startUserDataQuery, endUserDataQuery);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        Duration durationUserDataEditAndDelete = Duration.between(startUserDataEditAndDelete, endUserDataEditAndDelete);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        Duration durationUserEditAndDelete = Duration.between(startUserEditAndDelete, endUserEditAndDelete);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        
+        minimalLogsAddToList("Felhasználói adat létrehozásának az ideje: " + durationUserDataInit.getSeconds()/60 
+                + " perc " + durationUserDataInit.getSeconds()% 60 + " másodperc.");
+        minimalLogsAddToList("Felhasználó regisztrálásának az ideje: " + durationUserRegister.getSeconds()/60 
+                + " perc " + durationUserRegister.getSeconds()% 60 + " másodperc.");
+        minimalLogsAddToList("Felhasználó belépésének az ideje: " + durationUserLogin.getSeconds()/60 
+                + " perc " + durationUserLogin.getSeconds()% 60 + " másodperc.");
+        minimalLogsAddToList("Adatok feltöltésének az ideje: " + durationUserDataAdd.getSeconds()/60 
+                + " perc " + durationUserDataAdd.getSeconds()% 60 + " másodperc.");
+        minimalLogsAddToList("Adatok lekérdezésének az ideje: " + durationUserDataQuery.getSeconds()/60 
+                + " perc " + durationUserDataQuery.getSeconds()% 60 + " másodperc.");
+        minimalLogsAddToList("Egy adat módosításának és törlésének az ideje: " + durationUserDataEditAndDelete.getSeconds()/60 
+                + " perc " + durationUserDataEditAndDelete.getSeconds()% 60 + " másodperc.");
+        minimalLogsAddToList("Felhasználó adatának módosítása és felhasználó törlésének az ideje: " + durationUserEditAndDelete.getSeconds()/60 
+                + " perc " + durationUserEditAndDelete.getSeconds()% 60 + " másodperc.");
+        minimalLogsAddToList("A teszt befejeződött! Teljes ideje: " + durationAll.getSeconds()/60 
+                + " perc " + durationAll.getSeconds()% 60 + " másodperc.");
         
         writeFile(minimalLogs, "_testlog.txt");       // Ki írja fájlba a minimalis logokat.
     } 
 }
-
-/*
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Poco F1");
-        Thread.sleep(2000);
-        driver.findElement(By.className("nav-search-submit")).click();
-        //driver.findElement(By.linkText("Xiaomi")).click();
-        driver.navigate().to("http://google.com");
-        Thread.sleep(2000);
-        driver.navigate().back();
-        Thread.sleep(2000);
-        
-        /**
-        
-        String a = driver.getTitle();
-        String  b = "Üdvözlet";
-        if (a.equalsIgnoreCase(b)) {
-            System.out.println("Test Successful");
-        }else{
-            System.out.println("Test Failure");
-        }
-       
-        **/
-

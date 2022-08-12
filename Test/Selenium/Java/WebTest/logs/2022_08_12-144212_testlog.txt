@@ -1,0 +1,11 @@
+2022-08-12 14:41:51	Teszt indítása
+2022-08-12 14:41:51	Szükséges forrás fájlok betöltése....
+2022-08-12 14:41:51	Forrás fájlok betöltése kész!
+ 
+2022-08-12 14:41:53	1 fiók adatainak létrehozása
+2022-08-12 14:41:53	Felhasználónév: Urbán Bodza; Jelszó: 4EVgfBwr49; Email: urban.bodza3736@freemail.hu; Irányítószám: 4543; Ország: Magyarország; Megye: Szabolcs-Szatmár-Bereg; Város: Laskod
+2022-08-12 14:41:56	Sikeres regisztráció!
+2022-08-12 14:42:09	Sikertelen belépési adat kitöltés!
+ 
+ 
+2022-08-12 14:42:12	A teszt befejeződött! Teljes ideje: 0 perc 21 másodperc.

@@ -1,0 +1,21 @@
+2022-08-12 18:07:27	Teszt indítása
+2022-08-12 18:07:27	Szükséges forrás fájlok betöltése....
+2022-08-12 18:07:27	Forrás fájlok betöltése kész!
+ 
+2022-08-12 18:07:32	Sikeres bejelentkezés.
+2022-08-12 18:07:34	Módosítás sikeres
+2022-08-12 18:07:34	Adat módosítása sikeres!
+2022-08-12 18:07:35	Eltávolitás sikeres!
+2022-08-12 18:07:36	Adat eltávolítása sikeres!
+ 
+2022-08-12 18:07:46	Sikertelen belépési adat kitöltés!
+ 
+2022-08-12 18:07:57	Sikertelen belépési adat kitöltés!
+2022-08-12 18:07:59	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+2022-08-12 18:07:59	Felhasználó regisztrálásának az ideje: 0 perc 0 másodperc.
+2022-08-12 18:07:59	Felhasználó belépésének az ideje: 0 perc 0 másodperc.
+2022-08-12 18:07:59	Adatok feltöltésének az ideje: 0 perc 0 másodperc.
+2022-08-12 18:07:59	Adatok lekérdezésének az ideje: 0 perc 0 másodperc.
+2022-08-12 18:07:59	Egy adat módosításának és törlésének az ideje: 0 perc 4 másodperc.
+2022-08-12 18:07:59	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 0 másodperc.
+2022-08-12 18:07:59	A teszt befejeződött! Teljes ideje: 0 perc 32 másodperc.
