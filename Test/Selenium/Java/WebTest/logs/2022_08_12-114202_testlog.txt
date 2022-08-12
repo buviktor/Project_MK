@@ -1,0 +1,34 @@
+2022-08-12 11:41:13	Teszt indítása
+2022-08-12 11:41:13	Szükséges forrás fájlok betöltése....
+2022-08-12 11:41:13	Forrás fájlok betöltése kész!
+ 
+2022-08-12 11:41:15	1 fiók adatainak létrehozása
+2022-08-12 11:41:15	Felhasználónév: Kállai Manszvét; Jelszó: y1OlW8hfX7; Email: kallai.manszvet0260@gmail.com; Irányítószám: 3553; Ország: Magyarország; Megye: Borsod-Abaúj-Zemplén; Város: Kistokaj
+2022-08-12 11:41:18	Sikeres regisztráció!
+2022-08-12 11:41:21	Sikeres bejelentkezés.
+2022-08-12 11:41:21	Adatok feltöltése....
+2022-08-12 11:41:23	Módosítás sikeres
+2022-08-12 11:41:26	Sikeres bejelentkezés.
+2022-08-12 11:41:30	Hibás felhasználónév!
+2022-08-12 11:41:30	Felhasználó törlése sikeres!
+ 
+2022-08-12 11:41:30	2 fiók adatainak létrehozása
+2022-08-12 11:41:30	Felhasználónév: Görgei Perla; Jelszó: 8utaocM99j; Email: gorgei.perla3763@freemail.hu; Irányítószám: 8112; Ország: Magyarország; Megye: Fejér; Város: Zichyújfalu
+2022-08-12 11:41:33	Sikeres regisztráció!
+2022-08-12 11:41:36	Sikeres bejelentkezés.
+2022-08-12 11:41:36	Adatok feltöltése....
+2022-08-12 11:41:38	Módosítás sikeres
+2022-08-12 11:41:41	Sikeres bejelentkezés.
+2022-08-12 11:41:45	Hibás felhasználónév!
+2022-08-12 11:41:45	Felhasználó törlése sikeres!
+ 
+2022-08-12 11:41:45	3 fiók adatainak létrehozása
+2022-08-12 11:41:45	Felhasználónév: Koltai Gandalf; Jelszó: bdQ2jcdVZA; Email: koltai.gandalf7741@freemail.hu; Irányítószám: 2117; Ország: Magyarország; Megye: Pest; Város: Isaszeg
+2022-08-12 11:41:48	Sikeres regisztráció!
+2022-08-12 11:41:50	Sikeres bejelentkezés.
+2022-08-12 11:41:50	Adatok feltöltése....
+2022-08-12 11:41:52	Módosítás sikeres
+2022-08-12 11:41:56	Sikeres bejelentkezés.
+2022-08-12 11:42:00	Hibás felhasználónév!
+2022-08-12 11:42:00	Felhasználó törlése sikeres!
+2022-08-12 11:42:02	A teszt befejeződött! Teljes ideje: 0 perc 49 másodperc.

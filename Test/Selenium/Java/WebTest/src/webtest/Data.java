@@ -96,6 +96,11 @@ public class Data {
     public static String getPassword() {
         return new String(password);
     }
+    
+    public static String getNewPassword() {
+        password(10);
+        return new String(password);
+    }
         
     public static int getMoney(){
         money = rand.nextInt(500000)+1000;
@@ -106,8 +111,8 @@ public class Data {
     public static String getDate() {
         String[] localDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")).split("-");
         String year = "", month = "", day = "", yearNow = localDate[0];
-        int randomNumberForMonth, monthNow = Integer.parseInt(localDate[1]);
-        int randomNumberForDay, dayNow = Integer.parseInt(localDate[2]);
+        int randomNumberForMonth = 0, monthNow = Integer.parseInt(localDate[1]);
+        int randomNumberForDay = 0, dayNow = Integer.parseInt(localDate[2]);
         int randYear = (int)(Math.random() * 2 + 1);
         
         if (1 == randYear) year = yearNow;
@@ -145,6 +150,7 @@ public class Data {
             }
         }
         
+        if (day.length() != 2) day = "0" + day;
         return year + "-" + month + "-" + day;
     }
     

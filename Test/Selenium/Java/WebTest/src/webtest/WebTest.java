@@ -5,16 +5,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.Collator;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +22,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 
 
 /**
@@ -38,7 +38,7 @@ public class WebTest {
     
     private static WebDriver driver;
     
-    private static String message, randomLocation, randomName, password;
+    private static String message, randomLocation, randomName, password, email;
     private static Boolean start;
     
     static Random rand = new Random();
@@ -49,6 +49,8 @@ public class WebTest {
     static ArrayList<String> minimalLogs = new ArrayList<>();
     static ArrayList<String> uploadDataSorting = new ArrayList<>();       // ArrayList a sorrend megállapításához.
     static ArrayList<Integer> uploadDataSortingInt = new ArrayList<>();       // ArrayList a sorrend megállapításához.
+    
+    static Wait<WebDriver> wait;
     
     /**
      * pagePath metódus vissza adja a .html fájlok helyét Stringben.
@@ -84,12 +86,12 @@ public class WebTest {
             Thread.sleep(1000);
             
             message = driver.findElement(By.id("uzenet")).getText();
-            minimalLogsAddToList(message);
-            
+                        
             if (!message.equals("Sikeres bejelentkezés.")){
-                minimalLogsAddToList(message + "!");
+                minimalLogsAddToList(message);
                 start = false;
             }
+            else minimalLogsAddToList(message);
             
         } catch (Exception e) {
             minimalLogsAddToList("Sikertelen belépési adat kitöltés!");
@@ -119,6 +121,7 @@ public class WebTest {
         String postcode, country, county, city;
         
         password = randPassword;
+        email = randEmail;
         
         String[] l = randLocation.split(",");
         postcode = l[0]; country = l[1]; county = l[2]; city = l[3];
@@ -132,7 +135,7 @@ public class WebTest {
             Thread.sleep(500);
             driver.findElement(By.id("runame")).sendKeys(randomName);
             driver.findElement(By.id("rupassword")).sendKeys(password);
-            driver.findElement(By.id("email")).sendKeys(randEmail);
+            driver.findElement(By.id("email")).sendKeys(email);
             driver.findElement(By.id("postcode")).sendKeys(postcode);
             driver.findElement(By.id("country")).sendKeys(country);
             driver.findElement(By.id("county")).sendKeys(county);
@@ -359,14 +362,6 @@ public class WebTest {
                     break;
             }
         }
-            
-        
-        
-        System.out.println(uploadDataSortingInt);
-        System.out.println("--------");
-        System.out.println(uploadDataSorting);
-        System.out.println("++++++++");
-        
     }
         
     private static void queryFromDatabase() {
@@ -375,9 +370,6 @@ public class WebTest {
         String selected = " ", allDay = "Összes nap";
                 
         try {
-            driver.findElement(By.linkText("Lekérdezés")).click();
-            Thread.sleep(500);
-            
             List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
             if (!table.get(0).getText().equals("")) start = false;     // Tábla ürességének ellenőrzése.
             else {
@@ -426,112 +418,124 @@ public class WebTest {
                  * Sorrend teszt.
                 **/
                 
-                selectObject = new Select(selectSort.get(0));       // Dátum szerint csökkenő.
-                selectObject.selectByIndex(0);
-                driver.findElement(By.id("gomb2")).click();
-                table = driver.findElements(By.id("lista"));
-                tableToArrayList(table, allQuery);
-                sorting(0, false, categoryArrayList);
-                for (int i = 0; i < allQuery.size(); i++) {
-                    if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
-                        start = false;
-                        next = false;
-                        minimalLogsAddToList(i + " :" + sortArrayList.get(0) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
-                    }
-                }
                 if (next) {
-                    minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                    selectObject = new Select(selectSort.get(0));       // Dátum szerint csökkenő.
+                    selectObject.selectByIndex(0);
+                    driver.findElement(By.id("gomb2")).click();
+                    Thread.sleep(250);
+                    table = driver.findElements(By.id("lista"));
+                    tableToArrayList(table, allQuery);
+                    sorting(0, false, categoryArrayList);
+                    for (int i = 0; i < allQuery.size(); i++) {
+                        if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
+                            start = false;
+                            next = false;
+                            minimalLogsAddToList(i + " :" + sortArrayList.get(0) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                        }
+                    }
+                    if (next) {
+                        minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                    }
                 }
                 
-                selectObject = new Select(selectSorting.get(0));       // Dátum szerint növekvő.
-                selectObject.selectByIndex(1);
-                driver.findElement(By.id("gomb2")).click();
-                table = driver.findElements(By.id("lista"));
-                tableToArrayList(table, allQuery);
-                sorting(0, true, categoryArrayList);
-                for (int i = 0; i < allQuery.size(); i++) {
-                    if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
-                        start = false;
-                        next = false;
-                        minimalLogsAddToList(i + " :" + sortArrayList.get(0) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
-                    }
-                }
                 if (next) {
-                    minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                    selectObject = new Select(selectSorting.get(0));       // Dátum szerint növekvő.
+                    selectObject.selectByIndex(1);
+                    driver.findElement(By.id("gomb2")).click();
+                    Thread.sleep(250);
+                    table = driver.findElements(By.id("lista"));
+                    tableToArrayList(table, allQuery);
+                    sorting(0, true, categoryArrayList);
+                    for (int i = 0; i < allQuery.size(); i++) {
+                        if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
+                            start = false;
+                            next = false;
+                            minimalLogsAddToList(i + " :" + sortArrayList.get(0) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                        }
+                    }
+                    if (next) {
+                        minimalLogsAddToList(sortArrayList.get(0) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                    }
                 }
                 
-                selectObject = new Select(selectSort.get(0));       // Összeg szerint növekvő.
-                selectObject.selectByIndex(1);
-                driver.findElement(By.id("gomb2")).click();
-                table = driver.findElements(By.id("lista"));
-                tableToArrayList(table, allQuery);
-                sorting(1, true, categoryArrayList);
-                for (int i = 0; i < allQuery.size(); i++) {
-                    if (!allQuery.get(i).contains(String.valueOf(uploadDataSortingInt.get(i)))) {
-                        start = false;
-                        next = false;
-                        minimalLogsAddToList(i + " :" + sortArrayList.get(1) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
-                    }
-                }
                 if (next) {
-                    minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                    selectObject = new Select(selectSort.get(0));       // Összeg szerint növekvő.
+                    selectObject.selectByIndex(1);
+                    driver.findElement(By.id("gomb2")).click();
+                    Thread.sleep(250);
+                    table = driver.findElements(By.id("lista"));
+                    tableToArrayList(table, allQuery);
+                    sorting(1, true, categoryArrayList);
+                    for (int i = 0; i < allQuery.size(); i++) {
+                        if (!allQuery.get(i).contains(String.valueOf(uploadDataSortingInt.get(i)))) {
+                            start = false;
+                            next = false;
+                            minimalLogsAddToList(i + " :" + sortArrayList.get(1) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                        }
+                    }
+                    if (next) {
+                        minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                    }
                 }
                 
-                selectObject = new Select(selectSorting.get(0));       // Összeg szerint csökkenő.
-                selectObject.selectByIndex(0);
-                driver.findElement(By.id("gomb2")).click();
-                table = driver.findElements(By.id("lista"));
-                tableToArrayList(table, allQuery);
-                sorting(1, false, categoryArrayList);
-                for (int i = 0; i < allQuery.size(); i++) {
-                    if (!allQuery.get(i).contains(String.valueOf(uploadDataSortingInt.get(i)))) {
-                        start = false;
-                        next = false;
-                        minimalLogsAddToList(i + " :" + sortArrayList.get(1) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
-                    }
-                }
                 if (next) {
-                    minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                    selectObject = new Select(selectSorting.get(0));       // Összeg szerint csökkenő.
+                    selectObject.selectByIndex(0);
+                    driver.findElement(By.id("gomb2")).click();
+                    Thread.sleep(250);
+                    table = driver.findElements(By.id("lista"));
+                    tableToArrayList(table, allQuery);
+                    sorting(1, false, categoryArrayList);
+                    for (int i = 0; i < allQuery.size(); i++) {
+                        if (!allQuery.get(i).contains(String.valueOf(uploadDataSortingInt.get(i)))) {
+                            start = false;
+                            next = false;
+                            minimalLogsAddToList(i + " :" + sortArrayList.get(1) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                        }
+                    }
+                    if (next) {
+                        minimalLogsAddToList(sortArrayList.get(1) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                    }
                 }
                 
-                selectObject = new Select(selectSort.get(0));       // kategória szerint csökkenő.
-                selectObject.selectByIndex(2);
-                driver.findElement(By.id("gomb2")).click();
-                table = driver.findElements(By.id("lista"));
-                tableToArrayList(table, allQuery);
-                sorting(2, false, categoryArrayList);
-                        System.out.println("////////");
-                        System.out.println(allQuery);
-                        System.out.println("////////");
-                for (int i = 0; i < allQuery.size(); i++) {
-                    if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
-                        start = false;
-                        next = false;
-                        minimalLogsAddToList(i + " :" + sortArrayList.get(2) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
-                    }
-                }
                 if (next) {
-                    minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                    selectObject = new Select(selectSort.get(0));       // kategória szerint csökkenő.
+                    selectObject.selectByIndex(2);
+                    driver.findElement(By.id("gomb2")).click();
+                    Thread.sleep(250);
+                    table = driver.findElements(By.id("lista"));
+                    tableToArrayList(table, allQuery);
+                    sorting(2, false, categoryArrayList);
+                    for (int i = 0; i < allQuery.size(); i++) {
+                        if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
+                            start = false;
+                            next = false;
+                            minimalLogsAddToList(i + " :" + sortArrayList.get(2) + " szerinti " + sortingArrayList.get(0) + " sorrend nem egyezik meg!");
+                        }
+                    }
+                    if (next) {
+                        minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(0) + " sorrend megegyezett!");
+                    }
                 }
                 
-                selectObject = new Select(selectSorting.get(0));       // kategória szerint növekvő.
-                selectObject.selectByIndex(1);
-                driver.findElement(By.id("gomb2")).click();
-                table = driver.findElements(By.id("lista"));
-                tableToArrayList(table, allQuery);
-                        System.out.println("////////");
-                        System.out.println(allQuery);
-                        System.out.println("////////");
-                sorting(2, true, categoryArrayList);
-                for (int i = 0; i < allQuery.size(); i++) {
-                    if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
-                        start = false;
-                        next = false;
-                        minimalLogsAddToList(i + " :" + sortArrayList.get(2) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
-                    }
-                }
                 if (next) {
-                    minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                    selectObject = new Select(selectSorting.get(0));       // kategória szerint növekvő.
+                    selectObject.selectByIndex(1);
+                    driver.findElement(By.id("gomb2")).click();
+                    Thread.sleep(250);
+                    table = driver.findElements(By.id("lista"));
+                    tableToArrayList(table, allQuery);
+                    sorting(2, true, categoryArrayList);
+                    for (int i = 0; i < allQuery.size(); i++) {
+                        if (!allQuery.get(i).contains(uploadDataSorting.get(i))) {
+                            start = false;
+                            next = false;
+                            minimalLogsAddToList(i + " :" + sortArrayList.get(2) + " szerinti " + sortingArrayList.get(1) + " sorrend nem egyezik meg!");
+                        }
+                    }
+                    if (next) {
+                        minimalLogsAddToList(sortArrayList.get(2) + " szerinti " + sortingArrayList.get(1) + " sorrend megegyezett!");
+                    }
                 }
                 
                 selectObject = new Select(selectSort.get(0));       // Listázás szerint Dátumra állítva.
@@ -539,11 +543,10 @@ public class WebTest {
                 selectObject = new Select(selectSorting.get(0));       // Sorrend szerint csökkenőre állítva.
                 selectObject.selectByIndex(0);
                 
-                next = false;
                 /**
                  * Adatok lekérdezése és ellenőrzése.
                  * 
-                 * for(categoryNumber), selectOption(a) : 
+                 * categoryNumber: 
                  *      - 0 : Élelmiszer.
                  * 
                  * costNumber :
@@ -1634,6 +1637,140 @@ public class WebTest {
             start = false;
         }
     }
+    
+    private static void personalDataEdit() {
+        try {
+            boolean next = true;
+            String newPassword = "", newEmail = "", newPostcode = "", newCountry = "", newCounty = "", newCity = "";
+            String[] p;
+            List<WebElement> table = driver.findElements(By.id("adatok"));       // Adatok táblázatának inicializálása.
+            ArrayList<String> personalDataList = new ArrayList<>();         // ArrayList a kilistázott adathoz.
+            tableToArrayList(table, personalDataList);
+            if (personalDataList.get(0).isEmpty()) {        // Tábla ürességének ellenőrzése.
+                minimalLogsAddToList("Felhasználói adat ellenőrzése sikertelen. Nincs adat!");
+                start = false;
+                next = false;
+            }     
+            
+            if (next) {
+                p = personalDataList.get(0).split(" ");
+                String[] d = randomLocation.split(",");
+
+                if (!p[0].equals(email)) minimalLogsAddToList("Email cím nem egyezik meg!");
+                if (!p[1].equals(d[0])) minimalLogsAddToList("Irányítószám nem egyezik meg!");
+                if (!p[2].equals(d[1])) minimalLogsAddToList("Ország nem egyezik meg!");
+                if (!p[3].equals(d[2])) minimalLogsAddToList("Megye nem egyezik meg!");
+                if (!p[4].equals(d[3])) minimalLogsAddToList("Város nem egyezik meg!");
+
+                driver.findElement(By.id("gomb5")).click();
+                Thread.sleep(250);
+
+                newPassword = Data.getNewPassword();
+                newEmail = "editEmail@mail.com";
+                newPostcode = "1111";
+                newCountry = "Asguard";
+                newCounty = "Mordor";
+                newCity = "LegoCity";
+
+                driver.findElement(By.id("email")).clear();
+                driver.findElement(By.id("postcode")).clear();
+                driver.findElement(By.id("country")).clear();
+                driver.findElement(By.id("county")).clear();
+                driver.findElement(By.id("city")).clear();
+                
+                driver.findElement(By.id("newpassword")).sendKeys(newPassword);
+                driver.findElement(By.id("email")).sendKeys(newEmail);
+                driver.findElement(By.id("postcode")).sendKeys(newPostcode);
+                driver.findElement(By.id("country")).sendKeys(newCountry);
+                driver.findElement(By.id("county")).sendKeys(newCounty);
+                driver.findElement(By.id("city")).sendKeys(newCity);
+                driver.findElement(By.id("password")).sendKeys(password);
+                Thread.sleep(250);
+
+                driver.findElement(By.id("gomb4")).click();
+                Thread.sleep(250);
+                message = driver.findElement(By.id("uzenet")).getText();
+                
+                if (!message.equals("Módosítás sikeres")) {
+                    minimalLogsAddToList("Adat módosítás nem sikerült. " + message);
+                    start = false;
+                    next = false;
+                }
+            }
+            
+            if (next) {
+                minimalLogsAddToList(message);
+                password = newPassword;
+                driver.findElement(By.linkText("Kijelentkezés")).click();
+                Thread.sleep(250);
+                
+                login(randomName,newPassword);
+
+                if (!message.equals("Sikeres bejelentkezés.")){
+                    next = false;
+                }
+            }
+            
+            if (next) {
+                Thread.sleep(250);
+                driver.findElement(By.linkText("Adataim")).click();
+                Thread.sleep(250);
+                personalDataList.clear();
+                table = driver.findElements(By.id("adatok"));
+                tableToArrayList(table, personalDataList);
+                p = personalDataList.get(0).split(" ");
+                
+                if (!p[0].equals(newEmail)) minimalLogsAddToList("Módosított email cím nem egyezik meg!");
+                if (!p[1].equals(newPostcode)) minimalLogsAddToList("Módosított irányítószám nem egyezik meg!");
+                if (!p[2].equals(newCountry)) minimalLogsAddToList("Módosított ország nem egyezik meg!");
+                if (!p[3].equals(newCounty)) minimalLogsAddToList("Módosított megye nem egyezik meg!");
+                if (!p[4].equals(newCity)) minimalLogsAddToList("Módosított város nem egyezik meg!");
+                
+                
+                driver.findElement(By.id("gomb6")).click();
+                Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+                Thread.sleep(250);
+                String text = alert.getText();
+                if (text.equals("Biztosan törölni szeretné?")) alert.accept();
+                else {
+                    minimalLogsAddToList("Hibás alert!");
+                    alert = driver.switchTo().alert();
+                    alert.dismiss();
+                    start = false;
+                    next = false;
+                }
+            }
+            
+            if (next) {
+                driver.get(pagePath("index.html"));
+                login(randomName, newPassword);
+                if (!start) {
+                    minimalLogsAddToList("Felhasználó törlése sikeres!");
+                    start = true;
+                    
+                    driver.navigate().refresh();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+    private static void dataEdit() {
+        try {
+            driver.findElement(By.id("gomb2")).click();
+            Thread.sleep(500);  
+            
+            List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
+            ArrayList<String> allQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
+            tableToArrayList(table, allQuery);
+            
+            driver.findElement(By.name("...")).click();
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
      
     /**
      * log függvény kiolvassa a státusz választ.
@@ -1674,6 +1811,11 @@ public class WebTest {
         options.setCapability( "goog:loggingPrefs", logPrefs );
 
         driver = new ChromeDriver(options);  // Új példány a ChromeDriver-ből az előző beállításokkal.
+        
+        wait = new FluentWait<WebDriver>(driver)
+            .withTimeout(Duration.ofSeconds(5))
+            .pollingEvery(Duration.ofSeconds(5))
+            .ignoring(NoSuchElementException.class);
 
         driver.get(pagePath("index.html"));     // A főoldal betöltése.
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);        // Időzítés beállítása.
@@ -1684,7 +1826,7 @@ public class WebTest {
         * Első teszt: Automata teszt 3x.
         **/
         
-        for (int i=0; i<1; i++) {
+        for (int i=0; i<3; i++) {
             minimalLogs.add(" ");       // Üres sor beszúrása.
             /*
             if (start) {
@@ -1699,27 +1841,38 @@ public class WebTest {
             for (int j=0; j < 50; j++) {
                 if (start) {
                     newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
-                    driver.navigate().refresh();
+                    
                 } 
-            }
-            */
-            if (start) {
-                login("Ferencsik Délia", "77Gqh84175");
-
-                for (int j=0; j < 50; j++) {
-                    if (start) {
-                        newData(Data.getMoney(), Data.getDate(), Data.getCategory());        // Új fiók adatainak feltöltése.
-                    } 
-                }
-
-                queryFromDatabase();
             }
             
             if (start) {
                 minimalLogsAddToList("Adatok sikeresen feltöltve!");
-                driver.findElement(By.linkText("Kijelentkezés")).click();
-                uploadData.clear();
             }
+            
+            if (start) {        // Feltöltött adatok lekérdezése.
+                driver.findElement(By.linkText("Lekérdezés")).click();
+                Thread.sleep(250);
+                queryFromDatabase();
+            
+                //uploadData.clear();
+            }
+            */
+            if (start) {
+                login("valaki","valaki");
+                driver.findElement(By.linkText("Lekérdezés")).click();
+                Thread.sleep(250);
+                
+                dataEdit();
+            }
+            /*
+            if (start) {
+                driver.findElement(By.linkText("Adataim")).click();
+                Thread.sleep(250);
+                
+                personalDataEdit();
+            }
+            */
+            
         }
                
         Thread.sleep(2000);

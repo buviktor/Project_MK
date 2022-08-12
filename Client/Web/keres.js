@@ -81,12 +81,15 @@ document.getElementById("gomb2").onclick = function (e) {
         } 
       if (ok && json[0] != null) {
         lista.innerHTML = "<tr><th>Összeg</th><th>Kategória</th><th>Dátum</th><th></th></tr>";
+        let num = -1;
       json.forEach(cs => {
           if(cs!=json[0]) 
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Post()' >...</button></td></tr>"
-            });
-            document.getElementById("uzenet").innerHTML = ""
+              + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Post()' name='" + num + "'>...</button></td></tr>"
+            num++;
+        });
+            document.getElementById("uzenet").innerHTML = "";
+                
         } else {
             document.getElementById("uzenet").innerHTML = "Nincs ilyen adat!"
             lista2.innerHTML = "<tr><th>Összegzés</th><th>Bevétel</th><th>Kiadás</th></tr>";
