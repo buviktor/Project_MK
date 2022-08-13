@@ -711,21 +711,48 @@ public class WebTest {
 
                                                                 if (next) {     // dated id mező.
                                                                     hit = 0;
-                                                                    driver.findElement(By.id("napok")).click();
-                                                                    Thread.sleep(500);
-                                                                    String day = "1";
-                                                                    if (Integer.parseInt(day) < 10) {
-                                                                        day = "0" + day;
-                                                                    }
-                                                                    selected = costArrayList.get(costNumber) + ", " + categoryArrayList.get(categoryNumber) + ", " 
-                                                                    + yearArrayList.get(yearNumber) + ", " + monthArrayList.get(monthNumber) + ", " 
-                                                                    + day;
+                                                                    ArrayList<String> dayQuery = new ArrayList<>();
+                                                                    
+                                                                    if (!allQuery.isEmpty()) {
+                                                                        driver.findElement(By.id("napok")).click();
+                                                                        Thread.sleep(500);
+                                                                        String day = "1";
+                                                                        if (Integer.parseInt(day) < 10) {
+                                                                            day = "0" + day;
+                                                                        }
+                                                                        selected = costArrayList.get(costNumber) + ", " + categoryArrayList.get(categoryNumber) + ", " 
+                                                                        + yearArrayList.get(yearNumber) + ", " + monthArrayList.get(monthNumber) + ", " 
+                                                                        + day;
 
+                                                                        for (int i = 0; i < allQuery.size(); i++) {
+                                                                            String[] d = allQuery.get(i).split(" ");
+                                                                            String[] dd = d[2].split("-");
+
+                                                                            driver.findElement(By.id("dated")).clear();
+                                                                            driver.findElement(By.id("dated")).sendKeys(dd[2]);
+                                                                            Thread.sleep(250);
+                                                                            driver.findElement(By.id("gomb2")).click();
+                                                                            Thread.sleep(250);
+                                                                            table = driver.findElements(By.id("lista"));
+                                                                            tableToArrayList(table, dayQuery);
+                                                                            
+                                                                            for (int j = 0; j < dayQuery.size(); j++) {
+                                                                                if (allQuery.get(i).equals(dayQuery.get(j))) {
+                                                                                    hit++;
+                                                                                }
+                                                                            }
+                                                                            
+                                                                        }
+                                                                        
+                                                                        System.out.println(allQuery.size() + " = " +  hit);
+                                                                        Thread.sleep(4000);
+                                                                    }
+                                                                    /*
                                                                     driver.findElement(By.id("gomb2")).click();
                                                                     table = driver.findElements(By.id("lista"));
                                                                     tableToArrayList(table, allQuery);
                                                                     message = driver.findElement(By.id("uzenet")).getText();
-
+                                                                    
                                                                     if (!message.equals("Nincs ilyen adat!")) {
                                                                         for (int j = 0; j < allQuery.size(); j++) {
                                                                             for (int k = 0; k < uploadData.size(); k++) {
@@ -850,7 +877,7 @@ public class WebTest {
                                                                                 }
                                                                             }
                                                                             break; 
-                                                                        }
+                                                                        }*/
                                                                     }
                                                                 }
                                                             }
@@ -970,7 +997,7 @@ public class WebTest {
 
                                                                         controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
-                                                                        if (next) {     // dated id mező.
+                                                                        if (false) {     // dated id mező.
                                                                             hit = 0;
                                                                             driver.findElement(By.id("napok")).click();
                                                                             Thread.sleep(500);
@@ -1215,7 +1242,7 @@ public class WebTest {
 
                                                                 controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
-                                                                if (next) {     // dated id mező.
+                                                                if (false) {     // dated id mező.
                                                                     hit = 0;
                                                                     driver.findElement(By.id("napok")).click();
                                                                     Thread.sleep(500);
@@ -1476,7 +1503,7 @@ public class WebTest {
 
                                                                         controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
-                                                                        if (next) {     // dated id mező.
+                                                                        if (false) {     // dated id mező.
                                                                             hit = 0;
                                                                             driver.findElement(By.id("napok")).click();
                                                                             Thread.sleep(500);
@@ -2020,6 +2047,8 @@ public class WebTest {
                 driver.findElement(By.linkText("Lekérdezés")).click();
                 Thread.sleep(250);
                 queryFromDatabase();
+                
+                writeFile(uploadData, "_generaltAdatok.txt");
                 uploadData.clear();
                 driver.navigate().refresh();
                 endUserDataQuery = LocalTime.now();

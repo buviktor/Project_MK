@@ -50,7 +50,7 @@ document.getElementById("gomb2").onclick = function (e) {
     // összes napok figyelése és helyes formátumú érték küldése
     if (!document.getElementById("napok").checked) {
         dated = document.getElementById("dated").value;
-        if(parseInt(dated)<10) dated = "0" + dated;
+        if(parseInt(dated)<10 && dated.length!=2) dated = "0" + dated;
     }else{
         dated = document.getElementById("napok").value;
     }
