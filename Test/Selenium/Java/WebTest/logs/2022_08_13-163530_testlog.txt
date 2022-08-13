@@ -1,0 +1,18 @@
+2022-08-13 16:35:08	Teszt indítása
+2022-08-13 16:35:08	Szükséges forrás fájlok betöltése....
+2022-08-13 16:35:08	Forrás fájlok betöltése kész!
+2022-08-13 16:35:13	Sikeres bejelentkezés.
+ 
+2022-08-13 16:35:13	Adatok feltöltése....
+2022-08-13 16:35:14	Összeg (Ft): -3564, Dátum: 2022-04-28, Kategória: Számlák 5
+2022-08-13 16:35:15	Összeg (Ft): -4964, Dátum: 2021-02-25, Kategória: Egyébkiadások 6
+2022-08-13 16:35:16	Összeg (Ft): -7524, Dátum: 2022-04-09, Kategória: Élelmiszer 1
+2022-08-13 16:35:28	Sikertelen adat feltöltés!
+2022-08-13 16:35:30	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+2022-08-13 16:35:30	Felhasználó regisztrálásának az ideje: 0 perc 0 másodperc.
+2022-08-13 16:35:30	Felhasználó belépésének az ideje: 0 perc 0 másodperc.
+2022-08-13 16:35:30	Adatok feltöltésének az ideje: 0 perc 14 másodperc.
+2022-08-13 16:35:30	Adatok lekérdezésének az ideje: 0 perc 0 másodperc.
+2022-08-13 16:35:30	Egy adat módosításának és törlésének az ideje: 0 perc 0 másodperc.
+2022-08-13 16:35:30	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 0 másodperc.
+2022-08-13 16:35:30	A teszt befejeződött! Teljes ideje: 0 perc 22 másodperc.

@@ -1,0 +1,112 @@
+2022-08-13 18:17:01	Teszt indítása
+2022-08-13 18:17:01	Szükséges forrás fájlok betöltése....
+2022-08-13 18:17:01	Forrás fájlok betöltése kész!
+2022-08-13 18:17:06	Sikeres bejelentkezés.
+ 
+2022-08-13 18:17:06	Adatok feltöltése....
+2022-08-13 18:17:07	Összeg (Ft): -3700, Dátum: 2021-12-02, Kategória: Ruházat 2
+2022-08-13 18:17:09	Összeg (Ft): 92300, Dátum: 2021-12-30, Kategória: Egyébjutatások 7
+2022-08-13 18:17:10	Összeg (Ft): -2262, Dátum: 2021-03-25, Kategória: Számlák 5
+2022-08-13 18:17:11	Összeg (Ft): -7918, Dátum: 2021-10-05, Kategória: Számlák 5
+2022-08-13 18:17:12	Összeg (Ft): -9382, Dátum: 2022-05-17, Kategória: Ruházat 2
+2022-08-13 18:17:13	Összeg (Ft): -19660, Dátum: 2022-05-18, Kategória: Számlák 5
+2022-08-13 18:17:14	Összeg (Ft): -4086, Dátum: 2021-08-20, Kategória: Szabadidő 4
+2022-08-13 18:17:16	Összeg (Ft): -1120, Dátum: 2022-01-28, Kategória: Egyébkiadások 6
+2022-08-13 18:17:17	Összeg (Ft): 357600, Dátum: 2021-05-06, Kategória: Egyébjutatások 7
+2022-08-13 18:17:18	Összeg (Ft): -2408, Dátum: 2022-08-06, Kategória: Ruházat 2
+2022-08-13 18:17:19	Összeg (Ft): -9768, Dátum: 2021-07-04, Kategória: Egyébkiadások 6
+2022-08-13 18:17:20	Összeg (Ft): -2380, Dátum: 2022-05-07, Kategória: Élelmiszer 1
+2022-08-13 18:17:22	Összeg (Ft): -5752, Dátum: 2021-05-17, Kategória: Egyébkiadások 6
+2022-08-13 18:17:23	Összeg (Ft): -4226, Dátum: 2021-04-23, Kategória: Élelmiszer 1
+2022-08-13 18:17:24	Összeg (Ft): -5880, Dátum: 2022-02-03, Kategória: Ruházat 2
+2022-08-13 18:17:25	Összeg (Ft): -7242, Dátum: 2022-04-01, Kategória: Számlák 5
+2022-08-13 18:17:26	Összeg (Ft): 171300, Dátum: 2022-02-11, Kategória: Egyébjutatások 7
+2022-08-13 18:17:27	Összeg (Ft): -9044, Dátum: 2022-06-11, Kategória: Számlák 5
+2022-08-13 18:17:29	Összeg (Ft): -2620, Dátum: 2022-01-07, Kategória: Ruházat 2
+2022-08-13 18:17:30	Összeg (Ft): 175700, Dátum: 2022-02-25, Kategória: Egyébjutatások 7
+2022-08-13 18:17:31	Összeg (Ft): 454900, Dátum: 2022-04-13, Kategória: Fizetés 3
+2022-08-13 18:17:32	Összeg (Ft): -15340, Dátum: 2021-12-29, Kategória: Szabadidő 4
+2022-08-13 18:17:33	Összeg (Ft): 481200, Dátum: 2021-01-17, Kategória: Fizetés 3
+2022-08-13 18:17:35	Összeg (Ft): 500700, Dátum: 2022-01-30, Kategória: Fizetés 3
+2022-08-13 18:17:36	Összeg (Ft): -5246, Dátum: 2021-08-03, Kategória: Egyébkiadások 6
+2022-08-13 18:17:37	Összeg (Ft): 455100, Dátum: 2022-04-12, Kategória: Egyébjutatások 7
+2022-08-13 18:17:38	Összeg (Ft): -5852, Dátum: 2021-06-02, Kategória: Ruházat 2
+2022-08-13 18:17:39	Összeg (Ft): -3480, Dátum: 2022-05-21, Kategória: Szabadidő 4
+2022-08-13 18:17:41	Összeg (Ft): -5346, Dátum: 2021-07-06, Kategória: Egyébkiadások 6
+2022-08-13 18:17:42	Összeg (Ft): 355700, Dátum: 2021-07-12, Kategória: Fizetés 3
+2022-08-13 18:17:43	Összeg (Ft): -2022, Dátum: 2021-07-19, Kategória: Egyébkiadások 6
+2022-08-13 18:17:44	Összeg (Ft): -7820, Dátum: 2022-07-06, Kategória: Számlák 5
+2022-08-13 18:17:45	Összeg (Ft): -7206, Dátum: 2021-02-17, Kategória: Egyébkiadások 6
+2022-08-13 18:17:46	Összeg (Ft): -7056, Dátum: 2021-06-15, Kategória: Élelmiszer 1
+2022-08-13 18:17:48	Összeg (Ft): 53900, Dátum: 2022-01-27, Kategória: Egyébjutatások 7
+2022-08-13 18:17:49	Összeg (Ft): -9710, Dátum: 2022-01-27, Kategória: Egyébkiadások 6
+2022-08-13 18:17:50	Összeg (Ft): -4340, Dátum: 2022-02-05, Kategória: Szabadidő 4
+2022-08-13 18:17:51	Összeg (Ft): -7442, Dátum: 2021-07-30, Kategória: Ruházat 2
+2022-08-13 18:17:52	Összeg (Ft): -5700, Dátum: 2021-02-02, Kategória: Élelmiszer 1
+2022-08-13 18:17:54	Összeg (Ft): -12120, Dátum: 2021-10-27, Kategória: Számlák 5
+2022-08-13 18:17:55	Összeg (Ft): -7636, Dátum: 2021-07-17, Kategória: Élelmiszer 1
+2022-08-13 18:17:56	Összeg (Ft): 163100, Dátum: 2021-12-08, Kategória: Egyébjutatások 7
+2022-08-13 18:17:57	Összeg (Ft): -3982, Dátum: 2022-07-20, Kategória: Szabadidő 4
+2022-08-13 18:17:58	Összeg (Ft): -9740, Dátum: 2022-04-06, Kategória: Szabadidő 4
+2022-08-13 18:17:59	Összeg (Ft): -2060, Dátum: 2022-06-31, Kategória: Egyébkiadások 6
+2022-08-13 18:18:01	Összeg (Ft): -5698, Dátum: 2021-04-20, Kategória: Szabadidő 4
+2022-08-13 18:18:02	Összeg (Ft): -6938, Dátum: 2021-04-25, Kategória: Szabadidő 4
+2022-08-13 18:18:03	Összeg (Ft): -8464, Dátum: 2022-01-12, Kategória: Szabadidő 4
+2022-08-13 18:18:04	Összeg (Ft): 76700, Dátum: 2022-02-09, Kategória: Fizetés 3
+2022-08-13 18:18:05	Összeg (Ft): 189900, Dátum: 2021-03-23, Kategória: Fizetés 3
+2022-08-13 18:18:06	Adatok sikeresen feltöltve!
+2022-08-13 18:18:07	Az összes feltöltött adat és az összes lekérdezett adat megegyezik!
+2022-08-13 18:18:08	3 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	4 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	5 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	6 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	7 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	8 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	9 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	10 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	11 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	12 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	13 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	14 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	15 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	16 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	17 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	18 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	19 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	21 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	22 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	23 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	24 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	25 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	26 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	27 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	28 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	29 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	30 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	31 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	32 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	33 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	34 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	35 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	36 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	37 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	38 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	39 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	40 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	41 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	42 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	43 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	44 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	45 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	46 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	47 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	48 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:08	49 :Dátum szerinti Csökkenő sorrend nem egyezik meg!
+2022-08-13 18:18:10	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+2022-08-13 18:18:10	Felhasználó regisztrálásának az ideje: 0 perc 0 másodperc.
+2022-08-13 18:18:10	Felhasználó belépésének az ideje: 0 perc 0 másodperc.
+2022-08-13 18:18:10	Adatok feltöltésének az ideje: 0 perc 59 másodperc.
+2022-08-13 18:18:10	Adatok lekérdezésének az ideje: 0 perc 1 másodperc.
+2022-08-13 18:18:10	Egy adat módosításának és törlésének az ideje: 0 perc 0 másodperc.
+2022-08-13 18:18:10	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 0 másodperc.
+2022-08-13 18:18:10	A teszt befejeződött! Teljes ideje: 1 perc 9 másodperc.

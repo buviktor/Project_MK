@@ -1,0 +1,677 @@
+2022-08-13 17:05:18	Teszt indítása
+2022-08-13 17:05:18	Szükséges forrás fájlok betöltése....
+2022-08-13 17:05:18	Forrás fájlok betöltése kész!
+2022-08-13 17:05:23	Sikeres bejelentkezés.
+ 
+2022-08-13 17:05:23	Adatok feltöltése....
+2022-08-13 17:05:24	Összeg (Ft): -8738, Dátum: 2022-05-05, Kategória: Élelmiszer 1
+2022-08-13 17:05:25	Összeg (Ft): -10780, Dátum: 2022-01-02, Kategória: Élelmiszer 1
+2022-08-13 17:05:26	Összeg (Ft): 412700, Dátum: 2022-04-04, Kategória: Fizetés 3
+2022-08-13 17:05:27	Összeg (Ft): 375600, Dátum: 2021-10-15, Kategória: Fizetés 3
+2022-08-13 17:05:28	Összeg (Ft): -3478, Dátum: 2021-08-31, Kategória: Számlák 5
+2022-08-13 17:05:30	Összeg (Ft): -6222, Dátum: 2022-01-30, Kategória: Egyébkiadások 6
+2022-08-13 17:05:31	Összeg (Ft): 59500, Dátum: 2022-03-13, Kategória: Egyébjutatások 7
+2022-08-13 17:05:32	Összeg (Ft): -8560, Dátum: 2021-01-08, Kategória: Szabadidő 4
+2022-08-13 17:05:33	Összeg (Ft): -9754, Dátum: 2022-03-30, Kategória: Egyébkiadások 6
+2022-08-13 17:05:34	Összeg (Ft): -4396, Dátum: 2021-08-28, Kategória: Számlák 5
+2022-08-13 17:05:36	Összeg (Ft): 325900, Dátum: 2021-03-24, Kategória: Egyébjutatások 7
+2022-08-13 17:05:37	Összeg (Ft): -4486, Dátum: 2022-08-07, Kategória: Szabadidő 4
+2022-08-13 17:05:38	Összeg (Ft): -14360, Dátum: 2022-02-16, Kategória: Számlák 5
+2022-08-13 17:05:40	Összeg (Ft): 317600, Dátum: 2022-04-09, Kategória: Egyébjutatások 7
+2022-08-13 17:05:41	Összeg (Ft): -5388, Dátum: 2021-10-24, Kategória: Ruházat 2
+2022-08-13 17:05:42	Összeg (Ft): -8626, Dátum: 2022-02-22, Kategória: Egyébkiadások 6
+2022-08-13 17:05:43	Összeg (Ft): -6594, Dátum: 2022-06-10, Kategória: Számlák 5
+2022-08-13 17:05:44	Összeg (Ft): -19020, Dátum: 2021-05-16, Kategória: Számlák 5
+2022-08-13 17:05:46	Összeg (Ft): -15080, Dátum: 2022-02-26, Kategória: Szabadidő 4
+2022-08-13 17:05:47	Összeg (Ft): -9720, Dátum: 2021-03-09, Kategória: Számlák 5
+2022-08-13 17:05:48	Összeg (Ft): 73800, Dátum: 2021-02-23, Kategória: Egyébjutatások 7
+2022-08-13 17:05:49	Összeg (Ft): 126500, Dátum: 2022-05-26, Kategória: Egyébjutatások 7
+2022-08-13 17:05:50	Összeg (Ft): -4178, Dátum: 2021-04-10, Kategória: Egyébkiadások 6
+2022-08-13 17:05:52	Összeg (Ft): -11000, Dátum: 2022-07-15, Kategória: Ruházat 2
+2022-08-13 17:05:53	Összeg (Ft): 219100, Dátum: 2022-02-04, Kategória: Fizetés 3
+2022-08-13 17:05:54	Összeg (Ft): 65500, Dátum: 2022-03-20, Kategória: Egyébjutatások 7
+2022-08-13 17:05:55	Összeg (Ft): -4514, Dátum: 2021-05-12, Kategória: Egyébkiadások 6
+2022-08-13 17:05:57	Összeg (Ft): -4924, Dátum: 2021-03-21, Kategória: Élelmiszer 1
+2022-08-13 17:05:58	Összeg (Ft): -4830, Dátum: 2022-06-25, Kategória: Szabadidő 4
+2022-08-13 17:05:59	Összeg (Ft): -4110, Dátum: 2022-03-04, Kategória: Számlák 5
+2022-08-13 17:06:00	Összeg (Ft): 124300, Dátum: 2022-01-25, Kategória: Egyébjutatások 7
+2022-08-13 17:06:01	Összeg (Ft): -5112, Dátum: 2022-04-12, Kategória: Számlák 5
+2022-08-13 17:06:03	Összeg (Ft): -9410, Dátum: 2022-08-11, Kategória: Egyébkiadások 6
+2022-08-13 17:06:04	Összeg (Ft): -2738, Dátum: 2021-11-30, Kategória: Egyébkiadások 6
+2022-08-13 17:06:05	Összeg (Ft): -2118, Dátum: 2022-08-01, Kategória: Számlák 5
+2022-08-13 17:06:06	Összeg (Ft): -2026, Dátum: 2022-08-01, Kategória: Egyébkiadások 6
+2022-08-13 17:06:08	Összeg (Ft): -9932, Dátum: 2022-08-10, Kategória: Szabadidő 4
+2022-08-13 17:06:09	Összeg (Ft): -9338, Dátum: 2022-04-22, Kategória: Élelmiszer 1
+2022-08-13 17:06:10	Összeg (Ft): -7968, Dátum: 2022-02-10, Kategória: Egyébkiadások 6
+2022-08-13 17:06:11	Összeg (Ft): -8470, Dátum: 2021-10-29, Kategória: Ruházat 2
+2022-08-13 17:06:12	Összeg (Ft): -5626, Dátum: 2022-01-23, Kategória: Élelmiszer 1
+2022-08-13 17:06:13	Összeg (Ft): -15080, Dátum: 2021-12-15, Kategória: Számlák 5
+2022-08-13 17:06:15	Összeg (Ft): 447000, Dátum: 2021-01-03, Kategória: Fizetés 3
+2022-08-13 17:06:16	Összeg (Ft): -7962, Dátum: 2022-02-25, Kategória: Számlák 5
+2022-08-13 17:06:17	Összeg (Ft): -15300, Dátum: 2021-04-21, Kategória: Egyébkiadások 6
+2022-08-13 17:06:19	Összeg (Ft): 460300, Dátum: 2021-10-20, Kategória: Egyébjutatások 7
+2022-08-13 17:06:20	Összeg (Ft): 491800, Dátum: 2021-04-01, Kategória: Egyébjutatások 7
+2022-08-13 17:06:21	Összeg (Ft): -8588, Dátum: 2021-11-02, Kategória: Szabadidő 4
+2022-08-13 17:06:22	Összeg (Ft): -4594, Dátum: 2021-06-09, Kategória: Ruházat 2
+2022-08-13 17:06:23	Összeg (Ft): 494600, Dátum: 2021-01-07, Kategória: Fizetés 3
+2022-08-13 17:06:24	Adatok sikeresen feltöltve!
+2022-08-13 17:06:25	Az összes feltöltött adat és az összes lekérdezett adat megegyezik!
+2022-08-13 17:06:26	Dátum szerinti Csökkenő sorrend megegyezett!
+2022-08-13 17:06:26	Dátum szerinti Növekvő sorrend megegyezett!
+2022-08-13 17:06:26	Összeg szerinti Növekvő sorrend megegyezett!
+2022-08-13 17:06:27	Összeg szerinti Csökkenő sorrend megegyezett!
+2022-08-13 17:06:27	Kategoria szerinti Csökkenő sorrend megegyezett!
+2022-08-13 17:06:28	Kategoria szerinti Növekvő sorrend megegyezett!
+2022-08-13 17:06:28	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:28	-10780 Élelmiszer 2022-01-02 
+2022-08-13 17:06:28	-5626 Élelmiszer 2022-01-23 
+2022-08-13 17:06:28	-9338 Élelmiszer 2022-04-22 
+2022-08-13 17:06:28	-8738 Élelmiszer 2022-05-05 
+2022-08-13 17:06:28	Talált adat: 5, mért adat: 5.
+2022-08-13 17:06:28	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:28	-10780 Élelmiszer 2022-01-02 
+2022-08-13 17:06:28	-5626 Élelmiszer 2022-01-23 
+2022-08-13 17:06:28	-9338 Élelmiszer 2022-04-22 
+2022-08-13 17:06:28	-8738 Élelmiszer 2022-05-05 
+2022-08-13 17:06:28	Talált adat: 5, mért adat: 5.
+2022-08-13 17:06:28	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:28	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:28	Nincs ilyen adat!
+2022-08-13 17:06:29	Nincs ilyen adat!
+2022-08-13 17:06:29	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:29	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:31	Nincs ilyen adat!
+2022-08-13 17:06:31	Nincs ilyen adat!
+2022-08-13 17:06:31	Nincs ilyen adat!
+2022-08-13 17:06:31	Nincs ilyen adat!
+2022-08-13 17:06:31	Nincs ilyen adat!
+2022-08-13 17:06:32	Nincs ilyen adat!
+2022-08-13 17:06:32	Nincs ilyen adat!
+2022-08-13 17:06:32	Nincs ilyen adat!
+2022-08-13 17:06:32	Nincs ilyen adat!
+2022-08-13 17:06:32	-10780 Élelmiszer 2022-01-02 
+2022-08-13 17:06:32	-5626 Élelmiszer 2022-01-23 
+2022-08-13 17:06:32	-9338 Élelmiszer 2022-04-22 
+2022-08-13 17:06:32	-8738 Élelmiszer 2022-05-05 
+2022-08-13 17:06:32	Talált adat: 4, mért adat: 4.
+2022-08-13 17:06:32	-10780 Élelmiszer 2022-01-02 
+2022-08-13 17:06:32	-5626 Élelmiszer 2022-01-23 
+2022-08-13 17:06:32	Talált adat: 2, mért adat: 2.
+2022-08-13 17:06:35	Nincs ilyen adat!
+2022-08-13 17:06:35	Nincs ilyen adat!
+2022-08-13 17:06:35	-9338 Élelmiszer 2022-04-22 
+2022-08-13 17:06:35	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:37	-8738 Élelmiszer 2022-05-05 
+2022-08-13 17:06:37	Talált adat: 1, mért adat: 2.
+2022-08-13 17:06:37	Nem egyezik a talált és a mért adat!
+2022-08-13 17:06:39	Nincs ilyen adat!
+2022-08-13 17:06:40	Nincs ilyen adat!
+2022-08-13 17:06:40	Nincs ilyen adat!
+2022-08-13 17:06:40	Nincs ilyen adat!
+2022-08-13 17:06:40	Nincs ilyen adat!
+2022-08-13 17:06:40	Nincs ilyen adat!
+2022-08-13 17:06:41	Nincs ilyen adat!
+2022-08-13 17:06:41	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:41	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:41	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:41	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:41	Nincs ilyen adat!
+2022-08-13 17:06:41	Nincs ilyen adat!
+2022-08-13 17:06:42	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:42	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:43	Nincs ilyen adat!
+2022-08-13 17:06:44	Nincs ilyen adat!
+2022-08-13 17:06:44	Nincs ilyen adat!
+2022-08-13 17:06:44	Nincs ilyen adat!
+2022-08-13 17:06:44	Nincs ilyen adat!
+2022-08-13 17:06:44	Nincs ilyen adat!
+2022-08-13 17:06:45	Nincs ilyen adat!
+2022-08-13 17:06:45	Nincs ilyen adat!
+2022-08-13 17:06:45	Nincs ilyen adat!
+2022-08-13 17:06:45	Nincs ilyen adat!
+2022-08-13 17:06:45	Nincs ilyen adat!
+2022-08-13 17:06:45	Nincs ilyen adat!
+2022-08-13 17:06:45	Nincs ilyen adat!
+2022-08-13 17:06:45	Nincs ilyen adat!
+2022-08-13 17:06:46	Nincs ilyen adat!
+2022-08-13 17:06:46	Nincs ilyen adat!
+2022-08-13 17:06:46	Nincs ilyen adat!
+2022-08-13 17:06:46	Nincs ilyen adat!
+2022-08-13 17:06:46	Nincs ilyen adat!
+2022-08-13 17:06:46	Nincs ilyen adat!
+2022-08-13 17:06:47	Nincs ilyen adat!
+2022-08-13 17:06:47	Nincs ilyen adat!
+2022-08-13 17:06:47	Nincs ilyen adat!
+2022-08-13 17:06:47	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:47	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:47	Nincs ilyen adat!
+2022-08-13 17:06:47	Nincs ilyen adat!
+2022-08-13 17:06:47	-4924 Élelmiszer 2021-03-21 
+2022-08-13 17:06:47	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:49	Nincs ilyen adat!
+2022-08-13 17:06:50	Nincs ilyen adat!
+2022-08-13 17:06:50	Nincs ilyen adat!
+2022-08-13 17:06:50	Nincs ilyen adat!
+2022-08-13 17:06:50	Nincs ilyen adat!
+2022-08-13 17:06:50	Nincs ilyen adat!
+2022-08-13 17:06:50	Nincs ilyen adat!
+2022-08-13 17:06:51	Nincs ilyen adat!
+2022-08-13 17:06:51	Nincs ilyen adat!
+2022-08-13 17:06:51	Nincs ilyen adat!
+2022-08-13 17:06:51	Nincs ilyen adat!
+2022-08-13 17:06:51	Nincs ilyen adat!
+2022-08-13 17:06:51	Nincs ilyen adat!
+2022-08-13 17:06:51	Nincs ilyen adat!
+2022-08-13 17:06:52	Nincs ilyen adat!
+2022-08-13 17:06:52	Nincs ilyen adat!
+2022-08-13 17:06:52	Nincs ilyen adat!
+2022-08-13 17:06:52	Nincs ilyen adat!
+2022-08-13 17:06:52	Nincs ilyen adat!
+2022-08-13 17:06:52	Nincs ilyen adat!
+2022-08-13 17:06:53	Nincs ilyen adat!
+2022-08-13 17:06:53	Nincs ilyen adat!
+2022-08-13 17:06:53	-4594 Ruházat 2021-06-09 
+2022-08-13 17:06:53	-5388 Ruházat 2021-10-24 
+2022-08-13 17:06:53	-8470 Ruházat 2021-10-29 
+2022-08-13 17:06:53	-11000 Ruházat 2022-07-15 
+2022-08-13 17:06:53	Talált adat: 4, mért adat: 4.
+2022-08-13 17:06:53	-4594 Ruházat 2021-06-09 
+2022-08-13 17:06:53	-5388 Ruházat 2021-10-24 
+2022-08-13 17:06:53	-8470 Ruházat 2021-10-29 
+2022-08-13 17:06:53	-11000 Ruházat 2022-07-15 
+2022-08-13 17:06:53	Talált adat: 4, mért adat: 4.
+2022-08-13 17:06:53	-4594 Ruházat 2021-06-09 
+2022-08-13 17:06:53	-5388 Ruházat 2021-10-24 
+2022-08-13 17:06:53	-8470 Ruházat 2021-10-29 
+2022-08-13 17:06:53	Talált adat: 3, mért adat: 3.
+2022-08-13 17:06:53	Nincs ilyen adat!
+2022-08-13 17:06:54	Nincs ilyen adat!
+2022-08-13 17:06:54	Nincs ilyen adat!
+2022-08-13 17:06:54	Nincs ilyen adat!
+2022-08-13 17:06:54	Nincs ilyen adat!
+2022-08-13 17:06:54	-4594 Ruházat 2021-06-09 
+2022-08-13 17:06:54	Talált adat: 1, mért adat: 1.
+2022-08-13 17:06:56	Nincs ilyen adat!
+2022-08-13 17:06:56	Nincs ilyen adat!
+2022-08-13 17:06:56	Nincs ilyen adat!
+2022-08-13 17:06:57	-5388 Ruházat 2021-10-24 
+2022-08-13 17:06:57	-8470 Ruházat 2021-10-29 
+2022-08-13 17:06:57	Talált adat: 2, mért adat: 2.
+2022-08-13 17:06:59	Nincs ilyen adat!
+2022-08-13 17:07:00	Nincs ilyen adat!
+2022-08-13 17:07:00	-11000 Ruházat 2022-07-15 
+2022-08-13 17:07:00	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:00	Nincs ilyen adat!
+2022-08-13 17:07:00	Nincs ilyen adat!
+2022-08-13 17:07:00	Nincs ilyen adat!
+2022-08-13 17:07:00	Nincs ilyen adat!
+2022-08-13 17:07:00	Nincs ilyen adat!
+2022-08-13 17:07:01	Nincs ilyen adat!
+2022-08-13 17:07:01	-11000 Ruházat 2022-07-15 
+2022-08-13 17:07:01	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:03	Nincs ilyen adat!
+2022-08-13 17:07:03	Nincs ilyen adat!
+2022-08-13 17:07:03	Nincs ilyen adat!
+2022-08-13 17:07:03	Nincs ilyen adat!
+2022-08-13 17:07:04	Nincs ilyen adat!
+2022-08-13 17:07:04	-4594 Ruházat 2021-06-09 
+2022-08-13 17:07:04	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:04	-4594 Ruházat 2021-06-09 
+2022-08-13 17:07:04	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:04	Nincs ilyen adat!
+2022-08-13 17:07:04	Nincs ilyen adat!
+2022-08-13 17:07:04	Nincs ilyen adat!
+2022-08-13 17:07:05	Nincs ilyen adat!
+2022-08-13 17:07:05	Nincs ilyen adat!
+2022-08-13 17:07:05	-4594 Ruházat 2021-06-09 
+2022-08-13 17:07:05	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:07	Nincs ilyen adat!
+2022-08-13 17:07:07	Nincs ilyen adat!
+2022-08-13 17:07:07	Nincs ilyen adat!
+2022-08-13 17:07:07	Nincs ilyen adat!
+2022-08-13 17:07:08	Nincs ilyen adat!
+2022-08-13 17:07:08	Nincs ilyen adat!
+2022-08-13 17:07:08	Nincs ilyen adat!
+2022-08-13 17:07:08	Nincs ilyen adat!
+2022-08-13 17:07:08	Nincs ilyen adat!
+2022-08-13 17:07:08	Nincs ilyen adat!
+2022-08-13 17:07:09	Nincs ilyen adat!
+2022-08-13 17:07:09	Nincs ilyen adat!
+2022-08-13 17:07:09	Nincs ilyen adat!
+2022-08-13 17:07:09	Nincs ilyen adat!
+2022-08-13 17:07:09	Nincs ilyen adat!
+2022-08-13 17:07:09	Nincs ilyen adat!
+2022-08-13 17:07:10	Nincs ilyen adat!
+2022-08-13 17:07:10	Nincs ilyen adat!
+2022-08-13 17:07:10	Nincs ilyen adat!
+2022-08-13 17:07:10	Nincs ilyen adat!
+2022-08-13 17:07:10	-4594 Ruházat 2021-06-09 
+2022-08-13 17:07:10	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:10	Nincs ilyen adat!
+2022-08-13 17:07:10	Nincs ilyen adat!
+2022-08-13 17:07:11	Nincs ilyen adat!
+2022-08-13 17:07:11	Nincs ilyen adat!
+2022-08-13 17:07:11	Nincs ilyen adat!
+2022-08-13 17:07:11	-4594 Ruházat 2021-06-09 
+2022-08-13 17:07:11	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:13	Nincs ilyen adat!
+2022-08-13 17:07:13	Nincs ilyen adat!
+2022-08-13 17:07:13	Nincs ilyen adat!
+2022-08-13 17:07:14	Nincs ilyen adat!
+2022-08-13 17:07:14	Nincs ilyen adat!
+2022-08-13 17:07:14	Nincs ilyen adat!
+2022-08-13 17:07:14	Nincs ilyen adat!
+2022-08-13 17:07:14	Nincs ilyen adat!
+2022-08-13 17:07:14	Nincs ilyen adat!
+2022-08-13 17:07:14	Nincs ilyen adat!
+2022-08-13 17:07:15	Nincs ilyen adat!
+2022-08-13 17:07:15	Nincs ilyen adat!
+2022-08-13 17:07:15	Nincs ilyen adat!
+2022-08-13 17:07:15	Nincs ilyen adat!
+2022-08-13 17:07:15	Nincs ilyen adat!
+2022-08-13 17:07:15	Nincs ilyen adat!
+2022-08-13 17:07:16	Nincs ilyen adat!
+2022-08-13 17:07:16	Nincs ilyen adat!
+2022-08-13 17:07:16	Nincs ilyen adat!
+2022-08-13 17:07:16	447000 Fizetés 2021-01-03 
+2022-08-13 17:07:16	494600 Fizetés 2021-01-07 
+2022-08-13 17:07:16	375600 Fizetés 2021-10-15 
+2022-08-13 17:07:16	219100 Fizetés 2022-02-04 
+2022-08-13 17:07:16	412700 Fizetés 2022-04-04 
+2022-08-13 17:07:16	Talált adat: 5, mért adat: 5.
+2022-08-13 17:07:17	447000 Fizetés 2021-01-03 
+2022-08-13 17:07:17	494600 Fizetés 2021-01-07 
+2022-08-13 17:07:17	375600 Fizetés 2021-10-15 
+2022-08-13 17:07:17	219100 Fizetés 2022-02-04 
+2022-08-13 17:07:17	412700 Fizetés 2022-04-04 
+2022-08-13 17:07:17	Talált adat: 5, mért adat: 5.
+2022-08-13 17:07:17	447000 Fizetés 2021-01-03 
+2022-08-13 17:07:17	494600 Fizetés 2021-01-07 
+2022-08-13 17:07:17	375600 Fizetés 2021-10-15 
+2022-08-13 17:07:17	Talált adat: 3, mért adat: 3.
+2022-08-13 17:07:17	447000 Fizetés 2021-01-03 
+2022-08-13 17:07:17	494600 Fizetés 2021-01-07 
+2022-08-13 17:07:17	Talált adat: 2, mért adat: 2.
+2022-08-13 17:07:19	Nincs ilyen adat!
+2022-08-13 17:07:20	Nincs ilyen adat!
+2022-08-13 17:07:20	Nincs ilyen adat!
+2022-08-13 17:07:20	Nincs ilyen adat!
+2022-08-13 17:07:20	Nincs ilyen adat!
+2022-08-13 17:07:20	Nincs ilyen adat!
+2022-08-13 17:07:20	Nincs ilyen adat!
+2022-08-13 17:07:20	Nincs ilyen adat!
+2022-08-13 17:07:21	375600 Fizetés 2021-10-15 
+2022-08-13 17:07:21	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:23	Nincs ilyen adat!
+2022-08-13 17:07:23	Nincs ilyen adat!
+2022-08-13 17:07:23	219100 Fizetés 2022-02-04 
+2022-08-13 17:07:23	412700 Fizetés 2022-04-04 
+2022-08-13 17:07:23	Talált adat: 2, mért adat: 2.
+2022-08-13 17:07:23	Nincs ilyen adat!
+2022-08-13 17:07:23	219100 Fizetés 2022-02-04 
+2022-08-13 17:07:23	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:25	Nincs ilyen adat!
+2022-08-13 17:07:25	412700 Fizetés 2022-04-04 
+2022-08-13 17:07:25	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:27	Nincs ilyen adat!
+2022-08-13 17:07:28	Nincs ilyen adat!
+2022-08-13 17:07:28	Nincs ilyen adat!
+2022-08-13 17:07:28	Nincs ilyen adat!
+2022-08-13 17:07:28	Nincs ilyen adat!
+2022-08-13 17:07:28	Nincs ilyen adat!
+2022-08-13 17:07:28	Nincs ilyen adat!
+2022-08-13 17:07:29	Nincs ilyen adat!
+2022-08-13 17:07:29	219100 Fizetés 2022-02-04 
+2022-08-13 17:07:29	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:29	Nincs ilyen adat!
+2022-08-13 17:07:29	Nincs ilyen adat!
+2022-08-13 17:07:29	Nincs ilyen adat!
+2022-08-13 17:07:29	Nincs ilyen adat!
+2022-08-13 17:07:29	Nincs ilyen adat!
+2022-08-13 17:07:30	Nincs ilyen adat!
+2022-08-13 17:07:30	Nincs ilyen adat!
+2022-08-13 17:07:30	Nincs ilyen adat!
+2022-08-13 17:07:30	Nincs ilyen adat!
+2022-08-13 17:07:30	Nincs ilyen adat!
+2022-08-13 17:07:30	Nincs ilyen adat!
+2022-08-13 17:07:30	Nincs ilyen adat!
+2022-08-13 17:07:31	Nincs ilyen adat!
+2022-08-13 17:07:31	219100 Fizetés 2022-02-04 
+2022-08-13 17:07:31	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:31	Nincs ilyen adat!
+2022-08-13 17:07:31	219100 Fizetés 2022-02-04 
+2022-08-13 17:07:31	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:33	Nincs ilyen adat!
+2022-08-13 17:07:33	Nincs ilyen adat!
+2022-08-13 17:07:33	Nincs ilyen adat!
+2022-08-13 17:07:33	Nincs ilyen adat!
+2022-08-13 17:07:34	Nincs ilyen adat!
+2022-08-13 17:07:34	Nincs ilyen adat!
+2022-08-13 17:07:34	Nincs ilyen adat!
+2022-08-13 17:07:34	Nincs ilyen adat!
+2022-08-13 17:07:34	Nincs ilyen adat!
+2022-08-13 17:07:34	Nincs ilyen adat!
+2022-08-13 17:07:35	Nincs ilyen adat!
+2022-08-13 17:07:35	375600 Fizetés 2021-10-15 
+2022-08-13 17:07:35	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:35	Nincs ilyen adat!
+2022-08-13 17:07:35	Nincs ilyen adat!
+2022-08-13 17:07:35	Nincs ilyen adat!
+2022-08-13 17:07:35	Nincs ilyen adat!
+2022-08-13 17:07:35	Nincs ilyen adat!
+2022-08-13 17:07:35	Nincs ilyen adat!
+2022-08-13 17:07:35	Nincs ilyen adat!
+2022-08-13 17:07:36	Nincs ilyen adat!
+2022-08-13 17:07:36	Nincs ilyen adat!
+2022-08-13 17:07:36	375600 Fizetés 2021-10-15 
+2022-08-13 17:07:36	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:38	Nincs ilyen adat!
+2022-08-13 17:07:38	Nincs ilyen adat!
+2022-08-13 17:07:38	Nincs ilyen adat!
+2022-08-13 17:07:39	Nincs ilyen adat!
+2022-08-13 17:07:39	Nincs ilyen adat!
+2022-08-13 17:07:39	Nincs ilyen adat!
+2022-08-13 17:07:39	Nincs ilyen adat!
+2022-08-13 17:07:39	Nincs ilyen adat!
+2022-08-13 17:07:39	Nincs ilyen adat!
+2022-08-13 17:07:39	Nincs ilyen adat!
+2022-08-13 17:07:39	Nincs ilyen adat!
+2022-08-13 17:07:40	Nincs ilyen adat!
+2022-08-13 17:07:40	Nincs ilyen adat!
+2022-08-13 17:07:40	Nincs ilyen adat!
+2022-08-13 17:07:40	Nincs ilyen adat!
+2022-08-13 17:07:40	-8560 Szabadidő 2021-01-08 
+2022-08-13 17:07:40	-8588 Szabadidő 2021-11-02 
+2022-08-13 17:07:40	-15080 Szabadidő 2022-02-26 
+2022-08-13 17:07:40	-4830 Szabadidő 2022-06-25 
+2022-08-13 17:07:40	-4486 Szabadidő 2022-08-07 
+2022-08-13 17:07:40	-9932 Szabadidő 2022-08-10 
+2022-08-13 17:07:40	Talált adat: 6, mért adat: 6.
+2022-08-13 17:07:40	-8560 Szabadidő 2021-01-08 
+2022-08-13 17:07:40	-8588 Szabadidő 2021-11-02 
+2022-08-13 17:07:40	-15080 Szabadidő 2022-02-26 
+2022-08-13 17:07:40	-15080 Szabadidő 2022-02-26 
+2022-08-13 17:07:40	-4830 Szabadidő 2022-06-25 
+2022-08-13 17:07:40	-4486 Szabadidő 2022-08-07 
+2022-08-13 17:07:40	-9932 Szabadidő 2022-08-10 
+2022-08-13 17:07:40	Talált adat: 6, mért adat: 7.
+2022-08-13 17:07:40	Nem egyezik a talált és a mért adat!
+2022-08-13 17:07:41	-8560 Szabadidő 2021-01-08 
+2022-08-13 17:07:41	-8588 Szabadidő 2021-11-02 
+2022-08-13 17:07:41	Talált adat: 2, mért adat: 2.
+2022-08-13 17:07:41	-8560 Szabadidő 2021-01-08 
+2022-08-13 17:07:41	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:43	Nincs ilyen adat!
+2022-08-13 17:07:43	Nincs ilyen adat!
+2022-08-13 17:07:43	Nincs ilyen adat!
+2022-08-13 17:07:43	Nincs ilyen adat!
+2022-08-13 17:07:43	Nincs ilyen adat!
+2022-08-13 17:07:43	Nincs ilyen adat!
+2022-08-13 17:07:43	Nincs ilyen adat!
+2022-08-13 17:07:44	Nincs ilyen adat!
+2022-08-13 17:07:44	Nincs ilyen adat!
+2022-08-13 17:07:44	-8588 Szabadidő 2021-11-02 
+2022-08-13 17:07:44	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:46	Nincs ilyen adat!
+2022-08-13 17:07:46	-15080 Szabadidő 2022-02-26 
+2022-08-13 17:07:46	-4830 Szabadidő 2022-06-25 
+2022-08-13 17:07:46	-4486 Szabadidő 2022-08-07 
+2022-08-13 17:07:46	-9932 Szabadidő 2022-08-10 
+2022-08-13 17:07:46	Talált adat: 4, mért adat: 4.
+2022-08-13 17:07:46	Nincs ilyen adat!
+2022-08-13 17:07:46	-15080 Szabadidő 2022-02-26 
+2022-08-13 17:07:46	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:48	Nincs ilyen adat!
+2022-08-13 17:07:49	Nincs ilyen adat!
+2022-08-13 17:07:49	Nincs ilyen adat!
+2022-08-13 17:07:49	-4830 Szabadidő 2022-06-25 
+2022-08-13 17:07:49	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:51	Nincs ilyen adat!
+2022-08-13 17:07:51	-4486 Szabadidő 2022-08-07 
+2022-08-13 17:07:51	-9932 Szabadidő 2022-08-10 
+2022-08-13 17:07:51	Talált adat: 2, mért adat: 2.
+2022-08-13 17:07:54	Nincs ilyen adat!
+2022-08-13 17:07:54	Nincs ilyen adat!
+2022-08-13 17:07:54	Nincs ilyen adat!
+2022-08-13 17:07:54	Nincs ilyen adat!
+2022-08-13 17:07:55	-9932 Szabadidő 2022-08-10 
+2022-08-13 17:07:55	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:55	Nincs ilyen adat!
+2022-08-13 17:07:55	Nincs ilyen adat!
+2022-08-13 17:07:55	Nincs ilyen adat!
+2022-08-13 17:07:55	Nincs ilyen adat!
+2022-08-13 17:07:55	Nincs ilyen adat!
+2022-08-13 17:07:56	Nincs ilyen adat!
+2022-08-13 17:07:56	Nincs ilyen adat!
+2022-08-13 17:07:56	Nincs ilyen adat!
+2022-08-13 17:07:56	Nincs ilyen adat!
+2022-08-13 17:07:56	Nincs ilyen adat!
+2022-08-13 17:07:56	Nincs ilyen adat!
+2022-08-13 17:07:56	Nincs ilyen adat!
+2022-08-13 17:07:57	Nincs ilyen adat!
+2022-08-13 17:07:57	-9932 Szabadidő 2022-08-10 
+2022-08-13 17:07:57	Talált adat: 1, mért adat: 1.
+2022-08-13 17:07:57	Nincs ilyen adat!
+2022-08-13 17:07:57	Nincs ilyen adat!
+2022-08-13 17:07:57	Nincs ilyen adat!
+2022-08-13 17:07:57	Nincs ilyen adat!
+2022-08-13 17:07:57	Nincs ilyen adat!
+2022-08-13 17:07:57	Nincs ilyen adat!
+2022-08-13 17:07:58	Nincs ilyen adat!
+2022-08-13 17:07:58	-9932 Szabadidő 2022-08-10 
+2022-08-13 17:07:58	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:00	Nincs ilyen adat!
+2022-08-13 17:08:00	Nincs ilyen adat!
+2022-08-13 17:08:00	Nincs ilyen adat!
+2022-08-13 17:08:00	Nincs ilyen adat!
+2022-08-13 17:08:01	Nincs ilyen adat!
+2022-08-13 17:08:01	-8588 Szabadidő 2021-11-02 
+2022-08-13 17:08:01	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:01	Nincs ilyen adat!
+2022-08-13 17:08:01	Nincs ilyen adat!
+2022-08-13 17:08:01	Nincs ilyen adat!
+2022-08-13 17:08:01	Nincs ilyen adat!
+2022-08-13 17:08:01	Nincs ilyen adat!
+2022-08-13 17:08:01	Nincs ilyen adat!
+2022-08-13 17:08:02	Nincs ilyen adat!
+2022-08-13 17:08:02	Nincs ilyen adat!
+2022-08-13 17:08:02	Nincs ilyen adat!
+2022-08-13 17:08:02	Nincs ilyen adat!
+2022-08-13 17:08:02	-8588 Szabadidő 2021-11-02 
+2022-08-13 17:08:02	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:04	Nincs ilyen adat!
+2022-08-13 17:08:05	Nincs ilyen adat!
+2022-08-13 17:08:05	Nincs ilyen adat!
+2022-08-13 17:08:05	Nincs ilyen adat!
+2022-08-13 17:08:05	Nincs ilyen adat!
+2022-08-13 17:08:05	Nincs ilyen adat!
+2022-08-13 17:08:05	Nincs ilyen adat!
+2022-08-13 17:08:05	Nincs ilyen adat!
+2022-08-13 17:08:06	Nincs ilyen adat!
+2022-08-13 17:08:06	Nincs ilyen adat!
+2022-08-13 17:08:06	Nincs ilyen adat!
+2022-08-13 17:08:06	Nincs ilyen adat!
+2022-08-13 17:08:06	Nincs ilyen adat!
+2022-08-13 17:08:06	Nincs ilyen adat!
+2022-08-13 17:08:07	-9720 Számlák 2021-03-09 
+2022-08-13 17:08:07	-19020 Számlák 2021-05-16 
+2022-08-13 17:08:07	-4396 Számlák 2021-08-28 
+2022-08-13 17:08:07	-3478 Számlák 2021-08-31 
+2022-08-13 17:08:07	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:07	-14360 Számlák 2022-02-16 
+2022-08-13 17:08:07	-7962 Számlák 2022-02-25 
+2022-08-13 17:08:07	-4110 Számlák 2022-03-04 
+2022-08-13 17:08:07	-5112 Számlák 2022-04-12 
+2022-08-13 17:08:07	-6594 Számlák 2022-06-10 
+2022-08-13 17:08:07	-2118 Számlák 2022-08-01 
+2022-08-13 17:08:07	Talált adat: 11, mért adat: 11.
+2022-08-13 17:08:07	-9720 Számlák 2021-03-09 
+2022-08-13 17:08:07	-19020 Számlák 2021-05-16 
+2022-08-13 17:08:07	-4396 Számlák 2021-08-28 
+2022-08-13 17:08:07	-3478 Számlák 2021-08-31 
+2022-08-13 17:08:07	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:07	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:07	-14360 Számlák 2022-02-16 
+2022-08-13 17:08:07	-7962 Számlák 2022-02-25 
+2022-08-13 17:08:07	-4110 Számlák 2022-03-04 
+2022-08-13 17:08:07	-5112 Számlák 2022-04-12 
+2022-08-13 17:08:07	-6594 Számlák 2022-06-10 
+2022-08-13 17:08:07	-2118 Számlák 2022-08-01 
+2022-08-13 17:08:07	Talált adat: 11, mért adat: 12.
+2022-08-13 17:08:07	Nem egyezik a talált és a mért adat!
+2022-08-13 17:08:07	-9720 Számlák 2021-03-09 
+2022-08-13 17:08:07	-19020 Számlák 2021-05-16 
+2022-08-13 17:08:07	-4396 Számlák 2021-08-28 
+2022-08-13 17:08:07	-3478 Számlák 2021-08-31 
+2022-08-13 17:08:07	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:07	Talált adat: 5, mért adat: 5.
+2022-08-13 17:08:07	Nincs ilyen adat!
+2022-08-13 17:08:07	Nincs ilyen adat!
+2022-08-13 17:08:07	-9720 Számlák 2021-03-09 
+2022-08-13 17:08:07	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:09	Nincs ilyen adat!
+2022-08-13 17:08:09	-19020 Számlák 2021-05-16 
+2022-08-13 17:08:09	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:12	Nincs ilyen adat!
+2022-08-13 17:08:12	Nincs ilyen adat!
+2022-08-13 17:08:12	-4396 Számlák 2021-08-28 
+2022-08-13 17:08:12	-3478 Számlák 2021-08-31 
+2022-08-13 17:08:12	Talált adat: 2, mért adat: 2.
+2022-08-13 17:08:15	Nincs ilyen adat!
+2022-08-13 17:08:15	Nincs ilyen adat!
+2022-08-13 17:08:15	Nincs ilyen adat!
+2022-08-13 17:08:15	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:15	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:17	-14360 Számlák 2022-02-16 
+2022-08-13 17:08:17	-7962 Számlák 2022-02-25 
+2022-08-13 17:08:17	-4110 Számlák 2022-03-04 
+2022-08-13 17:08:17	-5112 Számlák 2022-04-12 
+2022-08-13 17:08:17	-6594 Számlák 2022-06-10 
+2022-08-13 17:08:17	-2118 Számlák 2022-08-01 
+2022-08-13 17:08:17	-2118 Számlák 2022-08-01 
+2022-08-13 17:08:17	Talált adat: 6, mért adat: 8.
+2022-08-13 17:08:17	Nem egyezik a talált és a mért adat!
+2022-08-13 17:08:17	Nincs ilyen adat!
+2022-08-13 17:08:17	-14360 Számlák 2022-02-16 
+2022-08-13 17:08:17	-7962 Számlák 2022-02-25 
+2022-08-13 17:08:17	Talált adat: 2, mért adat: 2.
+2022-08-13 17:08:20	-4110 Számlák 2022-03-04 
+2022-08-13 17:08:20	Talált adat: 1, mért adat: 3.
+2022-08-13 17:08:20	Nem egyezik a talált és a mért adat!
+2022-08-13 17:08:22	-5112 Számlák 2022-04-12 
+2022-08-13 17:08:22	Talált adat: 1, mért adat: 2.
+2022-08-13 17:08:22	Nem egyezik a talált és a mért adat!
+2022-08-13 17:08:24	Nincs ilyen adat!
+2022-08-13 17:08:24	-6594 Számlák 2022-06-10 
+2022-08-13 17:08:24	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:26	Nincs ilyen adat!
+2022-08-13 17:08:26	-2118 Számlák 2022-08-01 
+2022-08-13 17:08:26	-2118 Számlák 2022-08-01 
+2022-08-13 17:08:26	Talált adat: 1, mért adat: 2.
+2022-08-13 17:08:26	Nem egyezik a talált és a mért adat!
+2022-08-13 17:08:28	Nincs ilyen adat!
+2022-08-13 17:08:29	Nincs ilyen adat!
+2022-08-13 17:08:29	Nincs ilyen adat!
+2022-08-13 17:08:29	Nincs ilyen adat!
+2022-08-13 17:08:29	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:29	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:29	Talált adat: 1, mért adat: 2.
+2022-08-13 17:08:29	Nem egyezik a talált és a mért adat!
+2022-08-13 17:08:30	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:30	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:30	Nincs ilyen adat!
+2022-08-13 17:08:30	Nincs ilyen adat!
+2022-08-13 17:08:30	Nincs ilyen adat!
+2022-08-13 17:08:30	Nincs ilyen adat!
+2022-08-13 17:08:30	Nincs ilyen adat!
+2022-08-13 17:08:30	Nincs ilyen adat!
+2022-08-13 17:08:30	Nincs ilyen adat!
+2022-08-13 17:08:31	Nincs ilyen adat!
+2022-08-13 17:08:31	Nincs ilyen adat!
+2022-08-13 17:08:31	Nincs ilyen adat!
+2022-08-13 17:08:31	Nincs ilyen adat!
+2022-08-13 17:08:31	-15080 Számlák 2021-12-15 
+2022-08-13 17:08:31	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:33	Nincs ilyen adat!
+2022-08-13 17:08:33	Nincs ilyen adat!
+2022-08-13 17:08:34	Nincs ilyen adat!
+2022-08-13 17:08:34	Nincs ilyen adat!
+2022-08-13 17:08:34	Nincs ilyen adat!
+2022-08-13 17:08:34	Nincs ilyen adat!
+2022-08-13 17:08:34	Nincs ilyen adat!
+2022-08-13 17:08:34	Nincs ilyen adat!
+2022-08-13 17:08:34	Nincs ilyen adat!
+2022-08-13 17:08:35	Nincs ilyen adat!
+2022-08-13 17:08:35	Nincs ilyen adat!
+2022-08-13 17:08:35	Nincs ilyen adat!
+2022-08-13 17:08:35	Nincs ilyen adat!
+2022-08-13 17:08:35	Nincs ilyen adat!
+2022-08-13 17:08:35	-9720 Számlák 2021-03-09 
+2022-08-13 17:08:35	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:36	Nincs ilyen adat!
+2022-08-13 17:08:36	Nincs ilyen adat!
+2022-08-13 17:08:36	-9720 Számlák 2021-03-09 
+2022-08-13 17:08:36	Talált adat: 1, mért adat: 1.
+2022-08-13 17:08:38	Nincs ilyen adat!
+2022-08-13 17:08:38	Nincs ilyen adat!
+2022-08-13 17:08:38	Nincs ilyen adat!
+2022-08-13 17:08:38	Nincs ilyen adat!
+2022-08-13 17:08:38	Nincs ilyen adat!
+2022-08-13 17:08:39	Nincs ilyen adat!
+2022-08-13 17:08:39	Nincs ilyen adat!
+2022-08-13 17:08:39	Nincs ilyen adat!
+2022-08-13 17:08:39	Nincs ilyen adat!
+2022-08-13 17:08:39	Nincs ilyen adat!
+2022-08-13 17:08:39	Nincs ilyen adat!
+2022-08-13 17:08:40	Nincs ilyen adat!
+2022-08-13 17:08:40	Nincs ilyen adat!
+2022-08-13 17:08:40	Nincs ilyen adat!
+2022-08-13 17:08:40	Nincs ilyen adat!
+2022-08-13 17:08:40	Nincs ilyen adat!
+2022-08-13 17:08:40	Nincs ilyen adat!
+2022-08-13 17:08:40	Nincs ilyen adat!
+2022-08-13 17:08:41	Nincs ilyen adat!
+2022-08-13 17:08:41	Nincs ilyen adat!
+2022-08-13 17:08:41	Nincs ilyen adat!
+2022-08-13 17:08:41	Nincs ilyen adat!
+2022-08-13 17:08:41	-4178 Egyéb kiadások 2021-04-10 
+2022-08-13 17:08:41	-15300 Egyéb kiadások 2021-04-21 
+2022-08-13 17:08:41	-4514 Egyéb kiadások 2021-05-12 
+2022-08-13 17:08:41	-2738 Egyéb kiadások 2021-11-30 
+2022-08-13 17:08:41	-6222 Egyéb kiadások 2022-01-30 
+2022-08-13 17:08:41	-7968 Egyéb kiadások 2022-02-10 
+2022-08-13 17:08:41	-8626 Egyéb kiadások 2022-02-22 
+2022-08-13 17:08:41	-9754 Egyéb kiadások 2022-03-30 
+2022-08-13 17:08:41	-2026 Egyéb kiadások 2022-08-01 
+2022-08-13 17:08:41	-9410 Egyéb kiadások 2022-08-11 
+2022-08-13 17:08:41	Talált adat: 10, mért adat: 10.
+2022-08-13 17:08:42	-4178 Egyéb kiadások 2021-04-10 
+2022-08-13 17:08:42	-15300 Egyéb kiadások 2021-04-21 
+2022-08-13 17:08:42	-4514 Egyéb kiadások 2021-05-12 
+2022-08-13 17:08:42	-2738 Egyéb kiadások 2021-11-30 
+2022-08-13 17:08:42	-6222 Egyéb kiadások 2022-01-30 
+2022-08-13 17:08:42	-7968 Egyéb kiadások 2022-02-10 
+2022-08-13 17:08:42	-8626 Egyéb kiadások 2022-02-22 
+2022-08-13 17:08:42	-9754 Egyéb kiadások 2022-03-30 
+2022-08-13 17:08:42	-2026 Egyéb kiadások 2022-08-01 
+2022-08-13 17:08:42	-9410 Egyéb kiadások 2022-08-11 
+2022-08-13 17:08:42	Talált adat: 10, mért adat: 10.
+2022-08-13 17:08:42	-4178 Egyéb kiadások 2021-04-10 
+2022-08-13 17:08:42	-15300 Egyéb kiadások 2021-04-21 
+2022-08-13 17:08:42	-4514 Egyéb kiadások 2021-05-12 
+2022-08-13 17:08:42	-2738 Egyéb kiadások 2021-11-30 
+2022-08-13 17:08:42	Talált adat: 4, mért adat: 4.
+2022-08-13 17:08:42	Nincs ilyen adat!
+2022-08-13 17:08:42	Nincs ilyen adat!
+2022-08-13 17:08:42	Nincs ilyen adat!
+2022-08-13 17:08:42	-4178 Egyéb kiadások 2021-04-10 
+2022-08-13 17:08:42	-15300 Egyéb kiadások 2021-04-21 
+2022-08-13 17:08:42	Talált adat: 2, mért adat: 2.
+2022-08-13 17:08:45	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+2022-08-13 17:08:45	Felhasználó regisztrálásának az ideje: 0 perc 0 másodperc.
+2022-08-13 17:08:45	Felhasználó belépésének az ideje: 0 perc 0 másodperc.
+2022-08-13 17:08:45	Adatok feltöltésének az ideje: 1 perc 0 másodperc.
+2022-08-13 17:08:45	Adatok lekérdezésének az ideje: 2 perc 18 másodperc.
+2022-08-13 17:08:45	Egy adat módosításának és törlésének az ideje: 0 perc 0 másodperc.
+2022-08-13 17:08:45	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 0 másodperc.
+2022-08-13 17:08:45	A teszt befejeződött! Teljes ideje: 3 perc 27 másodperc.
