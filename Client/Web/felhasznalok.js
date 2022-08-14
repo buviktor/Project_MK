@@ -15,10 +15,11 @@ document.getElementById("gomb").onclick = function Keres(e) {
     .then((response) => response.json())
     .then(json => {
         if(json[0]!=null){
-        lista.innerHTML = "<tr><th>Név</th><th>E-mail</th><th>Ország</th><th>Megye</th><th>Város</th><th>Irányítószám</th><th>Dátum</th></tr>";
+        lista.innerHTML = "<tr><th>Név</th><th>E-mail</th><th>Ország</th><th>Megye</th><th>Város</th><th>Irányítószám</th><th>Dátum</th><th></th></tr>";
         json.forEach(cs => {
             if(cs!=json[0]) {
-                lista.innerHTML += "<tr><td>" + cs.name + "</td><td>" + cs.email + "</td><td>" + cs.country + "</td><td>" + cs.county + "</td><td>" + cs.city + "</td><td>" + cs.postcode + "</td><td>" + cs.date + "</td></tr>"
+                lista.innerHTML += "<tr><td>" + cs.name + "</td><td>" + cs.email + "</td><td>" + cs.country + "</td><td>" + cs.county + "</td>" +
+                "<td>" + cs.city + "</td><td>" + cs.postcode + "</td><td>" + cs.date + "</td><td><button class='btn btn-danger' id='"+ cs.id + "' onClick='reply_click(this.id)'>X</button></td></tr>"
             }
             else if(cs==json[0]){
                 if(document.getElementById("active").value == "0"){
@@ -36,6 +37,11 @@ document.getElementById("gomb").onclick = function Keres(e) {
     }
         })
         .catch (err => console.log(err));
+}
+
+// ----- Felhasználó ID -----
+function reply_click(clicked_id){
+    ID = clicked_id;
 }
 
 // ---- Felhasználó törlése ----
