@@ -459,7 +459,7 @@ app.route("/admin/users/:active/:order/:desc")
         else
             return res.status(400).send({message: "Hibás parancs!"})
 
-        const q= "select name,email,postcode,country,county,city, date_format(persons.active,'%Y-%m-%d') as date from persons " + where1 +" order by persons." + order1 + desc1
+        const q= "select ID,name,email,postcode,country,county,city, date_format(persons.active,'%Y-%m-%d') as date from persons " + where1 +" order by persons." + order1 + desc1
             pool.query(q,
                 function(error,results){
                     if(!error && req.user.username==AdminNev && results[0]){
