@@ -1,0 +1,58 @@
+####################################################################################################
+#                                2022-08-16 Automata Selenium Teszt                                #
+####################################################################################################
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+16:38:15	Teszt indítása!
+////////////////////////////////////////////////////////////////////////////////////////////////////
+16:38:15	Szükséges forrás fájlok betöltése....
+16:38:15	Forrás fájlok betöltése kész!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+16:38:17	Funkciónális teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+16:38:21	Regisztrációs funkció teszt OK!
+16:38:22	Bejelentkezős funkció teszt OK!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+16:38:22	Automata teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+16:38:22	1. felhasználó adatainak létrehozása...
+16:38:22	Fiók adatainak létrehozása kész!
+----------------------------------------------------------------------------------------------------
+16:38:22	1. felhasználó regisztrálása...
+16:38:22	Felhasználónév: Kocsis Edvarda
+16:38:22	Jelszó: m61js0rXD9
+16:38:22	Email: kocsis.edvarda3748@outlook.hu
+16:38:22	Irányítószám: 9178
+16:38:22	Ország: Magyarország
+16:38:22	Megye: Győr-Moson-Sopron
+16:38:22	Város: Hédervár
+16:38:24	Sikertelen regisztráció! Rendszer üzenet: 
+ 
+====================================================================================================
+16:38:24	1. felhasználó tesztjeinek részideje:
+ 
+16:38:24	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+16:38:24	Felhasználó regisztrálásának az ideje: 0 perc 2 másodperc.
+16:38:24	Felhasználó belépésének az ideje: 0 perc 0 másodperc.
+16:38:24	Adatok feltöltésének az ideje: 0 perc 0 másodperc.
+16:38:24	Adatok lekérdezésének az ideje: 0 perc 0 másodperc.
+16:38:24	Adatok módosításának és törlésének az ideje: 0 perc 0 másodperc.
+16:38:24	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 0 másodperc.
+====================================================================================================
+ 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+16:38:26	Tesztek összideje:
+
+16:38:26	Regisztráció és bejelentkező oldal funkcionális tesztjének az ideje: 0 perc 4 másodperc.
+16:38:26	Felhasználói adat létrehozásának az összideje: 0 perc 0 másodperc.
+16:38:26	Felhasználó regisztrálásának az összideje: 0 perc 2 másodperc.
+16:38:26	Felhasználó belépésének az összideje: 0 perc 0 másodperc.
+16:38:26	Adatok feltöltésének az összideje: 0 perc 0 másodperc.
+16:38:26	Adatok lekérdezésének az összideje: 0 perc 0 másodperc.
+16:38:26	Adatok módosításának és törlésének az összideje: 0 perc 0 másodperc.
+16:38:26	Felhasználó adatának módosítása és felhasználó törlésének az összideje: 0 perc 0 másodperc.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+16:38:26	A teszt befejeződött! Teljes ideje: 0 perc 11 másodperc.

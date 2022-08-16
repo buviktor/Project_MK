@@ -134,16 +134,16 @@ public class Data {
             day = String.valueOf(rand.nextInt(dayNow)+1);
             if (Integer.parseInt(day) < 10) day = "0" + day;
         } else {
-            switch (randomNumberForMonth-1) {
-                case 0: case 2: case 4: case 6: case 7: case 9: case 11:
+            switch (Integer.parseInt(month)) {
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                     if (randomNumberForDay >= 10) day = String.valueOf(randomNumberForDay);
                     else day = "0" + randomNumberForDay;
                     break;
-                case 1: 
+                case 2: 
                     if (randomNumberForDay >= 10) day = String.valueOf(randomNumberForDay-3);
                     else day = "0" + randomNumberForDay;
                     break;
-                case 3: case 5: case 8: case 10:
+                case 4: case 6: case 9: case 11:
                     if (randomNumberForDay >= 10) day = String.valueOf(randomNumberForDay-1);
                     else day = "0" + randomNumberForDay;
                     break;

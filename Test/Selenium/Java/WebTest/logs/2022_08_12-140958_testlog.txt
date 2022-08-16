@@ -1,9 +1,0 @@
-2022-08-12 14:09:37	Teszt indítása
-2022-08-12 14:09:37	Szükséges forrás fájlok betöltése....
-2022-08-12 14:09:37	Forrás fájlok betöltése kész!
- 
-2022-08-12 14:09:42	Sikeres bejelentkezés.
- 
-2022-08-12 14:09:54	Sikertelen belépési adat kitöltés!
- 
-2022-08-12 14:09:58	A teszt befejeződött! Teljes ideje: 0 perc 21 másodperc.

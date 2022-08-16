@@ -1,0 +1,148 @@
+####################################################################################################
+#                                2022-08-16 Automata Selenium Teszt                                #
+####################################################################################################
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+17:58:08	Teszt indítása!
+////////////////////////////////////////////////////////////////////////////////////////////////////
+17:58:08	Szükséges forrás fájlok betöltése....
+17:58:08	Forrás fájlok betöltése kész!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+17:58:11	Funkciónális teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+17:58:13	Regisztrációs funkció teszt OK!
+17:58:14	Bejelentkezős funkció teszt OK!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+17:58:14	Automata teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+17:58:14	1. felhasználó adatainak létrehozása...
+17:58:14	Fiók adatainak létrehozása kész!
+----------------------------------------------------------------------------------------------------
+17:58:14	1. felhasználó regisztrálása...
+17:58:14	Felhasználónév: Dömötör Zongor
+17:58:14	Jelszó: X6303zfKYU
+17:58:14	Email: domotor.zongor5346@gmail.com
+17:58:14	Irányítószám: 5213
+17:58:14	Ország: Magyarország
+17:58:14	Megye: Jász-Nagykun-Szolnok
+17:58:14	Város: Fegyvernek-Szapárfalu
+17:58:17	Sikeres regisztráció!
+----------------------------------------------------------------------------------------------------
+17:58:17	1. felhasználó bejelentkezése...
+17:58:18	Sikeres bejelentkezés.
+----------------------------------------------------------------------------------------------------
+17:58:18	Adatok feltöltése...
+17:58:20	Összeg (Ft): 145600,  Dátum: 2021-07-05,  Kategória: Egyébjutatások (7)
+17:58:21	Összeg (Ft): 491400,  Dátum: 2022-03-25,  Kategória: Egyébjutatások (7)
+17:58:22	Összeg (Ft):  -4048,  Dátum: 2022-07-11,  Kategória: Egyébkiadások (6)
+17:58:24	Összeg (Ft):  -6140,  Dátum: 2021-12-17,  Kategória: Élelmiszer (1)
+17:58:25	Összeg (Ft): 260300,  Dátum: 2022-06-23,  Kategória: Fizetés (3)
+17:58:27	Összeg (Ft):  -7584,  Dátum: 2021-02-28,  Kategória: Egyébkiadások (6)
+17:58:28	Összeg (Ft):  -4900,  Dátum: 2022-07-09,  Kategória: Élelmiszer (1)
+17:58:30	Összeg (Ft):  -8744,  Dátum: 2022-06-29,  Kategória: Élelmiszer (1)
+17:58:31	Összeg (Ft): 157900,  Dátum: 2022-06-20,  Kategória: Fizetés (3)
+17:58:33	Összeg (Ft):  -9360,  Dátum: 2021-02-15,  Kategória: Élelmiszer (1)
+17:58:34	Összeg (Ft): -10000,  Dátum: 2021-09-01,  Kategória: Szabadidő (4)
+17:58:36	Összeg (Ft): 223200,  Dátum: 2022-01-17,  Kategória: Egyébjutatások (7)
+17:58:37	Összeg (Ft):  -2798,  Dátum: 2022-04-28,  Kategória: Ruházat (2)
+17:58:39	Összeg (Ft):  -8862,  Dátum: 2022-06-30,  Kategória: Számlák (5)
+17:58:40	Összeg (Ft):  -6836,  Dátum: 2022-04-03,  Kategória: Egyébkiadások (6)
+17:58:42	Összeg (Ft):  -5708,  Dátum: 2022-03-30,  Kategória: Egyébkiadások (6)
+17:58:43	Összeg (Ft):  -6330,  Dátum: 2021-07-18,  Kategória: Egyébkiadások (6)
+17:58:45	Összeg (Ft):  -9762,  Dátum: 2022-05-13,  Kategória: Szabadidő (4)
+17:58:46	Összeg (Ft):  89900,  Dátum: 2022-05-14,  Kategória: Egyébjutatások (7)
+17:58:48	Összeg (Ft): 141100,  Dátum: 2022-06-10,  Kategória: Fizetés (3)
+17:58:49	Összeg (Ft):  -5864,  Dátum: 2021-01-21,  Kategória: Ruházat (2)
+17:58:51	Összeg (Ft):  -3440,  Dátum: 2021-04-20,  Kategória: Szabadidő (4)
+17:58:52	Összeg (Ft): -11820,  Dátum: 2022-06-06,  Kategória: Élelmiszer (1)
+17:58:54	Összeg (Ft): 363700,  Dátum: 2021-10-10,  Kategória: Fizetés (3)
+17:58:55	Összeg (Ft):  -7532,  Dátum: 2021-08-06,  Kategória: Egyébkiadások (6)
+17:58:57	Összeg (Ft):  -7312,  Dátum: 2022-05-18,  Kategória: Élelmiszer (1)
+17:58:58	Összeg (Ft): 188600,  Dátum: 2022-03-12,  Kategória: Fizetés (3)
+17:59:00	Összeg (Ft): -16760,  Dátum: 2022-02-20,  Kategória: Szabadidő (4)
+17:59:01	Összeg (Ft):  -2964,  Dátum: 2022-03-22,  Kategória: Számlák (5)
+17:59:03	Összeg (Ft):  -4136,  Dátum: 2021-12-26,  Kategória: Élelmiszer (1)
+17:59:04	Összeg (Ft):  -7884,  Dátum: 2021-08-13,  Kategória: Számlák (5)
+17:59:06	Összeg (Ft):  -7644,  Dátum: 2022-07-25,  Kategória: Szabadidő (4)
+17:59:07	Összeg (Ft): 196600,  Dátum: 2021-08-20,  Kategória: Fizetés (3)
+17:59:09	Összeg (Ft):  -7750,  Dátum: 2022-01-18,  Kategória: Szabadidő (4)
+17:59:10	Összeg (Ft):  -6262,  Dátum: 2021-08-20,  Kategória: Ruházat (2)
+17:59:11	Összeg (Ft):   4900,  Dátum: 2022-08-14,  Kategória: Fizetés (3)
+17:59:13	Összeg (Ft):  -7150,  Dátum: 2022-02-05,  Kategória: Élelmiszer (1)
+17:59:14	Összeg (Ft): -12920,  Dátum: 2021-08-18,  Kategória: Szabadidő (4)
+17:59:16	Összeg (Ft):  -9140,  Dátum: 2022-05-10,  Kategória: Egyébkiadások (6)
+17:59:17	Összeg (Ft):  -8752,  Dátum: 2022-03-26,  Kategória: Ruházat (2)
+17:59:19	Összeg (Ft):  -3120,  Dátum: 2022-04-29,  Kategória: Számlák (5)
+17:59:20	Összeg (Ft):  -8726,  Dátum: 2021-04-04,  Kategória: Egyébkiadások (6)
+17:59:21	Összeg (Ft):  -6476,  Dátum: 2022-01-02,  Kategória: Egyébkiadások (6)
+17:59:23	Összeg (Ft):  -8422,  Dátum: 2021-03-17,  Kategória: Ruházat (2)
+17:59:24	Összeg (Ft):  -2112,  Dátum: 2022-04-04,  Kategória: Egyébkiadások (6)
+17:59:26	Összeg (Ft):  -3900,  Dátum: 2022-02-03,  Kategória: Szabadidő (4)
+17:59:27	Összeg (Ft):  -9306,  Dátum: 2021-12-04,  Kategória: Élelmiszer (1)
+17:59:29	Összeg (Ft): 200700,  Dátum: 2021-03-01,  Kategória: Fizetés (3)
+17:59:30	Összeg (Ft):  -8008,  Dátum: 2022-06-26,  Kategória: Ruházat (2)
+17:59:32	Összeg (Ft):  -3744,  Dátum: 2022-07-01,  Kategória: Egyébkiadások (6)
+17:59:32	Adatok feltöltése kész!
+----------------------------------------------------------------------------------------------------
+17:59:32	Adatok lekérdezése...
+17:59:33	Az összes feltöltött adat és az összes lekérdezett adat megegyezik!
+17:59:34	Dátum szerinti Csökkenő sorrend megegyezett!
+17:59:34	Dátum szerinti Növekvő sorrend megegyezett!
+17:59:34	Összeg szerinti Növekvő sorrend megegyezett!
+17:59:35	Összeg szerinti Csökkenő sorrend megegyezett!
+17:59:35	Kategoria szerinti Csökkenő sorrend megegyezett!
+17:59:36	Kategoria szerinti Növekvő sorrend megegyezett!
+17:59:36	Az összegzés rész adatai valósak!
+ 
+17:59:36	Kiválasztva: Kiadás, Élelmiszer, Összes év
+17:59:36	-9360 Élelmiszer 2021-02-15 
+17:59:36	-9306 Élelmiszer 2021-12-04 
+17:59:36	-6140 Élelmiszer 2021-12-17 
+17:59:36	-4136 Élelmiszer 2021-12-26 
+17:59:36	-7150 Élelmiszer 2022-02-05 
+17:59:36	-7312 Élelmiszer 2022-05-18 
+17:59:36	-11820 Élelmiszer 2022-06-06 
+17:59:36	-8744 Élelmiszer 2022-06-29 
+17:59:36	-4900 Élelmiszer 2022-07-09 
+17:59:36	-4900 Élelmiszer 2022-07-09 
+17:59:36	Talált adat: 9, mért adat: 10.
+17:59:36	Nem egyezik a talált és a mért adat!
+ 
+17:59:37	Kiválasztva: Egyéb összeg, Élelmiszer, Összes év
+17:59:37	-7150 Élelmiszer 2022-02-05 
+17:59:37	Talált adat: 1, mért adat: 1.
+ 
+17:59:37	Kiválasztva: Egyéb összeg, Élelmiszer, Összes év
+17:59:37	-4900 Élelmiszer 2022-07-09 
+17:59:37	-4900 Élelmiszer 2022-07-09 
+17:59:37	Talált adat: 1, mért adat: 2.
+17:59:37	Nem egyezik a talált és a mért adat!
+ 
+====================================================================================================
+17:59:37	1. felhasználó tesztjeinek részideje:
+ 
+17:59:37	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+17:59:37	Felhasználó regisztrálásának az ideje: 0 perc 2 másodperc.
+17:59:37	Felhasználó belépésének az ideje: 0 perc 1 másodperc.
+17:59:37	Adatok feltöltésének az ideje: 1 perc 14 másodperc.
+17:59:37	Adatok lekérdezésének az ideje: 0 perc 5 másodperc.
+17:59:37	Adatok módosításának és törlésének az ideje: 0 perc 0 másodperc.
+17:59:37	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 0 másodperc.
+====================================================================================================
+ 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+17:59:39	Tesztek összideje:
+
+17:59:39	Regisztráció és bejelentkező oldal funkcionális tesztjének az ideje: 0 perc 3 másodperc.
+17:59:39	Felhasználói adat létrehozásának az összideje: 0 perc 0 másodperc.
+17:59:39	Felhasználó regisztrálásának az összideje: 0 perc 2 másodperc.
+17:59:39	Felhasználó belépésének az összideje: 0 perc 1 másodperc.
+17:59:39	Adatok feltöltésének az összideje: 1 perc 14 másodperc.
+17:59:39	Adatok lekérdezésének az összideje: 0 perc 5 másodperc.
+17:59:39	Adatok módosításának és törlésének az összideje: 0 perc 0 másodperc.
+17:59:39	Felhasználó adatának módosítása és felhasználó törlésének az összideje: 0 perc 0 másodperc.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+17:59:39	A teszt befejeződött! Teljes ideje: 1 perc 30 másodperc.
