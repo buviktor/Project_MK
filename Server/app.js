@@ -377,9 +377,9 @@ app.route("/admin/stat/:what/:order")
         }
         else
             return res.status(400).send({message: "Hibás parancs!"})
-        if(req.params.order==1)
+        if(req.params.order==0)
             var order1=" desc;"
-        else if(req.params.order==0)
+        else if(req.params.order==1)
             var order1=";"
         else
             return res.status(400).send({message: "Hibás parancs!"}) 
@@ -431,7 +431,7 @@ app.route("/admin/users/:active/:order/:desc")
     .get(authenticateToken,(req,res)=>{
         
         if(req.params.active=="0")
-            var where1="where datediff(CURDATE(), persons.active)>90"
+            var where1="where datediff(CURDATE(), persons.active)>90 or persons.active='0000-00-00'"
         else if(req.params.active=="1")
             var where1="where datediff(CURDATE(), persons.active)<=90"
         else if(req.params.active=="2")
