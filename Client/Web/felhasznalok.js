@@ -1,3 +1,5 @@
+let ID
+
 document.getElementById("gomb").onclick = function Keres(e) {
     e.preventDefault();
     const url = 'http://localhost:5000/admin/users' + "/" + document.getElementById("active").value + "/" + document.getElementById("order").value + "/" + document.getElementById("desc").value;
@@ -19,7 +21,7 @@ document.getElementById("gomb").onclick = function Keres(e) {
         json.forEach(cs => {
             if(cs!=json[0]) {
                 lista.innerHTML += "<tr><td>" + cs.name + "</td><td>" + cs.email + "</td><td>" + cs.country + "</td><td>" + cs.county + "</td>" +
-                "<td>" + cs.city + "</td><td>" + cs.postcode + "</td><td>" + cs.date + "</td><td><button class='btn btn-danger' id='"+ cs.id + "' onClick='reply_click(this.id)'>X</button></td></tr>"
+                "<td>" + cs.city + "</td><td>" + cs.postcode + "</td><td>" + cs.date + "</td><td><button class='btn btn-danger' id='"+ cs.ID + "' onClick='reply_click(this.id),Törlés()'>X</button></td></tr>"
             }
             else if(cs==json[0]){
                 if(document.getElementById("active").value == "0"){
@@ -44,7 +46,7 @@ function reply_click(clicked_id){
     ID = clicked_id;
 }
 
-// ---- Felhasználó törlése ----
+// ---- Passzív Felhasználók törlése ----
 function Töröl() {
 
     if (confirm("Biztosan törölni szeretné?") == true) {
@@ -68,5 +70,31 @@ function Töröl() {
      
 }else{
 
+}
+}
+
+// ---- Felhasználó törlése ----
+function Törlés() {
+
+    if (confirm("Biztosan törölni szeretné?") == true) {
+
+    const url = 'http://localhost:5000/user/person/' + ID;
+    const token = 'Bearer: ' + sessionStorage.token
+    fetch(url, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': token
+        },
+    })
+    
+        .then((response) => response.json())
+        .then((json) => {
+            document.getElementById("uzenet").innerHTML = json.message
+            setTimeout(function a() {
+                location.reload()
+            }, 1500)
+    })
+    .catch(err => console.log(err));
+    }else {
 }
 }
