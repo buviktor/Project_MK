@@ -1,0 +1,64 @@
+####################################################################################################
+#                                2022-08-17 Automata Selenium Teszt                                #
+####################################################################################################
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+18:24:35	Teszt indítása!
+////////////////////////////////////////////////////////////////////////////////////////////////////
+18:24:35	Szükséges forrás fájlok betöltése....
+18:24:36	Forrás fájlok betöltése kész!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+18:24:38	Funkciónális teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+18:24:40	Regisztrációs funkció teszt OK!
+18:24:42	Bejelentkezős funkció teszt OK!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+18:24:42	Admin teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+18:24:43	Sikeres bejelentkezés.
+18:24:44	TestLand Testas TestCity 1111 4
+18:24:44	valami valami valami 12221 1
+18:24:44	Sorrend egyezik!
+18:24:45	valami valami valami 12221 1
+18:24:45	TestLand Testas TestCity 1111 4
+18:24:45	Sorrend egyezik!
+18:24:45	teszt teszt teszt 2
+18:24:45	TestLand Testas TestCity 2
+18:24:45	valami valami valami 1
+18:24:45	Sorrend egyezik!
+18:24:45	valami valami valami 1
+18:24:45	teszt teszt teszt 2
+18:24:45	TestLand Testas TestCity 2
+18:24:45	Sorrend egyezik!
+18:24:46	TestLand Testas 2
+18:24:46	teszt teszt 2
+18:24:46	valami valami 1
+18:24:46	Sorrend egyezik!
+18:24:46	valami valami 1
+18:24:46	TestLand Testas 2
+18:24:46	teszt teszt 2
+18:24:46	Sorrend egyezik!
+18:24:47	TestLand 2
+18:24:47	teszt 2
+18:24:47	valami 1
+18:24:47	Sorrend egyezik!
+18:24:47	valami 1
+18:24:47	TestLand 2
+18:24:47	teszt 2
+18:24:47	Sorrend egyezik!
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+18:24:49	Tesztek összideje:
+
+18:24:49	Regisztráció és bejelentkező oldal funkcionális tesztjének az ideje: 0 perc 3 másodperc.
+18:24:49	Felhasználói adat létrehozásának az összideje: 0 perc 0 másodperc.
+18:24:49	Felhasználó regisztrálásának az összideje: 0 perc 0 másodperc.
+18:24:49	Felhasználó belépésének az összideje: 0 perc 0 másodperc.
+18:24:49	Adatok feltöltésének az összideje: 0 perc 0 másodperc.
+18:24:49	Adatok lekérdezésének az összideje: 0 perc 0 másodperc.
+18:24:49	Adatok módosításának és törlésének az összideje: 0 perc 0 másodperc.
+18:24:49	Felhasználó adatának módosítása és felhasználó törlésének az összideje: 0 perc 0 másodperc.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+18:24:49	A teszt befejeződött! Teljes ideje: 0 perc 13 másodperc.

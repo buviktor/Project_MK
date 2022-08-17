@@ -33,7 +33,7 @@ Insert into categories(ID, denomination) values
     (4, 'Szabadidő'),
     (5, 'Számlák'),
     (6, 'Egyéb kiadások'),
-    (7,'Egyéb jutatások');
+    (7,'Egyéb juttatások');
 
 
 ALTER TABLE registers AUTO_INCREMENT = 1;

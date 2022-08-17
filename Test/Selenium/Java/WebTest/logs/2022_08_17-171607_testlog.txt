@@ -1,0 +1,35 @@
+####################################################################################################
+#                                2022-08-17 Automata Selenium Teszt                                #
+####################################################################################################
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+17:15:57	Teszt indítása!
+////////////////////////////////////////////////////////////////////////////////////////////////////
+17:15:57	Szükséges forrás fájlok betöltése....
+17:15:57	Forrás fájlok betöltése kész!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+17:16:00	Funkciónális teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+17:16:02	Regisztrációs funkció teszt OK!
+17:16:03	Bejelentkezős funkció teszt OK!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+17:16:03	Admin teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+17:16:04	Sikeres bejelentkezés.
+17:16:05	Nincsenek regisztrált felhasználók!
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+17:16:07	Tesztek összideje:
+
+17:16:07	Regisztráció és bejelentkező oldal funkcionális tesztjének az ideje: 0 perc 3 másodperc.
+17:16:07	Felhasználói adat létrehozásának az összideje: 0 perc 0 másodperc.
+17:16:07	Felhasználó regisztrálásának az összideje: 0 perc 0 másodperc.
+17:16:07	Felhasználó belépésének az összideje: 0 perc 0 másodperc.
+17:16:07	Adatok feltöltésének az összideje: 0 perc 0 másodperc.
+17:16:07	Adatok lekérdezésének az összideje: 0 perc 0 másodperc.
+17:16:07	Adatok módosításának és törlésének az összideje: 0 perc 0 másodperc.
+17:16:07	Felhasználó adatának módosítása és felhasználó törlésének az összideje: 0 perc 0 másodperc.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+17:16:07	A teszt befejeződött! Teljes ideje: 0 perc 9 másodperc.
