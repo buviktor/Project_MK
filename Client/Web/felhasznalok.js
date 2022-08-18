@@ -28,8 +28,10 @@ document.getElementById("gomb").onclick = function Keres(e) {
                     össz.innerHTML = "<h4>Passzív felhasználók száma: " + cs.number + "</h4>",
                     delet.innerHTML = "<button id='delete' class='button btn btn-danger' onclick='Töröl()'>Passzív felhasználók törlése</button>"
                 }else if(document.getElementById("active").value == "1"){
+                    delet.innerHTML = "";
                     össz.innerHTML = "<h4>Aktív felhasználók száma: " + cs.number + "</h4>"
                 }else if(document.getElementById("active").value == "2"){
+                    delet.innerHTML = "";
                     össz.innerHTML = "<h4>Felhasználók száma: " + cs.number + "</h4>"
                 }
             } 
