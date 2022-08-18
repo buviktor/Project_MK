@@ -35,7 +35,8 @@ document.getElementById("gomb").onclick = function Keres(e) {
             } 
         });
     }else{
-        össz.innerHTML = "<h4>Nincs felhasználó!</h4>"
+        össz.innerHTML = "<h4>Nincs felhasználó!</h4>";
+        lista.style = "none"
     }
         })
         .catch (err => console.log(err));

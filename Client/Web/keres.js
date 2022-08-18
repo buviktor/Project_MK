@@ -92,8 +92,8 @@ document.getElementById("gomb2").onclick = function (e) {
                 
         } else {
             document.getElementById("uzenet").innerHTML = "Nincs ilyen adat!"
-            lista2.innerHTML = "<tr><th>Összegzés</th><th>Bevétel</th><th>Kiadás</th></tr>";
-            lista.innerHTML = "<tr><th>Összeg</th><th>Kategória</th><th>Dátum</th><th></th></tr>";
+             lista2.style = "none"; 
+             lista.style = "none";
         }
     })
         .catch (err => console.log(err));

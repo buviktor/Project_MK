@@ -38,9 +38,7 @@ a {
 .footer {
     position: fixed;
     bottom: 0;
-    height: 40px;
     width: 100%;
-
 }
 
 .reg {
@@ -82,10 +80,6 @@ a {
     .nav-link:hover {
         color: white;
     }
-    #lista{
-        display: block;
-    }
-
 }
 
 @media (min-width: 540px) {

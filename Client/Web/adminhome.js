@@ -22,7 +22,7 @@ window.addEventListener("load", function Adminhome() {
 
 document.getElementById("gomb2").onclick = function (e) {
     e.preventDefault();
-    const url = 'http://localhost:5000/admin/stat' + "/" + document.getElementById("what").value + "/" + document.getElementById("order").value;
+    const url = 'http://localhost:5000/admin/stat' + "/" + document.getElementById("what").value + "/" + document.getElementById("order1").value;
     const token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista")
     fetch(url, {
@@ -35,7 +35,7 @@ document.getElementById("gomb2").onclick = function (e) {
     .then((response) => response.json())
     .then(json => {
         if (document.getElementById("what").value == "country") {
-        lista.innerHTML = "<tr><th>Ország</th><th>DB</th></tr>";
+        lista.innerHTML = '<tr><th>Ország</th><th>DB</th></tr>';
         json.forEach(cs => {
             lista.innerHTML += "<tr><td>" + cs.country + "</td><td>" + cs.db + "</td></tr>"
                 });
