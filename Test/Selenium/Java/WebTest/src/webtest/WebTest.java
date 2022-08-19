@@ -17,7 +17,6 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
-import jdk.nashorn.internal.runtime.regexp.joni.EncodingHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -325,13 +324,11 @@ public class WebTest {
                 uploadDataSortingInt.add(Integer.parseInt(s[0]));
             }
             if (value == 2) {
-                
                 String categoryName = String.valueOf(category.get(Integer.parseInt(s[2])));
                 if (categoryName.equals("Egyébjuttatások")) categoryName = categoryName.replace("Egyébjuttatások", "Egyéb juttatások");
                 if (categoryName.equals("Egyébkiadások")) categoryName = categoryName.replace("Egyébkiadások", "Egyéb kiadások");
                 if (categoryName.equals("Élelmiszer")) categoryName = categoryName.replace("Élelmiszer", "Elelmiszer");
                 supportCategoryList.add(categoryName);
-                
             }
         }
         
@@ -686,12 +683,13 @@ public class WebTest {
                                                 
                                                 driver.findElement(By.id("gomb2")).click();
                                                 Thread.sleep(100);
-                                                table = driver.findElements(By.id("lista"));
-                                                tableToArrayList(table, allQuery);
                                                 message = driver.findElement(By.id("uzenet")).getText();
-
+                                                
                                                 hit = 0;
                                                 if (!message.equals("Nincs ilyen adat!")) {
+                                                    table = driver.findElements(By.id("lista"));
+                                                    tableToArrayList(table, allQuery);
+                                                    
                                                     for (int j = 0; j < allQuery.size(); j++) {
                                                         for (int k = 0; k < uploadData.size(); k++) {
                                                             String[] s = uploadData.get(k).split(", ");
@@ -708,7 +706,7 @@ public class WebTest {
                                                             }
                                                         }
                                                     }
-                                                }
+                                                } else allQuery.clear();
 
                                                 controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
@@ -728,12 +726,13 @@ public class WebTest {
                                                                                                                 
                                                         driver.findElement(By.id("gomb2")).click();
                                                         Thread.sleep(100);
-                                                        table = driver.findElements(By.id("lista"));
-                                                        tableToArrayList(table, allQuery);
                                                         message = driver.findElement(By.id("uzenet")).getText();
 
                                                         hit = 0;
                                                         if (!message.equals("Nincs ilyen adat!")) {
+                                                            table = driver.findElements(By.id("lista"));
+                                                            tableToArrayList(table, allQuery);
+                                                            
                                                             for (int j = 0; j < allQuery.size(); j++) {
                                                                 for (int k = 0; k < uploadData.size(); k++) {
                                                                     String[] s = uploadData.get(k).split(", ");
@@ -744,7 +743,7 @@ public class WebTest {
                                                                     }
                                                                 }
                                                             }
-                                                        }
+                                                        } else allQuery.clear();
 
                                                         controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
@@ -762,12 +761,13 @@ public class WebTest {
                                                                                                                               
                                                                 driver.findElement(By.id("gomb2")).click();
                                                                 Thread.sleep(100);
-                                                                table = driver.findElements(By.id("lista"));
-                                                                tableToArrayList(table, allQuery);
                                                                 message = driver.findElement(By.id("uzenet")).getText();
 
                                                                 hit = 0;
                                                                 if (!message.equals("Nincs ilyen adat!")) {
+                                                                    table = driver.findElements(By.id("lista"));
+                                                                    tableToArrayList(table, allQuery);
+                                                                
                                                                     for (int j = 0; j < allQuery.size(); j++) {
                                                                         for (int k = 0; k < uploadData.size(); k++) {
                                                                             String[] s = uploadData.get(k).split(", ");
@@ -780,7 +780,7 @@ public class WebTest {
                                                                             }
                                                                         }
                                                                     }
-                                                                }
+                                                                } else allQuery.clear();
 
                                                                 controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
@@ -850,12 +850,13 @@ public class WebTest {
 
                                                         driver.findElement(By.id("gomb2")).click();
                                                         Thread.sleep(250);
-                                                        table = driver.findElements(By.id("lista"));
-                                                        tableToArrayList(table, allQuery);
                                                         message = driver.findElement(By.id("uzenet")).getText();
 
                                                         hit = 0;
                                                         if (!message.equals("Nincs ilyen adat!")) {
+                                                            table = driver.findElements(By.id("lista"));
+                                                            tableToArrayList(table, allQuery);
+                                                        
                                                             for (int j = 0; j < allQuery.size(); j++) {
                                                                 for (int k = 0; k < uploadData.size(); k++) {
                                                                     String[] s = uploadData.get(k).split(", ");
@@ -872,7 +873,7 @@ public class WebTest {
                                                                     }
                                                                 }
                                                             }
-                                                        }
+                                                        } else allQuery.clear();
 
                                                         controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
@@ -927,12 +928,13 @@ public class WebTest {
                                                 
                                                 driver.findElement(By.id("gomb2")).click();
                                                 Thread.sleep(100);
-                                                table = driver.findElements(By.id("lista"));
-                                                tableToArrayList(table, allQuery);
                                                 message = driver.findElement(By.id("uzenet")).getText();
 
                                                 hit = 0;
                                                 if (!message.equals("Nincs ilyen adat!")) {
+                                                    table = driver.findElements(By.id("lista"));
+                                                    tableToArrayList(table, allQuery);
+                                                
                                                     for (int j = 0; j < allQuery.size(); j++) {
                                                         for (int k = 0; k < uploadData.size(); k++) {
                                                             String[] s = uploadData.get(k).split(", ");
@@ -949,7 +951,7 @@ public class WebTest {
                                                             }
                                                         }
                                                     }
-                                                }
+                                                } else allQuery.clear();
 
                                                 controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
@@ -969,12 +971,13 @@ public class WebTest {
                                                         
                                                         driver.findElement(By.id("gomb2")).click();
                                                         Thread.sleep(100);
-                                                        table = driver.findElements(By.id("lista"));
-                                                        tableToArrayList(table, allQuery);
                                                         message = driver.findElement(By.id("uzenet")).getText();
 
                                                         hit = 0;
                                                         if (!message.equals("Nincs ilyen adat!")) {
+                                                            table = driver.findElements(By.id("lista"));
+                                                            tableToArrayList(table, allQuery);
+                                                        
                                                             for (int j = 0; j < allQuery.size(); j++) {
                                                                 for (int k = 0; k < uploadData.size(); k++) {
                                                                     String[] s = uploadData.get(k).split(", ");
@@ -985,7 +988,7 @@ public class WebTest {
                                                                     }
                                                                 }
                                                             }
-                                                        }
+                                                        } else allQuery.clear();
 
                                                         controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
@@ -1003,12 +1006,13 @@ public class WebTest {
                                                                 
                                                                 driver.findElement(By.id("gomb2")).click();
                                                                 Thread.sleep(100);
-                                                                table = driver.findElements(By.id("lista"));
-                                                                tableToArrayList(table, allQuery);
                                                                 message = driver.findElement(By.id("uzenet")).getText();
 
                                                                 hit = 0;
                                                                 if (!message.equals("Nincs ilyen adat!")) {
+                                                                    table = driver.findElements(By.id("lista"));
+                                                                    tableToArrayList(table, allQuery);
+                                                                
                                                                     for (int j = 0; j < allQuery.size(); j++) {
                                                                         for (int k = 0; k < uploadData.size(); k++) {
                                                                             String[] s = uploadData.get(k).split(", ");
@@ -1021,7 +1025,7 @@ public class WebTest {
                                                                             }
                                                                         }
                                                                     }
-                                                                }
+                                                                } else allQuery.clear();
 
                                                                 controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
@@ -1090,12 +1094,13 @@ public class WebTest {
 
                                                         driver.findElement(By.id("gomb2")).click();
                                                         Thread.sleep(250);
-                                                        table = driver.findElements(By.id("lista"));
-                                                        tableToArrayList(table, allQuery);
                                                         message = driver.findElement(By.id("uzenet")).getText();
 
                                                         hit = 0;
                                                         if (!message.equals("Nincs ilyen adat!")) {
+                                                            table = driver.findElements(By.id("lista"));
+                                                            tableToArrayList(table, allQuery);
+                                                        
                                                             for (int j = 0; j < allQuery.size(); j++) {
                                                                 for (int k = 0; k < uploadData.size(); k++) {
                                                                     String[] s = uploadData.get(k).split(", ");
@@ -1112,7 +1117,7 @@ public class WebTest {
                                                                     }
                                                                 }
                                                             }
-                                                        }
+                                                        } else allQuery.clear();
 
                                                         controlForQuery(allQuery, hit, message);       // Mért adat ellenőrzése.
 
@@ -1159,6 +1164,11 @@ public class WebTest {
                                                         }
                                                     }
                                                 }
+                                            break;
+                                        default:
+                                            minimalLogs.add(" ");
+                                            minimalLogsAddToList(categoryArrayList.get(categoryNumber));
+                                            minimalLogsAddToList("Ilyen kategóriában nincs feltöltött adat!");
                                             break;
                                     }
                                 }
@@ -1565,18 +1575,47 @@ public class WebTest {
     }
     
     private static void adminSorting(int order, ArrayList<String> query, ArrayList<String> sort) {
+        ArrayList<String> supportSort = new ArrayList<>();
+        ArrayList<Integer> supportSortInt = new ArrayList<>();
+        ArrayList<String> supportQuery = new ArrayList<>();
         int hit = 0;
+        boolean number = true;
         
-        if (order == 0) Collections.sort(sort, Collections.reverseOrder());
-        else Collections.sort(sort);
-                                        
-        for (int i = 0; i < query.size(); i++) {
-            if(query.get(i).contains(sort.get(i))) {
-                hit++;
+        for (String e : sort) {
+            try {
+                supportSortInt.add(Integer.parseInt(replaceLetter(e.toLowerCase())));
+            } catch (Exception a) {
+                number = false;
+            }
+            if (!number) {
+                supportSort.add(replaceLetter(e.toLowerCase()));
+            }
+        }
+        for (String e : query) {
+            supportQuery.add(replaceLetter(e.toLowerCase()));
+        }
+        
+        if (number) {
+            if (order == 0) Collections.sort(supportSortInt, Collections.reverseOrder());
+            else Collections.sort(supportSortInt);
+        } else {
+            if (order == 0) Collections.sort(supportSort, Collections.reverseOrder());
+            else Collections.sort(supportSort);
+        }
+       
+        for (int i = 0; i < supportQuery.size(); i++) {
+            if (number) {
+                if(supportQuery.get(i).contains(String.valueOf(supportSortInt.get(i)))) {
+                    hit++;
+                }
+            } else {
+                if(supportQuery.get(i).contains(supportSort.get(i))) {
+                    hit++;
+                }
             }
         }
         
-        if (query.size() == hit) {
+        if (supportQuery.size() == hit) {
             minimalLogsAddToList("Sorrend egyezik!");
         } else {
             start = false;
@@ -1585,17 +1624,40 @@ public class WebTest {
         }
     }
     
+    private static String replaceLetter(String name) {
+        String replacedLetters = "";
+        String ABC = "abcdefghijklmnopqrstuvwxyz ,-0123456789";
+        char c;
+        for (int i=0; i<name.length(); i++) {
+            c = name.charAt(i);
+            switch(c) {
+                case 'á':
+                   c = 'a'; break;
+                case 'é':
+                   c = 'e'; break;
+                case 'í':
+                   c = 'i'; break;
+                case 'ó': case 'ö': case 'ő':
+                   c = 'o'; break;
+                case 'ú': case 'ü': case 'ű':
+                   c = 'u'; break;
+            }
+            if (ABC.indexOf(c) > -1) replacedLetters += c;
+        }
+        return replacedLetters;
+    }
+    
     private static void adminTest() {
-        int hit = 0;
+        int hit = 0, desc = 0;
         next = true;
         Select selectObject;
-        String categoryName = "";
+        String categoryName = "", find = "";
         
         try {
             Thread.sleep(250);
             List<WebElement> table = driver.findElements(By.id("lista"));       // Oldalon lévő táblázatának inicializálása.
             List<WebElement> selectLocation = driver.findElements(By.id("what"));       // Lekérdezés menü: Lokáció listázása.
-            List<WebElement> selectOrder = driver.findElements(By.id("order"));       // Lekérdezés menü: Sorrend listázása.
+            List<WebElement> selectOrder = driver.findElements(By.id("order1"));       // Lekérdezés menü: Sorrend listázása.
             List<WebElement> selectUser;                                            // Lekérdezés menü: Felhasználók csoportosítás listázása.
                 
             ArrayList<String> adminQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
@@ -1604,6 +1666,7 @@ public class WebTest {
             ArrayList<String> sort = new ArrayList<>();
             ArrayList<String> supportQuery = new ArrayList<>();
             ArrayList<String> userArrayList = new ArrayList<>();
+            ArrayList<String> deletedQuery = new ArrayList<>();
                 
             tableToArrayList(table, adminQuery);
             findElementsToArrayList(selectLocation, locationArrayList);
@@ -1623,72 +1686,64 @@ public class WebTest {
                             selectObject.selectByIndex(location);
                             selectObject = new Select(selectOrder.get(0));       // Dátum szerint csökkenő.
                             selectObject.selectByIndex(order);
-
+                            
                             driver.findElement(By.id("gomb2")).click();
                             Thread.sleep(250);
                             table = driver.findElements(By.id("lista"));
                             tableToArrayList(table, adminQuery);
                             
                             switch (location) {
-                                case 0:         // Irányítószám alapján keres.
+                                case 0:         // Ország alapján keres.
                                     if (next) {
-                                        for(String e : adminQuery){
-                                            String[] a = e.split(" ");
-                                            sort.add(a[4]);
-                                            System.out.println(a.length);
-                                            if (a.length != 5) {
-                                                start = false;
-                                                next = false;
-                                                minimalLogsAddToList("Talált adatban nincs benne az összes kritérium!");
-                                            } else minimalLogsAddToList(e.toString());
+                                        minimalLogs.add(" ");
+                                        minimalLogsAddToList("Kiválasztva: " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                        for (int i = 0; i < adminQuery.size(); i++) {
+                                            find = driver.findElement(By.xpath("/html/body/div[2]/table/tbody[" + (i+2) + "]/tr/td[2]")).getText();
+                                            sort.add(find);
+                                            minimalLogsAddToList(adminQuery.get(i));
                                         }
                                         
                                         adminSorting(order, adminQuery, sort);
                                     }
                                     break;
-                                case 1:         // Város alapján keres.
+                                case 1:         // Irányítószám alapján keres.
                                     if (next) {
-                                        for(String e : adminQuery){
-                                            String[] a = e.split(" ");
-                                            sort.add(a[3]);
-                                            System.out.println(a.length);
-                                            if (a.length != 4) {
-                                                start = false;
-                                                next = false;
-                                                minimalLogsAddToList("Talált adatban nincs benne az összes kritérium!");
-                                            } else minimalLogsAddToList(e.toString());
+                                        minimalLogs.add(" ");
+                                        minimalLogsAddToList("Kiválasztva: " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                        for (int i = 0; i < adminQuery.size(); i++) {
+                                            find = driver.findElement(By.xpath("/html/body/div[2]/table/tbody[" + (i+2) + "]/tr/td[5]")).getText();
+                                            sort.add(find);
+                                            minimalLogsAddToList(adminQuery.get(i));
+                                        }
+                                       
+                                        adminSorting(order, adminQuery, sort);
+                                    }
+                                    break;
+                                case 2:         // Város alapján keres.
+                                    if (next) {
+                                        minimalLogs.add(" ");
+                                        minimalLogsAddToList("Kiválasztva: " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                        for (int i = 0; i < adminQuery.size(); i++) {
+                                            find = driver.findElement(By.xpath("/html/body/div[2]/table/tbody[" + (i+2) + "]/tr/td[4]")).getText();
+                                            sort.add(find);
+                                            minimalLogsAddToList(adminQuery.get(i));
                                         }
                                         
                                         adminSorting(order, adminQuery, sort);
                                     }
                                     break;
-                                case 2:         // Megye alapján keres.
+                                case 3:         // Megye alapján keres.
                                     if (next) {
-                                        for(String e : adminQuery){
-                                            String[] a = e.split(" ");
-                                            sort.add(a[2]);
-                                            System.out.println(a.length);
-                                            if (a.length != 3) {
-                                                start = false;
-                                                next = false;
-                                                minimalLogsAddToList("Talált adatban nincs benne az összes kritérium!");
-                                            } else minimalLogsAddToList(e.toString());
-                                        }
-                                        
-                                        adminSorting(order, adminQuery, sort);
-                                    }
-                                    break;
-                                case 3:         // Ország alapján keres.
-                                    if (next) {
-                                        for(String e : adminQuery){
-                                            String[] a = e.split(" ");
-                                            sort.add(a[1]);
-                                            System.out.println(a.length);
-                                            if (a.length != 2) {
-                                                start = false;
-                                                next = false;
-                                                minimalLogsAddToList("Talált adatban nincs benne az összes kritérium!");
-                                            } else minimalLogsAddToList(e.toString());
+                                        minimalLogs.add(" ");
+                                        minimalLogsAddToList("Kiválasztva: " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                        for (int i = 0; i < adminQuery.size(); i++) {
+                                            find = driver.findElement(By.xpath("/html/body/div[2]/table/tbody[" + (i+2) + "]/tr/td[3]")).getText();
+                                            sort.add(find);
+                                            minimalLogsAddToList(adminQuery.get(i));
                                         }
                                         
                                         adminSorting(order, adminQuery, sort);
@@ -1697,7 +1752,6 @@ public class WebTest {
                             }
                         }
                     }
-                    System.out.println(adminQuery);
                 } 
             }
             
@@ -1705,7 +1759,7 @@ public class WebTest {
                 categoryName = "Drogéria";
                 driver.findElement(By.linkText("Kategóriák")).click();
                 Thread.sleep(100);
-                table = driver.findElements(By.id("lista"));
+                table = driver.findElements(By.id("menu"));
                 tableToArrayList(table, adminQuery);
                 
                 minimalLogs.add(" ");
@@ -1714,45 +1768,34 @@ public class WebTest {
                 driver.findElement(By.id("categori")).sendKeys(categoryName);
                 driver.findElement(By.id("gomb1")).click();
                 Thread.sleep(100);
+                message = driver.findElement(By.id("uzenet")).getText();
                 
-                driver.navigate().refresh();
-                Thread.sleep(100);
-                
-                table = driver.findElements(By.id("lista"));
-                tableToArrayList(table, supportQuery);
-                
-                if (supportQuery.size() > adminQuery.size()) {
-                    for (int i = 0; i < supportQuery.size(); i++) {
-                        if (supportQuery.get(i).contains(categoryName)) minimalLogsAddToList("Sikeres hozzáadás!");
-                        else {
-                            start = false;
-                            next = false;
-                            minimalLogsAddToList("Sikeres hozzáadás, de nem egyezik a bevitt adattal!");
-                        }
-                    }
-                } else {
-                    start = false;
-                    next = false;
-                    minimalLogsAddToList("Sikertelen hozzáadás!");
+                if (message.equals("Hozzáadás sikeres!")) {
+                    minimalLogsAddToList("Sikeres hozzáadás!");
                 }
             }
             
             if (next) {
+                Thread.sleep(3000);
                 String newCategoryName = "Egészség";
                 
                 minimalLogs.add(" ");
                 minimalLogsAddToList(categoryName + " kategória módosítása " + newCategoryName + " -ra/-re..." );
                 
+                table = driver.findElements(By.id("menu"));
+                tableToArrayList(table, supportQuery);
+                
+                driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END);
+                Thread.sleep(500);
                 driver.findElement(By.id(String.valueOf(supportQuery.size()))).click();
                 Thread.sleep(100);
+                driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END);
+                Thread.sleep(500);
                 driver.findElement(By.id("newcategori")).sendKeys(newCategoryName);
                 driver.findElement(By.id("gomb2")).click();
-                Thread.sleep(100);
+                Thread.sleep(3000);
                 
-                driver.navigate().refresh();
-                Thread.sleep(100);
-                
-                table = driver.findElements(By.id("lista"));
+                table = driver.findElements(By.id("menu"));
                 tableToArrayList(table, adminQuery);
                 
                 for (int i = 0; i < adminQuery.size(); i++) {
@@ -1774,8 +1817,10 @@ public class WebTest {
                 Thread.sleep(100);
                 selectUser = driver.findElements(By.id("active")); 
                 findElementsToArrayList(selectUser, userArrayList);
+                locationArrayList.clear();
                 selectLocation = driver.findElements(By.id("order"));
                 findElementsToArrayList(selectLocation, locationArrayList);
+                orderArrayList.clear();
                 selectOrder = driver.findElements(By.id("desc")); 
                 findElementsToArrayList(selectOrder, orderArrayList);
                 
@@ -1796,77 +1841,180 @@ public class WebTest {
                             tableToArrayList(table, adminQuery);
                             message = driver.findElement(By.id("össz")).getText();
                             
-                            // INNENTŐL NEM JÓ, TESZTELVE NEM VOLT CSAK MÁSOLTAM
+                            if (order == 0) desc = 1;
+                            else desc = 0;
+                            
                             if (!message.equals("Nincs felhasználó!")) {
-                            switch (location) {
-                                case 0:         // Irányítószám alapján keres.
-                                    if (next) {
-                                        for(String e : adminQuery){
-                                            String[] a = e.split(" ");
-                                            sort.add(a[4]);
-                                            System.out.println(a.length);
-                                            if (a.length != 5) {
-                                                start = false;
-                                                next = false;
-                                                minimalLogsAddToList("Talált adatban nincs benne az összes kritérium!");
-                                            } else minimalLogsAddToList(e.toString());
+                                switch (location) {
+                                    case 0:         // Név alapján keres.
+                                        if (next) {
+                                            minimalLogs.add(" ");
+                                            minimalLogsAddToList("Kiválasztva: " + userArrayList.get(user) + ", " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                            for (int i = 0; i < adminQuery.size(); i++) {
+                                                find = driver.findElement(By.xpath("/html/body/div[3]/table/tbody[" + (i+2) + "]/tr/td[1]")).getText();
+                                                sort.add(find);
+                                                minimalLogsAddToList(adminQuery.get(i));
+                                            }
+                                            
+                                            adminSorting(desc, adminQuery, sort);
                                         }
-                                        
-                                        adminSorting(order, adminQuery, sort);
-                                    }
-                                    break;
-                                case 1:         // Város alapján keres.
-                                    if (next) {
-                                        for(String e : adminQuery){
-                                            String[] a = e.split(" ");
-                                            sort.add(a[3]);
-                                            System.out.println(a.length);
-                                            if (a.length != 4) {
-                                                start = false;
-                                                next = false;
-                                                minimalLogsAddToList("Talált adatban nincs benne az összes kritérium!");
-                                            } else minimalLogsAddToList(e.toString());
+                                        break;
+                                    case 1:         // Irányítószám alapján keres.
+                                        if (next) {
+                                            minimalLogs.add(" ");
+                                            minimalLogsAddToList("Kiválasztva: " + userArrayList.get(user) + ", " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                            for (int i = 0; i < adminQuery.size(); i++) {
+                                                find = driver.findElement(By.xpath("/html/body/div[3]/table/tbody[" + (i+2) + "]/tr/td[6]")).getText();
+                                                sort.add(find);
+                                                minimalLogsAddToList(adminQuery.get(i));
+                                            }
+                                            
+                                            adminSorting(desc, adminQuery, sort);
                                         }
-                                        
-                                        adminSorting(order, adminQuery, sort);
-                                    }
-                                    break;
-                                case 2:         // Megye alapján keres.
-                                    if (next) {
-                                        for(String e : adminQuery){
-                                            String[] a = e.split(" ");
-                                            sort.add(a[2]);
-                                            System.out.println(a.length);
-                                            if (a.length != 3) {
-                                                start = false;
-                                                next = false;
-                                                minimalLogsAddToList("Talált adatban nincs benne az összes kritérium!");
-                                            } else minimalLogsAddToList(e.toString());
+                                        break;
+                                    case 2:         // Megye alapján keres.
+                                        if (next) {
+                                            minimalLogs.add(" ");
+                                            minimalLogsAddToList("Kiválasztva: " + userArrayList.get(user) + ", " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                            for (int i = 0; i < adminQuery.size(); i++) {
+                                                find = driver.findElement(By.xpath("/html/body/div[3]/table/tbody[" + (i+2) + "]/tr/td[4]")).getText();
+                                                sort.add(find);
+                                                minimalLogsAddToList(adminQuery.get(i));
+                                            }
+                                            
+                                            adminSorting(desc, adminQuery, sort);
                                         }
-                                        
-                                        adminSorting(order, adminQuery, sort);
-                                    }
-                                    break;
-                                case 3:         // Ország alapján keres.
-                                    if (next) {
-                                        for(String e : adminQuery){
-                                            String[] a = e.split(" ");
-                                            sort.add(a[1]);
-                                            System.out.println(a.length);
-                                            if (a.length != 2) {
-                                                start = false;
-                                                next = false;
-                                                minimalLogsAddToList("Talált adatban nincs benne az összes kritérium!");
-                                            } else minimalLogsAddToList(e.toString());
+                                        break;
+                                    case 3:         // Ország alapján keres.
+                                        if (next) {
+                                            minimalLogs.add(" ");
+                                            minimalLogsAddToList("Kiválasztva: " + userArrayList.get(user) + ", " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                            for (int i = 0; i < adminQuery.size(); i++) {
+                                                find = driver.findElement(By.xpath("/html/body/div[3]/table/tbody[" + (i+2) + "]/tr/td[3]")).getText();
+                                                sort.add(find);
+                                                minimalLogsAddToList(adminQuery.get(i));
+                                            }
+                                            
+                                            adminSorting(desc, adminQuery, sort);
                                         }
-                                        
-                                        adminSorting(order, adminQuery, sort);
-                                    }
-                                    break;
+                                        break;
+                                    case 4:         // Város alapján keres.
+                                        if (next) {
+                                            minimalLogs.add(" ");
+                                            minimalLogsAddToList("Kiválasztva: " + userArrayList.get(user) + ", " + locationArrayList.get(location) + ", " + orderArrayList.get(order));
+                                            
+                                            for (int i = 0; i < adminQuery.size(); i++) {
+                                                find = driver.findElement(By.xpath("/html/body/div[3]/table/tbody[" + (i+2) + "]/tr/td[5]")).getText();
+                                                sort.add(find);
+                                                minimalLogsAddToList(adminQuery.get(i));
+                                            }
+                                            
+                                            adminSorting(desc, adminQuery, sort);
+                                        }
+                                        break;
+                                }
                             }
-                            }
+                            else minimalLogsAddToList(message);
                         }
                     }
+                }
+            }
+            
+            if (next) {
+                minimalLogs.add(" ");
+                minimalLogsAddToList("Felhasználó törlése...");
+                selectObject = new Select(selectOrder.get(0));       // növekvő.
+                selectObject.selectByIndex(0);
+                selectUser = driver.findElements(By.id("active"));
+                driver.findElement(By.id("gomb")).click();
+                Thread.sleep(250);
+                driver.findElement(By.xpath("/html/body/div[3]/table/tbody[2]/tr/td[8]/button")).click();
+                Thread.sleep(100);
+                Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+                Thread.sleep(100);
+                String text = alert.getText();
+                if (text.equals("Biztosan törölni szeretné?")) alert.accept();
+                else {
+                    minimalLogsAddToList("Hibás alert!");
+                    alert = driver.switchTo().alert();
+                    alert.dismiss();
+                    start = false;
+                    next = false;
+                }
+                
+                selectObject = new Select(selectUser.get(0));       // User kiválasztása.
+                selectObject.selectByIndex(2);
+                selectObject = new Select(selectLocation.get(0));       // Lokáció kiválasztása.
+                selectObject.selectByIndex(4);
+                selectObject = new Select(selectOrder.get(0));       // növekvő.
+                selectObject.selectByIndex(0);
+                driver.findElement(By.id("gomb")).click();
+                Thread.sleep(250);
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, deletedQuery);
+                
+                if (!adminQuery.get(0).equals(deletedQuery.get(0))) minimalLogsAddToList("Felhasználó törlése sikeres!");
+                else {
+                    next = false;
+                    start = false;
+                    minimalLogsAddToList("Sikertelen felhasználó törlés!");
+                }
+            }
+            
+            if (next) {
+                minimalLogs.add(" ");
+                minimalLogsAddToList("Passzív felhasználók törlése...");
+                selectUser = driver.findElements(By.id("active"));
+                selectObject = new Select(selectUser.get(0));       // User kiválasztása.
+                selectObject.selectByIndex(0);
+                selectObject = new Select(selectLocation.get(0));       // Lokáció kiválasztása.
+                selectObject.selectByIndex(0);
+                selectObject = new Select(selectOrder.get(0));       // növekvő.
+                selectObject.selectByIndex(0);
+                
+                driver.findElement(By.id("gomb")).click();
+                Thread.sleep(250);
+                table = driver.findElements(By.id("lista"));
+                tableToArrayList(table, deletedQuery);
+                message = driver.findElement(By.id("össz")).getText();
+                
+                if (!message.equals("Nincs felhasználó!")) {
+                    driver.findElement(By.id("delete")).click();
+                    Thread.sleep(100);
+                    Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+                    Thread.sleep(100);
+                    String text = alert.getText();
+                    if (text.equals("Biztosan törölni szeretné?")) alert.accept();
+                    else {
+                        minimalLogsAddToList("Hibás alert!");
+                        alert = driver.switchTo().alert();
+                        alert.dismiss();
+                        start = false;
+                        next = false;
+                    }
+                    
+                    Thread.sleep(1000);
+                    driver.findElement(By.id("gomb")).click();
+                    Thread.sleep(250);
+                    table = driver.findElements(By.id("lista"));
+                    tableToArrayList(table, deletedQuery);
+                
+                    if (!deletedQuery.get(0).isEmpty()) {
+                        minimalLogsAddToList("Passzív felhasználók törlése sikeres!");
+                        driver.findElement(By.linkText("Kijelentkezés")).click();
+                    }
+                    else {
+                        next = false;
+                        start = false;
+                        minimalLogsAddToList("Sikertelen a passzív felhasználók törlése!");
+                    }
+                } else {
+                    minimalLogsAddToList(message);
+                    minimalLogsAddToList("Sikertelen a passzív felhasználók törlése!");
                 }
             }
         } catch (Exception e) {
@@ -1901,7 +2049,7 @@ public class WebTest {
         LocalTime startUserDataAdd = LocalTime.now(), endUserDataAdd = LocalTime.now(), startUserDataQuery = LocalTime.now();
         LocalTime endUserDataQuery = LocalTime.now(), startUserDataEditAndDelete = LocalTime.now(), endUserDataEditAndDelete = LocalTime.now();
         LocalTime startUserEditAndDelete = LocalTime.now(), endUserEditAndDelete = LocalTime.now();
-        LocalTime startFunctionTest = LocalTime.now(), endFunctionTest = LocalTime.now();
+        LocalTime startFunctionTest = LocalTime.now(), endFunctionTest = LocalTime.now(), startAdminTest = LocalTime.now(), endAdminTest = LocalTime.now();
         LocalTime startTime = LocalTime.now();
         int AllTimeUserDataInit = 0, AllTimeUserRegister = 0, AllTimeUserLogin = 0, AllTimeUserDataAdd = 0, AllTimeUserDataQuery = 0;
         int AllTimeUserDataEditAndDelete = 0, AllTimeUserEditAndDelete = 0;
@@ -1936,7 +2084,7 @@ public class WebTest {
             .ignoring(NoSuchElementException.class);
 
         driver.get(pagePath("index.html"));     // A főoldal betöltése.
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);        // Időzítés beállítása.
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);        // Időzítés beállítása.
         
         start = true;       // Indítási érték.
         
@@ -1959,7 +2107,7 @@ public class WebTest {
         /**
         * Második teszt: Automata teszt 3x.
         **/
-        /*
+        
         if (start) {
             minimalLogs.add(" ");       // Üres sor beszúrása a log file-ba.
             minimalLogs.add(String.join("", Collections.nCopies(100, ">")));
@@ -2105,8 +2253,10 @@ public class WebTest {
             minimalLogsAddToList("Admin teszt indítása!");
             minimalLogs.add(String.join("", Collections.nCopies(100, "<")));
             
+            startAdminTest = LocalTime.now(); 
             login("Admin", "admin");
             adminTest();
+            endAdminTest = LocalTime.now();
         }
         
         Thread.sleep(1000);
@@ -2115,6 +2265,7 @@ public class WebTest {
         LocalTime endTime = LocalTime.now();
         Duration durationAll = Duration.between(startTime, endTime);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
         Duration durationFunctionTest = Duration.between(startFunctionTest, endFunctionTest);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
+        Duration durationAdminTest = Duration.between(startAdminTest, endAdminTest);       // Kiszámolja menniy idő telt el a kezdéstől a befejezésig.
 
         minimalLogs.add(String.join("", Collections.nCopies(100, "\\")));
         minimalLogsAddToList("Tesztek összideje:");
@@ -2135,6 +2286,8 @@ public class WebTest {
                     + " perc " + AllTimeUserDataEditAndDelete % 60 + " másodperc.");
         minimalLogsAddToList("Felhasználó adatának módosítása és felhasználó törlésének az összideje: " + AllTimeUserEditAndDelete /60 
                     + " perc " + AllTimeUserEditAndDelete % 60 + " másodperc.");
+        minimalLogsAddToList("Admin felület tesztjének az ideje: " + durationAdminTest.getSeconds()/60 
+                    + " perc " + durationAdminTest.getSeconds()% 60 + " másodperc.");
         minimalLogs.add(String.join("", Collections.nCopies(100, "\\")));
         minimalLogs.add(" ");
         minimalLogsAddToList("A teszt befejeződött! Teljes ideje: " + durationAll.getSeconds()/60 

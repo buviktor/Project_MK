@@ -1,0 +1,155 @@
+####################################################################################################
+#                                2022-08-18 Automata Selenium Teszt                                #
+####################################################################################################
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+23:05:10	Teszt indítása!
+////////////////////////////////////////////////////////////////////////////////////////////////////
+23:05:10	Szükséges forrás fájlok betöltése....
+23:05:10	Forrás fájlok betöltése kész!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+23:05:13	Admin teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+23:05:14	Sikeres bejelentkezés.
+ 
+23:05:15	Kiválasztva: Ország, Csökkenő
+23:05:15	Magyarország 3
+23:05:15	United States 3
+23:05:15	Németország 2
+23:05:15	Románia 2
+23:05:15	Szerbia 1
+23:05:15	TestLand 1
+23:05:15	Szlovákia 1
+23:05:15	valami 1
+23:05:15	Sorrend egyezik!
+ 
+23:05:16	Kiválasztva: Ország, Növekvő
+23:05:16	Szerbia 1
+23:05:16	TestLand 1
+23:05:16	Szlovákia 1
+23:05:16	valami 1
+23:05:16	Németország 2
+23:05:16	Románia 2
+23:05:16	Magyarország 3
+23:05:16	United States 3
+23:05:16	Sorrend egyezik!
+ 
+23:05:16	Kiválasztva: Irányítószám, Csökkenő
+23:05:16	valami valami valami 1111 2
+23:05:16	Magyarország Hajdú-Bihar Debrecen 4000 1
+23:05:16	Németország Bajorország München 80331 1
+23:05:16	Szlovákia Pozsony Pozsony 81108 1
+23:05:16	United States Hudson Jersey 7030 1
+23:05:16	United States New York New York 10002 1
+23:05:16	Románia Szatmár Szatmárnémeti 440068 1
+23:05:16	Magyarország Pest Budapest 1138 1
+23:05:17	Magyarország Hajdú-Bihar Nyíradony 4027 1
+23:05:17	Németország Bajorország München 80337 1
+23:05:17	Szerbia Raška Kraljevo 561214 1
+23:05:17	United States New York New York 10001 1
+23:05:17	Románia Brassó Kőhalom 505500 1
+23:05:17	Sorrend egyezik!
+ 
+23:05:17	Kiválasztva: Irányítószám, Növekvő
+23:05:17	Magyarország Hajdú-Bihar Debrecen 4000 1
+23:05:17	Németország Bajorország München 80331 1
+23:05:17	Szlovákia Pozsony Pozsony 81108 1
+23:05:17	United States Hudson Jersey 7030 1
+23:05:17	United States New York New York 10002 1
+23:05:17	Románia Szatmár Szatmárnémeti 440068 1
+23:05:17	Magyarország Pest Budapest 1138 1
+23:05:17	Magyarország Hajdú-Bihar Nyíradony 4027 1
+23:05:17	Németország Bajorország München 80337 1
+23:05:17	Szerbia Raška Kraljevo 561214 1
+23:05:17	United States New York New York 10001 1
+23:05:17	Románia Brassó Kőhalom 505500 1
+23:05:17	valami valami valami 1111 2
+23:05:17	Sorrend egyezik!
+ 
+23:05:18	Kiválasztva: Város, Csökkenő
+23:05:18	Németország Bajorország München 2
+23:05:18	United States New York New York 2
+23:05:18	Szerbia Raška Kraljevo 1
+23:05:18	Magyarország Hajdú-Bihar Debrecen 1
+23:05:18	valami valami valami 1
+23:05:18	Románia Brassó Kőhalom 1
+23:05:18	United States Hudson Jersey 1
+23:05:18	Szlovákia Pozsony Pozsony 1
+23:05:18	Magyarország Hajdú-Bihar Nyíradony 1
+23:05:18	Magyarország Pest Budapest 1
+23:05:18	TestLand Testas TestCity 1
+23:05:18	Románia Szatmár Szatmárnémeti 1
+23:05:18	Sorrend egyezik!
+ 
+23:05:18	Kiválasztva: Város, Növekvő
+23:05:18	Szerbia Raška Kraljevo 1
+23:05:18	Magyarország Hajdú-Bihar Debrecen 1
+23:05:18	valami valami valami 1
+23:05:18	Románia Brassó Kőhalom 1
+23:05:18	United States Hudson Jersey 1
+23:05:18	Szlovákia Pozsony Pozsony 1
+23:05:18	Magyarország Hajdú-Bihar Nyíradony 1
+23:05:18	Magyarország Pest Budapest 1
+23:05:18	TestLand Testas TestCity 1
+23:05:18	Románia Szatmár Szatmárnémeti 1
+23:05:18	Németország Bajorország München 2
+23:05:18	United States New York New York 2
+23:05:18	Sorrend egyezik!
+ 
+23:05:19	Kiválasztva: Megye, Csökkenő
+23:05:19	Magyarország Hajdú-Bihar 2
+23:05:19	Németország Bajorország 2
+23:05:19	United States New York 2
+23:05:19	Magyarország Pest 1
+23:05:19	Szlovákia Pozsony 1
+23:05:19	Szerbia Raška 1
+23:05:19	United States Hudson 1
+23:05:19	Románia Brassó 1
+23:05:19	Románia Szatmár 1
+23:05:19	valami valami 1
+23:05:19	TestLand Testas 1
+23:05:19	Sorrend egyezik!
+ 
+23:05:20	Kiválasztva: Megye, Növekvő
+23:05:20	Magyarország Pest 1
+23:05:20	Szlovákia Pozsony 1
+23:05:20	Szerbia Raška 1
+23:05:20	United States Hudson 1
+23:05:20	Románia Brassó 1
+23:05:20	Románia Szatmár 1
+23:05:20	valami valami 1
+23:05:20	TestLand Testas 1
+23:05:20	Magyarország Hajdú-Bihar 2
+23:05:20	Németország Bajorország 2
+23:05:20	United States New York 2
+23:05:20	Sorrend egyezik!
+ 
+23:05:20	Drogéria kategória hozzáadása...
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás, de nem egyezik a bevitt adattal!
+23:05:20	Sikeres hozzáadás!
+23:05:20	Sikeres hozzáadás!
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+23:05:22	Tesztek összideje:
+
+23:05:22	Regisztráció és bejelentkező oldal funkcionális tesztjének az ideje: 0 perc 0 másodperc.
+23:05:22	Felhasználói adat létrehozásának az összideje: 0 perc 0 másodperc.
+23:05:22	Felhasználó regisztrálásának az összideje: 0 perc 0 másodperc.
+23:05:22	Felhasználó belépésének az összideje: 0 perc 0 másodperc.
+23:05:22	Adatok feltöltésének az összideje: 0 perc 0 másodperc.
+23:05:22	Adatok lekérdezésének az összideje: 0 perc 0 másodperc.
+23:05:22	Adatok módosításának és törlésének az összideje: 0 perc 0 másodperc.
+23:05:22	Felhasználó adatának módosítása és felhasználó törlésének az összideje: 0 perc 0 másodperc.
+23:05:22	Admin felület tesztjének az ideje: 0 perc 7 másodperc.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+23:05:22	A teszt befejeződött! Teljes ideje: 0 perc 11 másodperc.

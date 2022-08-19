@@ -1,0 +1,140 @@
+####################################################################################################
+#                                2022-08-19 Automata Selenium Teszt                                #
+####################################################################################################
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+17:34:27	Teszt indítása!
+////////////////////////////////////////////////////////////////////////////////////////////////////
+17:34:27	Szükséges forrás fájlok betöltése....
+17:34:27	Forrás fájlok betöltése kész!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+17:34:29	Admin teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+17:34:30	Sikeres bejelentkezés.
+ 
+17:34:32	Kiválasztva: Ország, Csökkenő
+17:34:32	United States 3
+17:34:32	Magyarország 2
+17:34:32	Németország 2
+17:34:32	Románia 2
+17:34:32	Szlovákia 1
+17:34:32	valami 1
+17:34:32	Szerbia 1
+17:34:32	TestLand 1
+17:34:32	Sorrend egyezik!
+ 
+17:34:32	Kiválasztva: Ország, Növekvő
+17:34:32	Szlovákia 1
+17:34:32	valami 1
+17:34:32	Szerbia 1
+17:34:32	TestLand 1
+17:34:32	Magyarország 2
+17:34:32	Németország 2
+17:34:32	Románia 2
+17:34:32	United States 3
+17:34:32	Sorrend egyezik!
+ 
+17:34:33	Kiválasztva: Irányítószám, Csökkenő
+17:34:33	valami valami valami 1111 2
+17:34:33	Magyarország Hajdú-Bihar Nyíradony 4027 1
+17:34:33	Németország Bajorország München 80337 1
+17:34:33	Szerbia Raška Kraljevo 561214 1
+17:34:33	United States New York New York 10001 1
+17:34:33	Románia Brassó Kőhalom 505500 1
+17:34:33	Magyarország Hajdú-Bihar Debrecen 4000 1
+17:34:33	Németország Bajorország München 80331 1
+17:34:33	Szlovákia Pozsony Pozsony 81108 1
+17:34:33	United States Hudson Jersey 7030 1
+17:34:33	United States New York New York 10002 1
+17:34:33	Románia Szatmár Szatmárnémeti 440068 1
+17:34:33	Sorrend egyezik!
+ 
+17:34:33	Kiválasztva: Irányítószám, Növekvő
+17:34:33	Magyarország Hajdú-Bihar Nyíradony 4027 1
+17:34:33	Németország Bajorország München 80337 1
+17:34:33	Szerbia Raška Kraljevo 561214 1
+17:34:33	United States New York New York 10001 1
+17:34:33	Románia Brassó Kőhalom 505500 1
+17:34:33	Magyarország Hajdú-Bihar Debrecen 4000 1
+17:34:33	Németország Bajorország München 80331 1
+17:34:34	Szlovákia Pozsony Pozsony 81108 1
+17:34:34	United States Hudson Jersey 7030 1
+17:34:34	United States New York New York 10002 1
+17:34:34	Románia Szatmár Szatmárnémeti 440068 1
+17:34:34	valami valami valami 1111 2
+17:34:34	Sorrend egyezik!
+ 
+17:34:34	Kiválasztva: Város, Csökkenő
+17:34:34	United States New York New York 2
+17:34:34	Németország Bajorország München 2
+17:34:34	valami valami valami 1
+17:34:34	Románia Brassó Kőhalom 1
+17:34:34	United States Hudson Jersey 1
+17:34:34	Szlovákia Pozsony Pozsony 1
+17:34:34	Magyarország Hajdú-Bihar Nyíradony 1
+17:34:34	TestLand Testas TestCity 1
+17:34:34	Románia Szatmár Szatmárnémeti 1
+17:34:34	Szerbia Raška Kraljevo 1
+17:34:34	Magyarország Hajdú-Bihar Debrecen 1
+17:34:34	Sorrend egyezik!
+ 
+17:34:35	Kiválasztva: Város, Növekvő
+17:34:35	valami valami valami 1
+17:34:35	Románia Brassó Kőhalom 1
+17:34:35	United States Hudson Jersey 1
+17:34:35	Szlovákia Pozsony Pozsony 1
+17:34:35	Magyarország Hajdú-Bihar Nyíradony 1
+17:34:35	TestLand Testas TestCity 1
+17:34:35	Románia Szatmár Szatmárnémeti 1
+17:34:35	Szerbia Raška Kraljevo 1
+17:34:35	Magyarország Hajdú-Bihar Debrecen 1
+17:34:35	United States New York New York 2
+17:34:35	Németország Bajorország München 2
+17:34:35	Sorrend egyezik!
+ 
+17:34:35	Kiválasztva: Megye, Csökkenő
+17:34:35	Magyarország Hajdú-Bihar 2
+17:34:35	Németország Bajorország 2
+17:34:35	United States New York 2
+17:34:35	Szlovákia Pozsony 1
+17:34:35	Szerbia Raška 1
+17:34:35	United States Hudson 1
+17:34:35	Románia Brassó 1
+17:34:35	Románia Szatmár 1
+17:34:35	valami valami 1
+17:34:35	TestLand Testas 1
+17:34:35	Sorrend egyezik!
+ 
+17:34:36	Kiválasztva: Megye, Növekvő
+17:34:36	Szlovákia Pozsony 1
+17:34:36	Szerbia Raška 1
+17:34:36	United States Hudson 1
+17:34:36	Románia Brassó 1
+17:34:36	Románia Szatmár 1
+17:34:36	valami valami 1
+17:34:36	TestLand Testas 1
+17:34:36	Magyarország Hajdú-Bihar 2
+17:34:36	Németország Bajorország 2
+17:34:36	United States New York 2
+17:34:36	Sorrend egyezik!
+ 
+17:34:36	Drogéria kategória hozzáadása...
+17:34:37	Sikeres hozzáadás!
+ 
+17:34:42	Drogéria kategória módosítása Egészség -ra/-re...
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+17:34:49	Tesztek összideje:
+
+17:34:49	Regisztráció és bejelentkező oldal funkcionális tesztjének az ideje: 0 perc 0 másodperc.
+17:34:49	Felhasználói adat létrehozásának az összideje: 0 perc 0 másodperc.
+17:34:49	Felhasználó regisztrálásának az összideje: 0 perc 0 másodperc.
+17:34:49	Felhasználó belépésének az összideje: 0 perc 0 másodperc.
+17:34:49	Adatok feltöltésének az összideje: 0 perc 0 másodperc.
+17:34:49	Adatok lekérdezésének az összideje: 0 perc 0 másodperc.
+17:34:49	Adatok módosításának és törlésének az összideje: 0 perc 0 másodperc.
+17:34:49	Felhasználó adatának módosítása és felhasználó törlésének az összideje: 0 perc 0 másodperc.
+17:34:49	Admin felület tesztjének az ideje: 0 perc 18 másodperc.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+17:34:49	A teszt befejeződött! Teljes ideje: 0 perc 22 másodperc.
