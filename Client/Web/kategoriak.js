@@ -63,6 +63,11 @@ function Mutat() {
 document.getElementById("gomb1").onclick = function () {
     const url = 'http://localhost:5000/admin/stat/county/0';
     const token = 'Bearer: ' + sessionStorage.token
+    let newcategori = document.getElementById("categori").value
+
+    if(newcategori == "") {
+        alert("Kérem töltse ki a mezőt!")
+    } else {
     fetch(url, {
         method: 'POST',
         headers: {
@@ -74,16 +79,18 @@ document.getElementById("gomb1").onclick = function () {
         })
     })
         .then((response) => response.json())
-        .then(json => {
-            document.getElementById("uzenet").innerHTML = json.message
-            AllCat();
-        })
+        .then((json) => {
+        document.getElementById("uzenet").innerHTML = json.message
+        setTimeout(function a() {
+            document.location = "kategoriak.html"
+        }, 1500)
+    })
         .catch(err => console.log(err));
+    }
 }
 
-// ----- KAtegória módosítása -----
-document.getElementById("gomb2").onclick = function (e) {
-    e.preventDefault();
+// ----- Kategória módosítása -----
+document.getElementById("gomb2").onclick = function () {
     const url = 'http://localhost:5000/admin/stat/county/0';
     const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
@@ -98,5 +105,11 @@ document.getElementById("gomb2").onclick = function (e) {
         })
     })
         .then((response) => response.json())
+        .then((json) => {
+            document.getElementById("uzenet").innerHTML = json.message
+            setTimeout(function a() {
+                document.location = "kategoriak.html"
+            }, 1500)
+        })
         .catch(err => console.log(err));
 }

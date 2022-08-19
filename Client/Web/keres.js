@@ -85,7 +85,7 @@ document.getElementById("gomb2").onclick = function (e) {
       json.forEach(cs => {
           if(cs!=json[0]) 
           lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.denomination + "</td>"
-              + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Post()' name='" + num + "'>...</button></td></tr>"
+              + "</td><td>" + cs.date + "</td><td><button class='btn btn-primary button' id='"+ cs.ID + "' onClick='reply_click(this.id),Post()' name='" + num + "'>Módosítás</button></td></tr>"
             num++;
         });
             document.getElementById("uzenet").innerHTML = "";
