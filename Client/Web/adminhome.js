@@ -1,3 +1,4 @@
+// ----- Fekhasználók kiírása -----
 window.addEventListener("load", function Adminhome() {
     const url = 'http://localhost:5000/admin/stat/country/0';
     const token = 'Bearer: ' + sessionStorage.token
@@ -20,6 +21,7 @@ window.addEventListener("load", function Adminhome() {
         .catch (err => console.log(err));
 })
 
+// ----- Felhasználók kiírása Ország, megye, irányítószám, város alapján -----
 document.getElementById("gomb2").onclick = function (e) {
     e.preventDefault();
     const url = 'http://localhost:5000/admin/stat' + "/" + document.getElementById("what").value + "/" + document.getElementById("order1").value;

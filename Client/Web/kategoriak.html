@@ -14,10 +14,11 @@
 </head>
 
 <body>
-
+<!-- ----- Navbar ----- -->
   <nav class="navbar navbar-dark bg-dark justify-content-center navbar-expand-lg">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -39,39 +40,43 @@
     </div>
   </nav>
 
+  <!-- ----- Új kategória hozzáadása ----- -->
   <div class="d-flex justify-content-center" style="margin-top: 100px;">
     <div class="col-md-4">
       <label for="összeg" class="form-label">Új kategória</label>
       <input class="form-control" id="categori" type="text">
     </div>
     <div class="d-flex mt-4 px-4">
-      <button class="btn btn-primary button" style="width: 100px" type="submit" id="gomb1" name="button">Hozzáad</button>
+      <button class="btn btn-primary button" style="width: 100px" type="submit" id="gomb1"
+        name="button">Hozzáad</button>
+    </div>
   </div>
-</div>
 
-
+<!-- ----- Meglévő kategóriák kiírása ----- -->
   <div class="mt-5 d-flex justify-content-center">
-    <table class="table" style="width: 600px;" id="menu"> 
+    <table class="table" style="width: 600px;" id="menu">
     </table>
   </div>
 
+  <!-- ----- Meglévő kategória módosítása ----- -->
   <div id="kat">
-   <div class="d-flex justify-content-center mb-5" style="margin-top: 40px;">
-    <div class="col-md-4">
-      <label for="newcategori" class="form-label" id="mcat"></label>
-      <input class="form-control" id="newcategori" type="text">
+    <div class="d-flex justify-content-center mb-5" style="margin-top: 40px;">
+      <div class="col-md-4">
+        <label for="newcategori" class="form-label" id="mcat"></label>
+        <input class="form-control" id="newcategori" type="text">
+      </div>
+      <div class="d-flex mt-4 px-4">
+        <button class="btn btn-primary button" style="width: 100px" type="submit" id="gomb2"
+          name="button">Módosítás</button>
+      </div>
     </div>
-    <div class="d-flex mt-4 px-4">
-      <button class="btn btn-primary button" style="width: 100px" type="submit" id="gomb2" name="button">Módosítás</button>
   </div>
-</div>
-</div>
 
   <!-- ----- Szervertől kapott üzenet ----- -->
   <div class="text-black d-flex justify-content-center">
     <h2 id="uzenet"></h2>
   </div>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
@@ -79,7 +84,3 @@
 
 </body>
 </html>
-
-
-
-
