@@ -1,0 +1,1219 @@
+####################################################################################################
+#                                2022-08-19 Automata Selenium Teszt                                #
+####################################################################################################
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+23:25:06	Teszt indítása!
+////////////////////////////////////////////////////////////////////////////////////////////////////
+23:25:06	Szükséges forrás fájlok betöltése....
+23:25:06	Forrás fájlok betöltése kész!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+23:25:09	Funkciónális teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+23:25:11	Regisztrációs funkció teszt OK!
+23:25:12	Bejelentkezős funkció teszt OK!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+23:25:12	Automata teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+23:25:12	1. felhasználó adatainak létrehozása...
+23:25:12	Fiók adatainak létrehozása kész!
+----------------------------------------------------------------------------------------------------
+23:25:12	1. felhasználó regisztrálása...
+23:25:12	Felhasználónév: Bíró Levéd
+23:25:12	Jelszó: qsYU4H1592
+23:25:12	Email: biro.leved0354@outlook.hu
+23:25:12	Irányítószám: 2610
+23:25:12	Ország: Magyarország
+23:25:12	Megye: Nógrád
+23:25:12	Város: Ősagárd
+23:25:15	Sikeres regisztráció!
+----------------------------------------------------------------------------------------------------
+23:25:15	1. felhasználó bejelentkezése...
+23:25:16	Sikeres bejelentkezés.
+----------------------------------------------------------------------------------------------------
+23:25:16	Adatok feltöltése...
+23:25:17	Összeg (Ft): -19520,  Dátum: 2022-04-13,  Kategória: Élelmiszer (1)
+23:25:19	Összeg (Ft):  67700,  Dátum: 2022-03-30,  Kategória: Fizetés (3)
+23:25:20	Összeg (Ft): -16740,  Dátum: 2022-07-06,  Kategória: Ruházat (2)
+23:25:21	Összeg (Ft): -19600,  Dátum: 2021-06-22,  Kategória: Számlák (5)
+23:25:23	Összeg (Ft):  -3776,  Dátum: 2021-03-31,  Kategória: Számlák (5)
+23:25:25	Összeg (Ft):  -6180,  Dátum: 2021-03-21,  Kategória: Szabadidő (4)
+23:25:26	Összeg (Ft):  -4006,  Dátum: 2021-08-10,  Kategória: Egyébkiadások (6)
+23:25:28	Összeg (Ft):  -4450,  Dátum: 2022-01-24,  Kategória: Ruházat (2)
+23:25:29	Összeg (Ft):  -5428,  Dátum: 2021-03-07,  Kategória: Szabadidő (4)
+23:25:31	Összeg (Ft):  -3028,  Dátum: 2022-07-04,  Kategória: Számlák (5)
+23:25:32	Összeg (Ft):  -4824,  Dátum: 2021-07-30,  Kategória: Számlák (5)
+23:25:34	Összeg (Ft): 270100,  Dátum: 2022-05-05,  Kategória: Egyébjuttatások (7)
+23:25:35	Összeg (Ft): 286200,  Dátum: 2022-07-09,  Kategória: Fizetés (3)
+23:25:37	Összeg (Ft):  -5760,  Dátum: 2021-09-12,  Kategória: Számlák (5)
+23:25:38	Összeg (Ft):  -8852,  Dátum: 2021-08-20,  Kategória: Ruházat (2)
+23:25:40	Összeg (Ft):  -8914,  Dátum: 2021-09-24,  Kategória: Élelmiszer (1)
+23:25:41	Összeg (Ft):  -5706,  Dátum: 2021-03-15,  Kategória: Ruházat (2)
+23:25:43	Összeg (Ft):  -8088,  Dátum: 2022-04-23,  Kategória: Élelmiszer (1)
+23:25:44	Összeg (Ft):  -8880,  Dátum: 2022-02-12,  Kategória: Ruházat (2)
+23:25:46	Összeg (Ft):  -5152,  Dátum: 2022-07-15,  Kategória: Számlák (5)
+23:25:47	Összeg (Ft):  -6030,  Dátum: 2022-03-13,  Kategória: Ruházat (2)
+23:25:49	Összeg (Ft):   -900,  Dátum: 2022-07-06,  Kategória: Egyébkiadások (6)
+23:25:50	Összeg (Ft): 460700,  Dátum: 2022-02-20,  Kategória: Egyébjuttatások (7)
+23:25:52	Összeg (Ft):  -4180,  Dátum: 2022-08-19,  Kategória: Ruházat (2)
+23:25:54	Összeg (Ft):  -4698,  Dátum: 2022-08-07,  Kategória: Ruházat (2)
+23:25:55	Összeg (Ft):  -7740,  Dátum: 2021-06-06,  Kategória: Szabadidő (4)
+23:25:57	Összeg (Ft):  -6328,  Dátum: 2021-05-28,  Kategória: Szabadidő (4)
+23:25:58	Összeg (Ft):  -8970,  Dátum: 2022-01-20,  Kategória: Élelmiszer (1)
+23:25:59	Összeg (Ft):  -7200,  Dátum: 2021-12-01,  Kategória: Ruházat (2)
+23:26:01	Összeg (Ft):  -6262,  Dátum: 2022-02-20,  Kategória: Számlák (5)
+23:26:02	Összeg (Ft): 465400,  Dátum: 2021-01-18,  Kategória: Fizetés (3)
+23:26:04	Összeg (Ft):  -6800,  Dátum: 2021-06-17,  Kategória: Egyébkiadások (6)
+23:26:06	Összeg (Ft):  -4978,  Dátum: 2022-08-08,  Kategória: Szabadidő (4)
+23:26:07	Összeg (Ft): 313700,  Dátum: 2022-06-14,  Kategória: Egyébjuttatások (7)
+23:26:09	Összeg (Ft):  -2882,  Dátum: 2022-03-07,  Kategória: Élelmiszer (1)
+23:26:10	Összeg (Ft):  -4658,  Dátum: 2021-09-22,  Kategória: Élelmiszer (1)
+23:26:12	Összeg (Ft):  -6706,  Dátum: 2021-05-19,  Kategória: Egyébkiadások (6)
+23:26:13	Összeg (Ft): -10140,  Dátum: 2021-04-02,  Kategória: Szabadidő (4)
+23:26:15	Összeg (Ft): 414900,  Dátum: 2022-07-07,  Kategória: Egyébjuttatások (7)
+23:26:16	Összeg (Ft):  -4274,  Dátum: 2021-01-16,  Kategória: Ruházat (2)
+23:26:17	Összeg (Ft): -15480,  Dátum: 2022-05-15,  Kategória: Élelmiszer (1)
+23:26:19	Összeg (Ft):  -9940,  Dátum: 2022-07-20,  Kategória: Egyébkiadások (6)
+23:26:20	Összeg (Ft): 112500,  Dátum: 2022-01-10,  Kategória: Fizetés (3)
+23:26:22	Összeg (Ft):  -6632,  Dátum: 2021-02-18,  Kategória: Szabadidő (4)
+23:26:23	Összeg (Ft):  -5740,  Dátum: 2021-12-08,  Kategória: Számlák (5)
+23:26:25	Összeg (Ft):  71700,  Dátum: 2021-01-23,  Kategória: Fizetés (3)
+23:26:26	Összeg (Ft):  -9008,  Dátum: 2022-04-18,  Kategória: Szabadidő (4)
+23:26:28	Összeg (Ft):  21600,  Dátum: 2021-12-04,  Kategória: Fizetés (3)
+23:26:29	Összeg (Ft):  -8996,  Dátum: 2021-11-26,  Kategória: Számlák (5)
+23:26:31	Összeg (Ft): 427900,  Dátum: 2022-07-18,  Kategória: Egyébjuttatások (7)
+23:26:31	Adatok feltöltése kész!
+----------------------------------------------------------------------------------------------------
+23:26:31	Adatok lekérdezése...
+23:26:33	Az összes feltöltött adat és az összes lekérdezett adat megegyezik!
+23:26:33	Dátum szerinti Csökkenő sorrend megegyezett!
+23:26:34	Dátum szerinti Növekvő sorrend megegyezett!
+23:26:34	Összeg szerinti Növekvő sorrend megegyezett!
+23:26:34	Összeg szerinti Csökkenő sorrend megegyezett!
+23:26:35	Kategoria szerinti Csökkenő sorrend megegyezett!
+23:26:35	Kategoria szerinti Növekvő sorrend megegyezett!
+23:26:35	Az összegzés rész adatai valósak!
+ 
+23:26:36	Kiválasztva: Kiadás, Élelmiszer, Összes év
+23:26:36	-4658 Élelmiszer 2021-09-22 Módosítás
+23:26:36	-8914 Élelmiszer 2021-09-24 Módosítás
+23:26:36	-8970 Élelmiszer 2022-01-20 Módosítás
+23:26:36	-2882 Élelmiszer 2022-03-07 Módosítás
+23:26:36	-19520 Élelmiszer 2022-04-13 Módosítás
+23:26:36	-8088 Élelmiszer 2022-04-23 Módosítás
+23:26:36	-15480 Élelmiszer 2022-05-15 Módosítás
+23:26:36	Talált adat: 7, mért adat: 7.
+ 
+23:26:36	Kiválasztva: Kiadás, Élelmiszer, 2021
+23:26:36	-4658 Élelmiszer 2021-09-22 Módosítás
+23:26:36	-8914 Élelmiszer 2021-09-24 Módosítás
+23:26:36	Talált adat: 2, mért adat: 2.
+ 
+23:26:36	Kiválasztva: Kiadás, Élelmiszer, 2021-Január
+23:26:36	Nincs ilyen adat!
+ 
+23:26:37	Kiválasztva: Kiadás, Élelmiszer, 2021-Február
+23:26:37	Nincs ilyen adat!
+ 
+23:26:37	Kiválasztva: Kiadás, Élelmiszer, 2021-Március
+23:26:37	Nincs ilyen adat!
+ 
+23:26:37	Kiválasztva: Kiadás, Élelmiszer, 2021-Április
+23:26:37	Nincs ilyen adat!
+ 
+23:26:37	Kiválasztva: Kiadás, Élelmiszer, 2021-Május
+23:26:37	Nincs ilyen adat!
+ 
+23:26:38	Kiválasztva: Kiadás, Élelmiszer, 2021-Június
+23:26:38	Nincs ilyen adat!
+ 
+23:26:38	Kiválasztva: Kiadás, Élelmiszer, 2021-Július
+23:26:38	Nincs ilyen adat!
+ 
+23:26:38	Kiválasztva: Kiadás, Élelmiszer, 2021-Augusztus
+23:26:38	Nincs ilyen adat!
+ 
+23:26:39	Kiválasztva: Kiadás, Élelmiszer, 2021-Szeptember
+23:26:39	-4658 Élelmiszer 2021-09-22 Módosítás
+23:26:39	-8914 Élelmiszer 2021-09-24 Módosítás
+23:26:39	Talált adat: 2, mért adat: 2.
+ 
+23:26:39	Kiválasztva: Kiadás, Élelmiszer, 2021-Szeptember-22
+23:26:39	-4658 Élelmiszer 2021-09-22 Módosítás
+23:26:39	Talált adat: 1, mért adat: 1.
+ 
+23:26:39	Kiválasztva: Kiadás, Élelmiszer, 2021-Szeptember-24
+23:26:40	-8914 Élelmiszer 2021-09-24 Módosítás
+23:26:40	Talált adat: 1, mért adat: 1.
+ 
+23:26:40	Kiválasztva: Kiadás, Élelmiszer, 2021-Október
+23:26:40	Nincs ilyen adat!
+ 
+23:26:41	Kiválasztva: Kiadás, Élelmiszer, 2021-November
+23:26:41	Nincs ilyen adat!
+ 
+23:26:41	Kiválasztva: Kiadás, Élelmiszer, 2021-December
+23:26:41	Nincs ilyen adat!
+ 
+23:26:41	Kiválasztva: Kiadás, Élelmiszer, 2022
+23:26:41	-8970 Élelmiszer 2022-01-20 Módosítás
+23:26:41	-2882 Élelmiszer 2022-03-07 Módosítás
+23:26:41	-19520 Élelmiszer 2022-04-13 Módosítás
+23:26:41	-8088 Élelmiszer 2022-04-23 Módosítás
+23:26:41	-15480 Élelmiszer 2022-05-15 Módosítás
+23:26:41	Talált adat: 5, mért adat: 5.
+ 
+23:26:41	Kiválasztva: Kiadás, Élelmiszer, 2022-Január
+23:26:42	-8970 Élelmiszer 2022-01-20 Módosítás
+23:26:42	Talált adat: 1, mért adat: 1.
+ 
+23:26:42	Kiválasztva: Kiadás, Élelmiszer, 2022-Január-20
+23:26:42	-8970 Élelmiszer 2022-01-20 Módosítás
+23:26:42	Talált adat: 1, mért adat: 1.
+ 
+23:26:43	Kiválasztva: Kiadás, Élelmiszer, 2022-Február
+23:26:43	Nincs ilyen adat!
+ 
+23:26:43	Kiválasztva: Kiadás, Élelmiszer, 2022-Március
+23:26:43	-2882 Élelmiszer 2022-03-07 Módosítás
+23:26:43	Talált adat: 1, mért adat: 1.
+ 
+23:26:43	Kiválasztva: Kiadás, Élelmiszer, 2022-Március-07
+23:26:44	-2882 Élelmiszer 2022-03-07 Módosítás
+23:26:44	Talált adat: 1, mért adat: 1.
+ 
+23:26:44	Kiválasztva: Kiadás, Élelmiszer, 2022-Április
+23:26:44	-19520 Élelmiszer 2022-04-13 Módosítás
+23:26:44	-8088 Élelmiszer 2022-04-23 Módosítás
+23:26:44	Talált adat: 2, mért adat: 2.
+ 
+23:26:45	Kiválasztva: Kiadás, Élelmiszer, 2022-Április-13
+23:26:45	-19520 Élelmiszer 2022-04-13 Módosítás
+23:26:45	Talált adat: 1, mért adat: 1.
+ 
+23:26:45	Kiválasztva: Kiadás, Élelmiszer, 2022-Április-23
+23:26:45	-8088 Élelmiszer 2022-04-23 Módosítás
+23:26:45	Talált adat: 1, mért adat: 1.
+ 
+23:26:46	Kiválasztva: Kiadás, Élelmiszer, 2022-Május
+23:26:46	-15480 Élelmiszer 2022-05-15 Módosítás
+23:26:46	Talált adat: 1, mért adat: 1.
+ 
+23:26:46	Kiválasztva: Kiadás, Élelmiszer, 2022-Május-15
+23:26:46	-15480 Élelmiszer 2022-05-15 Módosítás
+23:26:46	Talált adat: 1, mért adat: 1.
+ 
+23:26:47	Kiválasztva: Kiadás, Élelmiszer, 2022-Június
+23:26:47	Nincs ilyen adat!
+ 
+23:26:47	Kiválasztva: Kiadás, Élelmiszer, 2022-Július
+23:26:47	Nincs ilyen adat!
+ 
+23:26:48	Kiválasztva: Kiadás, Élelmiszer, 2022-Augusztus
+23:26:48	Nincs ilyen adat!
+ 
+23:26:48	Kiválasztva: Kiadás, Élelmiszer, 2022-Szeptember
+23:26:48	Nincs ilyen adat!
+ 
+23:26:48	Kiválasztva: Kiadás, Élelmiszer, 2022-Október
+23:26:48	Nincs ilyen adat!
+ 
+23:26:49	Kiválasztva: Kiadás, Élelmiszer, 2022-November
+23:26:49	Nincs ilyen adat!
+ 
+23:26:49	Kiválasztva: Kiadás, Élelmiszer, 2022-December
+23:26:49	Nincs ilyen adat!
+ 
+23:26:50	Kiválasztva: Egyéb összeg, Élelmiszer, Összes év
+23:26:50	-8914 Élelmiszer 2021-09-24 Módosítás
+23:26:50	Talált adat: 1, mért adat: 1.
+ 
+23:26:51	Kiválasztva: Egyéb összeg, Élelmiszer, 2021-09-24
+23:26:51	-8914 Élelmiszer 2021-09-24 Módosítás
+23:26:51	Talált adat: 1, mért adat: 1.
+ 
+23:26:52	Kiválasztva: Kiadás, Ruházat, Összes év
+23:26:52	-4274 Ruházat 2021-01-16 Módosítás
+23:26:52	-5706 Ruházat 2021-03-15 Módosítás
+23:26:52	-8852 Ruházat 2021-08-20 Módosítás
+23:26:52	-7200 Ruházat 2021-12-01 Módosítás
+23:26:52	-4450 Ruházat 2022-01-24 Módosítás
+23:26:52	-8880 Ruházat 2022-02-12 Módosítás
+23:26:52	-6030 Ruházat 2022-03-13 Módosítás
+23:26:52	-16740 Ruházat 2022-07-06 Módosítás
+23:26:52	-4698 Ruházat 2022-08-07 Módosítás
+23:26:52	-4180 Ruházat 2022-08-19 Módosítás
+23:26:52	Talált adat: 10, mért adat: 10.
+ 
+23:26:52	Kiválasztva: Kiadás, Ruházat, 2021
+23:26:52	-4274 Ruházat 2021-01-16 Módosítás
+23:26:52	-5706 Ruházat 2021-03-15 Módosítás
+23:26:52	-8852 Ruházat 2021-08-20 Módosítás
+23:26:52	-7200 Ruházat 2021-12-01 Módosítás
+23:26:52	Talált adat: 4, mért adat: 4.
+ 
+23:26:52	Kiválasztva: Kiadás, Ruházat, 2021-Január
+23:26:52	-4274 Ruházat 2021-01-16 Módosítás
+23:26:52	Talált adat: 1, mért adat: 1.
+ 
+23:26:53	Kiválasztva: Kiadás, Ruházat, 2021-Január-16
+23:26:53	-4274 Ruházat 2021-01-16 Módosítás
+23:26:53	Talált adat: 1, mért adat: 1.
+ 
+23:26:53	Kiválasztva: Kiadás, Ruházat, 2021-Február
+23:26:54	Nincs ilyen adat!
+ 
+23:26:54	Kiválasztva: Kiadás, Ruházat, 2021-Március
+23:26:54	-5706 Ruházat 2021-03-15 Módosítás
+23:26:54	Talált adat: 1, mért adat: 1.
+ 
+23:26:54	Kiválasztva: Kiadás, Ruházat, 2021-Március-15
+23:26:54	-5706 Ruházat 2021-03-15 Módosítás
+23:26:54	Talált adat: 1, mért adat: 1.
+ 
+23:26:55	Kiválasztva: Kiadás, Ruházat, 2021-Április
+23:26:55	Nincs ilyen adat!
+ 
+23:26:55	Kiválasztva: Kiadás, Ruházat, 2021-Május
+23:26:55	Nincs ilyen adat!
+ 
+23:26:55	Kiválasztva: Kiadás, Ruházat, 2021-Június
+23:26:56	Nincs ilyen adat!
+ 
+23:26:56	Kiválasztva: Kiadás, Ruházat, 2021-Július
+23:26:56	Nincs ilyen adat!
+ 
+23:26:56	Kiválasztva: Kiadás, Ruházat, 2021-Augusztus
+23:26:56	-8852 Ruházat 2021-08-20 Módosítás
+23:26:56	Talált adat: 1, mért adat: 1.
+ 
+23:26:57	Kiválasztva: Kiadás, Ruházat, 2021-Augusztus-20
+23:26:57	-8852 Ruházat 2021-08-20 Módosítás
+23:26:57	Talált adat: 1, mért adat: 1.
+ 
+23:26:57	Kiválasztva: Kiadás, Ruházat, 2021-Szeptember
+23:26:58	Nincs ilyen adat!
+ 
+23:26:58	Kiválasztva: Kiadás, Ruházat, 2021-Október
+23:26:58	Nincs ilyen adat!
+ 
+23:26:58	Kiválasztva: Kiadás, Ruházat, 2021-November
+23:26:58	Nincs ilyen adat!
+ 
+23:26:58	Kiválasztva: Kiadás, Ruházat, 2021-December
+23:26:59	-7200 Ruházat 2021-12-01 Módosítás
+23:26:59	Talált adat: 1, mért adat: 1.
+ 
+23:26:59	Kiválasztva: Kiadás, Ruházat, 2021-December-01
+23:26:59	-7200 Ruházat 2021-12-01 Módosítás
+23:26:59	Talált adat: 1, mért adat: 1.
+ 
+23:27:00	Kiválasztva: Kiadás, Ruházat, 2022
+23:27:00	-4450 Ruházat 2022-01-24 Módosítás
+23:27:00	-8880 Ruházat 2022-02-12 Módosítás
+23:27:00	-6030 Ruházat 2022-03-13 Módosítás
+23:27:00	-16740 Ruházat 2022-07-06 Módosítás
+23:27:00	-4698 Ruházat 2022-08-07 Módosítás
+23:27:00	-4180 Ruházat 2022-08-19 Módosítás
+23:27:00	Talált adat: 6, mért adat: 6.
+ 
+23:27:00	Kiválasztva: Kiadás, Ruházat, 2022-Január
+23:27:00	-4450 Ruházat 2022-01-24 Módosítás
+23:27:00	Talált adat: 1, mért adat: 1.
+ 
+23:27:00	Kiválasztva: Kiadás, Ruházat, 2022-Január-24
+23:27:01	-4450 Ruházat 2022-01-24 Módosítás
+23:27:01	Talált adat: 1, mért adat: 1.
+ 
+23:27:01	Kiválasztva: Kiadás, Ruházat, 2022-Február
+23:27:01	-8880 Ruházat 2022-02-12 Módosítás
+23:27:01	Talált adat: 1, mért adat: 1.
+ 
+23:27:02	Kiválasztva: Kiadás, Ruházat, 2022-Február-12
+23:27:02	-8880 Ruházat 2022-02-12 Módosítás
+23:27:02	Talált adat: 1, mért adat: 1.
+ 
+23:27:02	Kiválasztva: Kiadás, Ruházat, 2022-Március
+23:27:03	-6030 Ruházat 2022-03-13 Módosítás
+23:27:03	Talált adat: 1, mért adat: 1.
+ 
+23:27:03	Kiválasztva: Kiadás, Ruházat, 2022-Március-13
+23:27:03	-6030 Ruházat 2022-03-13 Módosítás
+23:27:03	Talált adat: 1, mért adat: 1.
+ 
+23:27:04	Kiválasztva: Kiadás, Ruházat, 2022-Április
+23:27:04	Nincs ilyen adat!
+ 
+23:27:04	Kiválasztva: Kiadás, Ruházat, 2022-Május
+23:27:04	Nincs ilyen adat!
+ 
+23:27:04	Kiválasztva: Kiadás, Ruházat, 2022-Június
+23:27:04	Nincs ilyen adat!
+ 
+23:27:05	Kiválasztva: Kiadás, Ruházat, 2022-Július
+23:27:05	-16740 Ruházat 2022-07-06 Módosítás
+23:27:05	Talált adat: 1, mért adat: 1.
+ 
+23:27:05	Kiválasztva: Kiadás, Ruházat, 2022-Július-06
+23:27:05	-16740 Ruházat 2022-07-06 Módosítás
+23:27:05	Talált adat: 1, mért adat: 1.
+ 
+23:27:06	Kiválasztva: Kiadás, Ruházat, 2022-Augusztus
+23:27:06	-4698 Ruházat 2022-08-07 Módosítás
+23:27:06	-4180 Ruházat 2022-08-19 Módosítás
+23:27:06	Talált adat: 2, mért adat: 2.
+ 
+23:27:06	Kiválasztva: Kiadás, Ruházat, 2022-Augusztus-07
+23:27:07	-4698 Ruházat 2022-08-07 Módosítás
+23:27:07	Talált adat: 1, mért adat: 1.
+ 
+23:27:07	Kiválasztva: Kiadás, Ruházat, 2022-Augusztus-19
+23:27:07	-4180 Ruházat 2022-08-19 Módosítás
+23:27:07	Talált adat: 1, mért adat: 1.
+ 
+23:27:07	Kiválasztva: Kiadás, Ruházat, 2022-Szeptember
+23:27:07	Nincs ilyen adat!
+ 
+23:27:08	Kiválasztva: Kiadás, Ruházat, 2022-Október
+23:27:08	Nincs ilyen adat!
+ 
+23:27:08	Kiválasztva: Kiadás, Ruházat, 2022-November
+23:27:08	Nincs ilyen adat!
+ 
+23:27:08	Kiválasztva: Kiadás, Ruházat, 2022-December
+23:27:08	Nincs ilyen adat!
+ 
+23:27:09	Kiválasztva: Egyéb összeg, Ruházat, Összes év
+23:27:09	-4180 Ruházat 2022-08-19 Módosítás
+23:27:09	Talált adat: 1, mért adat: 1.
+ 
+23:27:10	Kiválasztva: Egyéb összeg, Ruházat, 2022-08-19
+23:27:10	-4180 Ruházat 2022-08-19 Módosítás
+23:27:10	Talált adat: 1, mért adat: 1.
+ 
+23:27:11	Kiválasztva: Bevétel, Fizetés, Összes év
+23:27:11	465400 Fizetés 2021-01-18 Módosítás
+23:27:11	71700 Fizetés 2021-01-23 Módosítás
+23:27:11	21600 Fizetés 2021-12-04 Módosítás
+23:27:11	112500 Fizetés 2022-01-10 Módosítás
+23:27:11	67700 Fizetés 2022-03-30 Módosítás
+23:27:11	286200 Fizetés 2022-07-09 Módosítás
+23:27:11	Talált adat: 6, mért adat: 6.
+ 
+23:27:11	Kiválasztva: Bevétel, Fizetés, 2021
+23:27:11	465400 Fizetés 2021-01-18 Módosítás
+23:27:11	71700 Fizetés 2021-01-23 Módosítás
+23:27:11	21600 Fizetés 2021-12-04 Módosítás
+23:27:11	Talált adat: 3, mért adat: 3.
+ 
+23:27:11	Kiválasztva: Bevétel, Fizetés, 2021-Január
+23:27:12	465400 Fizetés 2021-01-18 Módosítás
+23:27:12	71700 Fizetés 2021-01-23 Módosítás
+23:27:12	Talált adat: 2, mért adat: 2.
+ 
+23:27:12	Kiválasztva: Bevétel, Fizetés, 2021-Január-18
+23:27:12	465400 Fizetés 2021-01-18 Módosítás
+23:27:12	Talált adat: 1, mért adat: 1.
+ 
+23:27:12	Kiválasztva: Bevétel, Fizetés, 2021-Január-23
+23:27:13	71700 Fizetés 2021-01-23 Módosítás
+23:27:13	Talált adat: 1, mért adat: 1.
+ 
+23:27:13	Kiválasztva: Bevétel, Fizetés, 2021-Február
+23:27:13	Nincs ilyen adat!
+ 
+23:27:13	Kiválasztva: Bevétel, Fizetés, 2021-Március
+23:27:13	Nincs ilyen adat!
+ 
+23:27:13	Kiválasztva: Bevétel, Fizetés, 2021-Április
+23:27:14	Nincs ilyen adat!
+ 
+23:27:14	Kiválasztva: Bevétel, Fizetés, 2021-Május
+23:27:14	Nincs ilyen adat!
+ 
+23:27:14	Kiválasztva: Bevétel, Fizetés, 2021-Június
+23:27:14	Nincs ilyen adat!
+ 
+23:27:14	Kiválasztva: Bevétel, Fizetés, 2021-Július
+23:27:15	Nincs ilyen adat!
+ 
+23:27:15	Kiválasztva: Bevétel, Fizetés, 2021-Augusztus
+23:27:15	Nincs ilyen adat!
+ 
+23:27:15	Kiválasztva: Bevétel, Fizetés, 2021-Szeptember
+23:27:15	Nincs ilyen adat!
+ 
+23:27:15	Kiválasztva: Bevétel, Fizetés, 2021-Október
+23:27:15	Nincs ilyen adat!
+ 
+23:27:16	Kiválasztva: Bevétel, Fizetés, 2021-November
+23:27:16	Nincs ilyen adat!
+ 
+23:27:16	Kiválasztva: Bevétel, Fizetés, 2021-December
+23:27:16	21600 Fizetés 2021-12-04 Módosítás
+23:27:16	Talált adat: 1, mért adat: 1.
+ 
+23:27:17	Kiválasztva: Bevétel, Fizetés, 2021-December-04
+23:27:17	21600 Fizetés 2021-12-04 Módosítás
+23:27:17	Talált adat: 1, mért adat: 1.
+ 
+23:27:17	Kiválasztva: Bevétel, Fizetés, 2022
+23:27:17	112500 Fizetés 2022-01-10 Módosítás
+23:27:17	67700 Fizetés 2022-03-30 Módosítás
+23:27:17	286200 Fizetés 2022-07-09 Módosítás
+23:27:17	Talált adat: 3, mért adat: 3.
+ 
+23:27:17	Kiválasztva: Bevétel, Fizetés, 2022-Január
+23:27:18	112500 Fizetés 2022-01-10 Módosítás
+23:27:18	Talált adat: 1, mért adat: 1.
+ 
+23:27:18	Kiválasztva: Bevétel, Fizetés, 2022-Január-10
+23:27:18	112500 Fizetés 2022-01-10 Módosítás
+23:27:18	Talált adat: 1, mért adat: 1.
+ 
+23:27:19	Kiválasztva: Bevétel, Fizetés, 2022-Február
+23:27:19	Nincs ilyen adat!
+ 
+23:27:19	Kiválasztva: Bevétel, Fizetés, 2022-Március
+23:27:19	67700 Fizetés 2022-03-30 Módosítás
+23:27:19	Talált adat: 1, mért adat: 1.
+ 
+23:27:19	Kiválasztva: Bevétel, Fizetés, 2022-Március-30
+23:27:20	67700 Fizetés 2022-03-30 Módosítás
+23:27:20	Talált adat: 1, mért adat: 1.
+ 
+23:27:20	Kiválasztva: Bevétel, Fizetés, 2022-Április
+23:27:20	Nincs ilyen adat!
+ 
+23:27:20	Kiválasztva: Bevétel, Fizetés, 2022-Május
+23:27:21	Nincs ilyen adat!
+ 
+23:27:21	Kiválasztva: Bevétel, Fizetés, 2022-Június
+23:27:21	Nincs ilyen adat!
+ 
+23:27:21	Kiválasztva: Bevétel, Fizetés, 2022-Július
+23:27:21	286200 Fizetés 2022-07-09 Módosítás
+23:27:21	Talált adat: 1, mért adat: 1.
+ 
+23:27:22	Kiválasztva: Bevétel, Fizetés, 2022-Július-09
+23:27:22	286200 Fizetés 2022-07-09 Módosítás
+23:27:22	Talált adat: 1, mért adat: 1.
+ 
+23:27:22	Kiválasztva: Bevétel, Fizetés, 2022-Augusztus
+23:27:22	Nincs ilyen adat!
+ 
+23:27:23	Kiválasztva: Bevétel, Fizetés, 2022-Szeptember
+23:27:23	Nincs ilyen adat!
+ 
+23:27:23	Kiválasztva: Bevétel, Fizetés, 2022-Október
+23:27:23	Nincs ilyen adat!
+ 
+23:27:23	Kiválasztva: Bevétel, Fizetés, 2022-November
+23:27:23	Nincs ilyen adat!
+ 
+23:27:24	Kiválasztva: Bevétel, Fizetés, 2022-December
+23:27:24	Nincs ilyen adat!
+ 
+23:27:24	Kiválasztva: Egyéb összeg, Fizetés, Összes év
+23:27:24	286200 Fizetés 2022-07-09 Módosítás
+23:27:24	Talált adat: 1, mért adat: 1.
+ 
+23:27:25	Kiválasztva: Egyéb összeg, Fizetés, 2022-07-09
+23:27:25	286200 Fizetés 2022-07-09 Módosítás
+23:27:25	Talált adat: 1, mért adat: 1.
+ 
+23:27:26	Kiválasztva: Kiadás, Szabadidő, Összes év
+23:27:26	-6632 Szabadidő 2021-02-18 Módosítás
+23:27:26	-5428 Szabadidő 2021-03-07 Módosítás
+23:27:26	-6180 Szabadidő 2021-03-21 Módosítás
+23:27:26	-10140 Szabadidő 2021-04-02 Módosítás
+23:27:26	-6328 Szabadidő 2021-05-28 Módosítás
+23:27:26	-7740 Szabadidő 2021-06-06 Módosítás
+23:27:26	-9008 Szabadidő 2022-04-18 Módosítás
+23:27:26	-4978 Szabadidő 2022-08-08 Módosítás
+23:27:26	Talált adat: 8, mért adat: 8.
+ 
+23:27:26	Kiválasztva: Kiadás, Szabadidő, 2021
+23:27:27	-6632 Szabadidő 2021-02-18 Módosítás
+23:27:27	-5428 Szabadidő 2021-03-07 Módosítás
+23:27:27	-6180 Szabadidő 2021-03-21 Módosítás
+23:27:27	-10140 Szabadidő 2021-04-02 Módosítás
+23:27:27	-6328 Szabadidő 2021-05-28 Módosítás
+23:27:27	-7740 Szabadidő 2021-06-06 Módosítás
+23:27:27	Talált adat: 6, mért adat: 6.
+ 
+23:27:27	Kiválasztva: Kiadás, Szabadidő, 2021-Január
+23:27:27	Nincs ilyen adat!
+ 
+23:27:27	Kiválasztva: Kiadás, Szabadidő, 2021-Február
+23:27:27	-6632 Szabadidő 2021-02-18 Módosítás
+23:27:27	Talált adat: 1, mért adat: 1.
+ 
+23:27:27	Kiválasztva: Kiadás, Szabadidő, 2021-Február-18
+23:27:28	-6632 Szabadidő 2021-02-18 Módosítás
+23:27:28	Talált adat: 1, mért adat: 1.
+ 
+23:27:28	Kiválasztva: Kiadás, Szabadidő, 2021-Március
+23:27:28	-5428 Szabadidő 2021-03-07 Módosítás
+23:27:28	-6180 Szabadidő 2021-03-21 Módosítás
+23:27:28	Talált adat: 2, mért adat: 2.
+ 
+23:27:29	Kiválasztva: Kiadás, Szabadidő, 2021-Március-07
+23:27:29	-5428 Szabadidő 2021-03-07 Módosítás
+23:27:29	Talált adat: 1, mért adat: 1.
+ 
+23:27:29	Kiválasztva: Kiadás, Szabadidő, 2021-Március-21
+23:27:29	-6180 Szabadidő 2021-03-21 Módosítás
+23:27:29	Talált adat: 1, mért adat: 1.
+ 
+23:27:30	Kiválasztva: Kiadás, Szabadidő, 2021-Április
+23:27:30	-10140 Szabadidő 2021-04-02 Módosítás
+23:27:30	Talált adat: 1, mért adat: 1.
+ 
+23:27:30	Kiválasztva: Kiadás, Szabadidő, 2021-Április-02
+23:27:31	-10140 Szabadidő 2021-04-02 Módosítás
+23:27:31	Talált adat: 1, mért adat: 1.
+ 
+23:27:31	Kiválasztva: Kiadás, Szabadidő, 2021-Május
+23:27:31	-6328 Szabadidő 2021-05-28 Módosítás
+23:27:31	Talált adat: 1, mért adat: 1.
+ 
+23:27:32	Kiválasztva: Kiadás, Szabadidő, 2021-Május-28
+23:27:32	-6328 Szabadidő 2021-05-28 Módosítás
+23:27:32	Talált adat: 1, mért adat: 1.
+ 
+23:27:32	Kiválasztva: Kiadás, Szabadidő, 2021-Június
+23:27:32	-7740 Szabadidő 2021-06-06 Módosítás
+23:27:32	Talált adat: 1, mért adat: 1.
+ 
+23:27:33	Kiválasztva: Kiadás, Szabadidő, 2021-Június-06
+23:27:33	-7740 Szabadidő 2021-06-06 Módosítás
+23:27:33	Talált adat: 1, mért adat: 1.
+ 
+23:27:33	Kiválasztva: Kiadás, Szabadidő, 2021-Július
+23:27:34	Nincs ilyen adat!
+ 
+23:27:34	Kiválasztva: Kiadás, Szabadidő, 2021-Augusztus
+23:27:34	Nincs ilyen adat!
+ 
+23:27:34	Kiválasztva: Kiadás, Szabadidő, 2021-Szeptember
+23:27:34	Nincs ilyen adat!
+ 
+23:27:34	Kiválasztva: Kiadás, Szabadidő, 2021-Október
+23:27:35	Nincs ilyen adat!
+ 
+23:27:35	Kiválasztva: Kiadás, Szabadidő, 2021-November
+23:27:35	Nincs ilyen adat!
+ 
+23:27:35	Kiválasztva: Kiadás, Szabadidő, 2021-December
+23:27:35	Nincs ilyen adat!
+ 
+23:27:35	Kiválasztva: Kiadás, Szabadidő, 2022
+23:27:36	-9008 Szabadidő 2022-04-18 Módosítás
+23:27:36	-4978 Szabadidő 2022-08-08 Módosítás
+23:27:36	Talált adat: 2, mért adat: 2.
+ 
+23:27:36	Kiválasztva: Kiadás, Szabadidő, 2022-Január
+23:27:36	Nincs ilyen adat!
+ 
+23:27:36	Kiválasztva: Kiadás, Szabadidő, 2022-Február
+23:27:36	Nincs ilyen adat!
+ 
+23:27:36	Kiválasztva: Kiadás, Szabadidő, 2022-Március
+23:27:36	Nincs ilyen adat!
+ 
+23:27:36	Kiválasztva: Kiadás, Szabadidő, 2022-Április
+23:27:37	-9008 Szabadidő 2022-04-18 Módosítás
+23:27:37	Talált adat: 1, mért adat: 1.
+ 
+23:27:37	Kiválasztva: Kiadás, Szabadidő, 2022-Április-18
+23:27:37	-9008 Szabadidő 2022-04-18 Módosítás
+23:27:37	Talált adat: 1, mért adat: 1.
+ 
+23:27:38	Kiválasztva: Kiadás, Szabadidő, 2022-Május
+23:27:38	Nincs ilyen adat!
+ 
+23:27:38	Kiválasztva: Kiadás, Szabadidő, 2022-Június
+23:27:38	Nincs ilyen adat!
+ 
+23:27:39	Kiválasztva: Kiadás, Szabadidő, 2022-Július
+23:27:39	Nincs ilyen adat!
+ 
+23:27:39	Kiválasztva: Kiadás, Szabadidő, 2022-Augusztus
+23:27:39	-4978 Szabadidő 2022-08-08 Módosítás
+23:27:39	Talált adat: 1, mért adat: 1.
+ 
+23:27:39	Kiválasztva: Kiadás, Szabadidő, 2022-Augusztus-08
+23:27:40	-4978 Szabadidő 2022-08-08 Módosítás
+23:27:40	Talált adat: 1, mért adat: 1.
+ 
+23:27:40	Kiválasztva: Kiadás, Szabadidő, 2022-Szeptember
+23:27:40	Nincs ilyen adat!
+ 
+23:27:40	Kiválasztva: Kiadás, Szabadidő, 2022-Október
+23:27:40	Nincs ilyen adat!
+ 
+23:27:41	Kiválasztva: Kiadás, Szabadidő, 2022-November
+23:27:41	Nincs ilyen adat!
+ 
+23:27:41	Kiválasztva: Kiadás, Szabadidő, 2022-December
+23:27:41	Nincs ilyen adat!
+ 
+23:27:42	Kiválasztva: Egyéb összeg, Szabadidő, Összes év
+23:27:42	-5428 Szabadidő 2021-03-07 Módosítás
+23:27:42	Talált adat: 1, mért adat: 1.
+ 
+23:27:42	Kiválasztva: Egyéb összeg, Szabadidő, 2021-03-07
+23:27:43	-5428 Szabadidő 2021-03-07 Módosítás
+23:27:43	Talált adat: 1, mért adat: 1.
+ 
+23:27:43	Kiválasztva: Kiadás, Számlák, Összes év
+23:27:44	-3776 Számlák 2021-03-31 Módosítás
+23:27:44	-19600 Számlák 2021-06-22 Módosítás
+23:27:44	-4824 Számlák 2021-07-30 Módosítás
+23:27:44	-5760 Számlák 2021-09-12 Módosítás
+23:27:44	-8996 Számlák 2021-11-26 Módosítás
+23:27:44	-5740 Számlák 2021-12-08 Módosítás
+23:27:44	-6262 Számlák 2022-02-20 Módosítás
+23:27:44	-3028 Számlák 2022-07-04 Módosítás
+23:27:44	-5152 Számlák 2022-07-15 Módosítás
+23:27:44	Talált adat: 9, mért adat: 9.
+ 
+23:27:44	Kiválasztva: Kiadás, Számlák, 2021
+23:27:44	-3776 Számlák 2021-03-31 Módosítás
+23:27:44	-19600 Számlák 2021-06-22 Módosítás
+23:27:44	-4824 Számlák 2021-07-30 Módosítás
+23:27:44	-5760 Számlák 2021-09-12 Módosítás
+23:27:44	-8996 Számlák 2021-11-26 Módosítás
+23:27:44	-5740 Számlák 2021-12-08 Módosítás
+23:27:44	Talált adat: 6, mért adat: 6.
+ 
+23:27:44	Kiválasztva: Kiadás, Számlák, 2021-Január
+23:27:44	Nincs ilyen adat!
+ 
+23:27:44	Kiválasztva: Kiadás, Számlák, 2021-Február
+23:27:44	Nincs ilyen adat!
+ 
+23:27:45	Kiválasztva: Kiadás, Számlák, 2021-Március
+23:27:45	-3776 Számlák 2021-03-31 Módosítás
+23:27:45	Talált adat: 1, mért adat: 1.
+ 
+23:27:45	Kiválasztva: Kiadás, Számlák, 2021-Március-31
+23:27:45	-3776 Számlák 2021-03-31 Módosítás
+23:27:45	Talált adat: 1, mért adat: 1.
+ 
+23:27:46	Kiválasztva: Kiadás, Számlák, 2021-Április
+23:27:46	Nincs ilyen adat!
+ 
+23:27:46	Kiválasztva: Kiadás, Számlák, 2021-Május
+23:27:46	Nincs ilyen adat!
+ 
+23:27:46	Kiválasztva: Kiadás, Számlák, 2021-Június
+23:27:46	-19600 Számlák 2021-06-22 Módosítás
+23:27:46	Talált adat: 1, mért adat: 1.
+ 
+23:27:47	Kiválasztva: Kiadás, Számlák, 2021-Június-22
+23:27:47	-19600 Számlák 2021-06-22 Módosítás
+23:27:47	Talált adat: 1, mért adat: 1.
+ 
+23:27:48	Kiválasztva: Kiadás, Számlák, 2021-Július
+23:27:48	-4824 Számlák 2021-07-30 Módosítás
+23:27:48	Talált adat: 1, mért adat: 1.
+ 
+23:27:48	Kiválasztva: Kiadás, Számlák, 2021-Július-30
+23:27:48	-4824 Számlák 2021-07-30 Módosítás
+23:27:48	Talált adat: 1, mért adat: 1.
+ 
+23:27:49	Kiválasztva: Kiadás, Számlák, 2021-Augusztus
+23:27:49	Nincs ilyen adat!
+ 
+23:27:49	Kiválasztva: Kiadás, Számlák, 2021-Szeptember
+23:27:49	-5760 Számlák 2021-09-12 Módosítás
+23:27:49	Talált adat: 1, mért adat: 1.
+ 
+23:27:50	Kiválasztva: Kiadás, Számlák, 2021-Szeptember-12
+23:27:50	-5760 Számlák 2021-09-12 Módosítás
+23:27:50	Talált adat: 1, mért adat: 1.
+ 
+23:27:50	Kiválasztva: Kiadás, Számlák, 2021-Október
+23:27:51	Nincs ilyen adat!
+ 
+23:27:51	Kiválasztva: Kiadás, Számlák, 2021-November
+23:27:51	-8996 Számlák 2021-11-26 Módosítás
+23:27:51	Talált adat: 1, mért adat: 1.
+ 
+23:27:51	Kiválasztva: Kiadás, Számlák, 2021-November-26
+23:27:52	-8996 Számlák 2021-11-26 Módosítás
+23:27:52	Talált adat: 1, mért adat: 1.
+ 
+23:27:52	Kiválasztva: Kiadás, Számlák, 2021-December
+23:27:52	-5740 Számlák 2021-12-08 Módosítás
+23:27:52	Talált adat: 1, mért adat: 1.
+ 
+23:27:52	Kiválasztva: Kiadás, Számlák, 2021-December-08
+23:27:53	-5740 Számlák 2021-12-08 Módosítás
+23:27:53	Talált adat: 1, mért adat: 1.
+ 
+23:27:53	Kiválasztva: Kiadás, Számlák, 2022
+23:27:53	-6262 Számlák 2022-02-20 Módosítás
+23:27:53	-3028 Számlák 2022-07-04 Módosítás
+23:27:53	-5152 Számlák 2022-07-15 Módosítás
+23:27:53	Talált adat: 3, mért adat: 3.
+ 
+23:27:53	Kiválasztva: Kiadás, Számlák, 2022-Január
+23:27:54	Nincs ilyen adat!
+ 
+23:27:54	Kiválasztva: Kiadás, Számlák, 2022-Február
+23:27:54	-6262 Számlák 2022-02-20 Módosítás
+23:27:54	Talált adat: 1, mért adat: 1.
+ 
+23:27:54	Kiválasztva: Kiadás, Számlák, 2022-Február-20
+23:27:55	-6262 Számlák 2022-02-20 Módosítás
+23:27:55	Talált adat: 1, mért adat: 1.
+ 
+23:27:55	Kiválasztva: Kiadás, Számlák, 2022-Március
+23:27:55	Nincs ilyen adat!
+ 
+23:27:55	Kiválasztva: Kiadás, Számlák, 2022-Április
+23:27:55	Nincs ilyen adat!
+ 
+23:27:56	Kiválasztva: Kiadás, Számlák, 2022-Május
+23:27:56	Nincs ilyen adat!
+ 
+23:27:56	Kiválasztva: Kiadás, Számlák, 2022-Június
+23:27:56	Nincs ilyen adat!
+ 
+23:27:56	Kiválasztva: Kiadás, Számlák, 2022-Július
+23:27:56	-3028 Számlák 2022-07-04 Módosítás
+23:27:56	-5152 Számlák 2022-07-15 Módosítás
+23:27:56	Talált adat: 2, mért adat: 2.
+ 
+23:27:57	Kiválasztva: Kiadás, Számlák, 2022-Július-04
+23:27:57	-3028 Számlák 2022-07-04 Módosítás
+23:27:57	Talált adat: 1, mért adat: 1.
+ 
+23:27:57	Kiválasztva: Kiadás, Számlák, 2022-Július-15
+23:27:57	-5152 Számlák 2022-07-15 Módosítás
+23:27:57	Talált adat: 1, mért adat: 1.
+ 
+23:27:58	Kiválasztva: Kiadás, Számlák, 2022-Augusztus
+23:27:58	Nincs ilyen adat!
+ 
+23:27:58	Kiválasztva: Kiadás, Számlák, 2022-Szeptember
+23:27:58	Nincs ilyen adat!
+ 
+23:27:58	Kiválasztva: Kiadás, Számlák, 2022-Október
+23:27:59	Nincs ilyen adat!
+ 
+23:27:59	Kiválasztva: Kiadás, Számlák, 2022-November
+23:27:59	Nincs ilyen adat!
+ 
+23:27:59	Kiválasztva: Kiadás, Számlák, 2022-December
+23:27:59	Nincs ilyen adat!
+ 
+23:28:00	Kiválasztva: Egyéb összeg, Számlák, Összes év
+23:28:00	-5760 Számlák 2021-09-12 Módosítás
+23:28:00	Talált adat: 1, mért adat: 1.
+ 
+23:28:01	Kiválasztva: Egyéb összeg, Számlák, 2021-09-12
+23:28:01	-5760 Számlák 2021-09-12 Módosítás
+23:28:01	Talált adat: 1, mért adat: 1.
+ 
+23:28:02	Kiválasztva: Kiadás, Egyéb kiadások, Összes év
+23:28:02	-6706 Egyéb kiadások 2021-05-19 Módosítás
+23:28:02	-6800 Egyéb kiadások 2021-06-17 Módosítás
+23:28:02	-4006 Egyéb kiadások 2021-08-10 Módosítás
+23:28:02	-900 Egyéb kiadások 2022-07-06 Módosítás
+23:28:02	-9940 Egyéb kiadások 2022-07-20 Módosítás
+23:28:02	Talált adat: 5, mért adat: 5.
+ 
+23:28:02	Kiválasztva: Kiadás, Egyéb kiadások, 2021
+23:28:02	-6706 Egyéb kiadások 2021-05-19 Módosítás
+23:28:02	-6800 Egyéb kiadások 2021-06-17 Módosítás
+23:28:02	-4006 Egyéb kiadások 2021-08-10 Módosítás
+23:28:02	Talált adat: 3, mért adat: 3.
+ 
+23:28:02	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Január
+23:28:02	Nincs ilyen adat!
+ 
+23:28:03	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Február
+23:28:03	Nincs ilyen adat!
+ 
+23:28:03	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Március
+23:28:03	Nincs ilyen adat!
+ 
+23:28:03	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Április
+23:28:03	Nincs ilyen adat!
+ 
+23:28:03	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Május
+23:28:03	-6706 Egyéb kiadások 2021-05-19 Módosítás
+23:28:03	Talált adat: 1, mért adat: 1.
+ 
+23:28:04	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Május-19
+23:28:04	-6706 Egyéb kiadások 2021-05-19 Módosítás
+23:28:04	Talált adat: 1, mért adat: 1.
+ 
+23:28:05	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Június
+23:28:05	-6800 Egyéb kiadások 2021-06-17 Módosítás
+23:28:05	Talált adat: 1, mért adat: 1.
+ 
+23:28:05	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Június-17
+23:28:05	-6800 Egyéb kiadások 2021-06-17 Módosítás
+23:28:05	Talált adat: 1, mért adat: 1.
+ 
+23:28:06	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Július
+23:28:06	Nincs ilyen adat!
+ 
+23:28:06	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Augusztus
+23:28:06	-4006 Egyéb kiadások 2021-08-10 Módosítás
+23:28:06	Talált adat: 1, mért adat: 1.
+ 
+23:28:07	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Augusztus-10
+23:28:07	-4006 Egyéb kiadások 2021-08-10 Módosítás
+23:28:07	Talált adat: 1, mért adat: 1.
+ 
+23:28:07	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Szeptember
+23:28:08	Nincs ilyen adat!
+ 
+23:28:08	Kiválasztva: Kiadás, Egyéb kiadások, 2021-Október
+23:28:08	Nincs ilyen adat!
+ 
+23:28:08	Kiválasztva: Kiadás, Egyéb kiadások, 2021-November
+23:28:08	Nincs ilyen adat!
+ 
+23:28:08	Kiválasztva: Kiadás, Egyéb kiadások, 2021-December
+23:28:09	Nincs ilyen adat!
+ 
+23:28:09	Kiválasztva: Kiadás, Egyéb kiadások, 2022
+23:28:09	-900 Egyéb kiadások 2022-07-06 Módosítás
+23:28:09	-9940 Egyéb kiadások 2022-07-20 Módosítás
+23:28:09	Talált adat: 2, mért adat: 2.
+ 
+23:28:09	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Január
+23:28:09	Nincs ilyen adat!
+ 
+23:28:09	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Február
+23:28:09	Nincs ilyen adat!
+ 
+23:28:09	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Március
+23:28:10	Nincs ilyen adat!
+ 
+23:28:10	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Április
+23:28:10	Nincs ilyen adat!
+ 
+23:28:10	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Május
+23:28:10	Nincs ilyen adat!
+ 
+23:28:10	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Június
+23:28:10	Nincs ilyen adat!
+ 
+23:28:10	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Július
+23:28:11	-900 Egyéb kiadások 2022-07-06 Módosítás
+23:28:11	-9940 Egyéb kiadások 2022-07-20 Módosítás
+23:28:11	Talált adat: 2, mért adat: 2.
+ 
+23:28:11	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Július-06
+23:28:11	-900 Egyéb kiadások 2022-07-06 Módosítás
+23:28:11	Talált adat: 1, mért adat: 1.
+ 
+23:28:11	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Július-20
+23:28:12	-9940 Egyéb kiadások 2022-07-20 Módosítás
+23:28:12	Talált adat: 1, mért adat: 1.
+ 
+23:28:12	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Augusztus
+23:28:12	Nincs ilyen adat!
+ 
+23:28:12	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Szeptember
+23:28:13	Nincs ilyen adat!
+ 
+23:28:13	Kiválasztva: Kiadás, Egyéb kiadások, 2022-Október
+23:28:13	Nincs ilyen adat!
+ 
+23:28:13	Kiválasztva: Kiadás, Egyéb kiadások, 2022-November
+23:28:13	Nincs ilyen adat!
+ 
+23:28:13	Kiválasztva: Kiadás, Egyéb kiadások, 2022-December
+23:28:13	Nincs ilyen adat!
+ 
+23:28:14	Kiválasztva: Egyéb összeg, Egyéb kiadások, Összes év
+23:28:14	-900 Egyéb kiadások 2022-07-06 Módosítás
+23:28:14	Talált adat: 1, mért adat: 1.
+ 
+23:28:15	Kiválasztva: Egyéb összeg, Egyéb kiadások, 2022-07-06
+23:28:15	-900 Egyéb kiadások 2022-07-06 Módosítás
+23:28:15	Talált adat: 1, mért adat: 1.
+ 
+23:28:16	Kiválasztva: Bevétel, Egyéb juttatások, Összes év
+23:28:16	460700 Egyéb juttatások 2022-02-20 Módosítás
+23:28:16	270100 Egyéb juttatások 2022-05-05 Módosítás
+23:28:16	313700 Egyéb juttatások 2022-06-14 Módosítás
+23:28:16	414900 Egyéb juttatások 2022-07-07 Módosítás
+23:28:16	427900 Egyéb juttatások 2022-07-18 Módosítás
+23:28:16	Talált adat: 5, mért adat: 5.
+ 
+23:28:16	Kiválasztva: Bevétel, Egyéb juttatások, 2021
+23:28:16	Nincs ilyen adat!
+ 
+23:28:16	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Január
+23:28:16	Nincs ilyen adat!
+ 
+23:28:16	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Február
+23:28:17	Nincs ilyen adat!
+ 
+23:28:17	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Március
+23:28:17	Nincs ilyen adat!
+ 
+23:28:17	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Április
+23:28:17	Nincs ilyen adat!
+ 
+23:28:17	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Május
+23:28:18	Nincs ilyen adat!
+ 
+23:28:18	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Június
+23:28:18	Nincs ilyen adat!
+ 
+23:28:18	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Július
+23:28:18	Nincs ilyen adat!
+ 
+23:28:18	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Augusztus
+23:28:18	Nincs ilyen adat!
+ 
+23:28:19	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Szeptember
+23:28:19	Nincs ilyen adat!
+ 
+23:28:19	Kiválasztva: Bevétel, Egyéb juttatások, 2021-Október
+23:28:19	Nincs ilyen adat!
+ 
+23:28:19	Kiválasztva: Bevétel, Egyéb juttatások, 2021-November
+23:28:19	Nincs ilyen adat!
+ 
+23:28:20	Kiválasztva: Bevétel, Egyéb juttatások, 2021-December
+23:28:20	Nincs ilyen adat!
+ 
+23:28:20	Kiválasztva: Bevétel, Egyéb juttatások, 2022
+23:28:20	460700 Egyéb juttatások 2022-02-20 Módosítás
+23:28:20	270100 Egyéb juttatások 2022-05-05 Módosítás
+23:28:20	313700 Egyéb juttatások 2022-06-14 Módosítás
+23:28:20	414900 Egyéb juttatások 2022-07-07 Módosítás
+23:28:20	427900 Egyéb juttatások 2022-07-18 Módosítás
+23:28:20	Talált adat: 5, mért adat: 5.
+ 
+23:28:20	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Január
+23:28:20	Nincs ilyen adat!
+ 
+23:28:20	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Február
+23:28:21	460700 Egyéb juttatások 2022-02-20 Módosítás
+23:28:21	Talált adat: 1, mért adat: 1.
+ 
+23:28:21	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Február-20
+23:28:21	460700 Egyéb juttatások 2022-02-20 Módosítás
+23:28:21	Talált adat: 1, mért adat: 1.
+ 
+23:28:22	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Március
+23:28:22	Nincs ilyen adat!
+ 
+23:28:22	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Április
+23:28:22	Nincs ilyen adat!
+ 
+23:28:22	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Május
+23:28:23	270100 Egyéb juttatások 2022-05-05 Módosítás
+23:28:23	Talált adat: 1, mért adat: 1.
+ 
+23:28:23	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Május-05
+23:28:23	270100 Egyéb juttatások 2022-05-05 Módosítás
+23:28:23	Talált adat: 1, mért adat: 1.
+ 
+23:28:24	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Június
+23:28:24	313700 Egyéb juttatások 2022-06-14 Módosítás
+23:28:24	Talált adat: 1, mért adat: 1.
+ 
+23:28:24	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Június-14
+23:28:24	313700 Egyéb juttatások 2022-06-14 Módosítás
+23:28:24	Talált adat: 1, mért adat: 1.
+ 
+23:28:25	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Július
+23:28:25	414900 Egyéb juttatások 2022-07-07 Módosítás
+23:28:25	427900 Egyéb juttatások 2022-07-18 Módosítás
+23:28:25	Talált adat: 2, mért adat: 2.
+ 
+23:28:25	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Július-07
+23:28:26	414900 Egyéb juttatások 2022-07-07 Módosítás
+23:28:26	Talált adat: 1, mért adat: 1.
+ 
+23:28:26	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Július-18
+23:28:26	427900 Egyéb juttatások 2022-07-18 Módosítás
+23:28:26	Talált adat: 1, mért adat: 1.
+ 
+23:28:26	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Augusztus
+23:28:26	Nincs ilyen adat!
+ 
+23:28:27	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Szeptember
+23:28:27	Nincs ilyen adat!
+ 
+23:28:27	Kiválasztva: Bevétel, Egyéb juttatások, 2022-Október
+23:28:27	Nincs ilyen adat!
+ 
+23:28:27	Kiválasztva: Bevétel, Egyéb juttatások, 2022-November
+23:28:28	Nincs ilyen adat!
+ 
+23:28:28	Kiválasztva: Bevétel, Egyéb juttatások, 2022-December
+23:28:28	Nincs ilyen adat!
+ 
+23:28:28	Kiválasztva: Egyéb összeg, Egyéb juttatások, Összes év
+23:28:29	427900 Egyéb juttatások 2022-07-18 Módosítás
+23:28:29	Talált adat: 1, mért adat: 1.
+ 
+23:28:29	Kiválasztva: Egyéb összeg, Egyéb juttatások, 2022-07-18
+23:28:29	427900 Egyéb juttatások 2022-07-18 Módosítás
+23:28:29	Talált adat: 1, mért adat: 1.
+----------------------------------------------------------------------------------------------------
+23:28:29	Adatok módosítása és törlése...
+23:28:33	1. adat módosítása sikeres!
+23:28:35	1. adat eltávolítása sikeres!
+23:28:38	2. adat módosítása sikeres!
+23:28:41	2. adat eltávolítása sikeres!
+23:28:43	3. adat módosítása sikeres!
+23:28:46	3. adat eltávolítása sikeres!
+23:28:49	4. adat módosítása sikeres!
+23:28:51	4. adat eltávolítása sikeres!
+23:28:54	5. adat módosítása sikeres!
+23:28:57	5. adat eltávolítása sikeres!
+23:28:57	Sikeres adat módosítás és törlés!
+----------------------------------------------------------------------------------------------------
+23:28:57	Felhasználó adatainak módosítása és törlése...
+23:29:01	Sikeres bejelentkezés.
+23:29:02	Felhasználó adatainak módosítása sikeres!
+23:29:04	Sikertelen bejelentkezés! Rendszer üzenet: Hibás felhasználónév!
+23:29:04	Felhasználó törlése sikeres!
+23:29:04	Felhasználó adatainak módosítása és törlése sikeres!
+ 
+====================================================================================================
+23:29:04	1. felhasználó tesztjeinek részideje:
+ 
+23:29:04	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+23:29:04	Felhasználó regisztrálásának az ideje: 0 perc 2 másodperc.
+23:29:04	Felhasználó belépésének az ideje: 0 perc 1 másodperc.
+23:29:04	Adatok feltöltésének az ideje: 1 perc 15 másodperc.
+23:29:04	Adatok lekérdezésének az ideje: 1 perc 58 másodperc.
+23:29:04	Adatok módosításának és törlésének az ideje: 0 perc 27 másodperc.
+23:29:04	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 7 másodperc.
+====================================================================================================
+ 
+23:29:04	2. felhasználó adatainak létrehozása...
+23:29:04	Fiók adatainak létrehozása kész!
+----------------------------------------------------------------------------------------------------
+23:29:04	2. felhasználó regisztrálása...
+23:29:04	Felhasználónév: Tóth Prijá
+23:29:04	Jelszó: p4PLJ23DbR
+23:29:04	Email: toth.prija3358@freemail.hu
+23:29:04	Irányítószám: 2185
+23:29:04	Ország: Magyarország
+23:29:04	Megye: Pest
+23:29:04	Város: Váckisújfalu
+23:29:06	Sikeres regisztráció!
+----------------------------------------------------------------------------------------------------
+23:29:06	2. felhasználó bejelentkezése...
+23:29:08	Sikeres bejelentkezés.
+----------------------------------------------------------------------------------------------------
+23:29:08	Adatok feltöltése...
+23:29:09	Összeg (Ft):  -8776,  Dátum: 2022-08-02,  Kategória: Élelmiszer (1)
+23:29:11	Összeg (Ft):  -9920,  Dátum: 2022-03-04,  Kategória: Élelmiszer (1)
+23:29:12	Összeg (Ft): 433200,  Dátum: 2022-03-21,  Kategória: Fizetés (3)
+23:29:14	Összeg (Ft):  -8616,  Dátum: 2021-11-18,  Kategória: Szabadidő (4)
+23:29:15	Összeg (Ft): -14600,  Dátum: 2021-04-18,  Kategória: Ruházat (2)
+23:29:16	Összeg (Ft):  -4558,  Dátum: 2022-06-24,  Kategória: Egyébkiadások (6)
+23:29:18	Összeg (Ft): 409000,  Dátum: 2021-04-13,  Kategória: Egyébjuttatások (7)
+23:29:20	Összeg (Ft):  -5460,  Dátum: 2021-10-30,  Kategória: Egyébkiadások (6)
+23:29:21	Összeg (Ft):  -3676,  Dátum: 2022-06-24,  Kategória: Élelmiszer (1)
+23:29:23	Összeg (Ft): 388400,  Dátum: 2022-01-21,  Kategória: Egyébjuttatások (7)
+23:29:24	Összeg (Ft):  -9040,  Dátum: 2021-11-16,  Kategória: Élelmiszer (1)
+23:29:26	Összeg (Ft): 275500,  Dátum: 2021-07-13,  Kategória: Egyébjuttatások (7)
+23:29:27	Összeg (Ft):  -6362,  Dátum: 2022-08-07,  Kategória: Egyébkiadások (6)
+23:29:29	Összeg (Ft): 115700,  Dátum: 2022-04-17,  Kategória: Egyébjuttatások (7)
+23:29:30	Összeg (Ft):  -4600,  Dátum: 2022-01-31,  Kategória: Ruházat (2)
+23:29:31	Összeg (Ft):  -8358,  Dátum: 2021-08-16,  Kategória: Számlák (5)
+23:29:33	Összeg (Ft):  -6556,  Dátum: 2021-03-31,  Kategória: Számlák (5)
+23:29:34	Összeg (Ft):  -9412,  Dátum: 2022-05-09,  Kategória: Számlák (5)
+23:29:36	Összeg (Ft):  -9922,  Dátum: 2021-09-05,  Kategória: Egyébkiadások (6)
+23:29:37	Összeg (Ft): -19460,  Dátum: 2021-07-22,  Kategória: Számlák (5)
+23:29:39	Összeg (Ft):  -7272,  Dátum: 2021-11-30,  Kategória: Számlák (5)
+23:29:40	Összeg (Ft):  -2620,  Dátum: 2022-03-11,  Kategória: Ruházat (2)
+23:29:42	Összeg (Ft):  -6136,  Dátum: 2021-01-06,  Kategória: Ruházat (2)
+23:29:43	Összeg (Ft): 248800,  Dátum: 2022-03-30,  Kategória: Fizetés (3)
+23:29:45	Összeg (Ft):  -2900,  Dátum: 2021-02-10,  Kategória: Szabadidő (4)
+23:29:46	Összeg (Ft):  -2564,  Dátum: 2022-03-15,  Kategória: Szabadidő (4)
+23:29:48	Összeg (Ft):  -2368,  Dátum: 2021-04-18,  Kategória: Számlák (5)
+23:29:49	Összeg (Ft):  -9460,  Dátum: 2021-06-17,  Kategória: Számlák (5)
+23:29:50	Összeg (Ft):  -4532,  Dátum: 2021-03-08,  Kategória: Egyébkiadások (6)
+23:29:52	Összeg (Ft):  -4072,  Dátum: 2021-11-18,  Kategória: Egyébkiadások (6)
+23:29:53	Összeg (Ft):  -3686,  Dátum: 2021-07-27,  Kategória: Ruházat (2)
+23:29:55	Összeg (Ft):  -5648,  Dátum: 2022-02-15,  Kategória: Egyébkiadások (6)
+23:29:56	Összeg (Ft): 107900,  Dátum: 2022-01-19,  Kategória: Egyébjuttatások (7)
+23:29:58	Összeg (Ft):  -7288,  Dátum: 2021-11-15,  Kategória: Számlák (5)
+23:29:59	Összeg (Ft):  -6856,  Dátum: 2022-07-28,  Kategória: Egyébkiadások (6)
+23:30:01	Összeg (Ft): -16320,  Dátum: 2021-10-31,  Kategória: Szabadidő (4)
+23:30:02	Összeg (Ft): 374300,  Dátum: 2021-02-04,  Kategória: Egyébjuttatások (7)
+23:30:04	Összeg (Ft):  -3736,  Dátum: 2021-10-14,  Kategória: Élelmiszer (1)
+23:30:05	Összeg (Ft):   4700,  Dátum: 2021-02-22,  Kategória: Fizetés (3)
+23:30:07	Összeg (Ft):  -8808,  Dátum: 2022-02-06,  Kategória: Ruházat (2)
+23:30:08	Összeg (Ft): 418400,  Dátum: 2021-01-17,  Kategória: Egyébjuttatások (7)
+23:30:10	Összeg (Ft):  -3162,  Dátum: 2022-02-27,  Kategória: Számlák (5)
+23:30:11	Összeg (Ft):  -8886,  Dátum: 2022-05-31,  Kategória: Élelmiszer (1)
+23:30:13	Összeg (Ft):  -6150,  Dátum: 2021-06-23,  Kategória: Ruházat (2)
+23:30:14	Összeg (Ft): 261700,  Dátum: 2021-12-06,  Kategória: Fizetés (3)
+23:30:16	Összeg (Ft): 291700,  Dátum: 2022-01-01,  Kategória: Egyébjuttatások (7)
+23:30:17	Összeg (Ft):  -8530,  Dátum: 2022-06-09,  Kategória: Szabadidő (4)
+23:30:19	Összeg (Ft): -10400,  Dátum: 2021-09-02,  Kategória: Élelmiszer (1)
+23:30:20	Összeg (Ft):  -9122,  Dátum: 2021-10-03,  Kategória: Szabadidő (4)
+23:30:22	Összeg (Ft):  -6980,  Dátum: 2022-05-28,  Kategória: Szabadidő (4)
+23:30:22	Adatok feltöltése kész!
+----------------------------------------------------------------------------------------------------
+23:30:22	Adatok lekérdezése...
+23:30:23	Az összes feltöltött adat és az összes lekérdezett adat megegyezik!
+23:30:24	Dátum szerinti Csökkenő sorrend megegyezett!
+23:30:24	Dátum szerinti Növekvő sorrend megegyezett!
+23:30:25	23 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	24 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	25 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	26 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	27 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	28 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	29 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	30 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	31 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	32 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	33 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	34 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	35 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	36 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+23:30:25	37 :Összeg szerinti Növekvő sorrend nem egyezik meg!
+ 
+====================================================================================================
+23:30:25	2. felhasználó tesztjeinek részideje:
+ 
+23:30:25	Felhasználói adat létrehozásának az ideje: 0 perc 0 másodperc.
+23:30:25	Felhasználó regisztrálásának az ideje: 0 perc 2 másodperc.
+23:30:25	Felhasználó belépésének az ideje: 0 perc 1 másodperc.
+23:30:25	Adatok feltöltésének az ideje: 1 perc 14 másodperc.
+23:30:25	Adatok lekérdezésének az ideje: 0 perc 2 másodperc.
+23:30:25	Adatok módosításának és törlésének az ideje: 0 perc 27 másodperc.
+23:30:25	Felhasználó adatának módosítása és felhasználó törlésének az ideje: 0 perc 7 másodperc.
+====================================================================================================
+ 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+23:30:26	Tesztek összideje:
+
+23:30:26	Regisztráció és bejelentkező oldal funkcionális tesztjének az ideje: 0 perc 3 másodperc.
+23:30:26	Felhasználói adat létrehozásának az összideje: 0 perc 0 másodperc.
+23:30:26	Felhasználó regisztrálásának az összideje: 0 perc 4 másodperc.
+23:30:26	Felhasználó belépésének az összideje: 0 perc 2 másodperc.
+23:30:26	Adatok feltöltésének az összideje: 2 perc 29 másodperc.
+23:30:26	Adatok lekérdezésének az összideje: 2 perc 0 másodperc.
+23:30:26	Adatok módosításának és törlésének az összideje: 0 perc 54 másodperc.
+23:30:26	Felhasználó adatának módosítása és felhasználó törlésének az összideje: 0 perc 14 másodperc.
+23:30:26	Admin felület tesztjének az ideje: 0 perc 0 másodperc.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+23:30:26	A teszt befejeződött! Teljes ideje: 5 perc 20 másodperc.

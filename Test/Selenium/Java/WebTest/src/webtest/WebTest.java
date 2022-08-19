@@ -40,23 +40,23 @@ public class WebTest {
     private static WebDriver driver;
     
     private static String message, randomLocation, randomName, password, email;
-    private static Boolean start, next = true;
+    private static Boolean start, next = true;      // Inditási érték deklarálása és Tovább haladási érték inicializálása.
     
-    static Random rand = new Random();
+    static Random rand = new Random();      // Random osztály példányosítása.
     
-    static ArrayList<Data> locations = new ArrayList<>();
-    static ArrayList<Data> names = new ArrayList<>();
-    static ArrayList<String> uploadData = new ArrayList<>();
-    static ArrayList<String> minimalLogs = new ArrayList<>();
+    static ArrayList<Data> locations = new ArrayList<>();       // Külső fájlból beolvasott lokációk.
+    static ArrayList<Data> names = new ArrayList<>();       // Külső fájlból beolvasott nevek.
+    static ArrayList<String> uploadData = new ArrayList<>();        // feltöltött véletlen szerű adatok listája.
+    static ArrayList<String> minimalLogs = new ArrayList<>();       // Fájlba mentet logok listája.
     static ArrayList<String> uploadDataSorting = new ArrayList<>();       // ArrayList a sorrend megállapításához.
     static ArrayList<Integer> uploadDataSortingInt = new ArrayList<>();       // ArrayList a sorrend megállapításához.
     
-    static Wait<WebDriver> wait;
+    static Wait<WebDriver> wait;        // Időzítés
     
     /**
      * pagePath metódus vissza adja a .html fájlok helyét Stringben.
      * 
-     * Szöveg típusú paraméterek: page
+     * Szöveg típusú paraméter/ek: page
     **/
     
     private static String pagePath(String page){
@@ -164,12 +164,12 @@ public class WebTest {
     
     /**
      * newData függvény új adatot vesz fel az adatbázisba,
-     * 1. A dátumot megfelől formátummá alakítja
+     * 1. A dátumot megfelelő formátummá alakítja
      * 2. Beírja az összeget
      * 3. Beírja a dátumot
      * 4. Kiválasztja a kategóriát
      * 4. Rákattint a hozzáad gombra
-     * 5. Ellenőrzi, hogy sikerült-e a bejelentkezés !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     * 5. Ellenőrzi, hogy sikerült-e a bejelentkezés!
      * 
      * Szöveg típusú paraméter/ek: date
      * Szám típusú paraméter/ek: value, category
@@ -203,7 +203,7 @@ public class WebTest {
             
             Thread.sleep(250);
             List<WebElement> listOfCategory = driver.findElements(By.id("categoriesID"));        // List a kategóriák ArrayList-jéhez.
-            ArrayList<String> categories = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
+            ArrayList<String> categories = new ArrayList<>();         // ArrayList a kategóriák adatához.
             findElementsToArrayList(listOfCategory, categories);
             minimalLogsAddToList("Összeg (Ft): " + String.join("", Collections.nCopies(6-amount.length(), " ")) + amount + ",  Dátum: " + date 
                     + ",  Kategória: " + categories.get(category) + " (" + Integer.toString(category) + ")");
@@ -226,12 +226,13 @@ public class WebTest {
     }
     
     /**
-     * randomLocationAndName függvény kiválaszt véletlen szerűen egy nnevet és egy helységet
+     * randomLocationAndName függvény kiválaszt véletlen szerűen egy nevet és egy helységet,
+     * majd ellenőrzi az adatok meglétét
     **/
     
     private static void randomLocationAndName() {
-        randomName = names.get(rand.nextInt(names.size())).getName();
-        randomLocation = locations.get(rand.nextInt(locations.size())).getLocation();
+        randomName = names.get(rand.nextInt(names.size())).getName();       // Elmenjük az aktuális generált nevet.
+        randomLocation = locations.get(rand.nextInt(locations.size())).getLocation();       // Elmenjük az aktuális generált lokációt.
         
         if(randomName.length() != 0 && randomLocation.length() != 0) minimalLogsAddToList("Fiók adatainak létrehozása kész!");
         else {
@@ -239,6 +240,15 @@ public class WebTest {
             start = false;
         }
     }
+    
+    /**
+     * readFile függvény beolvassa a segéd fájlokat,
+     * és feltölti őket egy listába.
+     * 
+     * Szöveg típusú paraméter/ek: path
+     * Lista típusú paraméter/ek: list
+     * Szám típusú paraméter/ek: which
+    **/
     
     private static void readFile(String path, ArrayList list, int which) {
         try (Scanner scan = new Scanner(new File(path))){
@@ -249,6 +259,13 @@ public class WebTest {
             System.out.println(e);
         }
     }
+    
+    /**
+     * writeFile függvény kiírja a lista tartalmát egy fájlba.
+     * 
+     * Szöveg típusú paraméter/ek: log
+     * Lista típusú paraméter/ek: list
+     */
 
     private static void writeFile(ArrayList list, String log) {
         try (PrintWriter writer = new PrintWriter(new File("./logs/" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd-HHmmss")) + log))){
@@ -260,23 +277,42 @@ public class WebTest {
         }
     }
     
+    /**
+     * minimalLogsAddToList függvény formázottan hozzá adja a tartalmakat a minimalLogs nevű listához.
+     * 
+     * Szöveg típusú paraméter/ek: prompt
+     */
+    
     private static void minimalLogsAddToList(String prompt) {
         minimalLogs.add(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")) + "\t" + prompt);
     }
     
-    private static void findElementsToArrayList(List<WebElement> table, ArrayList<String> stringList) {         // 192: -1; 
+    /**
+     * findElementsToArrayList függvény egy WebElement-ből készít egy ArrayList-et.
+     * 
+     * Lista típusú paraméter/ek: table, stringList
+     */
+    
+    private static void findElementsToArrayList(List<WebElement> table, ArrayList<String> stringList) {
         List<String> strings = new ArrayList<>();
         for(WebElement e : table){
             strings.add(e.getText());
         }
         
         Scanner readList = new Scanner(strings.get(0));
-        //readList.nextLine();
         while (readList.hasNextLine()) {
             String nextLine = readList.nextLine().replace(" ", "");
             if (!nextLine.equals("")) stringList.add(nextLine);
         }
     }
+    
+    /**
+     * tableToArrayList függvény egy WebElement-ből készít egy ArrayList-et.
+     * Annyiban különbözik a findElementsToArrayList függvénytől,
+     * hogy ez az első (úgy nevezett cím sort) sort "levágja" a listából
+     * 
+     * Lista típusú paraméter/ek: table, stringList 
+     */
     
     private static void tableToArrayList(List<WebElement> table, ArrayList<String> stringList) {
         stringList.clear();
@@ -293,6 +329,15 @@ public class WebTest {
         }
     }
     
+    /**
+     * controlForQuery függvény segéd függvénye a queryFromDatabase-nek,
+     * feladat, hogy össze vesse a weboldalról kiolvasott adatokat a mért adatokkal.
+     * 
+     * Lista típusú paraméter/ek: allQuery
+     * Szöveg típusú paraméter/ek: message
+     * Szám típusú paraméter/ek: hit
+     */
+    
     private static void controlForQuery(ArrayList<String> allQuery, int hit, String message) {
         if (!message.equals("Nincs ilyen adat!")) {
             if (hit != allQuery.size()) {
@@ -308,6 +353,15 @@ public class WebTest {
             } else minimalLogsAddToList("Talált adat: " + allQuery.size() + ", mért adat: " + hit + ".");
         }else minimalLogsAddToList(message);  
     }
+    
+    /**
+     * sorting függvény segéd függvénye a queryFromDatabase-nek,
+     * feladat, hogy sorba rendezze a feltöltött adatokat.
+     * 
+     * Lista típusú paraméter/ek: category
+     * Logikai típusú paraméter/ek: sort
+     * Szám típusú paraméter/ek: value
+     */
     
     private static void sorting(int value, boolean sort, ArrayList category) {
         uploadDataSorting.clear();
@@ -338,7 +392,7 @@ public class WebTest {
                     Collections.sort(uploadDataSortingInt);
                     break;
                 case 2:
-                    Collections.sort(supportCategoryList);
+                    Collections.sort(supportCategoryList);      // Növekvő sorba rendezés.
                     for (String l : supportCategoryList) {
                         if (l.equals("Elelmiszer")) {
                             l = l.replace("Elelmiszer", "Élelmiszer");
@@ -354,7 +408,7 @@ public class WebTest {
         else {
             switch (value) {
                 case 1:
-                    Collections.sort(uploadDataSortingInt, Collections.reverseOrder());
+                    Collections.sort(uploadDataSortingInt, Collections.reverseOrder());      // Csökkenő sorba rendezés.
                     break;
                 case 2:
                     Collections.sort(supportCategoryList, Collections.reverseOrder());
@@ -371,6 +425,13 @@ public class WebTest {
             }
         }
     }
+    
+    /**
+     * querySelected függvény segéd függvénye a queryFromDatabase-nek,
+     * feladat, hogy a kiválasztot legördülő listát a minimalLog ArrayList-hez adja.
+     * 
+     * Szöveg típusú paraméter/ek: cost, category, year, month, day
+     */
     
     private static void querySelected(String cost, String category, String year, String month, String day) {
         String date = "";
@@ -395,6 +456,14 @@ public class WebTest {
         minimalLogs.add(" ");
         minimalLogsAddToList("Kiválasztva: " + cost + ", " + category + ", " + date);
     }
+    
+    /**
+     * querySelected függvény végzi a Lekérdezés oldal adat ellenörzését,
+     * 1. Össze hasonlítja a lekérdezet adatokat a feltöltött adatokkal
+     * 2. Sorrend szerinti lekérdezés ellenőrzése
+     * 3. Összegzés ellenőrzése az adatok össze adásával, kivonásával
+     * 4. Adatok lekérdezése és ellenőrzése a kiválasztott szempontok szerint
+     */
         
     private static void queryFromDatabase() {
         int hit = 0;
@@ -627,20 +696,15 @@ public class WebTest {
                 /**
                  * Adatok lekérdezése és ellenőrzése.
                  * 
-                 * categoryNumber: 
-                 *      - 0 : Összes kategória.
-                 *      - 1 : Élelmiszer.
-                 *      - 2 : Élelmiszer.
-                 *      - 3 : Élelmiszer.
-                 *      - 4 : Élelmiszer.
-                 *      - 5 : Élelmiszer.
-                 *      - 6 : Élelmiszer.
-                 *      - 7 : Élelmiszer.
-                 * 
-                 * costNumber :
-                 *      - 0 : Kiadás.
-                 *      - 1 : Bevétel.
-                 *      - 2 : Egyéb összeg.
+                 * categoryNumber:                  costNumber:                 monthNumber:
+                 *      - 0 : Minden kategória.         - 0 : Kiadás.               - 0 : Összes hónap.     - 8 : Augusztus.
+                 *      - 1 : Élelmiszer.               - 1 : Bevétel.              - 1 : Január.           - 9 : Szeptember.
+                 *      - 2 : Ruházat.                  - 2 : Egyéb összeg.         - 2 : Február.          - 10 : Október.
+                 *      - 3 : Fizetés.                                              - 3 : Március.          - 11 : November.
+                 *      - 4 : Szabadidő.            yearNumber:                     - 4 : Április.          - 12 : December.
+                 *      - 5 : Számlák.                  - 0 : Összes év.            - 5 : Május.
+                 *      - 6 : Egyéb kiadások.           - 1 : 2021.                 - 6 : Június
+                 *      - 7 : Egyéb juttatások.         - 2 : 2022.                 - 7 : Július.
                 **/
                 
                 if (next) {
@@ -1184,6 +1248,16 @@ public class WebTest {
         }
     }
     
+    /**
+     * personalDataEditAndDelete függvény végzi az Adataim oldal adat ellenörzését,
+     * felhasználó adatainak módosítását és törlését
+     * 1. Felhasználói adat meglétét ellenőrzi
+     * 2. Felhasználói adatainak ellenörzése a generált adatokkal
+     * 3. Felhasználói adatainak módosítása
+     * 4. Felhasználói adatainak módosításának ellenőzése
+     * 5. Felhasználó törlése
+     */
+    
     private static void personalDataEditAndDelete() {
         try {
             String newPassword = "", newEmail = "", newPostcode = "", newCountry = "", newCounty = "", newCity = "";
@@ -1192,12 +1266,19 @@ public class WebTest {
             ArrayList<String> personalDataList = new ArrayList<>();         // ArrayList a kilistázott adathoz.
             tableToArrayList(table, personalDataList);
             
+            /**
+            * Felhasználói adat meglétének ellenörzése.
+            */
             
             if (personalDataList.get(0).isEmpty()) {        // Tábla ürességének ellenőrzése.
                 minimalLogsAddToList("Felhasználói adat ellenőrzése sikertelen. Nincs adat!");
                 start = false;
                 next = false;
-            }     
+            }   
+            
+            /**
+             * Felhasználói adatainak ellenörzése.
+             */
             
             if (next) {
                 p = personalDataList.get(0).split(" ");
@@ -1224,6 +1305,10 @@ public class WebTest {
                     next = false;
                 }
             }
+            
+            /**
+             * Felhasználói adatainak módosítása.
+             */
             
             if (next) {
                 driver.findElement(By.id("gomb5")).click();
@@ -1261,6 +1346,10 @@ public class WebTest {
                     next = false;
                 }
             }
+            
+            /**
+             * Felhasználói adatainak módosításának ellenőzése.
+             */
             
             if (next) {
                 
@@ -1303,6 +1392,10 @@ public class WebTest {
                     }
                 }
             }
+            
+            /**
+             * Felhasználó törlése.
+             */
                 
             if (next) {
                 minimalLogsAddToList("Felhasználó adatainak módosítása sikeres!");
@@ -1337,6 +1430,13 @@ public class WebTest {
         }
     }
     
+    /**
+     * dataEditAndDelete függvény végzi a Lekérdezés oldal adatainak módosítását és törlését,
+     * 1. Módosítja az első lekérdezet adatot és ellenőrzi a sikerességét
+     * 2. Törli a módosított adatot és ellenőrzi a sikerességét
+     * @param value 
+     */
+    
     private static void dataEditAndDelete(int value) {
         try {
             String amount = "1111", dateY = "2022", dateM = "05", dateD = "05", category = "Fizetés";
@@ -1346,7 +1446,7 @@ public class WebTest {
             
             List<WebElement> table = driver.findElements(By.id("lista"));       // Lekérdezés táblázatának inicializálása.
             ArrayList<String> originalQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
-            ArrayList<String> editedQuery = new ArrayList<>();         // ArrayList a kilistázott összes adathoz.
+            ArrayList<String> editedQuery = new ArrayList<>();         // ArrayList a kilistázott összes módosított adathoz.
             tableToArrayList(table, originalQuery);
             
             driver.findElement(By.name("0")).click();
@@ -1414,8 +1514,20 @@ public class WebTest {
         }
     }
     
+    /**
+     * functionTest függvény végzi a Bejelentekés és a Regisztráció 
+     * oldal mezők kitöltésére figyelmeztető felugró ablakot.
+     * 1. Regisztációs oldal ellenőrzése
+     * 2. Bejelentkezés oldal ellenőrzése
+     */
+    
     private static void functionTest() {
         try {
+            
+            /**
+             * Regisztációs oldal ellenőrzése
+             */
+            
             driver.findElement(By.id("profile-tab")).click();
             Thread.sleep(250);
             driver.findElement(By.id("gomb")).click();
@@ -1540,6 +1652,10 @@ public class WebTest {
                 }
             }
             
+            /**
+             * Bejelentkezés oldal ellenőrzése
+             */
+            
             if (next) {
                 driver.findElement(By.id("home-tab")).click();
                 Thread.sleep(250);
@@ -1573,6 +1689,14 @@ public class WebTest {
             System.out.println(e);
         }
     }
+    
+    /**
+     * adminSorting függvény segéd függvénye a adminTest-nek,
+     * feladat, hogy sorba rendezze a felhasználókról lévő statisztikai adatokat.
+     * 
+     * Lista típusú paraméter/ek: query, sort
+     * Szám típusú paraméter/ek: order
+     */
     
     private static void adminSorting(int order, ArrayList<String> query, ArrayList<String> sort) {
         ArrayList<String> supportSort = new ArrayList<>();
@@ -1624,12 +1748,19 @@ public class WebTest {
         }
     }
     
-    private static String replaceLetter(String name) {
+    /**
+     * replaceLetter metódus segéd metódusa a adminTest-nek,
+     * feladat, hogy a szövegek átalakítása.
+     * 
+     * Szöveg típusú paraméter/ek: string
+     */
+    
+    private static String replaceLetter(String string) {
         String replacedLetters = "";
         String ABC = "abcdefghijklmnopqrstuvwxyz ,-0123456789";
         char c;
-        for (int i=0; i<name.length(); i++) {
-            c = name.charAt(i);
+        for (int i=0; i<string.length(); i++) {
+            c = string.charAt(i);
             switch(c) {
                 case 'á':
                    c = 'a'; break;
@@ -1646,6 +1777,16 @@ public class WebTest {
         }
         return replacedLetters;
     }
+    
+    /**
+     * adminTest függvény fedi le az Admin oldalhoz tartozó teszteket
+     * 1. Felhasználók keresése
+     * 2. Főoldalon lévő statisztika kilistázásának a tesztje
+     * 3. Kategória hozzáadása és átnevezése
+     * 4. Felhasználók kilistázása aktivitás szerint
+     * 5. Egy felhasználó törlése
+     * 6. Passzív felhasználók törlése
+     */
     
     private static void adminTest() {
         int hit = 0, desc = 0;
@@ -1672,6 +1813,10 @@ public class WebTest {
             findElementsToArrayList(selectLocation, locationArrayList);
             findElementsToArrayList(selectOrder, orderArrayList);
             
+            /**
+             * Felhasználók keresése.
+             */
+            
             if (table.get(0).getText().equals("")) {     // Tábla ürességének ellenőrzése.
                 next = false;
                 start = false;
@@ -1679,6 +1824,17 @@ public class WebTest {
             }
             else {
                 if (next) {
+                    
+                    /**
+                     * Főoldal tesztje.
+                     * 
+                     * location:                    order:
+                     *      - 0 : Ország.               - 0 : Csökkenő.
+                     *      - 1 : Irányítószám.         - 1 : Növekvő.
+                     *      - 2 : Város.
+                     *      - 3 : Megye.
+                     */
+                    
                     for (int location = 0; location < locationArrayList.size(); location++) {
                         for (int order = 0; order < orderArrayList.size(); order++) {
                             sort.clear();
@@ -1686,6 +1842,8 @@ public class WebTest {
                             selectObject.selectByIndex(location);
                             selectObject = new Select(selectOrder.get(0));       // Dátum szerint csökkenő.
                             selectObject.selectByIndex(order);
+                            driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END);
+                            Thread.sleep(500);
                             
                             driver.findElement(By.id("gomb2")).click();
                             Thread.sleep(250);
@@ -1755,6 +1913,10 @@ public class WebTest {
                 } 
             }
             
+            /**
+             * Kategóriák oldal tesztje.
+             */
+             
             if (next) {
                 categoryName = "Drogéria";
                 driver.findElement(By.linkText("Kategóriák")).click();
@@ -1811,6 +1973,17 @@ public class WebTest {
                     minimalLogsAddToList("Sikertelen módosítás!");
                 }
             }
+            
+            /**
+             * Felhasználók oldal tesztje.
+             * 
+             * location:                    user:                               order:
+             *      - 0 : Név.                  - 0 : Passzív felhasználók.         - 0 : Növekvő.
+             *      - 1 : Irányítószám.         - 1 : Aktív felhasználók.           - 1 : Csökkenő.
+             *      - 2 : Megye.                - 2 : Minden felhasználó.
+             *      - 3 : Ország.
+             *      - 4 : Város.
+             */
             
             if (next) {
                 driver.findElement(By.linkText("Felhasználók")).click();
@@ -1924,6 +2097,10 @@ public class WebTest {
                 }
             }
             
+            /**
+             * Egy felhasználó törlése.
+             */
+            
             if (next) {
                 minimalLogs.add(" ");
                 minimalLogsAddToList("Felhasználó törlése...");
@@ -1964,6 +2141,10 @@ public class WebTest {
                     minimalLogsAddToList("Sikertelen felhasználó törlés!");
                 }
             }
+            
+            /**
+             * Passzív felhasználók törlése.
+             */
             
             if (next) {
                 minimalLogs.add(" ");
@@ -2019,6 +2200,7 @@ public class WebTest {
             }
         } catch (Exception e) {
             System.out.println(e);
+            start = false;
         }
     }
      
@@ -2106,6 +2288,14 @@ public class WebTest {
         
         /**
         * Második teszt: Automata teszt 3x.
+        * 
+        * 1. A fiók paraméterei
+        * 2. Új fiók regisztrálása
+        * 3. Új fiók bejelentkezése
+        * 4. Új fiók adatainak feltöltése
+        * 5. Feltöltött adatok lekérdezése
+        * 6. Feltöltött adat módosítása és törlése
+        * 7. Felhasználó adatainak módosítása és a felhasználó törlése
         **/
         
         if (start) {
@@ -2115,10 +2305,10 @@ public class WebTest {
             minimalLogs.add(String.join("", Collections.nCopies(100, "<")));
 
             for (int i=0; i<3; i++) {
-                if (start) {
+                if (start) {         // A fiók paraméterei.
                     startUserDataInit = LocalTime.now();
                     minimalLogsAddToList((i+1) + ". felhasználó adatainak létrehozása...");
-                    randomLocationAndName();         // A fiók paraméterei.
+                    randomLocationAndName();
                     endUserDataInit = LocalTime.now();
                 }
 
@@ -2169,11 +2359,11 @@ public class WebTest {
                     driver.navigate().refresh();
                     endUserDataQuery = LocalTime.now();
                     
-                    if(!start) writeFile(uploadData, "_" + (i+1) + "_user_uploadData.txt");
+                    if(!start) writeFile(uploadData, "_" + (i+1) + "_user_FAULT_uploadData.txt");
                     uploadData.clear();
                 }
 
-                if (start) {
+                if (start) {        // Feltöltött adat módosítása és törlése.
                     minimalLogs.add(String.join("", Collections.nCopies(100, "-")));
                     minimalLogsAddToList("Adatok módosítása és törlése...");
                     
@@ -2182,7 +2372,7 @@ public class WebTest {
                     Thread.sleep(250);
                             
                     for (int j = 0; j < 5; j++) {
-                        if (start) {        // Feltöltött adat módosítása és törlése.
+                        if (start) {
                             Thread.sleep(250);
                             dataEditAndDelete(j+1);
                         }
@@ -2293,6 +2483,7 @@ public class WebTest {
         minimalLogsAddToList("A teszt befejeződött! Teljes ideje: " + durationAll.getSeconds()/60 
                     + " perc " + durationAll.getSeconds()% 60 + " másodperc.");
         
-        writeFile(minimalLogs, "_testlog.txt");       // Ki írja fájlba a minimalis logokat.
+        if (start) writeFile(minimalLogs, "_PASS_testlog.txt");       // Ki írja fájlba a minimalis logokat.
+        else writeFile(minimalLogs, "_FAULT_testlog.txt");
     } 
 }

@@ -1,0 +1,82 @@
+####################################################################################################
+#                                2022-08-20 Automata Selenium Teszt                                #
+####################################################################################################
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+00:42:40	Teszt indítása!
+////////////////////////////////////////////////////////////////////////////////////////////////////
+00:42:40	Szükséges forrás fájlok betöltése....
+00:42:40	Forrás fájlok betöltése kész!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+00:42:43	Funkciónális teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+00:42:45	Regisztrációs funkció teszt OK!
+00:42:46	Bejelentkezős funkció teszt OK!
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+00:42:46	Admin teszt indítása!
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+00:42:47	Sikeres bejelentkezés.
+ 
+00:42:49	Kiválasztva: Ország, Csökkenő
+00:42:49	Magyarország 10
+00:42:49	Németország 4
+00:42:49	United States 4
+00:42:49	Románia 2
+00:42:49	Szlovákia 2
+00:42:49	Szerbia 1
+00:42:49	TestLand 1
+00:42:49	Sorrend egyezik!
+ 
+00:42:49	Kiválasztva: Ország, Növekvő
+00:42:49	Szerbia 1
+00:42:49	TestLand 1
+00:42:49	Románia 2
+00:42:49	Szlovákia 2
+00:42:49	Németország 4
+00:42:49	United States 4
+00:42:50	Magyarország 10
+00:42:50	Sorrend egyezik!
+ 
+00:42:50	Kiválasztva: Irányítószám, Csökkenő
+00:42:50	Magyarország Pest Budapest 1138 1
+00:42:50	Magyarország Pest Vác 2602 1
+00:42:50	Magyarország Hajdú-Bihar Debrecen 4002 1
+00:42:50	Magyarország Hajdú-Bihar Nyíradony 4027 1
+00:42:50	Németország Bajorország München 80337 1
+00:42:50	Németország Bajorország Augsburg 86157 1
+00:42:50	Szlovákia Pozsony Pozsony 81108 1
+00:42:50	United States Hudson Jersey 7030 1
+00:42:50	United States New York New York 10001 1
+00:42:50	Románia Brassó Kőhalom 505500 1
+00:42:50	TestLand Testas TestCity 1111 1
+00:42:50	Magyarország Pest Váckisújfalu 2185 1
+00:42:50	Magyarország Pest Budapest 1135 1
+00:42:50	Magyarország Pest Vác 2600 1
+00:42:50	Magyarország Hajdú-Bihar Debrecen 4000 1
+00:42:50	Magyarország Hajdú-Bihar Nyíradony 4025 1
+00:42:50	Németország Bajorország München 80331 1
+00:42:50	Németország Bajorország Augsburg 86163 1
+00:42:50	Szlovákia Pozsony Pozsony 81105 1
+00:42:50	Szerbia Raška Kraljevo 561214 1
+00:42:50	United States Hudson Jersey 7094 1
+00:42:50	United States New York New York 10002 1
+00:42:50	Románia Szatmár Szatmárnémeti 440068 1
+00:42:50	Magyarország Bács-Kiskun Szakmár 6336 1
+00:42:50	Sorrend egyezik!
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+00:42:54	Tesztek összideje:
+
+00:42:54	Regisztráció és bejelentkező oldal funkcionális tesztjének az ideje: 0 perc 3 másodperc.
+00:42:54	Felhasználói adat létrehozásának az összideje: 0 perc 0 másodperc.
+00:42:54	Felhasználó regisztrálásának az összideje: 0 perc 0 másodperc.
+00:42:54	Felhasználó belépésének az összideje: 0 perc 0 másodperc.
+00:42:54	Adatok feltöltésének az összideje: 0 perc 0 másodperc.
+00:42:54	Adatok lekérdezésének az összideje: 0 perc 0 másodperc.
+00:42:54	Adatok módosításának és törlésének az összideje: 0 perc 0 másodperc.
+00:42:54	Felhasználó adatának módosítása és felhasználó törlésének az összideje: 0 perc 0 másodperc.
+00:42:54	Admin felület tesztjének az ideje: 0 perc 5 másodperc.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+00:42:54	A teszt befejeződött! Teljes ideje: 0 perc 13 másodperc.
