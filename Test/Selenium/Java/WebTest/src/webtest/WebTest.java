@@ -184,7 +184,7 @@ public class WebTest {
             else if (value >= 100000) amount = "-" + (value / 50);
             else amount = "-" + (value / 5);
             
-            uploadData.add(amount + ", " + date + ", " + Integer.toString(category));     // uploadData lista feltöltése a generált adatokkal, log fájlhoz szükséges.
+            uploadData.add(amount + ", " + date + ", " + Integer.toString(category));     // uploadData lista feltöltése a generált adatokkal.
                     
             Thread.sleep(250);
             driver.findElement(By.id("amount")).sendKeys(amount);
@@ -1644,7 +1644,8 @@ public class WebTest {
                 driver.findElement(By.id("gomb")).click();
                 Thread.sleep(250);
                 message = driver.findElement(By.id("ruzenet")).getText();
-                if (message.equals("Van már ilyen nevű felhasználó!!") || message.equals("Sikeres regisztráció")) minimalLogsAddToList("Regisztrációs funkció teszt OK!");
+                if (message.equals("Van már ilyen nevű felhasználó!!") || 
+                        message.equals("Sikeres regisztráció")) minimalLogsAddToList("Regisztrációs funkció teszt OK!");
                 else {
                     minimalLogsAddToList("Regisztrációs funkció teszt hibás!");
                     start = false;
@@ -2444,7 +2445,7 @@ public class WebTest {
             minimalLogs.add(String.join("", Collections.nCopies(100, "<")));
             
             startAdminTest = LocalTime.now(); 
-            login("Admin", "admin");
+            login("Admin", "!AdminProject_MK");
             adminTest();
             endAdminTest = LocalTime.now();
         }
