@@ -1,14 +1,19 @@
-# Költségvetés kimutatás (Vizsgamunka)
+<h1 align="center">Költségvetés kimutatás (Vizsgamunka)<h1>
 
-### Feladat leírása:
+<p align="center" >
+    <img src="/Client/Web/pictures/logo.png"
+         alt="Saját logó">
+</p>
+
+### <ins>Feladat leírása:</ins>
 
 A csapat projektmunka keretén belül egy olyan webhelyet fejleszt, amely képes a bevételek és kiadások megadása segítségével elkészíti a felhasználó havi bontású költségvetés nyilvántartását.
 
 Az adatokat egy online adatbázisban van tárolva, amelyet egy API-n keresztül lehet elérni. Az elkészített reszponzív weblapok (asztali és mobil platform) erről az API-ról töltik le és jelenítik meg az adatokat.
 
 Ezen kívül van egy felület, ahol az oldal üzemeltetője lekérdezheti a felhasználók statisztikai adatait, illetve törölheti a nem kívánt felhasználókat.
-
-### Részei:
+***
+### <ins>Részei:</ins>
 
 - #### Frontend: 
 
@@ -23,9 +28,8 @@ Ezen kívül van egy felület, ahol az oldal üzemeltetője lekérdezheti a felh
 > A Thunder Client Api teszt fájlai a [Test/Thunder](https://github.com/buviktor/Project_MK/tree/main/Test/Thunder) mappában találhatóak, és a Selenium teszt fájlai a [Test/Selenium](https://github.com/buviktor/Project_MK/tree/main/Test/Selenium) mappában találhatóak.
 
 **Részletes magyar nyelvű dokumentációja: [BKSZC_Vizsgaremek_2022.docx](https://github.com/buviktor/Project_MK/blob/main/Docs/BKSZC_Vizsgaremek_2022.docx), vagy megtaláljátok a [Docs](https://github.com/buviktor/Project_MK/tree/main/Docs) mappában!**
-
-
-### Készítők és szerepkörök:
+***
+### <ins>Készítők és szerepkörök:</ins>
 
 - Projekt vezető és tesztelő: [Viktor](https://github.com/buviktor)
 - Backend: [Tamás](https://github.com/Tamasd9182)
