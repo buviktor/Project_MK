@@ -16,11 +16,16 @@ window.addEventListener("load", function AllCat() {
             menu.innerHTML += "<option value=" + cs.ID + ">" + cs.denomination + "</option> "
         });
     })
+    .then(
+        Post()
+    )
     .catch (err => console.log(err))
 })
 
 // ----Módosítandó post kiírása
+
 function Post() {
+    
     const url = 'http://localhost:5000/user/post' + "/" + sessionStorage.id + "/" +  sessionStorage.regid;
     const token = 'Bearer: ' + sessionStorage.token
     const lista = document.getElementById("lista");
@@ -38,12 +43,12 @@ function Post() {
             lista.innerHTML += "<tr><td>" + cs.amount + "</td><td>" + cs.date + "</td><td>" + cs.denomination + "</td>"
             document.getElementById("amount").setAttribute ('value', cs.amount);
             document.getElementById("regAt").setAttribute ('value', cs.date);
-            document.getElementById("menu").selectedIndex = (cs.categoriesID);
+            document.getElementById("menu").selectedIndex = cs.categoriesID;
         });   
     })
     .catch(err => console.log(err))
 }
-Post()
+
 
 // ----Post módosítása
 document.getElementById("gomb").onclick = function (e) {

@@ -14,7 +14,7 @@ window.addEventListener("load", function Adminhome() {
     .then(json => {
       lista.innerHTML = "<tr><th>Ország</th><th>DB</th></tr>";
       json.forEach(cs => {
-          if(cs!=json[0]) 
+           
           lista.innerHTML += "<tr><td>" + cs.country + "</td><td>" + cs.db + "</td></tr>"
             });
         })
