@@ -36,6 +36,19 @@ Allpost()
 // ----- Új poszt hozzáadása -----
 document.getElementById("gomb1").onclick = function (e) {
     e.preventDefault();
+    if(document.getElementById("dates").value == "")
+    alert("Kérem töltse ki a dátum mezőt!")
+    else if(document.getElementById("amount").value == "0")
+    alert("Az összeg nem lehet nulla!")
+    else if(document.getElementById("amount").value == "")
+    alert("Kérem töltse ki az összeg mezőt!")
+    else if(document.getElementById("categoriesID").value == "0")
+    alert("Kérem töltse ki a kategória mezőt!")
+
+    else if(Date.parse(document.getElementById("dates").value) > Date.now() )
+    alert("Dátum megadása csak a mai dátumig engedélyezett!")
+
+    else{
     const url = 'http://localhost:5000/user/all/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
     fetch(url, {
@@ -57,7 +70,7 @@ document.getElementById("gomb1").onclick = function (e) {
             Allpost()
         })
         .catch(err => console.log(err));
-}
+}}
 
 // ----- Kategoriák -----
 window.addEventListener("load", function AllCat() {

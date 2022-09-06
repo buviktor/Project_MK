@@ -1,5 +1,5 @@
 //---- Adatok kiírása ----
-window.addEventListener("load", function Adatok() {
+function Adatok() {
     const url = 'http://localhost:5000/user/person/' + sessionStorage.id;
     const token = 'Bearer: ' + sessionStorage.token
     const adatok = document.getElementById("adatok");
@@ -23,7 +23,8 @@ window.addEventListener("load", function Adatok() {
             }); 
         })
         .catch(err => console.log(err))
-})
+}
+Adatok()
 
 // ---- Adatok módosítása ----
 document.getElementById("gomb4").onclick = function (e) {
@@ -54,7 +55,9 @@ document.getElementById("gomb4").onclick = function (e) {
     })
     .then((response) => response.json())
     .then(json => document.getElementById("uzenet").innerHTML = json.message)
+    .then(Adatok())
     .catch(err => console.log(err));
+    
     }
 }
 
