@@ -2437,6 +2437,8 @@ public class WebTest {
         /**
         * Harmadik teszt: Admin teszt.
         **/
+        for (int i = 0; i < 10; i++) {
+            
         
         if (start) {
             minimalLogs.add(" ");
@@ -2448,6 +2450,8 @@ public class WebTest {
             login("Admin", "!AdminProject_MK");
             adminTest();
             endAdminTest = LocalTime.now();
+        }
+        
         }
         
         Thread.sleep(1000);
